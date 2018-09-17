@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name=”viewport” content="initial-scale=2.0,width=device-width,user-scalable=yes"/>
+   <!--JS-->
+   <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+   <!--图标-->
+   <link rel="stylesheet" href="http://static.runoob.com/assets/foundation-icons/foundation-icons.css">
+   <!--动态-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/1.0/css/imagehover.min.css" />	
+   <!--异步-->
+   <script src="./论坛/jquery.js"></script> 
+   <script src="./论坛/jquery.form.js"></script> 
+	<title>nglinux</title>
+	<style>
+div{
+	font-family:Helvetica,Tahoma,Arial,STXihei,sans-serif;
+}
+a{
+text-decoration: none;
+color: black;
+}
+/**标签缩进**/
+	#mySidenav a {
+    position: absolute;
+    left: -87px;
+    transition: 0.3s;
+    padding: 8px 0px 8px 5px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left:0px;
+}
+/**标签缩进**/
+
+    /**slideInUp**/
+     .slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+  @keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  } 
+  /**slideInUp**/
+#nav li{
+	display: inline;
+}
+#nav li a{
+text-decoration: none;
+font-size:x-large;
+font-weight: bold;
+padding: 0px 10px 0px;
+color:#222;
+line-height: 1;
+}
+#nav li a:visited{
+color:#111;
+}
+#nav li a:hover{
+color:#4fd2c2;
+}
+#f4-table{
+	border-collapse: collapse;
+	margin:auto;
+}
+#f4-table tr td{
+	border:1px solid #bbb;
+	font-size: 25px;
+	padding: 8px;
+	font-weight: bold;
+	text-align: center;
+}
+#f4-table tr td img{
+	width: 200px;
+	height: 200px;
+}
+#f5-table{
+	border-collapse: collapse;
+	margin:auto;
+}
+
+.tr1{
+	width: 25%;
+	height: 180px;
+	text-align:center;
+	float: left;
+}
+.tr1 img{
+	width: 65%;
+	height: auto;
+
+}
+.tr2{
+	width: 25%;
+	height: 290px;
+	float: left;
+}
+.tr2 h2{
+	color: #fff;font-size: 1.5em;font-weight: bold;
+	margin: 30px 30px 20px;
+}
+.tr2 p{
+	color: #fff;
+	font-size: 1em;
+	line-height: 20px;
+	margin: 0px 30px 0px;
+}
+/*图形界面*/
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+}
+
+/*模态框*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #333;
+}
+
+/* 模态框内容 */
+.modal-content {
+  position: relative;
+  background-color: #333;
+  padding: 0;
+  width: 100%;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {
+  color: #fff;
+  font-size: 1em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left:15%;
+}
+
+.column img {
+  margin-bottom: 1em;
+}
+.column span{
+   display: block;
+   text-align: center;
+   font-size: 1.2em;
+   margin-top: -10px;
+   margin-bottom: 10px;
+}
+
+.caption-container {
+	font-size: 1em;
+  text-align: center;
+  background-color: #333;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+/*f7*/
+.imghvr-flip-vert{
+	background-color: transparent;
+	padding: 0 13px 0;
+}
+.imghvr-flip-vert img{
+	width: 90px;height: 90px;
+}
+.imghvr-flip-vert figcaption{
+	background: #4fd2c2;
+	text-decoration: underline;
+	font-size: large;
+}
+.imghvr-flip-vert span{
+	display: block;font-size: large;color:black;text-align: center;
+}
+#f8-left p{
+	color: #fff;
+	line-height: 10px;
+	font-size: 1.1em;
+}
+</style>
+</head>
+<body style="margin:0px;overflow-x: hidden;">
+	<div id="header" style="height:50px;width:100%;background: #fff;box-shadow:0 1px 0 #999;">
+		<a name="top"></a>		
+		<a name="start"></a>
+		<div style="width: 100%;margin:auto;">
+		<a href="./index.html"><img style="width: 200px;height: 50px;float: left;margin-left: 3.4%;" src="./首页/新首页图片/login.png" alt="login" /></a>
+		<div style="height:50px;float: right;margin-right: 30px;">
+		<ul id="nav" style="list-style-type: none;">
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./下载.html">Download</a></li>
+			<li><a href="./安装.html">Install</a></li>
+			<li><a href="./论坛.html">forum</a></li>
+			<li><a href="./学习Linux.html">Learn Linux</a></li>
+			<li><a href="#joinus">Join us</a></li>
+			<li id="signup"><a style="color:#fff;background: #4fd2c2;padding: 5px 3px 5px;border-radius: 15px;margin-left: 15px;" href="#">Sign up</a></li>
+			<li><a href="./chinese.html" style="font-weight: normal;font-size: 1.2em;text-decoration: underline;">中文</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+	 <div id="mySidenav" class="sidenav" style="position: fixed;">
+	  <a style="top:10px;background: #cc6633;" href="#start" >Start</a>
+	  <a style="top:30px;background: #66cc33;font-size: 1em;padding: 9px 0px 9px 5px;" href="#opensource" >Open Source</a>
+	  <a style="top:60px;background: #ffcc00;" href="#creation" >Creation</a>
+	  <a style="top:90px;background: #333366;" href="#features" >Features</a>
+	  <a style="top:120px;background: #0099cc;" href="#uses" >Uses</a>
+	  <a style="top:150px;background:#ff9933;" href="#interface">Interface</a>
+	  <a style="top:180px;background: #cc6633;" href="#develop" >Develop</a>
+	  <a style="top:210px;background: #ffcc00;" href="#contact" >Contact</a>
+	</div>
+	<!--首页-->
+	<div id="f1" style="width: 100%;height:660px;background: #f8f8f8">
+		<div id="f1-font" style="padding-top: 55px;width: 40%;max-width: 430px;height:300px;float: left;position: relative;left:12%;top:130px;">
+			<h1 style="font-size:2.8em;font-weight: normal;">Do you need <strong>linux</strong>?</h1>
+			<p style="font-size: x-large;color: gray;line-height: 1.3;margin-bottom: 60px;margin-top: -10px;">Linux is a <strong>free</strong> and <strong>open source</strong> UNIX-like operating system.</p>
+			<a style="background:#4fd2c2;padding: 10px 20px 15px;margin-right: 30px;max-width: 130px;font-size: x-large;font-weight: bold;border-radius: 10px;color: white;" href="./下载.html"><i style="color: white;padding-right:15px;font-size: 30px;" class="fi-download"></i>Download</a>
+			<a style="background: #6562a7;padding: 10px 20px 15px;border-radius: 10px;max-width: 180px;font-size:x-large;font-weight: bold;color: white;" href="./安装.html"><i style="color: white;font-size:30px;padding-right:15px;" class="fi-monitor"></i>Install</a>
+		</div>
+		<img class="slideInUp" style="float: right;position: relative;left:-5%;top:50px;width: 50%;max-width: 600px;height: auto;" src="./首页/一/linux.png" alt="" />
+	</div>
+	<!--回到顶部-->
+	<a href="#top" ><div style="position: fixed;bottom:10px;right:20px;"><i style="color:#fff;padding: 3px 5px 3px;font-size: 30px;background: #4fd2c2;" class="fi-arrow-up"></i></div></a>
+	<!--开源-->
+	<div id="f2" style="width: 100%;height:700px;background: white;margin-top:100px;">
+		<a name="opensource"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;font-size: 2.8em;font-weight: normal;margin-top: 8px;">Open Source</h1>
+		<img style="float: left;margin-left: 10%;width: 40%;max-width: 510px;height: auto;" src="./首页/二/opensource.png" alt="opensource" />
+			<ul id="f2-list" style="float:left;margin-left:5%;width: 45%;color: gray;line-height: 1.4;margin-top:100px;">
+				<li style="font-size: x-large;">Freedom of use.</li>
+				<li style="font-size: x-large;">Freedom of research——You can get <br/>the software source code.</li>
+				<li style="font-size: x-large;">Freedom of dissemination and improvement.</li>
+			</ul>
+	</div>
+	<!--Linux历史-->
+	<div id="f3"  style="width:100%;height:600px;background:#f8f8f8;">
+		<a name="creation"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;font-weight:normal;font-size: 2.8em;margin-top: 8px;">The creation of Linux</h1>
+		<p style="float:left;width:40%;max-width: 500px;height: 200px;font-size: 1.9em;line-height: 1.6;color:gray;position: relative;top: 60px;left:13%;">In 1991,<strong>Linus Torvalds</strong> began a project that later became the <strong>Linux kernel</strong>.After that,many people contributed code to the project.</p>
+		<img style="float:right;position: relative;right:15%;top: 10px;" src="./首页/三/Linus_Torvalds.jpg" alt="Linus_Torvalds" />
+	</div>
+	<!--特点-->
+	<div id="f4" style="width:100%;height:700px;margin-top: 100px;">
+		<a name="features"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;font-size: 2.8em;font-weight: normal;margin-top: 8px;">Why use linux</h1>
+		<p style="max-width: 60%;font-size: 1.3em;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;margin-top: -16px;line-height: 1.4;">Users know <strong>what they want</strong> and understand what they are doing and they are responsible for their actions.</p>
+		<table id="f4-table" name="features" style="background: #f8f8f8;">
+			<tr>
+				<td><img src="./首页/四/开放性.png" alt="开放性" /></td>
+				<td><img src="./首页/四/多用户.png" alt="多用户" /></td>
+				<td><img src="./首页/四/网络功能.png" alt="网络功能" /></td>
+				<td><img src="./首页/四/系统安全.png" alt="系统安全" /></td>
+			</tr>
+			<tr>
+				<td>Openness</td>
+				<td>Multi-user</td>
+				<td>Rich network features</td>
+				<td>Reliable system security</td>
+			</tr>
+			<tr style="margin:auto;">
+				<td><img src="./首页/四/可移植性.png" alt="移植性" /></td>
+				<td><img src="./首页/四/兼容性.png" alt="兼容性" /></td>
+				<td><img src="./首页/四/用户界面.png" alt="用户界面" /></td>
+				<td><img src="./首页/四/速度性能.png" alt="速度性能" /></td>
+			</tr>
+			<tr>
+				<td>Good portability</td>
+				<td>Standard compatibility</td>
+				<td>Good user interface</td>
+				<td>Excellent speed performance</td>
+			</tr>
+		</table>
+	</div>
+	<!--用途-->
+	<div id="f5"  style="width: 100%;height:675px;background: #f8f8f8;margin-top: 100px;">
+		<a name="uses"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;font-weight: normal;font-size: 2.8em;margin-top: 8px;">Uses</h1>
+		<p style="max-width: 60%;font-size: 1.3em;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;margin-top: -16px;">Today, various Linux distributions are used for various occasions, from <strong>embedded devices</strong> to <strong>supercomputers</strong>, and have established a position in the server domain. Usually, servers use <a href="#develop" style="color: gray;"><strong>LAMP</strong></a> combinations.</p>
+		<div id="div-8" style="width: 90%;max-width:1164px;height:470px;margin:auto;background: #f8f8f8;">
+			<div class="tr1" style="background:rgb(172,172,172);"><img src="./首页/五/gnome2.png" alt="desktop" /></div>
+			<div class="tr1" style="background:rgb(230,221,255);"><img src="./首页/五/server.png" alt="server" /></div>
+			<div class="tr1" style="background:rgb(172,172,172);"><img src="./首页/五/smart.png" alt="smart" /></div>
+			<div class="tr1" style="background:rgb(221,255,255);"><img src="./首页/五/embedded.png" alt="embedded" /></div>
+			<div class="tr2" style="background: #4fd2c2;">
+				<h2 style="">Desktop</h2>
+				<p>Most modern distributions include a graphical user environment.The two most popular ednvironments being the KDE Plasma Desktop and GNOME.</p>
+			</div>
+			<div class="tr2" style="background: #6562a7;">
+				<h2>Servers</h2>
+				<p>Linux distributions have long been used as server operating systems.LAMP server-software combination has achieved popularity among developers, and which is one of the more common platforms for website hosting.</p>
+			</div>
+			<div class="tr2" style="background: #ff3366;">
+				<h2 style="">Smart devices</h2>
+			    <p>Several operating systems for smart devices , such as smartphones , tablet computers , smart TVs systems, are based on Linux.Android has become the dominant mobile operating system for smartphones.</p>
+			</div>
+			<div class="tr2" style="background: #d667cd;">
+				<h2 style="">Embedded devices</h2>
+				<p>Linux's low cost, powerful customization capabilities and good portability make Linux widely used in embedded systems.</p>
+			</div>
+		</div>
+	</div>
+	<!--图形界面-->
+	<div id="f6"  style="margin-top: 100px;">
+		<a name="interface"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;font-weight: normal;font-size: 2.8em;margin-top: 8px;">Interface</h1>
+		<p style="max-width: 60%;font-size: 1.3em;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;margin-top: -16px;">Linux has a <strong>good user interface</strong>:command interface,graphical interface,etc.</p>
+	<div class="row" style="margin-left:auto;max-width: 1164px;">
+  <div class="column">
+    <img src="./首页/六/Cinnamon.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <span >Cinnamon</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Unity.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <span >Unity</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Enlightenment.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <span >Enlightenment</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Fluxbox.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <span >Fluxbox</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/GNOME.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    <span >GNOME</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Mate.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+    <span >Mate</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Pantheon.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+    <span >Pantheon</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/i3-gaps.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+    <span >i3-gaps</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Trinity.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+    <span >Trinity</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Xfce.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+    <span >Xfce</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/KDE-Plasma.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+    <span >KDE-Plasma</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Sugar.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+    <span >Sugar</span>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 12</div>
+      <img src="./首页/六/Cinnamon.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <img src="./首页/六/Unity.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 12</div>
+      <img src="./首页/六/Enlightenment.jpg" style="display: block;margin:auto;">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 12</div>
+      <img src="./首页/六/Fluxbox.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 12</div>
+      <img src="./首页/六/GNOME.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 12</div>
+      <img src="./首页/六/Mate.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 12</div>
+      <img src="./首页/六/Pantheon.jpg" style="display: block;margin:auto;">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">8 / 12</div>
+      <img src="./首页/六/i3-gaps.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 12</div>
+      <img src="./首页/六/Trinity.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 12</div>
+      <img src="./首页/六/Xfce.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 12</div>
+      <img src="./首页/六/KDE-Plasma.jpg" style="display: block;margin:auto;">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">12 / 12</div>
+      <img src="./首页/六/Sugar.jpg" style="display: block;margin:auto;">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Cinnamon.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(1)" alt="Cinnamon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Unity.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(2)" alt="Unity">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Enlightenment.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(3)" alt="Enlightenment">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Fluxbox.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(4)" alt="Fluxbox">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/GNOME.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(5)" alt="GNOME">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Mate.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(6)" alt="Mate">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Pantheon.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(7)" alt="Pantheon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/i3-gaps.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(8)" alt="i3-gaps">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Trinity.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(9)" alt="Trinity">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Xfce.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(10)" alt="Xfce">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/KDE-Plasma.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(11)" alt="KDE-Plasma">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Sugar.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(12)" alt="Sugar">
+    </div>
+  </div>
+</div>
+</div>
+	<!--开发工具-->
+	<div id="f7" style="width:100%;margin-top: 100px;height: 600px;background: #f8f8f8;">
+		<a name="develop"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;font-weight: normal;font-size: 2.8em;margin-top: 8px;">Programming on linux</h1>
+		<p style="max-width: 760px;font-size: 1.4em;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;margin-top: -16px;line-height: 1.4;">Linux is a <strong>highly customizable environment</strong> and offers many <strong>excellent development tools.</strong></p>
+		<div id="pic-24" style="width: 1000px;margin:auto;">
+			<figure class="imghvr-flip-vert">
+    <img src="./首页/七/chrome.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.google.cn/chrome/" target="_blank" ></a>
+  <span>Chrome</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/firefox.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" ></a>
+  <span>Firefox</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/git.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://git-scm.com/" target="_blank" ></a>
+  <span>Git</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/github.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://github.com/" target="_blank" ></a>
+  <span>Github</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/apache.png">
+    <figcaption>Learn more</figcaption>
+    <a href="http://www.apache.org/" target="_blank" ></a>
+  <span>Apache</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/mysql.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.mysql.com/" target="_blank" ></a>
+  <span>MySQL</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/php.png">
+    <figcaption>Learn more</figcaption>
+    <a href="http://www.php.net/" target="_blank" ></a>
+  <span>PHP</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/python.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.python.org/" target="_blank" ></a>
+  <span>Python</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/perl.png">
+    <figcaption>Learn more</figcaption>
+    <a href="http://www.perl.org/" target="_blank" ></a>
+  <span>Perl</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/vim.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.vim.org/download.php" target="_blank" ></a>
+  <span>Vim</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/gedit.png">
+    <figcaption>Learn more<div></figcaption>
+    <a href="https://gedit.en.softonic.com/" target="_blank" ></a>
+  <span>Gedit</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/emacs.png">
+    <figcaption>Learn more</figcaption>
+    <a href="http://www.gnu.org/software/emacs/" target="_blank" ></a>
+  <span>Emacs</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/eclipse.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.eclipse.org/downloads/" target="_blank" ></a>
+  <span>Eclipse</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/gcc.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://gcc.gnu.org/" target="_blank" ></a>
+  <span>GCC</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/gdb.png">
+    <figcaption>Learn more</figcaption>
+    <a href="http://www.gnu.org/software/gdb/" target="_blank" ></a>
+  <span>GDB</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/geany.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.geany.org/" target="_blank" ></a>
+  <span>Geany</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/Clang.png">
+    <figcaption>Learn more</figcaption>
+    <a href="http://clang.llvm.org/" target="_blank" ></a>
+  <span>Clang</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/kdevelop.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.kdevelop.org/" target="_blank" ></a>
+  <span>Kdevelop</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/qt.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www1.qt.io/cn/" target="_blank" ></a>
+  <span>Qt Creator</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/sublime.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.sublimetext.com/" target="_blank" ></a>
+  <span>Sublime</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/Jetbrains.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.jetbrains.com/" target="_blank" ></a>
+  <span>JetBrains</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/clion.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://www.jetbrains.com/clion/" target="_blank" ></a>
+  <span>Clion</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/vsc.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://code.visualstudio.com/" target="_blank" ></a>
+  <span>VS code</span>
+  </figure>
+  <figure class="imghvr-flip-vert">
+    <img src="./首页/七/netbeans.png">
+    <figcaption>Learn more</figcaption>
+    <a href="https://netbeans.org/" target="_blank" ></a>
+  <span>NetBeans</span>
+  </figure>
+</div>
+	</div>
+	<!--加入我们-->
+	<div id="joinus" style="width: 100%;height: 300px;margin-top: 100px;">
+		<a name="joinus"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;font-size: 2.8em;font-weight: normal;margin-top: 8px;">Join us</h1>
+		<p style="max-width: 60%;font-size: 20px;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;margin-top: -16px;"><strong>Wechat</strong> Scans QR Code and Joins Linux Communication <strong>Group.</strong></p>
+		<img style="width: 200px;height: 200px;display: block;margin:auto;" src="./首页/二维码.jpg" alt="QR code" />
+	</div>
+	<!--联系我们-->
+	<div id="f8"  style="width: 100%;height: 400px;background: #4fd2c2;margin-top: 100px;">
+		<a name="contact"></a>
+		<div id="f8-left" style="float: left;margin:30px 0px 0px 75px;width: 34%; ">
+			<h5 style="color: #fff;font-size: 1.3em;"><b>contact us</b></h5>
+			<h2 style="color: #fff;margin-bottom: 30px;font-size: 2.4em;font-weight: normal;margin-top: -20px;line-height: 1.3;">QUESTIONS AND <b>INQUIRIES</b></h2>
+			<p>Contacts:Kwong Super Mao</p>
+			<p>WeChat&TEL:13556178373</p>
+			<p>Mailbox:1165296623@qq.com</p>
+			<p style="line-height: 1;">Or, send us questions or comments by filling out the form.</p>	
+		</div>
+		<div id="f8-right" style="float: left;margin-top: 120px;width: 60%;height: 180px;">
+			<form  id="myForm" action="./首页/_POST.php" method="post" style="margin-left: 5%;"> 
+				<input style="background: transparent;border: 1px solid #fff;border-radius: 10px;padding: 9px 12px 9px 20px;height: 42px;width: 36%;max-width: 268px;font-color: white;" type="text" name="name"  id="name"  placeholder="Name" /><br/>
+				<input style="font-color: white;background: transparent;border: 1px solid #fff;border-radius: 10px;padding: 9px 12px 9px 20px;height: 42px;width: 36%;max-width: 268px;margin-top: 30px;" type="text" name="email"  id="email"  placeholder="Email/Tel*" />
+				<div id="f8-message" style="position: relative;bottom:100px;left: 300px;">
+					<textarea style="background: transparent;border: 1px solid #fff;border-radius: 10px;padding: 9px 12px 9px 20px;width: 40%;max-width: 290px;height: 96px;" name="message" id="message" rows="4" placeholder="Message"></textarea><br/>
+					<input style="padding: 10px 25px 10px;border: 1px solid #fff;border-radius: 10px;background: #fff;color: #333;margin-left: 180px;margin-top: 20px;cursor: pointer;" type="submit" value="Submit" ></input>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--版权信息-->
+		<div id="f9-last" style="width: 100%;height: 60px;background: #333;margin-top:-18px;text-align: center;">
+			<p style="color: #fff;line-height: 2;text-align: center;margin-bottom:0px;">© 2018 All right reserved.Development by QingFeng.</p>
+			<a style="color: white;text-align: center;display: block;" href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备18036003号-1</a>
+		</div>
+<!--图形界面-->
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<!--滚动效果-->
+<script>
+$(function(){
+    $('a[href*=#],area[href*=#]').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var $target = $(this.hash);
+            $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+            if ($target.length) {
+                var targetOffset = $target.offset().top;
+                $('html,body').animate({
+                    scrollTop: targetOffset
+                },
+                1000);
+                return false;
+            }
+        }
+    });
+})
+</script>
+<script> 
+        $(document).ready(function() { 
+            $('#myForm').ajaxForm(function() { 
+                alert("感谢你的留言!"); 
+            }); 
+        }); 
+    </script> 
+</body>
+</html>
+

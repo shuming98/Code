@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>模态框</title>
+</head>
+<body>
+<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+	观众参展报名
+</button>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					观众参展报名
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form action="" method="post" style="text-align:left;margin-left: 20%;">
+					<p style="font-size: 20px;">姓名：<input style="" type="text" /></p>
+					<p style="font-size: 20px;">电话：<input type="text" /></p>
+					<p style="font-size: 20px;">邮箱：<input type="text" /></p>
+					<p style="font-size: 20px;">性别：<input style="" type="radio" name="sex"  value="男" />男
+						    <input type="radio" name="sex"  value="女" />女
+					</p>
+					<p style="font-size: 20px;">能否按时参展：<input type="radio" name="ex" value="能" />能
+						    <input type="radio"  name="ex" value="不能" />不能
+					</p>
+					<p style="font-size: 20px;">备注：<textarea name="text" id="text" cols="30" rows="3"></textarea></p>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">提交更改
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+</body>
+</html>

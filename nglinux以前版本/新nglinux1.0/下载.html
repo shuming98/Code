@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>下载</title>
+	<style>
+	a{
+		color: blue;
+	}
+	a:visited{
+		color: gray;
+	}
+	a:hover{
+		color: red;
+	}
+	div{
+		text-decoration: none;
+		font-family:Helvetica,Tahoma,"微软雅黑","华文细黑","Microsoft YaHei",sans-serif;
+	}
+	input[type=text] {
+	    width: 130px;
+	    box-sizing: border-box;
+	    border: 2px solid #ccc;
+	    border-radius: 4px;
+	    font-size: 16px;
+	    background-color: transparent;
+	    padding: 12px 20px 12px 20px;
+	    -webkit-transition: width 0.4s ease-in-out;
+	    transition: width 0.4s ease-in-out;
+	}
+
+	input[type=text]:focus {
+	    width: 300px;
+	}
+
+	#index ul a li{
+		display: block;
+		float: left;
+		color: black;
+		line-height: 50px;
+		font-size: 25px;
+		border-right:3px solid orange;
+		padding: 0px 46px 0px;
+	}
+	#index ul a li{
+		color: black;
+	}
+	#index ul a:visvited li{
+		color: gray;
+	}
+	#index ul a:hover li{
+		background: khaki;
+		color:blue;
+		font-size: 30px;
+	}
+	#r2 ul li{
+		list-style-type: none;
+		list-style-image: url("./下载页面/link.png");
+		list-style-position: outside;
+		position: relative;
+	}
+	#r2 ul li a{
+		position: relative;
+		bottom: 12px;
+		text-decoration:none;
+		padding: 1px;
+		font-size: 15px;
+	</style>
+</head>
+<body>
+	<div id="header-container" style="margin-top:-6px;">
+		<div style="height:50px;border-bottom: 1px solid gray;background:#f8f8f8;width: 100%;box-shadow: 0 1px 0 #999;">
+			<a href="./index.html"><img style="height: 50px;width: 200px;border: none;float: left;" src="./newlogin.png" alt="login" /></a>
+			<a href=""><span style="float:right;margin-right:80px;line-height: 50px;font-size: 20px;color:black;">Sign up</span></a>
+			<a href="#"><span style="float:right;margin-right:20px;line-height: 50px;font-size: 20px;color:black;">Sign in</span></a>
+			<a href="#"><img style="height: 50px;width: 50px;float: right;border: none;" src="./new登录login.png" alt="" /></a>
+			<div id="find" style="float: left;margin-left: 300px;">
+                <input type="text" name="search" placeholder="Search..">
+            </div>
+		</div>
+		<div><img style="width:100%;margin-bottom: -15px;" src="./下载页面/下载.png" alt="Download" /></div>
+		<div style="width: 100%;background:turquoise;border-radius: 10px;"><div id="index" style="height: 50px;width:1200px;margin:auto;">
+			<ul>
+				<a href="./index.html">
+					<li style="border-left: 3px solid orange;">Home</li>
+				</a>
+				<a href="./下载.html">
+					<li>Download</li>
+				</a>
+				<a href="./安装.html">
+					<li>Install</li>
+				</a>
+				<a href="./论坛.html">
+					<li>Forum</li>
+				</a>
+				<a href="./学习Linux.html">
+					<li>Learn Linux</li>
+				</a>
+				<a href="./加入我们.html">
+					<li>Join us</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+	<div id="main-container" style="width:1122px;height: 1900px;margin: auto;margin-top:20px;">
+		<div id="main-left" style="width: 780px;height: auto;border: 1px solid black;background: gainsboro;float: left;">
+			<h1>下载:</h1>
+			<h2 style="text-indent: 40px;">一、Linux主要发行版:</h2>
+			<img style="display: block;margin:auto;" src="./下载页面/release.png" alt="发行版图" />
+			<h2 style="text-indent: 40px;">二、主要发行版下载链接：</h2>
+			<span style="position: relative;bottom: 45px;left: 320px;">(注：本网站只提供官方链接，并不直接提供安装包)</span>
+			<div id="linux" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/linux.png" alt="linux" />
+				<div style="float:left;"><h3>Linux内核下载链接：<span style="font-size: 15px">(获取内核源代码，自主设计Linux系统)</span><h3><a href="https://www.kernel.org/" target="_blank">https://www.kernel.org/</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="debian" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/debian.png" alt="debian" />
+			<div style="float:left;"><h3>Debian发行版官方下载链接：<span style="font-size: 15px;">(APT包赛高!)</span><h3><a href="https://www.debian.org/distrib/" target="_blank">https://www.debian.org/distrib/</a></h3></h3></div>
+			</div>
+			<br/>
+			<div id="ubuntu" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float: left;" src="./下载页面/ubuntu.png" alt="ubuntu" />
+				<div style="float:left;"><h3>Ubuntu发行版官方下载链接：<span style="font-size: 15px;">(界面友好，容易上手)</span><h3><a href="http://www.ubuntu.org.cn/download/desktop" target="_blank">http://www.ubuntu.org.cn/download/desktop</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="slackware" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/slackware.png" alt="slackware" />
+				<div style="float:left;"><h3>Slackware发行版官方下载链接：<span style="font-size: 15px;">(简单就是美)</span><h3><a href="http://www.slackware.com/getslack/torrents.php" target="_blank">http://www.slackware.com/getslack/torrents.php</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="suse" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/suse.png" alt="suse" />
+				<div style="float:left;"><h3>Suse发行版官方下载链接：<span style="font-size: 15px;">(专门服务于企业级应用)</span><h3><a href="https://download.suse.com/index.jsp" target="_blank">https://download.suse.com/index.jsp</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="redhat" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/redhat.png" alt="redhat" />
+				<div style="float:left;"><h3>RedHat发行版官方下载链接：<span style="font-size: 15px;">(redhat发行版主要应用于企业，不建议个人使用，因为要收费)</span><h3><a href="https://www.redhat.com/en" target="_blank">https://www.redhat.com/en</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="centos" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/centos.png" alt="centos" />
+				<div style="float:left;"><h3>CentOS发行版官方下载链接：<span style="font-size: 15px">(学习运维服务器首选系统)</span><h3 style="font-size:17px;"><a href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso" target="_blank">http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="fedora" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/fedora.png" alt="fedora" />
+				<div style="float:left;"><h3>Fedora发行版官方下载链接：<span style="font-size: 15px;">(稳定性较差，适合桌面应用)</span><h3><a href="https://getfedora.org/en/workstation/download/" target="_blank">https://getfedora.org/en/workstation/download/</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="gentoo" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/gentoo.png" alt="gentoo" />
+				<div style="float:left;"><h3>Gentoo发行版官方下载链接：<span style="font-size: 15px;">(自主定制系统，深究Linux知识)</span><h3><a href="https://www.gentoo.org/downloads/" target="_blank">https://www.gentoo.org/downloads/</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="arch" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px;float:left;" src="./下载页面/arch.png" alt="arch" />
+				<div style="float:left;"><h3>Arch发行版官方下载链接：<span style="font-size: 15px;">(折腾～折腾～让你爱上折腾)</span><h3><a href="https://www.archlinux.org/download/" target="_blank">https://www.archlinux.org/download/</a></h3></h3>
+			</div>
+			</div>
+			<br/>
+			<div id="linux下载站" style="width: 780px;height: 100px;">
+				<img style="width: 100px;height: 100px; float: left;"  src="./下载页面/linuxorg.png" alt="linux.org" />
+				<div style="float:left;"><h3>其余Linux发行版下载网站<span style="font-size: 15px;">(已经检测，请放心下载)</span><h3><a href="https://www.linux.org/pages/download/" target="_blank">www.linux.org/pages/download/</a></h3></h3>
+			</div>
+			</div>
+		</div>
+		<div id="main-right" style="width: 310px;height: 700px;float: left;margin-left: 30px;position: sticky;top:0px;">
+			<div style="width: 302px;height: 355px;margin:auto;border:1px solid black;">
+			<div style="width: 290px;height: 30px;padding:3px 5px 3px ;background: powderblue;border:1px solid lightyellow;border-radius: 5px;margin:auto;"><img style="width: 30px;" src="./下载页面/r1.png" alt="" /><span style="font-size:20px;position: relative;bottom: 6px;">推荐内容</span></div>
+			<div id="r2" style="width: 300px;height: 300px;">
+				<ul>
+				<li><a href="https://zhuanlan.zhihu.com/p/26379813" target="_blank">漫画赏析:Linux内核到底长啥样?</a></li>
+				<li><a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg" target="_blank">Linux发行版（及其衍生）有哪些？</a></li>
+				<li><a href="https://www.zhihu.com/question/19646810" target="_blank">开始学习Linux用什么发行版比较好？</a></li>
+				<li><a href="https://www.zhihu.com/question/58083256" target="_blank">学编程用哪个版本的Linux环境好？</a></li>
+				<li><a href="https://www.zhihu.com/question/19852664" target="_blank">各个Linux发行版的风格和哲学分别是怎样的？</a></li>
+				<li><a href="https://zhuanlan.zhihu.com/p/34139332" target="_blank">2018年10大最漂亮的Linux发行版。</a></li>
+				<li><a href="https://www.zhihu.com/question/20319376/answer/23295172" target="_blank">国内有哪些比较好的 Linux 发行版？</a></li>
+			</ul>
+			</div>
+		    </div>
+			<div style="width: 302px;height:auto;border:1px solid black;margin: auto;margin-top:20px;">
+				<div style="width: 290px;height: 30px;padding:3px 5px 3px ;background: powderblue;border:1px solid lightyellow;border-radius: 5px;"><img style="width: 30px;" src="./下载页面/r1.png" alt="" /><span style="font-size:20px;position: relative;bottom: 6px;">加入我们</span></div>
+				<div>
+					<img style="padding:5px 25px 5px;width: 250px;height: 250px;" src="./下载页面/二维码.png" alt="二维码" />
+					<p style="margin: auto;margin-left: 55px;font-size: 20px;">微信扫码，加入我们</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

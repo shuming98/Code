@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+  <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+   <link rel="stylesheet" href="http://static.runoob.com/assets/foundation-icons/foundation-icons.css">
+	<title>nglinux</title>
+	<style>
+div{
+	font-family:Helvetica,Tahoma,Arial,STXihei,sans-serif;
+}
+a{
+text-decoration: none;
+color: black;
+}
+/**标签缩进**/
+	#mySidenav a {
+    position: absolute;
+    left: -85px;
+    transition: 0.3s;
+    padding: 5px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+/**标签缩进**/
+
+    /**slideInUp**/
+     .slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+  @keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  } 
+  /**slideInUp**/
+#nav li{
+	display: inline;
+}
+#nav li a{
+font-size:x-large;
+font-weight: bold;
+padding: 0px 10px 0px;
+color:#222;
+line-height: 55px;
+}
+#nav li a:visited{
+color:#111;
+}
+#nav li a:hover{
+color:#4fd2c2;
+}
+#f4-table{
+	border-collapse: collapse;
+	margin:auto;
+}
+#f4-table tr td{
+	border:1px solid black;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+#f4-table tr td img{
+	width: 200px;
+	height: 200px;
+}
+#f5-table{
+	border-collapse: collapse;
+	margin:auto;
+}
+
+.tr1{
+	width: 290px;
+	text-align: center;
+	float: left;
+}
+.tr1 img{
+	width: 180px;
+	height: 180px;
+
+}
+.tr2{
+	width: 290px;
+	height: 290px;
+	float: left;
+}
+.tr2 h2{
+	color: #fff;font-size: 25px;font-weight: bold;
+	margin: 30px 30px 20px;
+}
+.tr2 p{
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0px 30px 0px;
+}
+
+#pic-12 ul li a img{
+	width: 250px;height: 150px;
+}
+/*f7 css **/
+.container {
+    position: relative;
+    max-width: 120px;
+    max-height: 120px;          
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100px;
+  height: 100px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  padding-left-right:10px;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  background: #4fd2c2;
+  width: 100px;
+  height: 100px;
+
+}
+.span{
+	display: block;
+	text-align: center;
+	color: #333;
+	font-size: 17px;
+	font-weight:600 !important;
+}
+/**f7 css**/
+#f7-pic{
+	list-style-type: none;
+	display: inline;
+}
+#f7-pic li{
+	display: block;
+	float: left;
+	padding:7px 20px 7px;
+}
+#f7-pic a{
+	text-decoration: underline white;
+}
+#f8-left p{
+	color: #fff;
+	line-height: 10px;
+	font-size: 16px;
+}
+</style>
+</head>
+<body>
+	<div id="header" style="height:55px;width:100%;background: #fff;box-shadow:0 1px 0 #999;margin-top:0px;">
+		<a name="top"></a>		
+		<a name="start"></a>
+		<div style="width: 1200px;margin:auto;">
+		<a href="./index.html"><img style="width: 200px;height: 50px;float: left;" src="./首页/新首页图片/login.png" alt="login" /></a>
+		<div style="height:50px;float: right;margin-right: 50px;">
+		<ul id="nav" style="list-style-type: none;">
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./下载.html">Download</a></li>
+			<li><a href="./安装.html">Install</a></li>
+			<li><a href="./论坛.html">forum</a></li>
+			<li><a href="./学习Linux.html">Learn Linux</a></li>
+			<li><a href="./加入我们.html">Join us</a></li>
+			<li id="signup"><a style="color:#fff;background: #4fd2c2;padding: 5px 3px 5px;border-radius: 15px;margin-left: 15px;" href="#">Sign up</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+	 <div id="mySidenav" class="sidenav" style="position: fixed;">
+	  <a style="top:0px;background: #83b944;" href="./旧版首页.html" >返回旧版</a>
+	  <a style="top:20px;background: #56b4aa;" href="#start" >Start</a>
+	  <a style="top:50px;background: #717176;font-size: 15px;padding: 9px 0px 9px;" href="#opensource" >Open Source</a>
+	  <a style="top:80px;background: #83b944;" href="#creation" >Creation</a>
+	  <a style="top:110px;background: #f4b53c;" href="#features" >Features</a>
+	  <a style="top:140px;background: #b34348;" href="#uses" >Uses</a>
+	  <a style="top:170px;background: #7a93be;" href="#interface">Interface</a>
+	  <a style="top:200px;background: #d1ca3f;" href="#develop" >Develop</a>
+	  <a style="top:230px;background: #717176;" href="#contact" >Contact</a>
+	</div>
+	<div id="f1" style="width: 100%;height:660px;background: #f8f8f8">
+		<div id="f1-font" style="padding-top: 55px;width: 440px;height:300px;float: left;position: relative;left: 150px;top:150px;">
+			<h1 style="font-size:45px;">Do you need <strong>linux</strong>?</h1>
+			<p style="font-size: x-large;color: gray;line-height: 30px;margin-bottom: 60px;">Linux is a <strong>free</strong> and <strong>open source</strong> UNIX-like operating system.</p>
+			<a style="background:#4fd2c2;padding: 10px 20px 15px;margin-right: 30px;max-width: 130px;font-size: x-large;font-weight: bold;border-radius: 10px;color: white;" href="#"><i style="color: white;padding-right:15px;font-size: 30px;" class="fi-download"></i>Download</a>
+			<a style="background: #6562a7;padding: 10px 20px 15px;border-radius: 10px;max-width: 180px;font-size:x-large;font-weight: bold;color: white;" href="#"><i style="color: white;font-size: 30px;padding-right:15px;" class="fi-monitor"></i>Install</a>
+		</div>
+		<img class="slideInUp" style="float: right;position: relative;right: 80px;top:50px;" src="./首页/一/6-linux.png" alt="" />
+	</div>
+	<!--回到顶部-->
+	<a href="#top" ><div style="position: fixed;bottom:10px;right:20px;width: 40px;height: 40px;"><i style="color: #4fd2c2;font-size: 40px;opacity: 0.7;" class="fi-arrow-up"></i></div></a>
+	<div id="f2" style="width: 100%;height:700px;background: white;margin-top:140px;">
+		<a name="opensource"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;">Open Source</h1>
+		<img style="float: left;max-width: 80%;" src="./首页/二/opensource.png" alt="opensource" />
+			<ul id="f2-list" style="float:left;color: gray;line-height: 30px;margin-top:100px;">
+				<li style="font-size: x-large;">Freedom of use.</li>
+				<li style="font-size: x-large;">Freedom of research——You can get <br/>the software source code.</li>
+				<li style="font-size: x-large;">Freedom of dissemination and improvement.</li>
+			</ul>
+	</div>
+	<div id="f3"  style="width:100%;height:600px;background:#f8f8f8;">
+		<a name="creation"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;">The creation of Linux</h1>
+		<p style="float:left;width:40%;height: 200px;font-size: 30px;color:gray;position: relative;top: 60px;left:160px;">In 1991,<strong>Linus Torvalds</strong> began a project that later became the <strong>Linux kernel</strong>.After that,many people contributed code to the project.</p>
+		<img style="float:right;max-height: 70%;position: relative;right: 150px;" src="./首页/三/Linus_Torvalds.jpeg" alt="Linus_Torvalds" />
+	</div>
+	<div id="f4" style="width:100%;height:700px;margin-top: 100px;">
+		<a name="features"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;">Why use linux</h1>
+		<p style="max-width: 760px;font-size: 20px;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;">Users know <strong>what they want</strong> and understand what they are doing and they are responsible for their actions.</p>
+		<table id="f4-table" name="features" style="background: #f8f8f8;">
+			<tr>
+				<td><img src="./首页/四/开放性.png" alt="开放性" /></td>
+				<td><img src="./首页/四/多用户.png" alt="多用户" /></td>
+				<td><img src="./首页/四/网络功能.png" alt="网络功能" /></td>
+				<td><img src="./首页/四/系统安全.png" alt="系统安全" /></td>
+			</tr>
+			<tr>
+				<td>Openness</td>
+				<td>Multi-user</td>
+				<td>Rich network features</td>
+				<td>Reliable system security</td>
+			</tr>
+			<tr style="margin:auto;">
+				<td><img src="./首页/四/可移植性.png" alt="移植性" /></td>
+				<td><img src="./首页/四/兼容性.png" alt="兼容性" /></td>
+				<td><img src="./首页/四/用户界面.png" alt="用户界面" /></td>
+				<td><img src="./首页/四/速度性能.png" alt="速度性能" /></td>
+			</tr>
+			<tr>
+				<td>Good portability</td>
+				<td>Standard compatibility</td>
+				<td>Good user interface</td>
+				<td>Excellent speed performance</td>
+			</tr>
+		</table>
+	</div>
+	<div id="f5"  style="width: 100%;height:675;background: #f8f8f8;margin-top: 100px;">
+		<a name="uses"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;">Uses</h1>
+		<p style="max-width: 760px;font-size: 20px;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;">Today, various Linux distributions are used for various occasions, from <strong>embedded devices</strong> to <strong>supercomputers</strong>, and have established a position in the server domain. Usually, servers use <strong>LAMP</strong> combinations.</p>
+		<div id="div-8" style="width: 1164px;height:470px;margin:auto;background: #f8f8f8;">
+			<div class="tr1" style="background:rgb(172,172,172);"><img src="./首页/五/desktop.png" alt="desktop" /></div>
+			<div class="tr1" style="background:rgb(230,221,255);"><img src="./首页/五/server.png" alt="server" /></div>
+			<div class="tr1" style="background:rgb(172,172,172);"><img src="./首页/五/smart.png" alt="smart" /></div>
+			<div class="tr1" style="background:rgb(221,255,255);"><img src="./首页/五/embedded.png" alt="embedded" /></div>
+			<div class="tr2" style="background: #4fd2c2;">
+				<h2 style="">Desktop</h2>
+				<p>Most modern distributions include a graphical user environment.The two most popular environments being the KDE Plasma Desktop and GNOME.</p>
+			</div>
+			<div class="tr2" style="background: #6562a7;">
+				<h2>Servers</h2>
+				<p>Linux distributions have long been used as server operating systems.LAMP server-software combination has achieved popularity among developers, and which is one of the more common platforms for website hosting.</p>
+			</div>
+			<div class="tr2" style="background: #ff3366;">
+				<h2 style="">Smart devices</h2>
+			    <p>Several operating systems for smart devices , such as smartphones , tablet computers , smart TVs systems, are based on Linux.Android has become the dominant mobile operating system for smartphones.</p>
+			</div>
+			<div class="tr2" style="background: #d667cd;">
+				<h2 style="">Embedded devices</h2>
+				<p>Linux's low cost, powerful customization capabilities and good portability make Linux widely used in embedded systems.</p>
+			</div>
+		</div>
+	</div>
+	<div id="f6"  style="margin-top: 100px;">
+		<a name="interface"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;">Interface</h1>
+		<p style="max-width: 760px;font-size: 20px;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;">Linux has a <strong>good user interface</strong>:command interface,graphical interface,etc.</p>
+			<div id="pic-12" style="width: 1080px;margin:auto;">
+			<ul class="clearing-thumbs" data-clearing>
+    <li><a href="./首页/六/Cinnamon.jpg" class="th"><img  data-caption="Cinnamon" src="./首页/六/Cinnamon.jpg" ></a><p style="text-align: center;">Cinnamon</p></li>
+    <li><a href="./首页/六/Unity.jpg" class="th"><img  data-caption="Unity" src="./首页/六/Unity.jpg" ></a><p style="text-align: center;">Unity</p></li>
+    <li><a href="./首页/六/Enlightenment.jpg" class="th"><img  data-caption="Enlightenment" src="./首页/六/Enlightenment.jpg" ></a><p style="text-align: center;">Enlightenment</p></li>
+    <li><a href="./首页/六/Fluxbox.jpg" class="th"><img  data-caption="Fluxbox" src="./首页/六/Fluxbox.jpg" ></a><p style="text-align: center;">Fluxbox</p></li>
+    <li><a href="./首页/六/GNOME.jpg" class="th"><img  data-caption="GNOME" src="./首页/六/GNOME.jpg" ></a><p style="text-align: center;">GNOME</p></li>
+     <li><a href="./首页/六/Mate.jpg" class="th"><img  data-caption="Mate" src="./首页/六/Mate.jpg" ></a><p style="text-align: center;">Mate</p></li>
+    <li><a href="./首页/六/Pantheon.jpg" class="th"><img  data-caption="Pantheon" src="./首页/六/Pantheon.jpg" ></a><p style="text-align: center;">Pantheon</p></li>
+    <li><a href="./首页/六/i3-gaps.jpg" class="th"><img  data-caption="i3-gaps" src="./首页/六/i3-gaps.jpg" ></a><p style="text-align: center;">i3-gaps</p></li>
+    <li><a href="./首页/六/Trinity.jpg" class="th"><img  data-caption="Trinity" src="./首页/六/Trinity.jpg" ></a><p style="text-align: center;">Trinity</p></li>
+    <li><a href="./首页/六/Xfce.jpg" class="th"><img  data-caption="Xfce" src="./首页/六/Xfce.jpg" ></a><p style="text-align: center;">Xfce</p></li>
+    <li><a href="./首页/六/KDE-Plasma.jpg" class="th"><img  data-caption="KDE-Plasma" src="./首页/六/KDE-Plasma.jpg" ></a><p style="text-align: center;">KDE-Plasma</p></li>
+    <li><a href="./首页/六/Sugar.jpg" class="th"><img  data-caption="Sugar" src="./首页/六/Sugar.jpg" ></a><p style="text-align: center;">Sugar</p></li>
+  </ul>
+		</div>
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+	</div>
+	<div id="f7" style="width:100%;margin-top: 100px;height: 750px;background:#f8f8f8; ">
+		<a name="develop"></a>
+		<span style="width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;"></span>
+		<h1 style="text-align: center;">Programming on linux</h1>
+		<p style="max-width: 760px;font-size: 20px;color: #999;text-align: center;margin:0 auto;margin-bottom: 30px;">Linux is a <strong>highly customizable environment</strong> and offers many <strong>excellent development tools.</strong></p>
+		<div id="pic-24" style="width: 1000px;margin:auto;">
+			<ul id="f7-pic">
+				<li><div class="container">
+  <img src="./首页/七/chrome.png" alt="chrome" class="image" >
+  <span class="span">Chrome</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.google.cn/chrome/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/firefox.png" alt="firefox" class="image">
+  <span class="span">Firefox</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/git.png" alt="git" class="image">
+  <span class="span">Git</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://git-scm.com/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/github.png" alt="github" class="image">
+  <span class="span">Github</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://github.com/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/apache.png" alt="apache" class="image">
+  <span class="span">Apache</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="http://www.apache.org/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/mysql.png" alt="mysql" class="image">
+  <span class="span">MySQL</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.mysql.com/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/php.png" alt="php" class="image">
+  <span class="span">PHP</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="http://www.php.net/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/python.png" alt="python" class="image">
+  <span class="span">Python</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.python.org/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/perl.png" alt="perl" class="image">
+  <span class="span">Perl</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="http://www.perl.org/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/vim.png" alt="vim" class="image">
+  <span class="span">Vim</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.vim.org/download.php" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/gedit.png" alt="gedit" class="image">
+  <span class="span">Gedit</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://gedit.en.softonic.com/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/emacs.png" alt="emacs" class="image">
+  <span class="span">Emacs</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="http://www.gnu.org/software/emacs/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/eclipse.png" alt="eclipse" class="image">
+  <span class="span">Eclipse</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.eclipse.org/downloads/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/gcc.png" alt="gcc" class="image">
+  <span class="span">GCC</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://gcc.gnu.org/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/gdb.png" alt="gdb" class="image">
+  <span class="span">GDB</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="http://www.gnu.org/software/gdb/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/geany.png" alt="geany" class="image">
+  <span class="span">Geany</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href=" https://www.geany.org/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/Clang.png" alt="Clang" class="image">
+  <span class="span">Clang</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="http://clang.llvm.org/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/kdevelop.png" alt="kdevelop" class="image">
+  <span class="span">Kdevelop</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.kdevelop.org/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/qt.png" alt="qt" class="image">
+  <span class="span">Qt Creator</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www1.qt.io/cn/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/sublime.png" alt="sublime" class="image">
+  <span class="span">Sublime</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.sublimetext.com/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/Jetbrains.png" alt="Jetbrains" class="image">
+  <span class="span">JetBrains</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.jetbrains.com/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/clion.png" alt="clion" class="image">
+  <span class="span">Clion</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://www.jetbrains.com/clion/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/vsc.png" alt="vsc" class="image">
+  <span class="span">VS code</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://code.visualstudio.com/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+				<li><div class="container">
+  <img src="./首页/七/netbeans.png" alt="netbeans" class="image">
+  <span class="span">NetBeans</span>
+  <div class="middle" style="width: 100%;height:100%;">
+    <a href="https://netbeans.org/" target="_blank"><div class="text">Learn more</div></a>
+  </div>
+</div></li>
+			</ul>
+		</div>
+	</div>
+	<div id="f8"  style="width: 100%;height: 400px;background: #4fd2c2;margin-top: 200px;">
+		<a name="contact"></a>
+		<div id="f8-left" style="float: left;margin:60px 0px 0px 75px;width: 450px; ">
+			<h5 style="color: #fff;"><b>contact us</b></h5>
+			<h2 style="color: #fff;margin-bottom: 30px;">QUESTIONS AND <b>INQUIRIES</b></h2>
+			<p>Contacts:Kwong Super Mao</p>
+			<p>WeChat&TEL:13556178373</p>
+			<p>Mailbox:1165296623@qq.com</p>
+			<p>Or, send us questions or comments by filling out the form.</p>	
+		</div>
+		<div id="f8-right" style="float: left;margin-top: 120px;width: 677px;height: 180px;">
+			<form id="demo" method="post"  onsubmit="return sub();" >
+				<input style="background: transparent;border: 1px solid #fff;border-radius: 10px;padding: 9px 12px 9px 20px;height: 42px;width: 300px;font-color: white;" type="text" name="name"  id="name"  placeholder="Name" />
+				<input style="font-color: white;background: transparent;border: 1px solid #fff;border-radius: 10px;padding: 9px 12px 9px 20px;height: 42px;width: 300px;margin-top: 30px;" type="text" name="email"  id="email"  placeholder="Email/Tel*" />
+				<div id="f8-message" style="float: right;position: relative;bottom: 120px;right: 40px;">
+					<textarea style="background: transparent;border: 1px solid #fff;border-radius: 10px;padding: 9px 12px 9px 20px;width: 300px;height: 100px;" name="message" id="message" rows="4" placeholder="Message"></textarea>
+					<input style="padding: 10px 25px 10px;border: 1px solid #fff;border-radius: 10px;background: #fff;color: #333;margin-left: 200px;" type="submit" value="Submit" ></input>
+				</div>
+			</form>
+		</div>
+	</div>
+		<div id="f9-last" style="width: 100%;height: 70px;background: #333;">
+			<p style="color: #fff;line-height: 70px;text-align: center;margin-bottom: 0px;">© 2018 All right reserved.Development by QingFeng.</p>
+		</div>
+		<script type="text/javascript">  
+    function sub() {  
+        $.ajax({  
+                cache: true,  
+                type: "POST",  
+                url:"./首页/_POST.php",  
+                data:$('#demo').serialize(), 
+                async: false,  
+                error: function(request) {  
+                    alert("Connection error:"+request.error);  
+                },  
+                success: function(data) {  
+                    alert("Your message was successfully sent!");  
+                }  
+            });  
+    }  
+</script>
+</body>
+</html>
+

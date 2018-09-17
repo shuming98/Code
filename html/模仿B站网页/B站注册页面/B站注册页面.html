@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>B站注册</title>
+	<style>
+	a{
+		text-decoration: none;
+		color: #00a1d6;
+	}
+	a:visited{
+		color: #00a1d6;
+	}
+	a:hover{
+		color: #F35C8F;
+	}
+	input{
+		border:1px solid gray;
+	  	border-radius: 3px;
+	}
+	</style>
+</head>
+<body>
+	<img src="login-header.png" alt="pic" />
+	<div style="height: 450px; width: 420px;margin:auto;">
+		<form action="http://127.0.0.1/php/_POST.php" method="post">
+			<input style="width: 395px;height: 20px;color: #a5a5a5;padding: 10px;" type="text" name="uname" placeholder="昵称（例：bilibili)"/>
+			<br />
+			<br />
+			<input style="width: 395px;height: 20px;color: #a5a5a5;padding: 10px;" type="password" name="password" placeholder="密码(6-16个字符组成，区分大小字)"/>
+			<br />
+			<br />
+			<select style="width: 90px; height: 40px" name="area" id="area">
+				<option value="中国大陆">中国大陆</option>
+				<option value="美国">美国</option>
+				<option value="英国">英国</option>
+				<option value="日本">日本</option>
+				<option value="新加坡">新加坡</option>
+			</select>
+			<input style="width: 310px;height: 22px; padding:9px 0px 9px 10px; color: #00a1d6;" type="text" name="tel" placeholder="填写常用手机号码" />
+			<span style="float: right;font-size: 12px;color:#00a1d6; ">用邮箱注册&gt</span>
+			<br />
+			<br />
+			<input style="width: 275px;height: 20px; padding:9px 0px 9px 10px; color: #00a1d6;float:left;" type="text" name="code" />
+			<input style="width: 130px; height: 40px;float:left;background:#00a1d6;color: white;" type="submit" name="get-code" value="点击获取" />
+			<br />
+			<br />
+			<br />
+			<input type="checkbox" name="read" value="read" /><span style="font-size: 12px">我已同意<a href="https://passport.bilibili.com/register/licence?spm_id_from=333.39.registerForm.3">《哔哩哔哩弹幕网用户使用协议》</a>和<a href="https://www.bilibili.com/blackboard/help.html#q">《哔哩哔哩弹幕网账号中心规范》</a></span>
+			<input style="width: 415px;height: 40px;background: #00a1d6;color: white;" type="submit" name="login" value="注册" />
+			<span style="font-size: 5px;color: #00a1d6;float:right;">已有账号，直接登录&gt</span>
+		</form>
+	</div>
+	<img src="login-foot.png" alt="pic" />
+</body>
+</html>

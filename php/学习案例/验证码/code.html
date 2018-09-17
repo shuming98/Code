@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录页面</title>
+</head>
+<body>
+<form method="post" action="./form.php">
+    <p>账号:<input type="text" id="user" style="border=3px solid blue; padding: 5px 10px 5px;" /></p>
+    <p>密码:<input type="password" id="password" style="border=3px solid blue; padding: 5px 10px 5px;"/></p>
+    <div style="margin-left: 80px;">
+    <p >验证码: <img id="captcha_img" border='1' src='./captcha2.php?r=echo rand(); ?>' />
+    <a href="javascript:void(0)" onclick="document.getElementById('captcha_img').src='./captcha2.php?r='+Math.random()">换一个?</a>	
+    </p></div>
+  <P>请输入验证码:<input id="code" type="text" name='authcode' value=''/></p>
+  <p><a href=""><input  type='submit' value='提交' style='padding:6px 5px;'/></a></p>
+</form>
+
+</body>
+</html>
+
