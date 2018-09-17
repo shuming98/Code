@@ -63,7 +63,7 @@ div{
 	<span style="font-size: 1.3em;color:red;padding: 33px;">轻风:&nbsp&nbsp最近沉迷Hollow Knight，忘记更新了!-_-!</span>
 	<div style="border-bottom: 1px dashed #999;"></div>
 	<?php 
-	$conn=mysqli_connect('localhost','root','flzx_3QC','nglinux');
+	$conn=mysqli_connect('localhost','root','','nglinux');
 	mysqli_query($conn,'set names utf8');
 	$sql="select id,content from forum";
 	$res=mysqli_query($conn,$sql);
