@@ -5,21 +5,24 @@ a{text-decoration: none;color: black;}
 /**回到顶部**/
 #go_top{position: fixed;bottom:10px;right:20px;}
 #go_top>i{color:#fff;padding: 3px 5px 3px;font-size: 30px;background: #4fd2c2;}
+
 /**板块小划线和大标题**/
 .cyan_line{width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;}
 .f_title{text-align: center;font-size: 2.8em;font-weight: normal;margin-top: 8px;}
+
 /**导航栏**/
-#header{height:50px;width:100%;background: #fff;box-shadow:0 1px 0 #999;}
-#header_div1{width: 100%;margin:auto;}
-#header_div1>a>img{width: 200px;height: 50px;float: left;margin-left: 3.4%;}
-#header_div2{height:50px;float: right;margin-right: 30px;}
+#header{height:55px;width:100%;background: #fff;box-shadow:0 1px 0 #999;}
+#header_div1{width: 1200px;margin:auto;}
+#header_logo{width: 200px;height: 50px;float: left;}
+#header_div2{height:50px;float: right;margin-right: -13px;}
 .nav{list-style-type: none;}
 .nav li{display: inline;}
 .nav li a{text-decoration: none;font-size:x-large;font-weight: bold;
-padding: 0px 10px 0px;color:#222;line-height: 1;}
+padding: 0px 10px 0px;color:#222;line-height: 23px;}
 .nav li a:visited{color:#111;}
 .nav li a:hover{color:#4fd2c2;}
-#signup_a{color:#fff;background: #4fd2c2;padding: 5px 3px 5px;border-radius: 15px;margin-left: 15px;}
+#header_signup{color:#fff;background: #4fd2c2;padding: 5px 3px 5px;
+border-radius: 15px;margin-left: 15px;}
 #lang_a{font-weight: normal;font-size: 1.2em;text-decoration: underline;}
 
 /**左上角标签缩进**/
