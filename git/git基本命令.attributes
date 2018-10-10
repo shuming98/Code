@@ -6,7 +6,7 @@
                git config --global user.name "email@example.com"
                git config --global color.ui true
 
-三、创建本地版本库
+三、创建本地版本库ß
 	1)创建空目录：mkdir 目录名
 	           cd    目录名
 
@@ -16,7 +16,8 @@
 	1)版本库(目录)下新建一个文件。
 	2)把文件添加到仓库：git add 文件名1 文件名2 文件3 ...... （文件放入暂存区）
 	3)把文件提交到仓库：git commit -m "提交文字说明"         （文件放入分支）
-
+	4)git commit -a 相当于②加③
+ß
 五、查看文件修改和状态
 	1）查看仓库当前状态：git status
 	2）查看文件修改：git diff 文件名  [仓库与目录文件的不同]
