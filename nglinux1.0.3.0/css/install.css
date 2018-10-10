@@ -62,7 +62,7 @@ visibility: visible;}
 100% {-webkit-transform: translateX(0);transform: translateX(0);}} 
 
 /*教程*/
-#main_container{width:1200px;height:8600px;margin: auto;margin-top:20px;background: #f8f8f8;}
+#main_container{width:1200px;height:8800px;margin: auto;margin-top:20px;background: #f8f8f8;}
 #main_left{width:780px;height: 8200px;margin:auto;}
 #main_big_title{text-align: center;}
 .main_qianyan>p{width: 640px;height: 130px;margin: auto;border: 1px solid #999;margin-top: 20px;

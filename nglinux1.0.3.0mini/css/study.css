@@ -1,0 +1,47 @@
+*{text-decoration:none; font-family:Helvetica,Tahoma,"微软雅黑","华文细黑","Microsoft YaHei",sans-serif}
+body{background:#f8f8f8; margin:0px; overflow-x:hidden}
+table{border-collapse:collapse}
+td{border:1px solid #999}
+a{color:#000}
+a:visited{color:#666}
+a:hover{color:#4fd2c2}
+
+#header{height:55px; width:100%; background:#fff}
+#header_div1{width:1200px; margin:auto}
+#header_logo{width:200px; height:50px; float:left}
+#header_div2{height:50px; float:right; margin-right:50px}
+.nav{list-style-type:none}
+.nav li{display:inline}
+.nav li a{text-decoration:none; font-size:x-large; font-weight:bold; padding:0px 10px 0px; color:#222; line-height:23px}
+.nav li a:visited{color:#111}
+.nav li a:hover{color:#4fd2c2}
+#header_signup{color:#fff; background:#4fd2c2; padding:5px 3px 5px; border-radius:15px; margin-left:15px}
+
+#header_pic{width:100%; height:300px; background:url(../img/study/1.jpg); background-repeat:no-repeat; background-position:50%}
+#cav{background:black; display:block; width:100%; height:250px}
+#myCanvas{width:100%; height:100%}
+
+#main_container{width:1122px; height:870px; margin:auto; margin-top:20px}
+#main_left{width:780px; height:870px; float:left; background:#f8f8f8; margin:auto}
+#main_left_div1{height:30px; padding:3px 5px 3px; background:powderblue; border:1px solid lightyellow; border-radius:5px}
+.icon{width:30px}
+.re_title{font-size:20px; position:relative; bottom:6px}
+#re_book_img1{width:219px; height:255px; margin:0px 20px 0px}
+#re_book_img2{width:228px; height:247px; margin:0px 20px 0px}
+#re_book_img3{width:197px; height:249px; margin:0px 20px 0px}
+#main_left_div2{height:30px; padding:3px 5px 3px; background:powderblue; border:1px solid lightyellow; border-radius:5px; margin-top:50px}
+#re_video{width:240px}
+#re_video_td{border:none}
+#re_video_img{border:none; width:100%; height:50%}
+#re_video_td2{border:none; text-align:center}
+
+#main_right{width:310px; height:700px; float:left; margin-left:30px; position:sticky; top:0px}
+#main_right_div1{width:302px; height:320px; margin:auto; border:1px solid #999}
+#main_right_div2{width:290px; height:30px; padding:3px 5px 3px; background:powderblue; border:1px solid lightyellow; border-radius:5px; margin:auto}
+#main_right_content_1{width:300px; height:300px}
+#main_right_content_1 ul li{list-style-type:none; list-style-image:url("../img/study/link.png"); list-style-position:outside; position:relative}
+#main_right_content_1 ul li a{position:relative; bottom:12px; text-decoration:none; padding:1px; font-size:15px}
+#main_right_div3{width:302px; height:320px; border:1px solid #999; margin:auto; margin-top:20px}
+#main_right_div4{width:290px; height:30px; padding:3px 5px 3px; background:powderblue; border:1px solid lightyellow; border-radius:5px}
+#QR{padding:5px 25px 0px; width:250px; height:250px}
+#QR_p{margin:auto; margin-left:55px; font-size:20px}

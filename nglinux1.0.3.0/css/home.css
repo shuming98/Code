@@ -175,9 +175,9 @@ img.hover-shadow{transition: 0.3s;}
 #f8_right{float: left;margin-top: 120px;width: 60%;height: 180px;}
 #myForm{margin-left: 5%;}
 #name{background: transparent;border: 1px solid #fff;border-radius: 10px;
-  padding: 9px 12px 9px 20px;height: 42px;width: 36%;max-width: 268px;font-color: white;}
-#email{font-color: white;background: transparent;border: 1px solid #fff;
-border-radius: 10px;padding: 9px 12px 9px 20px;height: 42px;width: 36%;max-width: 268px;margin-top: 30px;}
+  padding: 9px 12px 9px 20px;height: 42px;width: 36%;max-width: 268px;}
+#email{background: transparent;border: 1px solid #fff;border-radius: 10px;padding: 9px 12px 9px 20px;
+height: 42px;width: 36%;max-width: 268px;margin-top: 30px;}
 #myForm_message{position: relative;bottom:100px;left: 300px;}
 #message{background: transparent;border: 1px solid #fff;border-radius: 10px;
   padding: 9px 12px 9px 20px;width: 40%;max-width: 290px;height: 96px;}

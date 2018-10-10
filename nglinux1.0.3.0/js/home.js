@@ -6,26 +6,26 @@
 			alert('请输入正确的邮箱或手机号码');
 			return false;
 		}
-	}
+	};
 //图形界面
 function openModal() {
   document.getElementById('myModal').style.display = "block";
-}
+};
 
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
-}
+};
 
 var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
-}
+};
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
-}
+};
 
 function showSlides(n) {
   var i;
@@ -43,7 +43,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
-}
+};
 //滚动效果
 $(function(){
     $('a[href*=#],area[href*=#]').click(function() {
@@ -60,4 +60,4 @@ $(function(){
             }
         }
     });
-})
+});
