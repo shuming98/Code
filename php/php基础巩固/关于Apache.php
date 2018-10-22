@@ -7,7 +7,7 @@
 Apache:80端口  ftp:21端口 ssh:22端口
 Apache响应静态文件,不认识PHP需要装PHP解析器。
 
-*Apache如何服务多个域名(一个服务器放多个网站)
+*Apache如何服务多个域名(一个服务器放多个网站)[没有vhost文件就直接在httpd.conf上写]
 1）在apache配置文件"httpd.conf"找到"httpd-vhosts.conf",并取消屏蔽(去掉"#")
 2)在apache额外配置文件"httpd-vhosts.conf"输入:
 
@@ -26,4 +26,6 @@ DocumentRoot "对应的网站目录"  如,/Users/www/nglinux
 "DirectoryIndex index.html index.php"
 3)重启Apache
 
+
+/sbin/service httpd configtest    检测apache配置文件有无错
  ?>
