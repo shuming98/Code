@@ -1,5 +1,5 @@
 <?php  
-$conn=mysqli_connect('localhost','root','','nglinux');
+$conn=mysqli_connect('127.0.0.1','root','123456','nglinux');
 mysqli_query($conn,'set names utf8');
 $sql="insert into forum(content) values ('$_POST[textarea]')";
 $res=mysqli_query($conn,$sql);

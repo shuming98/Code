@@ -37,7 +37,7 @@
 	<span class="read_span">轻风:&nbsp;&nbsp; South park</span>
 	<div class="border_bottom"></div>
 	<?php 
-	$conn=mysqli_connect('localhost','root','','nglinux');
+	$conn=mysqli_connect('127.0.0.1','root','123456','nglinux');
 	mysqli_query($conn,'set names utf8');
 	$sql="select id,content from forum";
 	$res=mysqli_query($conn,$sql);

@@ -6,6 +6,9 @@
     3.建库:create databases 库名;
     4.删库:drop database 库名;
 
+零_壹、修改数据库密码
+    1.mysqladmin -u用户名 -p password 新密码  
+
 一、创建表:建表就是声明列的过程。(列，选什么类型的列？列给什么样的属性?)
 语法: create table 表名(
 	列名 类型 属性
