@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>管理系统登录页面</title>
-</head>
 <style>
     body{background: #f8f8f8;}
 	#container{
@@ -57,13 +56,14 @@
 		margin-left: 50px;
 	}
 </style>
+</head>
 <body>
 	<div id="container">
 		<div id="main">
 			<img id="logo" src="./logo.png" alt="logo">
 			<h2 id="title_h2"><i>无人经济体验展</i></h2>
 				<h1 id="title_h1">网站信息管理系统</h1>
-				<form id="login" action="">
+				<form id="login" action="#">
 					<p>账号：<input class="textbox" type="text"></p>
 					<p>密码：<input class="textbox" type="password"></p>
 					<input id="login_button1" type="submit" value="登录">

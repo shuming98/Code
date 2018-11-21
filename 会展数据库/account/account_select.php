@@ -113,20 +113,29 @@ td{
       <td>账号</td>     
       <td>密码</td>
       <td>最后修改时间</td>
-      <td colspan="2">数据维护操作</td> 
+      <td colspan="2">数据维护操作</td>
     </tr>
     <?php
   error_reporting(0);
-  $username=$_GET['username'];
+  
   $id=$_GET['id'];    
+  $username=$_GET['username'];
+
   $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
   mysqli_query($conn,'set names utf8');
+  
+  $sql="select * from account where id = '$id'";
+  $sql2="select * from account where username = '$username'";
 
-  $sql="select * from account where username = '$username'";
-  $sql2="select * from account where id = '$id'";
+  $data=mysqli_query($conn,$sql);
+  $data2=mysqli_query($conn,$sql2);
 
-  $username!==NULL?($sql=$sql):($sql=$sql2);
-  $data=mysqli_query($conn,$sql); 
+  if(mysqli_num_rows($data)){ 
+    $data=$data;
+  }else{
+    $data=$data2;
+  }
+
   while($row=mysqli_fetch_assoc($data)){
    ?>
     <tr>
@@ -140,7 +149,8 @@ td{
   <?php }
     ?>
   </table>
-  <?php if(($username!==NULL || $id!==NULL)&&($data->num_rows)==0){
+  <?php 
+  if(($username!==NULL || $id!==NULL)&&($data->num_rows)==0){
     echo '<h2>没有该查询结果！！！</h2>';
   } 
    mysqli_close($conn);

@@ -80,7 +80,7 @@
 <span class="title_span"></span>
 <form class="form_account" method="POST">
   <p>账号：<input class="form_input" type="text" disabled="disabled" name="username" value="<?php echo $arr['username']; ?>"  ></p>
-  <p>密码：<input class="form_input" type="password" name="password" value="<?php echo $arr['password']; ?>" ></p>
+  <p>密码：<input class="form_input" type="password" name="password" value="<?php echo $arr['password']; ?>" required="required"></p>
   <input class="form_button" type="submit" />
   <input class="form_button" type="reset" />
 </form>
