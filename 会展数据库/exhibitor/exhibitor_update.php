@@ -7,7 +7,7 @@
   <style>
 .div_table{
   height: 559px;
-  margin: 20px 0px 50px 100px;
+  margin-top: 20px;
   overflow:scroll;
 }
 table{
@@ -15,9 +15,10 @@ table{
 }
 td{
   padding: 3px 20px 0px;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   border: 1px dashed #3198D5;
+  white-space:nowrap;
 }
 </style>
 </head>
@@ -51,9 +52,9 @@ td{
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">展商信息添加</a>
-        <a href="#">展商信息查询</a>
-        <a href="#">展商信息维护</a>
+        <a href="./exhibitor_add.html">展商信息添加</a>
+        <a href="./exhibitor_select.php">展商信息查询</a>
+        <a href="./exhibitor_update.php">展商信息维护</a>
       </div>
   </div> 
   <div class="dropdown">
@@ -70,35 +71,37 @@ td{
   <a href="#">退出</a>
 </div>
 </div>
-<h2 class="title_h2">用户信息维护</h2>
+<h2 class="title_h2">展商信息维护</h2>
 <span class="title_span"></span>
 <div class="div_table">
   <table>
     <tr>
-      <td>姓名</td>
-      <td>性别</td>     
-      <td>年龄</td>
-      <td>月收入</td>
-      <td>参展意向</td>     
-      <td>手机号</td>
-      <td>邮箱</td>
+      <td>联系人</td>
+      <td>企业名称</td>     
+      <td>联系地址</td>
+      <td>联系号码</td>
+      <td>邮箱</td>     
+      <td>展区申请</td>
+      <td>展台类型</td>
+      <td>申请数量</td>
       <td colspan="2">数据维护操作</td> 
     </tr>
     <?php 
   error_reporting(0);
   $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
   mysqli_query($conn,'set names utf8');   
-  $data=mysqli_query($conn,'select * from user');
+  $data=mysqli_query($conn,'select * from exhibitor');
   while($row=mysqli_fetch_assoc($data)){
    ?>
     <tr>
-      <td><?php echo $row['name']; ?></td>
-      <td><?php echo $row['gender']; ?></td>
-      <td><?php echo $row['age']; ?></td>
-      <td><?php echo $row['income']; ?></td>
-      <td><?php echo $row['tend']; ?></td>
-      <td><?php echo $row['mobile_number']; ?></td>
-      <td><?php echo $row['email'],'<br/>'; ?></td>
+      <td><?php echo $row['username']; ?></td>
+      <td><?php echo $row['enterprise']; ?></td>
+      <td><?php echo $row['address']; ?></td>
+      <td><?php echo $row['tel']; ?></td>
+      <td><?php echo $row['email']; ?></td>
+      <td><?php echo $row['application']; ?></td>
+      <td><?php echo $row['type']; ?></td>
+      <td><?php echo $row['number'],'<br/>'; ?></td>
       <td><a href="./mysql_update.php?id=<?php echo $row['id']; ?>">修改</a></td>
       <td><a href="./mysql_delete.php?id=<?php echo $row['id']; ?>">删除</a></td>
     </tr>

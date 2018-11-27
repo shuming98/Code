@@ -24,7 +24,10 @@
   font-size: 20px;
 }
 .form_button{
-  font-size: 1em;
+   -webkit-appearance: button;
+  font-size: 18px;
+  border-radius: 7px;
+  background: #f8f8f8;
 }
 .div_table{
   width: 100%;
@@ -80,13 +83,13 @@ td{
       </div>
   </div> 
   <div class="dropdown">
-    <button class="dropbtn cursor">观众管理
+    <button class="dropbtn cursor">留言管理
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">观众信息添加</a>
-      <a href="#">观众信息查询</a>
-      <a href="#">观众信息维护</a>
+      <a href="#">留言信息添加</a>
+      <a href="#">留言信息查询</a>
+      <a href="#">留言信息维护</a>
     </div>
   </div> 
   <a href="#">关于</a>

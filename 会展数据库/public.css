@@ -6,6 +6,7 @@
   height: 720px;
   margin: auto;
   border: 1px solid #f8f8f8;
+  box-shadow: 0 2px 10px -1px rgba(36,41,46,.6);
 }
 /*导航栏*/
 .cursor{
@@ -15,7 +16,7 @@
     overflow: visible;
     background-color:#f8f8f8;
     z-index: 999;
-    width: 1280px;
+    width: 1278px;
     height: 52px;
     margin: auto;
 }
