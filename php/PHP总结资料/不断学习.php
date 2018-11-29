@@ -8,4 +8,7 @@ history.go(-1)或history.back(); //浏览器后退
 history.go(1)或history.forward(); //浏览器前进
 </script>" 
 
+
+$_GET 接收表单method="get"的数据
+$_POST 接收表单method="post"的数据
  ?>

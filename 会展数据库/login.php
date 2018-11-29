@@ -45,16 +45,16 @@
 		padding: 5px 10px 5px;
 		font-size: 1em;
 	}
-	#login_button1{
+	.login_button{
 		font-size: 1em;
 		width: 100px;
 		margin-left: 40px;
 	}
-	#login_button2{
-		font-size: 1em;
-		width: 100px;
-		margin-left: 50px;
+	.error_p{
+		text-align: center;
+		color: red;
 	}
+
 </style>
 </head>
 <body>
@@ -63,12 +63,42 @@
 			<img id="logo" src="./logo.png" alt="logo">
 			<h2 id="title_h2"><i>无人经济体验展</i></h2>
 				<h1 id="title_h1">网站信息管理系统</h1>
-				<form id="login" action="#">
-					<p>账号：<input class="textbox" type="text"></p>
-					<p>密码：<input class="textbox" type="password"></p>
-					<input id="login_button1" type="submit" value="登录">
-					<input id="login_button2" type="reset" value="重置">
+				<form id="login" action="./login.php" method="post">
+					<p>账号：<input class="textbox" type="text" name="account"></p>
+					<p>密码：<input class="textbox" type="password" name="password"></p>
+					<input class="login_button" type="submit" value="登录">
+					<input class="login_button" type="reset" value="重置">
 				</form>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+	<?php  
+	$account=$_POST['account'];
+	$password=$_POST['password'];
+
+	$conn=mysqli_connect('127.0.0.1','root','123456','uee');
+	mysqli_query($conn,'set names utf8');
+	$sql="select account,password from login where account='$account'";
+	$res=mysqli_query($conn,$sql);
+	$arr=mysqli_fetch_assoc($res);
+
+	if((empty($account)) || (empty($password)))
+	{
+		echo '<p class="error_p">*请填写正确的账号和密码</p>';
+		
+	}
+	else
+	{
+		if(($account==$arr['account']) && ($password==$arr['password']))
+		{
+			echo "<script>alert('登录成功,欢迎你$account');location.replace('./home/home.html');</script>";
+		}
+		else
+		{
+			echo '<p class="error_p">*账号或密码错误</p>';
+			exit;
+		}
+	}
+	?>
 		</div>
 	</div>
 </body>

@@ -31,7 +31,7 @@
   font-size: 20px;
 }
 .form_enterprise{
-  width: 260px;
+  width: 535px;
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
@@ -45,7 +45,7 @@
   font-size: 20px;
 }
 .form_email{
-  width: 300px; 
+  width: 575px; 
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
@@ -53,7 +53,7 @@
 }
 .form_option{
   font-size: 18px;
-  width: 130px;
+  width: 150px;
 }
 .form_button{
   -webkit-appearance: button;
