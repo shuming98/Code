@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../public.css">
+  <link rel="stylesheet" href="../css/public.css">
   <title>网站管理系统</title>
   <style>
 .div_table{
@@ -12,6 +12,7 @@
   overflow:scroll;
 }
 .form_update{
+  margin-top: 20px;
   margin-left: 100px;
 }
 .form_checkbox{
@@ -38,16 +39,16 @@ td{
 <body>
   <div class="container">
     <div class="navbar">
-      <div id="t_nav"> 
-    <a href="#">首页</a>
+      <div id="t_nav">  
+    <a href="../home/home.html">首页</a>
     <div class="dropdown">
       <button class="dropbtn cursor">账号管理
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="./account_add.html">账号信息添加</a>
-        <a href="./account_select.php">账号信息查询</a>
-        <a href="./account_update.php">账号信息维护</a>
+        <a href="../account/account_add.html">账号信息添加</a>
+        <a href="../account/account_select.php">账号信息查询</a>
+        <a href="../account/account_update.php">账号信息维护</a>
       </div>
     </div> 
     <div class="dropdown">
@@ -55,9 +56,9 @@ td{
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="./user_add.html">用户信息添加</a>
-        <a href="./user_select.php">用户信息查询</a>
-        <a href="./user_update.php">用户信息维护</a>
+        <a href="../user/user_add.html">用户信息添加</a>
+        <a href="../user/user_select.php">用户信息查询</a>
+        <a href="../user/user_update.php">用户信息维护</a>
       </div>
     </div> 
     <div class="dropdown">
@@ -75,14 +76,14 @@ td{
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">留言信息添加</a>
-      <a href="#">留言信息查询</a>
-      <a href="#">留言信息维护</a>
+      <a href="../message/message_add.html">留言信息添加</a>
+      <a href="../message/message_select.php">留言信息查询</a>
+      <a href="../message/message_update.php">留言信息维护</a>
     </div>
   </div> 
-  <a href="#">关于</a>
-  <a href="#">退出</a>
-</div>
+  <a href="../other/about_us.html">关于</a>
+  <a href="../index.php">退出</a>
+</div>  
 </div>
 <h2 class="title_h2">展商信息维护</h2>    
 <span class="title_span"></span>
@@ -134,7 +135,7 @@ td{
     </tr>
 
     <?php 
-  //error_reporting(0);
+  error_reporting(0);
   $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
   mysqli_query($conn,'set names utf8');   
   $data=mysqli_query($conn,'select * from exhibitor');

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-  <link rel="stylesheet" href="../public.css">
+  <link rel="stylesheet" href="../css/public.css">
 	<title>网站管理系统</title>
 	<style>
-#am{width: 100%;height: 548px;background: #472b68;}
+#am{width: 100%;height: 666px;background: #472b68;}
 #title{
   color: #FFF;
   font-weight: 100;
@@ -14,7 +14,7 @@
   margin: auto;
   text-shadow: 0 0 10px #00a2ca,0 0 20px #00a2ca,0 0 30px #00a2ca,0 0 40px #00b4ca,0 0 70px #00b4ca,0 0 80px #00b4ca,0 0 100px #00b4ca,0 0 150px #00b4ca;
   position: relative;
-  left: 25%;
+  left: 28%;
   top: 40%;
 }
 </style>
@@ -22,16 +22,16 @@
 <body>
   <div class="container">
 	  <div class="navbar">
-      <div id="t_nav">  <!--移动导航标签位置-->
-    <a href="#">首页</a>
+      <div id="t_nav"> 
+    <a href="./home.html">首页</a>
     <div class="dropdown">
       <button class="dropbtn cursor">账号管理
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">账号信息添加</a>
-        <a href="#">账号信息查询</a>
-        <a href="#">账号信息更新</a>
+        <a href="../account/account_add.html">账号信息添加</a>
+        <a href="../account/account_select.php">账号信息查询</a>
+        <a href="../account/account_update.php">账号信息更新</a>
       </div>
     </div> 
     <div class="dropdown">
@@ -39,9 +39,9 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">用户信息添加</a>
-        <a href="#">用户信息查询</a>
-        <a href="#">用户信息更新</a>
+        <a href="../user/user_add.html">用户信息添加</a>
+        <a href="../user/user_select.php">用户信息查询</a>
+        <a href="../user/user_update.php">用户信息更新</a>
       </div>
     </div> 
     <div class="dropdown">
@@ -49,9 +49,9 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">展商信息添加</a>
-        <a href="#">展商信息查询</a>
-        <a href="#">展商信息更新</a>
+        <a href="../exhibitor/exhibitor_add.html">展商信息添加</a>
+        <a href="../exhibitor/exhibitor_select.php">展商信息查询</a>
+        <a href="../exhibitor/exhibitor_update.php">展商信息更新</a>
       </div>
   </div> 
   <div class="dropdown">
@@ -59,13 +59,13 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">留言信息添加</a>
-      <a href="#">留言信息查询</a>
-      <a href="#">留言信息更新</a>
+      <a href="../message/message_add.html">留言信息添加</a>
+      <a href="../message/message_select.php">留言信息查询</a>
+      <a href="../message/message_update.php">留言信息更新</a>
     </div>
   </div> 
-  <a href="#">关于</a>
-  <a href="#">退出</a>
+  <a href="../other/about_us.html">关于</a>
+  <a href="../index.php">退出</a>
 </div>
 </div>
 <div id="am">

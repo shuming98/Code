@@ -5,41 +5,45 @@
   <link rel="stylesheet" href="../css/public.css">
 	<title>网站管理系统</title>
 	<style>
-.form_account{
-  width:  380px;
-  margin: 50px auto;
+.express{
+  width: 360px;
+  height: 180px;
+  margin: auto;
 }
-.form_account>p{
-   font-size: 1.5em;
+.express_p{
+  font-size: 1.1em;
+  text-align: center;
 }
-.form_input{
-   width: 300px;
-   padding: 5px 10px 5px;
-   font-size: 1em;
-   border: none;
-   outline: none;
-   border-bottom: 1px solid gray;
+.express_p span{
+  color: orange;
 }
-.form_button{
-  font-size: 1em;
-  width: 100px;
-  margin-left: 60px;
+.download{
+  width: 360px;
+  height: 200px;
+  margin: auto;
+}
+.download_img{
+  margin: 20px;
+}
+#copyright{
+  text-align: center;
+  margin-top: 180px;
 }
 </style>
 </head>
 <body>
   <div class="container">
 	  <div class="navbar">
-      <div id="t_nav">  
+      <div id="t_nav"> 
     <a href="../home/home.html">首页</a>
     <div class="dropdown">
       <button class="dropbtn cursor">账号管理
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="./account_add.html">账号信息添加</a>
-        <a href="./account_select.php">账号信息查询</a>
-        <a href="./account_update.php">账号信息维护</a>
+        <a href="../account/account_add.html">账号信息添加</a>
+        <a href="../account/account_select.php">账号信息查询</a>
+        <a href="../account/account_update.php">账号信息更新</a>
       </div>
     </div> 
     <div class="dropdown">
@@ -49,7 +53,7 @@
       <div class="dropdown-content">
         <a href="../user/user_add.html">用户信息添加</a>
         <a href="../user/user_select.php">用户信息查询</a>
-        <a href="../user/user_update.php">用户信息维护</a>
+        <a href="../user/user_update.php">用户信息更新</a>
       </div>
     </div> 
     <div class="dropdown">
@@ -59,7 +63,7 @@
       <div class="dropdown-content">
         <a href="../exhibitor/exhibitor_add.html">展商信息添加</a>
         <a href="../exhibitor/exhibitor_select.php">展商信息查询</a>
-        <a href="../exhibitor/exhibitor_update.php">展商信息维护</a>
+        <a href="../exhibitor/exhibitor_update.php">展商信息更新</a>
       </div>
   </div> 
   <div class="dropdown">
@@ -69,21 +73,26 @@
     <div class="dropdown-content">
       <a href="../message/message_add.html">留言信息添加</a>
       <a href="../message/message_select.php">留言信息查询</a>
-      <a href="../message/message_update.php">留言信息维护</a>
+      <a href="../message/message_update.php">留言信息更新</a>
     </div>
   </div> 
-  <a href="../other/about_us.html">关于</a>
+  <a href="./about_us.html">关于</a>
   <a href="../index.php">退出</a>
-</div>  
 </div>
-<h2 class="title_h2">账号信息修改</h2>
+</div>
+<h2 class="title_h2">关于数据库</h2>
 <span class="title_span"></span>
-<form class="form_account" method="POST">
-  <p>账号：<input class="form_input" type="text" disabled="disabled" name="username" value="<?php echo $arr['username']; ?>"  ></p>
-  <p>密码：<input class="form_input" type="password" name="password" value="<?php echo $arr['password']; ?>" required="required"></p>
-  <input class="form_button" type="submit" />
-  <input class="form_button" type="reset" />
-</form>
-</div>  
+<div class="express">
+<p class="express_p">本数据库管理系统属于<span>课程设计</span></p>
+<p class="express_p">采用<span>PHP+MySQL</span>组合完成的B/S结构</p>
+<p class="express_p">提供完整的源代码下载</p>
+<p class="express_p">允许<span>自由</span>下载、使用、修改并发布</p>
+</div>
+<div class="download">
+  <a href="" target="_blank"><img class="download_img" src="../img/rar.png" alt="rar"></a>
+  <a href="https://github.com/shuming98/Code/tree/master/会展数据库" target="_blank"><img class="download_img" src="../img/github.png" alt="github"></a>
+</div>
+<p id="copyright">&copy; 2018 All right reserved.Development by SQL.</p>
+</div>
 </body>
 </html>

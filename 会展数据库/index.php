@@ -60,10 +60,10 @@
 <body>
 	<div id="container">
 		<div id="main">
-			<img id="logo" src="./logo.png" alt="logo">
+			<img id="logo" src="./img/logo.png" alt="logo">
 			<h2 id="title_h2"><i>无人经济体验展</i></h2>
-				<h1 id="title_h1">网站信息管理系统</h1>
-				<form id="login" action="./login.php" method="post">
+				<h1 id="title_h1">网站数据管理系统</h1>
+				<form id="login" action="./index.php" method="post">
 					<p>账号：<input class="textbox" type="text" name="account"></p>
 					<p>密码：<input class="textbox" type="password" name="password"></p>
 					<input class="login_button" type="submit" value="登录">
@@ -90,7 +90,7 @@
 	{
 		if(($account==$arr['account']) && ($password==$arr['password']))
 		{
-			echo "<script>alert('登录成功,欢迎你$account');location.replace('./home/home.html');</script>";
+			echo "<script>alert('登录成功,欢迎您$account');location.replace('./home/home.html');</script>";
 		}
 		else
 		{

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../public.css">
+  <link rel="stylesheet" href="../css/public.css">
   <title>网站管理系统</title>
   <style>
 .div_table{
@@ -26,16 +26,16 @@ td{
 <body>
   <div class="container">
     <div class="navbar">
-      <div id="t_nav"> 
-    <a href="#">首页</a>
+      <div id="t_nav">  
+    <a href="../home/home.html">首页</a>
     <div class="dropdown">
       <button class="dropbtn cursor">账号管理
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="./account_add.html">账号信息添加</a>
-        <a href="./account_select.php">账号信息查询</a>
-        <a href="./account_update.php">账号信息维护</a>
+        <a href="../account/account_add.html">账号信息添加</a>
+        <a href="../account/account_select.php">账号信息查询</a>
+        <a href="../account/account_update.php">账号信息维护</a>
       </div>
     </div> 
     <div class="dropdown">
@@ -43,9 +43,9 @@ td{
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="./user_add.html">用户信息添加</a>
-        <a href="./user_select.php">用户信息查询</a>
-        <a href="./user_update.php">用户信息维护</a>
+        <a href="../user/user_add.html">用户信息添加</a>
+        <a href="../user/user_select.php">用户信息查询</a>
+        <a href="../user/user_update.php">用户信息维护</a>
       </div>
     </div> 
     <div class="dropdown">
@@ -53,9 +53,9 @@ td{
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">展商信息添加</a>
-        <a href="#">展商信息查询</a>
-        <a href="#">展商信息维护</a>
+        <a href="../exhibitor/exhibitor_add.html">展商信息添加</a>
+        <a href="../exhibitor/exhibitor_select.php">展商信息查询</a>
+        <a href="../exhibitor/exhibitor_update.php">展商信息维护</a>
       </div>
   </div> 
   <div class="dropdown">
@@ -68,9 +68,9 @@ td{
       <a href="./message_update.php">留言信息维护</a>
     </div>
   </div> 
-  <a href="#">关于</a>
-  <a href="#">退出</a>
-</div>
+  <a href="../other/about_us.html">关于</a>
+  <a href="../index.php">退出</a>
+</div>  
 </div>
 <h2 class="title_h2">留言信息维护</h2>
 <span class="title_span"></span>
@@ -80,15 +80,15 @@ td{
       <td>id</td>
       <td>联系人</td>     
       <td>企业名称</td>
-      <td>邮箱</td>
-      <td>留言信息</td>     
+      <td>邮箱</td> 
+      <td>留言信息</td>
       <td colspan="2">数据维护操作</td> 
     </tr>
     <?php 
   error_reporting(0);
   $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
   mysqli_query($conn,'set names utf8');   
-  $data=mysqli_query($conn,'select * from message');
+  $data=mysqli_query($conn,'select * from message order by id');
   while($row=mysqli_fetch_assoc($data)){
    ?>
     <tr>
