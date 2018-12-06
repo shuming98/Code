@@ -11,7 +11,6 @@
 }else{
 	$sql2="update exhibitor set username='".$_POST['username']."',enterprise='".$_POST['enterprise']."',address='".$_POST['address']."',tel='".$_POST['tel']."',email='".$_POST['email']."',application='".$_POST['application']."',type='".$_POST['type']."',number='".$_POST['number']."',time=current_timestamp where id='$id'";
 	$res2 = mysqli_query($conn,$sql2);
-	var_dump($sql2);
 	if(res2){
 		echo "<script>alert('修改成功');location.replace('exhibitor_update.php');</script>";
 	}else{

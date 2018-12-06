@@ -24,7 +24,7 @@
   font-size: 20px;
 }
 .form_enterprise{
-  width: 300px;
+  width: 230px;
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
@@ -38,24 +38,28 @@
   font-size: 20px;
 }
 .form_button{
-  -webkit-appearance: button;
-  font-size: 18px;
-  border-radius: 7px;
-  background: #f8f8f8;
+  padding: 1px 5px;
+  font-size: 18px;  
+  cursor: pointer;
+  color: #fff;
+  background-color: #3198D5;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
 }
 .div_table{
   width: 100%;
   float: left;
   height: 497px;
   margin-left:100px;
-  overflow:scroll;
+  overflow:auto;
 }
 table{
   border-collapse: collapse;
 }
 td{
   padding: 3px 20px 0px;
-  font-size: 1.2em;
+  font-size: 18px;
   text-align: center;
   border: 1px dashed #3198D5;
   white-space:nowrap;
@@ -120,7 +124,7 @@ td{
   <input class="form_button" type="submit" value="查询">
 </form>
 <form class="form_select" action="./message_select.php?enterprise=" method="get">
-  <span>企业名称：
+  <span>企业品牌：
   <input name="enterprise" class="form_enterprise" type="text"></span>
   <input class="form_button" type="submit" value="查询">
 </form>
@@ -137,7 +141,7 @@ td{
     <tr>
       <td>id</td>
       <td>联系人</td>     
-      <td>企业名称</td>
+      <td>企业品牌</td>
       <td>邮箱</td>
       <td>留言信息</td>     
       <td colspan="2">数据维护操作</td>

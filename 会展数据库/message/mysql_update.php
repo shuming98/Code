@@ -11,7 +11,6 @@
 }else{
 	$sql2="update message set message='".$_POST['message']."',time=current_timestamp where id='$id'";
 	$res2 = mysqli_query($conn,$sql2);
-	var_dump($sql2);
 	if(res2){
 		echo "<script>alert('修改成功');location.replace('message_update.php');</script>";
 	}else{

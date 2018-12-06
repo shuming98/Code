@@ -31,14 +31,31 @@
    outline: none;
    border-bottom: 1px solid gray;
 }
+input[type=radio]{
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+}
 .form_number{
   width: 50px;
 }
 .form_button{
-  font-size: 1em;
-  width: 100px;
-  margin:10px 0px 0px 80px;
-
+    padding: 3px 6px;
+    width: 110px;
+    text-align: center;
+    font-size: 20px;
+    margin:20px 0px 0px 70px;
+    border-radius: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: black;
+    border: 2px solid #555555;
+}
+.form_button:hover {
+    background-color: #555555;
+    color: #f8f8f8;
 }
 </style>
 </head>
@@ -97,8 +114,8 @@
 <form class="form_account" id="form_verify"  method="post">
   <span class="small_title_span">参展企业信息</span>
   <p>联系人：<input class="form_input" type="text" name="username" required="required" value="<?php echo $arr['username']; ?>"></p>
-  <p>企业名称：<input class="form_input" type="text" name="enterprise" required="required" value="<?php echo $arr['enterprise']; ?>"></p>
-  <p>联系地址：<input class="form_input" type="text" name="address" required="required" value="<?php echo $arr['address']; ?>"></p>
+  <p>企业品牌：<input class="form_input" type="text" name="enterprise" required="required" value="<?php echo $arr['enterprise']; ?>"></p>
+  <p>品牌发源地：<input class="form_input" type="text" name="address" required="required" value="<?php echo $arr['address']; ?>"></p>
   <p>联系号码：<input class="form_input" type="text" name="tel" required="required" value="<?php echo $arr['tel']; ?>"></p>
   <p>邮箱：<input class="form_input" type="text" name="email" required="required" value="<?php echo $arr['email']; ?>"></p>
   <span class="small_title_span">展区申请(单选)</span>
@@ -117,8 +134,8 @@
   <input type="radio" value="豪华展台双开" name="type">豪华展台双开
   </p>
   <p>申请数量：<input class="form_input form_number" type="text" name="number" required="required" value="<?php echo $arr['number']; ?>">个</p> 
-  <input class="form_button" type="submit" />
-  <input class="form_button" type="reset" />
+  <input class="form_button" type="submit" value="提交" />
+  <input class="form_button" type="reset" value="重置" />
 </form>           
 </div> 
 </div>  

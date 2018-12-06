@@ -24,10 +24,14 @@
   font-size: 20px;
 }
 .form_button{
-   -webkit-appearance: button;
-  font-size: 18px;
-  border-radius: 7px;
-  background: #f8f8f8;
+   padding: 1px 5px;
+  font-size: 18px;  
+  cursor: pointer;
+  color: #fff;
+  background-color: #3198D5;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
 }
 .div_table{
   width: 100%;

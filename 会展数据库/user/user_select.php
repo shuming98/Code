@@ -40,26 +40,32 @@
 .form_option{
   font-size: 18px;
   width: 130px;
+  height: 25px;
+  border-radius: 5px;
 }
 .form_button{
-  -webkit-appearance: button;
-  font-size: 18px;
-  border-radius: 7px;
-  background: #f8f8f8;
+  padding: 1px 5px;
+  font-size: 18px;  
+  cursor: pointer;
+  color: #fff;
+  background-color: #3198D5;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
 }
 .div_table{
   width: 100%;
   float: left;
   height: 497px;
   margin-left:100px;
-  overflow:scroll;
+  overflow:auto;
 }
 table{
   border-collapse: collapse;
 }
 td{
   padding: 3px 20px 0px;
-  font-size: 1.2em;
+  font-size: 18px;
   text-align: center;
   border: 1px dashed #3198D5;
 }

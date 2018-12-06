@@ -23,38 +23,43 @@
 		float: left;
 	}
 	#title_h2{
-		font-size: 1.7em;
+		font-size: 25px;
 		float: left;
 		font-weight: 300;
 		text-indent: 30px;
 	}
 	#title_h1{
-		font-size: 2em;
+		font-size: 32px;
 		float: left;
 		position: relative;
 		bottom: 30px;	
 	}
 	#login{
-		float: left;
-		margin-left: 50px;
+		display: block;
+		width: 300px;
+		margin:20px auto 0px;
 	}
 	#login>p{
-		font-size: 1.5em;
+		font-size: 20px;
+		clear: both;
 	}
 	.textbox{			
 		padding: 5px 10px 5px;
-		font-size: 1em;
+		font-size: 20px;
+		width: 200px;
+		height: 25px;
 	}
 	.login_button{
-		font-size: 1em;
+		cursor: pointer;
+		font-size: 18px;
 		width: 100px;
+		height: 30px;
 		margin-left: 40px;
 	}
 	.error_p{
 		text-align: center;
 		color: red;
 	}
-
 </style>
 </head>
 <body>
@@ -69,9 +74,8 @@
 					<input class="login_button" type="submit" value="登录">
 					<input class="login_button" type="reset" value="重置">
 				</form>
-				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-	<?php  
+	<?php 
+	error_reporting(0); 
 	$account=$_POST['account'];
 	$password=$_POST['password'];
 

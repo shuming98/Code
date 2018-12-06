@@ -8,14 +8,14 @@
 .div_table{
   height: 559px;
   margin: 20px 0px 50px 100px;
-  overflow:scroll;
+  overflow:auto;
 }
 table{
   border-collapse: collapse;
 }
 td{
   padding: 3px 20px 0px;
-  font-size: 1.2em;
+  font-size: 18px;
   text-align: center;
   border: 1px dashed #3198D5;
 }

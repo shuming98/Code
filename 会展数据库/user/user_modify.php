@@ -10,7 +10,7 @@
   margin: 50px auto;
 }
 .form_account>p{
-   font-size: 1.5em;
+   font-size: 24px;
 }
 .form_input{
    width: 300px;
@@ -21,9 +21,22 @@
    border-bottom: 1px solid gray;
 }
 .form_button{
-  font-size: 1em;
-  width: 100px;
-  margin-left: 80px;
+    padding: 3px 6px;
+    width: 110px;
+    text-align: center;
+    font-size: 20px;
+    margin-left:70px;
+    border-radius: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: black;
+    border: 2px solid #555555;
+}
+.form_button:hover {
+    background-color: #555555;
+    color: #f8f8f8;
 }
 </style>
 </head>
@@ -100,8 +113,8 @@
   </p> 
   <p>手机号：<input class="form_input" type="text" name="mobile_number" value="<?php echo $arr['mobile_number']; ?>"></p>
   <p>邮箱：<input class="form_input" type="text" name="email" value="<?php echo $arr['email']; ?>"></p>
-  <input class="form_button" type="submit" />
-  <input class="form_button" type="reset" />
+  <input class="form_button" type="submit" value="提交" />
+  <input class="form_button" type="reset" value="重置" />
 </form>
 </div> 
 <script>

@@ -21,9 +21,22 @@
    border-bottom: 1px solid gray;
 }
 .form_button{
-  font-size: 1em;
-  width: 100px;
-  margin-left: 60px;
+    padding: 3px 6px;
+    width: 110px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 50px;
+    border-radius: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: black;
+    border: 2px solid #555555;
+}
+.form_button:hover {
+    background-color: #555555;
+    color: #f8f8f8;
 }
 </style>
 </head>
@@ -81,8 +94,8 @@
 <form class="form_account" action="./mysql_add.php" method="POST">
   <p>账号：<input class="form_input" type="text" name="username" placeholder="邮箱或手机号码" required="required"></p>
   <p>密码：<input class="form_input" type="password" name="password" placeholder="20个字符以内" required="required"></p>
-  <input class="form_button" type="submit" />
-  <input class="form_button" type="reset" />
+  <input class="form_button" type="submit" value="提交" />
+  <input class="form_button" type="reset" value="重置" />
 </form>
 </div>  
 </body>

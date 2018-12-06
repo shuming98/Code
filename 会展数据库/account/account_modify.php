@@ -19,11 +19,25 @@
    border: none;
    outline: none;
    border-bottom: 1px solid gray;
+   background: #fff;
 }
 .form_button{
-  font-size: 1em;
-  width: 100px;
-  margin-left: 60px;
+    padding: 3px 6px;
+    width: 110px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 50px;
+    border-radius: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: black;
+    border: 2px solid #555555;
+}
+.form_button:hover {
+    background-color: #555555;
+    color: #f8f8f8;
 }
 </style>
 </head>
@@ -81,8 +95,8 @@
 <form class="form_account" method="POST">
   <p>账号：<input class="form_input" type="text" disabled="disabled" name="username" value="<?php echo $arr['username']; ?>"  ></p>
   <p>密码：<input class="form_input" type="password" name="password" value="<?php echo $arr['password']; ?>" required="required"></p>
-  <input class="form_button" type="submit" />
-  <input class="form_button" type="reset" />
+  <input class="form_button" type="submit" value="提交" />
+  <input class="form_button" type="reset"  value="重置" />
 </form>
 </div>  
 </body>

@@ -6,17 +6,17 @@
   <title>网站管理系统</title>
   <style>
 .div_table{
-  height: 559px;
+  height: 521px;
   margin-top: 20px;
-  margin-left: 50px;
-  overflow:scroll;  
+  margin-left: 100px;
+  overflow:auto;  
 }
 table{
   border-collapse: collapse;
 }
 td{
-  padding: 3px 20px 0px;
-  font-size: 1em;
+  padding: 3px 15px 0px;
+  font-size: 18px;
   text-align: center;
   border: 1px dashed #3198D5;
   white-space:nowrap;
@@ -79,7 +79,7 @@ td{
     <tr>
       <td>id</td>
       <td>联系人</td>     
-      <td>企业名称</td>
+      <td>企业品牌</td>
       <td>邮箱</td> 
       <td>留言信息</td>
       <td colspan="2">数据维护操作</td> 

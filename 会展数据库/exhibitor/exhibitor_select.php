@@ -31,7 +31,7 @@
   font-size: 20px;
 }
 .form_enterprise{
-  width: 535px;
+  width: 148px;
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
@@ -45,7 +45,7 @@
   font-size: 20px;
 }
 .form_email{
-  width: 575px; 
+  width: 188px; 
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
@@ -53,26 +53,32 @@
 }
 .form_option{
   font-size: 18px;
-  width: 150px;
+  width: 148px;
+  height: 25px;
+  border-radius: 5px;
 }
 .form_button{
-  -webkit-appearance: button;
-  font-size: 18px;
-  border-radius: 7px;
-  background: #f8f8f8;
+  padding: 1px 5px;
+  font-size: 18px;  
+  cursor: pointer;
+  color: #fff;
+  background-color: #3198D5;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
 }
 .div_table{
   height: 497px;
   width: 1200px;
-  margin: 20px auto 50px;
-  overflow:scroll;
+  margin:20px 0px 0px 100px;
+  overflow:auto;
 }
 table{
   border-collapse: collapse;
 }
 td{
-  padding: 3px 20px 0px;
-  font-size: 1.2em;
+  padding: 3px 10px 0px;
+  font-size: 18px;
   text-align: center;
   border: 1px dashed #3198D5;
   white-space:nowrap;
@@ -138,7 +144,7 @@ td{
   <input class="form_button" type="submit" value="查询">
 </form>
 <form class="form_select" action="./exhibitor_select.php?enterprise=" method="get">
-  <span>企业名称：
+  <span>企业品牌：
   <input name="enterprise" class="form_enterprise" type="text"></span>
   <input class="form_button" type="submit" value="查询">
 </form>
@@ -192,8 +198,8 @@ td{
   <table>
     <tr>
       <td>联系人</td>
-      <td>企业名称</td>     
-      <td>联系地址</td>
+      <td>企业品牌</td>     
+      <td>品牌发源地</td>
       <td>联系号码</td>
       <td>邮箱</td>     
       <td>展区申请</td>

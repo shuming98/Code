@@ -6,10 +6,10 @@
   <title>网站管理系统</title>
   <style>
 .div_table{
-  height: 559px;
+  height: 495px;
   margin-top: 20px;
   margin-left: 100px;
-  overflow:scroll;
+  overflow:auto;
 }
 .form_update{
   margin-top: 20px;
@@ -19,17 +19,21 @@
   font-size: 1.2em;
 }
 .form_button{
-  -webkit-appearance: button;
-  font-size: 16px;
-  border-radius: 7px;
-  background: #f8f8f8;  
+  padding: 1px 5px;
+  font-size: 18px;  
+  cursor: pointer;
+  color: #fff;
+  background-color: #3198D5;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px #999; 
 }
 table{
   border-collapse: collapse;      
 }
 td{
-  padding: 3px 20px 0px;
-  font-size: 1em;
+  padding: 3px 15px 0px;
+  font-size: 18px;
   text-align: center;
   border: 1px dashed #3198D5;
   white-space:nowrap;
@@ -90,8 +94,8 @@ td{
 
 <form class="form_update" action="./exhibitor_update.php" method="get">
   <input class="form_checkbox" type="checkbox" name="username" checked="checked">联系人
-  <input class="form_checkbox" type="checkbox" name="enterprise" checked="checked">企业名称
-  <input class="form_checkbox" type="checkbox" name="address">联系地址
+  <input class="form_checkbox" type="checkbox" name="enterprise" checked="checked">企业品牌
+  <input class="form_checkbox" type="checkbox" name="address">品牌发源地
   <input class="form_checkbox" type="checkbox" name="tel">联系号码
   <input class="form_checkbox" type="checkbox" name="email">邮箱
   <input class="form_checkbox" type="checkbox" name="application" checked="checked">展区申请
@@ -104,14 +108,15 @@ td{
   <table>
     <tr>
       <?php 
+      error_reporting(0);
       if($_GET['username']=='on'){
         echo '<td>联系人</td>';
       }
       if($_GET['enterprise']=='on'){
-        echo '<td>企业名称</td>';
+        echo '<td>企业品牌</td>';
       }
       if($_GET['address']=='on'){
-        echo '<td>联系地址</td>';
+        echo '<td>品牌发源地</td>';
       }
       if($_GET['tel']=='on'){
         echo '<td>联系号码</td>';
@@ -135,7 +140,6 @@ td{
     </tr>
 
     <?php 
-  error_reporting(0);
   $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
   mysqli_query($conn,'set names utf8');   
   $data=mysqli_query($conn,'select * from exhibitor');

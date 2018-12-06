@@ -8,7 +8,7 @@
 .div_table{
   height: 559px;
   margin: 20px 0px 50px 200px;
-  overflow:scroll;
+  overflow:auto;
 }
 table{
   border-collapse: collapse;

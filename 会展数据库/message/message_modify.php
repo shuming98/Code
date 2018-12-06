@@ -22,6 +22,7 @@
    border: none;
    outline: none;
    border-bottom: 1px solid gray;
+   background: #fff;
 }
 .input_id{width: 440px;}
 .input_username{width: 405px;}
@@ -29,12 +30,26 @@
 .input_email{width: 420px;}
 .message{
   font-size: 1em;
+  overflow: auto;
+  width: 480px;
 }
 .form_button{
-  font-size: 1em;
-  width: 100px;
-  margin:10px 0px 0px 80px;
-
+    padding: 3px 6px;
+    width: 110px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0px 0px 70px;
+    border-radius: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: black;
+    border: 2px solid #555555;
+}
+.form_button:hover {
+    background-color: #555555;
+    color: #f8f8f8;
 }
 </style>
 </head>
@@ -93,11 +108,11 @@
 <form class="form_account" method="post">
   <p>id：<input class="form_input input_id" type="text" name="id" value="<?php echo $arr['id']; ?>" disabled="disabled"></p>
   <p>联系人：<input class="form_input input_username" type="text" name="username" value="<?php echo $arr['username']; ?>" disabled="disabled"></p>
-  <p>企业名称：<input class="form_input input_enterprise" type="text" name="enterprise" value="<?php echo $arr['enterprise']; ?>" disabled="disabled"></p>
+  <p>企业品牌：<input class="form_input input_enterprise" type="text" name="enterprise" value="<?php echo $arr['enterprise']; ?>" disabled="disabled"></p>
   <p>邮箱：<input class="form_input input_email" type="text" name="email" value="<?php echo $arr['email']; ?>" disabled="disabled"></p>
   <p>留言：</p><textarea class="message" name="message" cols="50" rows="10" placeholder="可填写会展及展会相关问题或您的个人情况，届时会有工作人员反馈咨询到您的邮箱。"><?php echo $arr['message']; ?></textarea>
-  <input class="form_button" type="submit" />
-  <input class="form_button" type="reset" />
+  <input class="form_button" type="submit" value="提交" />
+  <input class="form_button" type="reset" value="重置" />
 </form>           
 </div>  
 </div>  
