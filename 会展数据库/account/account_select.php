@@ -38,7 +38,7 @@
   float: left;
   height: 497px;
   margin-left:200px;
-  overflow:scroll;
+  overflow:auto;
 }
 table{
   border-collapse: collapse;
