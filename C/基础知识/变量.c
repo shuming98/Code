@@ -18,11 +18,14 @@
   *常用转义序列：\a 警报 \b 退格 \f 换页 \n 换行 \r 回车,移到行首 \t 制表 \v 垂直制表
                \\ \' \" \? 输出字符\'"?      \0 八进制形式 \x 十六进制形式表示ASCII码'
 
-   可加上 unsigned 或 signed 关键字,unsigned 用于小数运算 
+   可加上 unsigned 或 signed 关键字,unsigned 用于小数运算
+
+   *声明字符串用数组：如 char name[30];  （%s）（以空字符\0’结束,意味着数组容量要比存储字符多1）
+    打印较长字符串方法：①分开多个 printf()写;②分开多个”双引号“写;③加”\“回车
 
 三、浮点型
-  float       (%f)   32位   数值加上 f 或 F 表示float
-  double      (%f)   64位    
+  float       (%f)   32位   数值加上 f 或 F 表示float           [精确到.6f]
+  double      (%f)   64位                                    [精确到.15f]
   long double (%lf)  128位  数值加上 l 或 L 表示long double
 
   指数计数法(e计数法)(%e) 如,2.0e20 = 2.0*10^20   6.63e-34 = 6.63*10^-34
