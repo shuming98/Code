@@ -153,4 +153,24 @@ div>ul>li*4
 table td文字不换行：white-space:nowrap;   
 
 css写法：
-1.使用相同属性的多个标签可以“,”隔开。  如：.top, .bottom, .footer{float:none}                        
+1.使用相同属性的多个标签可以“,”隔开。  如：.top, .bottom, .footer{float:none}       
+
+table td文字不换行：white-space:nowrap;
+              
+Emmet基本语法：
+后代：>   如：div>p  
+兄弟：+   如：div+img
+上级：^   如：input^p
+分组：()  如：div>form>(input*2^p)>button
+乘法：*   如：ul>li*5
+自增符号：$ 如：ul>li.className$@5*3  【$变量;@n,从n开始递增】
+               p>span{num $}*10      【{输入标签内容}】
+ID和类属性：如：div#layout.container
+自定义属性：如：input[type=password id=passwd name=passwd]
+本文：{}    如：a{click me}
+Emmet缩写：
+字符集：meta:utf
+移动端：meta:vp
+脚本：script:src
+表单get：form:get/post
+输入：input:t/p/c/r/f/s/b/checkout                 
