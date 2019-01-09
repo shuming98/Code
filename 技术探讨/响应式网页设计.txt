@@ -41,7 +41,6 @@ web前端工程师逃不开两个问题:1.网页自适应屏幕(分辨率)问题
 
 网格系统实现方法：从宽度，层次，交互和密度四个特征寻找接缝。
 
-参考资料:
 参考资料：《Fluid Grids》by Ethan Marcotte March 03, 2009
 		《Responsive Web Design》 by Ethan Marcotte May 25, 2010
 		《Fluid Images》by Ethan Marcotte June 07, 2011
