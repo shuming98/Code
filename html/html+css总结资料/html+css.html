@@ -150,4 +150,23 @@ div>ul>li*4
 除此以外，后代选择器的权值为每项权值之和，比如”#id .class a”的权值为100 + 10 + 1 = 111。
 派生（后代、子）选择器用标签或类选择器进行。【为了维护id选择器的地位】  
 按钮不能改变大小时，添加属性： -webkit-appearance: button;
-table td文字不换行：white-space:nowrap;                           
+table td文字不换行：white-space:nowrap;
+						  
+Emmet基本语法：
+后代：>   如：div>p  
+兄弟：+   如：div+img
+上级：^   如：input^p
+分组：()  如：div>form>(input*2^p)>button
+乘法：*   如：ul>li*5
+自增符号：$ 如：ul>li.className$@5*3  【$变量;@n,从n开始递增】
+               p>span{num $}*10      【{输入标签内容}】
+ID和类属性：如：div#layout.container
+自定义属性：如：input[type=password id=passwd name=passwd]
+本文：{}    如：a{click me}
+
+Emmet缩写：
+字符集：meta:utf
+移动端：meta:vp
+脚本：script:src
+表单get：form:get/post
+输入：input:t/p/c/r/f/s/b/checkout
