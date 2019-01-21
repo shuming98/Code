@@ -1,5 +1,8 @@
 C程序由一个或多个函数组成,函数是C程序的构造块.
 C程序一定从 main()函数开始执行.
+0.函数定义
+  header:void Tem(double Tem);  [返回值类型 函数(变量类型 变量名)]
+  body:void Tem(double Tem){}
 
 1.输出 printf("字符串+转换说明+转义序列",变量,数值,表达式);  [变量与转换说明要一一对应][printf()的返回值是字符个数，即 strlen()]
  

@@ -1,4 +1,4 @@
-（转换说明）
+（[类型]转换说明,结果显示取决于你用什么类型转换）
 一、整型(溢出会周期性，重新从起始点开始)
   int (十进制 %d ,八进制 %o ,十六进制 %x ,显示前缀0八进制 %#o ,显示前缀x0十六进制 %#x 或 %#X)
   unsigned = unsigned int   (%u)  
@@ -49,3 +49,8 @@
  ①int var;
  ②long long var=23;
  ③float var,var2,var3;
+
+ 六、知识
+ 1.为现有类型创建别名:typeof  如:typeof unsigned int uint; uint num;
+ 2.强制类型转换:moeny = (int)1.7 + 2;  [ (类型)值/变量名 ]
+ 3.实参:值;  形参:变量
