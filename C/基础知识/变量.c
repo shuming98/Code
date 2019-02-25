@@ -32,7 +32,7 @@
   p计数法[16进制.p2的指数](%a 或 %A)  如,0xa.1fp10 = 0xa.1f*2^10
 
 四、布尔型(实际上也是整型)
-  _Bool 逻辑判断 true false
+  _Bool 逻辑判断 true false [0为假,非0为真]
 
 五、复数和虚数浮点数类型(浮点型基础上)
   float _Complex       64位
@@ -50,7 +50,12 @@
  ②long long var=23;
  ③float var,var2,var3;
 
- 六、知识
+六、数组
+1.声明数组：int array[20] 可存储20个元素,下标[0~19].
+2.字符数组包含于字符串.
+3.输入字符串不需要加&,输入单个数组下标需要加&.
+
+七、知识
  1.为现有类型创建别名:typeof  如:typeof unsigned int uint; uint num;
  2.强制类型转换:moeny = (int)1.7 + 2;  [ (类型)值/变量名 ]
  3.实参:值;  形参:变量
