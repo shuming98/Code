@@ -58,4 +58,5 @@
 七、知识
  1.为现有类型创建别名:typeof  如:typeof unsigned int uint; uint num;
  2.强制类型转换:moeny = (int)1.7 + 2;  [ (类型)值/变量名 ]
- 3.实参:值;  形参:变量
+ 3.实参:值、表达式;  形参:变量
+ 
