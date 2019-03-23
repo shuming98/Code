@@ -36,3 +36,12 @@ C程序一定从 main()函数开始执行.
 
 一、函数构造
 1.return语句的另一个作用是，终止函数并把控制返回给主函数的下一条语句.
+2.命令行参数
+	int main(int argc,char *argv[])  //带参数的主函数(字符串数量,指针数组)
+	./a.out Mac is "a good" operating system. //执行时添加参数
+	//这个执行命令有5个参数,
+	//argv[0] -> ./a.out, 
+	//argv[1] -> Mac,
+	//argv[3] -> "a good", 
+	//argv[5] -> system.
+
