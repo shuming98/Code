@@ -1,6 +1,39 @@
+//登录模态框
 var login = document.getElementById('login');
 window.onclick = function(event){
 	if(event.target == login){
 		login.style.display = "none";
 	}
+}
+
+//上传资源模态框
+var upload_resource = document.getElementById('upload_resource');
+window.onclick = function(event){
+  if(event.target == upload_resource){
+    upload_resource.style.display = "none";
+  }
+}
+
+//批改作业模态框
+var check_work = document.getElementById('check_work');
+window.onclick = function(event){
+  if(event.target == check_work){
+    check_work.style.display = "none";
+  }
+}
+
+//轮播图
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); 
 }
