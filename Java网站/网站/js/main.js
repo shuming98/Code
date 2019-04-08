@@ -1,4 +1,5 @@
 //登录模态框
+@characterSet:
 var login = document.getElementById('login');
 window.onclick = function(event){
 	if(event.target == login){
@@ -19,6 +20,14 @@ var check_work = document.getElementById('check_work');
 window.onclick = function(event){
   if(event.target == check_work){
     check_work.style.display = "none";
+  }
+}
+
+//查看作业模态框
+var show_work = document.getElementById('show_work');
+window.onclick = function(event){
+  if(event.target == show_work){
+    show_work.style.display = "none";
   }
 }
 
