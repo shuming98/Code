@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../css/public.css">
-	<title>讨论区发帖</title>
+	<title>首页</title>
 </head>
 <body>
 	<!--导航栏-->
@@ -18,7 +18,7 @@
 			<li><a href="#"><img src="../../images/icon/forum.png" alt="forum">讨论区</a></li>
 			<li><a href="#"><img src="../../images/icon/about.png" alt="about">关于</a></li>
 		</ul>
-			<form action="#" method="get">		
+			<form action="#" method="get">	
 				<input type="search" name="search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;搜索...">
 			</form>
 		<a class="nav_login" href="#" onclick="document.getElementById('login').style.display='block'"><img src="../../images/icon/user.png" alt="login">登录</a>
@@ -26,40 +26,20 @@
 
 	<!--模态框登录-->
 	<div id="login" class="modal">
-		<form class="modal_content animate" action="#" method="post" >
+		<form class="modal_content animate" action="../admin/login.php" method="post" >
 			<div class="modal_img">
 				<span onclick="document.getElementById('login').style.display='none'" class="close">&times;</span>
 				<img src="../../images/icon/user.png" alt="user">
 			</div>
 			<div class="modal_form">
-				<p><b>账号</b>:<input type="text" name="username" required="required" placeholder="请输入账号/学号"></p>
-				<p><b>密码</b>:<input type="password" name="password" required="required" placeholder="请输入密码"></p>
+				<p><b>账号</b>:<input type="text" name="user_account" required="required" placeholder="请输入账号/学号"></p>
+				<p><b>密码</b>:<input type="password" name="user_password" required="required" placeholder="请输入密码"></p>
 				<p><input type="checkbox" checked="checked" name="remember">记住密码<a href="#">忘记密码?</a></p>
 				<input type="submit" value="登录">
 			</div>				
 		</form>
 	</div>
 	<div class="clearfix"></div>
-	<!--讨论区发帖-->
-	<div class="forum_post_container">
-		<p>讨论区&gt;<a href="#" style="color:#265AFF">发帖</a></p>
-		<form action="#">
-			<p>标题：<input type="text" placeholder="请输入标题"></p>
-			<p>内容：</p>
-			<textarea name=""></textarea>
-			<select name="">
-				<option value="默认分类">默认分类</option>
-				<option value="分享">分享</option>
-				<option value="求助">求助</option>
-			</select>
-			<input type="submit" value="发布">
-		</form>
-	</div>
-	<footer class="footer">
-		<p>© 2019 All right reserved.Development by 402.</p>
-		<p>粤ICP备18036003号</p>
-	</footer>
 </body>
 <script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
-
 </html>

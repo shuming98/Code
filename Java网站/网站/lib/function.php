@@ -60,6 +60,21 @@ function randStr($num=7){
 }
 
 /**
+ * 创建目录(用于保存上传的用户头像)
+ * ROOT . '/upload/user_pic/2019/04/jike.docs'
+ * @return $path 文件路径
+ */
+function createUserPicDir(){
+	$path = '/upload/user_pic/'.date('Y/m');
+	$fpath = ROOT . $path;
+	if(is_dir($fpath) || mkdir($fpath,0777,true)){
+		return $path;
+	}else{
+		return false;
+ 	}
+}
+
+/**
  * 创建目录(用于保存上传的文件)
  * ROOT . '/upload/2019/04/16/jike.docs'
  * @return $path 文件路径
@@ -85,7 +100,7 @@ function getExt($filename){
 
 /**
  * 生成缩略图(应用于论坛发帖)
- * @param str $oimg 原图url
+ * @param str $oimg 原图相对url
  * @param int $sw 缩略图的宽
  * @param int $sh 缩略图的高
  * @return str $simg 缩略图路径
@@ -94,10 +109,10 @@ function getExt($filename){
 function makeThumb($oimg,$sw=200,$sh=200){
 	$simg = dirname($oimg) . '/' . randStr() . '.png';//缩略图存放路径
 	$opath = ROOT . $oimg;//原图绝对路径
-	$spath = ROOT . $img;//缩略图绝对路径
+	$spath = ROOT . $simg;//缩略图绝对路径
 
 	$spic = imagecreatetruecolor($sw, $sh);//缩略图大小
-	$white = imagecolorallocate($pic, 255,255,255);
+	$white = imagecolorallocate($spic, 255,255,255);
 	imagefill($spic,0,0,$white);//填充背景色
 	list($bw,$bh,$btype) = getimagesize($opath);
 	$map = array(
@@ -139,10 +154,10 @@ function md5Code($name){
  */
 
 function access(){
-	if(!isset($_COOKIE['name']) || !isset($_COOKIE['md5Code'])){
+	if(!isset($_COOKIE['user_account']) || !isset($_COOKIE['md5Code'])){
 		return false;
 	}
-	return $_COOKIE['md5Code'] === md5Code($_COOKIE['name']);
+	return $_COOKIE['md5Code'] === md5Code($_COOKIE['user_account']);
 }
 
 ?>

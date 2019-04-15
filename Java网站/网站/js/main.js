@@ -1,3 +1,23 @@
+//上传图片并预览
+var imgCont = document.getElementById("showImg"); 
+var ipt = document.getElementById("up_img"); 
+function fileUpLoad(_this){
+  var file = _this.files[0];
+  if(!FileReader){
+    alert("你的浏览器不支持H5的FileReader");
+    ipt.setAttribute("disabled","disabled");
+    return;
+  }
+  var fileReader = new FileReader();
+  fileReader.readAsDataURL(file);
+  fileReader.onload = function(e){
+    var img = '<img src="'+this.result+'"/>';
+    imgCont.innerHTML = img;
+    console.log(this.result);
+  }
+}
+
+
 //轮播图
 var slideIndex = 0;
 showSlides();
@@ -15,7 +35,6 @@ function showSlides() {
 }
 
 //登录模态框
-@characterSet:
 var login = document.getElementById('login');
 window.onclick = function(event){
 	if(event.target == login){
@@ -23,11 +42,27 @@ window.onclick = function(event){
 	}
 }
 
+//用户信息模态框
+var user = document.getElementById('user');
+window.onclick = function(event){
+  if(event.target == user){
+    user.style.display = "none";
+  }
+}
+
 //上传资源模态框
 var upload_resource = document.getElementById('upload_resource');
 window.onclick = function(event){
   if(event.target == upload_resource){
     upload_resource.style.display = "none";
+  }
+}
+
+//上传资源模态框
+var add_tag = document.getElementById('add_tag');
+window.onclick = function(event){
+  if(event.target == add_tag){
+    add_tag.style.display = "none";
   }
 }
 
@@ -56,3 +91,6 @@ for(i=0;i<toggler.length;i++){
     this.classList.toggle("caret_down");
   });
 }
+
+
+

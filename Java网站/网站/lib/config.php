@@ -7,7 +7,7 @@ return array(
 	'host'=>'127.0.0.1',
 	'user'=>'root',
 	'passwd'=>'123456',
-	'db'=>'',
+	'db'=>'java_web',
 	'charset'=>'utf8',
 	'salt'=>'OP1AS5D$#:9;'
 );

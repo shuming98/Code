@@ -1,4 +1,3 @@
 <?php 
-echo dirname(__DIR__);
-
+require('./lib/init.php');
  ?>
