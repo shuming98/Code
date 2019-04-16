@@ -25,7 +25,7 @@ $teacher_class = mGetAll($sql4);
 		<ul>
 			<li><a href="../../home.php"><img src="../../images/icon/home.png" alt="home">首页</a></li>
 			<li><a href="./resource.php"><img src="../../images/icon/resource.png" alt="resource">课程资源</a></li>
-			<li><a href="./study"><img src="../../images/icon/study.png" alt="study">学习园地</a></li>
+			<li><a href="./study.php"><img src="../../images/icon/study.png" alt="study">学习园地</a></li>
 <?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>
 			<li><a href="./check_work.php"><img src="../../images/icon/work.png" alt="work">作业区</a></li>
 <?php }else{ ?>			

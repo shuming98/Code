@@ -107,10 +107,17 @@ a:hover { color: #26A5FF; text-decoration:none;}
 
 /*资源下载*/
 .resource_show{width: 900px;height:auto;float:left;}
-.resource_show>span{display:block;width:300px;text-align: center;font-size: 16px;border-bottom:2px solid #999;border-top:2px solid #999;margin:15px 0px 0px 15px;}
-.resource_show figure{width: 15%;padding:10px;}
+.resource_show>span{display:block;width:300px;text-align: center;font-size: 16px;border-bottom:2px solid #999;border-top:2px solid #999;margin:15px 0px 0px 15px;color:#888;}
+.resource_show>span>span{color:#26A5FF;}
+.resource_show figure{width: 15%;padding:10px;float:left;}
 .resource_show img{width: 100%;padding:10px;}
-.resource_show figcaption{text-align: center;font-size: 16px;}
+.resource_show figcaption{font-size: 14px;text-align: center;height:15px;}
+
+/*分页页号*/
+#page_bar{width: 150px;height: 20px;margin:600px auto 10px auto;}
+#page_bar span{color:#000;font-size:20px;padding:10px;}
+#page_bar a{color:#666;font-size:16px;padding:10px;}
+#page_bar a:hover{border:1px solid #26A5FF;}
 
 /*资源分类*/
 .resource_select{width: 340px;height:auto;float: left;margin-left:30px;border-left:1px solid #aaa;padding-left:30px;}

@@ -75,6 +75,21 @@ function createUserPicDir(){
 }
 
 /**
+ * 创建目录(用于保存上传的课程资源文件)
+ * ROOT . '/upload/user_pic/2019/04/jike.docs'
+ * @return $path 文件路径
+ */
+function createCourseResourceDir(){
+	$path = '/upload/course_resource/'.date('Y/m/d');
+	$fpath = ROOT . $path;
+	if(is_dir($fpath) || mkdir($fpath,0777,true)){
+		return $path;
+	}else{
+		return false;
+ 	}
+}
+
+/**
  * 创建目录(用于保存上传的文件)
  * ROOT . '/upload/2019/04/16/jike.docs'
  * @return $path 文件路径

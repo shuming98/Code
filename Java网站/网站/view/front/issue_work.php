@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+require('../../lib/init.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

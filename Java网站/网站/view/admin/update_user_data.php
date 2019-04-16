@@ -31,6 +31,4 @@ if(!empty($_POST['teacher'])){
 mExec('user_data',$user_data,'update',"user_account='$_SESSION[user_account]'");
 
 echo '<script>location.replace(document.referrer);</script>'
-
-
  ?>

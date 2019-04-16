@@ -1,9 +1,58 @@
 <?php session_start();
 require('../../lib/init.php');
-//资源标签
+
+//查询所有资源标签
 $sql = "select tag_id,tag_name from resource_tag";
 $tag_name = mGetAll($sql);
+
+/**
+ * 实现分页功能 
+ */
+
+//查询资源总数
+$sql2 = "select count(*) from resource";
+$resource_sum = mGetOne($sql2);
+
+//查询单个标签的资源总数
+$sql3 = "select count(*) from resource where tag_id=$_GET[tag_id]";
+$tag_resource_sum = mGetOne($sql3);
+
+//设置每页显示资源数量
+$per_page_num = 12;
+
+//从地址栏获得当前页码
+$current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+//判断地址栏是否有tag_id,并调用分页函数
+if(isset($_GET['tag_id'])){
+	$where = " and tag_id=$_GET[tag_id]";
+	$pages = getPage($tag_resource_sum,$current_page,$per_page_num);
+	
+	//查询这个tag_id的tag_name
+	$sql4 = "select tag_name from resource_tag where tag_id=$_GET[tag_id]";
+	$position = mGetOne($sql4);
+}else{
+	$where = '';
+	$pages = getPage($resource_sum,$current_page,$per_page_num);
+}
+
+//查询所有资源
+$sql5 = 'select resource_id,resource_name,resource_type,resource_path from resource where 1' . $where . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
+$resource = mGetAll($sql5);
+
+//文件格式对应其图标
+$map = array(
+	'doc'=>'../../images/icon/doc.png',
+	'docx'=>'../../images/icon/doc.png',
+	'ppt'=>'../../images/icon/ppt.png',
+	'pptx'=>'../../images/icon/ppt.png',
+	'zip'=>'../../images/icon/zip.png',
+	'rar'=>'../../images/icon/rar.png',
+	'exe'=>'../../images/icon/exe.png',
+	'jar'=>'../../images/icon/jar.png'
+);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +67,40 @@ $tag_name = mGetAll($sql);
 	<div class="resource_container">
 	<!--资源下载-->
 		<div class="resource_show">
-			<span>当前位置:JAVA课程资源&gt;教学文档</span>
+			<span>当前位置:JAVA课程资源&gt;<span>
+				<?php 
+					if(isset($_GET['tag_id'])){
+						echo $position;
+					}else{
+						echo '全部资源';
+					}
+				 ?> 
+			</span>
+			</span>
+	<!-- 输出全部资源 -->
+<?php foreach($resource as $v){ ?>
 			<figure>
-				<a href="#">
-				<img src="../../images/icon/study.png" alt="">
-				<figcaption>实验报告</figcaption>	
+				<a href="<?php echo '../..',$v['resource_path']; ?>" download="<?php echo $v['resource_name'],'.',$v['resource_type'] ?>">
+				<img src="<?php echo $map[$v['resource_type']]; ?>" alt="">
+				<figcaption>
+					<?php echo $v['resource_name']; ?>
+				</figcaption>	
 				</a>
 			</figure>
+<?php } ?>
+
+	<!-- 分页页号 -->
+		<div id="page_bar">
+			<?php 
+				foreach($pages as $k=>$v){
+					if($k == $current_page){
+						echo '<span>',$k,'</span>';
+					}else{
+						echo '<a href="./resource.php?',$v,'">',$k,'</a>';
+					}
+				}
+			?>
+		</div>
 		</div>
 	<!--资源分类-->
 		<div class="resource_select">
@@ -33,6 +109,7 @@ $tag_name = mGetAll($sql);
 			<div class="resource_category">
 				<p><img style="width: 20px;" src="../../images/icon/about.png" alt="">资源分类</p>
 				<ul>
+			<!-- 输出资源标签名 -->
 <?php foreach($tag_name as $v){ ?>
 					<li><a href="./resource.php?tag_id=<?php echo $v['tag_id']; ?>"><?php echo $v['tag_name']; ?></a></li>
 <?php } ?>
@@ -58,7 +135,7 @@ $tag_name = mGetAll($sql);
 			<h1><img src="../../images/icon/work.png" alt="">上传课程资源</h1>
 			<span onclick="document.getElementById('upload_resource').style.display='none'" class="close">&times;</span>
 		<form action="../admin/upload_resource.php" method="post" enctype="multipart/form-data">
-			<p>资源标题:<input type="resource_name" name="title"></p>
+			<p>资源名字:<input type="text" name="resource_name"></p>
 			<p>资源分类:
 				<select name="tag_name">
 <?php foreach($tag_name as $v){ ?>
@@ -85,5 +162,5 @@ $tag_name = mGetAll($sql);
 	</div>
 	<?php include('./foot.html'); ?>
 </body>
-<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../js/main.js"></script>
 </html>
