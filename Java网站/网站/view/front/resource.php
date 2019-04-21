@@ -59,6 +59,7 @@ $map = array(
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../css/public.css">
+	<script src="../../js/jquery.js"></script>
 	<title>课程资源</title>
 </head>
 <body>
@@ -134,7 +135,7 @@ $map = array(
 		<div class="upload_modal_content animate">
 			<h1><img src="../../images/icon/work.png" alt="">上传课程资源</h1>
 			<span onclick="document.getElementById('upload_resource').style.display='none'" class="close">&times;</span>
-		<form action="../admin/upload_resource.php" method="post" enctype="multipart/form-data">
+		<form id="upload_resource_form"  method="post" enctype="multipart/form-data">
 			<p>资源名字:<input type="text" name="resource_name"></p>
 			<p>资源分类:
 				<select name="tag_name">
@@ -146,6 +147,12 @@ $map = array(
 			<p>文件上传:<input name="resource" type="file"></p>
 			<p><input type="submit" value="上传"></p>
 		</form>
+		<!-- 进度条 -->
+		<div class="upload_progress">
+			<div id="upload_progress"></div>
+		</div>
+		<h2 id="upload_rate"></h2>
+		<div class="clearfix"></div>
 		</div>
 	</div>
 
@@ -154,7 +161,7 @@ $map = array(
 		<div class="add_tag_content animate">
 			<h1><img src="../../images/icon/work.png" alt="">添加资源分类<span>(最多可添加5个)</span></h1>
 			<span onclick="document.getElementById('add_tag').style.display='none'" class="close">&times;</span>
-		<form action="../admin/add_tag.php" method="post">
+		<form method="post">
 			<input type="text" name="tag_name" placeholder="请输入资源类名">
 			<input type="submit" value="添加">
 		</form>

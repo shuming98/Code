@@ -16,10 +16,9 @@ create table user_data(
 	user_nick char(30) not null default '匿名',
 	gender char(10) not null default '',
 	tel char(20) not null default '',
-	birth char(20) not null default '',
 	class char(20) not null  default '',
 	teacher char(10) not null default '',
-	pic_path varchar(255) not null default '',
+	pic_path varchar(255) not null default '/images/icon/user.png',
 	key user_account(user_account)
 )engine=myisam default charset=utf8;
 
@@ -43,9 +42,32 @@ create table resource(
 	tag_id smallint unsigned not null default 0,
 	user_account char(30) not null default '',
 	resource_name char(50) not null default '请叫我资源',
+	resource_type char(20) not null default '',
 	resource_path varchar(255) not null default '',
-	resource_text varchar(255) not null default '',
-	update_date date,
+	update_date datetime default current_timestamp,
 	click_count int unsigned not null default 0,
 	key tag_id(tag_id)
+)engine=myisam default charset=utf8;
+
+create table issue_work(
+	work_id int unsigned not null primary key auto_increment,
+	user_account char(30) not null default 0,
+	class char(20) not null default '',
+	work_title char(50) not null default '作业',
+	work_content text,
+	work_filepath char(255) not null default '',
+	issue_date datetime default current_timestamp,
+	deadline datetime not null default '2019-01-01 00:00:00'
+)engine=myisam default charset=utf8;
+
+create table submit_work(
+	work_num int unsigned not null primary key auto_increment,
+	work_id int unsigned not null default 0,
+	user_account char(30) not null default '',
+	work_content text,
+	work_filepath char(255) not null default '',
+	submit_date datetime default current_timestamp,
+	score char(10) not null default '',
+	comment char(100) not null default '',
+	key work_id(work_id)
 )engine=myisam default charset=utf8;

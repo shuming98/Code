@@ -1,4 +1,5 @@
-<?php session_start(); 
+<?php 
+session_start(); 
 require('../../lib/init.php');
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ require('../../lib/init.php');
 	<?php include('./nav.php'); ?>
 	<div class="show_grade_container">
 		<p class="show_grade_date">学生id，你好，今天星期一</p>
-		<p class="show_grade_nav">作业&gt;<a href="#">查看作业</a>&gt;<a href="#" style="color:#26A5FF">查看成绩</a></p>
+		<p class="show_grade_nav">作业&gt;<a href="./show_work.php">查看作业</a>&gt;<a href="./show_grade.php" style="color:#26A5FF">查看成绩</a></p>
 		<div class="clearfix"></div>
 		<table>
 			<tr>

@@ -1,0 +1,3681 @@
+---------------------------------------
+2019/04/17 07:28:16
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:16
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:16
+select count(*) from resource where tag_id=2
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:16
+select tag_name from resource_tag where tag_id=2
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:16
+select resource_id,resource_name,resource_type,resource_path from resource where 1 and tag_id=2 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:16
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:16
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:16
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:16
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:18
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:21
+select user.user_account,permission_id from user inner join user_data on user.user_account=user_data.user_account where user.user_account = 'teacher' and user_password = '34427a6ab59facd747db7ad8d1c31685'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:21
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:21
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:21
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:21
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:22
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:22
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:22
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:22
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:22
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:22
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:22
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:28:22
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:29:47
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:29:47
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:29:47
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:29:47
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:29:47
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:29:47
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:29:47
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:29:47
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:24
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:24
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:24
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:24
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:24
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:24
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:24
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:24
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:27
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:28
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:30
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:38
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:39
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:39
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:39
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:39
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:39
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:39
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:39
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:39
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:50
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:30:51
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:31:58
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:31:58
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:31:58
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:31:58
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:31:58
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:31:58
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:31:58
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:31:58
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:32:51
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:32:51
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:32:51
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:32:51
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:32:51
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:32:51
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:32:51
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:32:51
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:33:44
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:31
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:31
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:31
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:31
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:31
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:31
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:31
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:31
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:32
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:32
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:32
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:32
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:32
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:32
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:32
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:42:32
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:16
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:17
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:18
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:19
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:20
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:22
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:22
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:22
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:22
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:22
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:22
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:22
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:22
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:49
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:54
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:54
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:54
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:54
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:54
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:54
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:54
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:54
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:51:55
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:09
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:09
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:09
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:09
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:09
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:09
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:09
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:09
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:10
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:14
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:52:15
+update resource set click_count=click_count+1 where resource_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:47
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:47
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:47
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:47
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:47
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:47
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:47
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:47
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:48
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:49
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:49
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:49
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:49
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 12,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:49
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:49
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:49
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:49
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 24,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 12,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:50
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:51
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:51
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:51
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:51
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:51
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:51
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:51
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:51
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select count(*) from resource where tag_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select tag_name from resource_tag where tag_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select resource_id,resource_name,resource_type,resource_path from resource where 1 and tag_id=1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select count(*) from resource where tag_id=2
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select tag_name from resource_tag where tag_id=2
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select resource_id,resource_name,resource_type,resource_path from resource where 1 and tag_id=2 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:53
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select count(*) from resource where tag_id=3
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select tag_name from resource_tag where tag_id=3
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select resource_id,resource_name,resource_type,resource_path from resource where 1 and tag_id=3 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:54
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select count(*) from resource where tag_id=2
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select tag_name from resource_tag where tag_id=2
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select resource_id,resource_name,resource_type,resource_path from resource where 1 and tag_id=2 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select count(*) from resource where tag_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select tag_name from resource_tag where tag_id=1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select resource_id,resource_name,resource_type,resource_path from resource where 1 and tag_id=1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:53:55
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:00
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:00
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:00
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:00
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:01
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:01
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:01
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:01
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:01
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:01
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:01
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 07:54:01
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:06
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:15
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:15
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:15
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:15
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:15
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:15
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:15
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:15
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:16
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:16
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:16
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:16
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:18
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:18
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:18
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:18
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:18
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:18
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:18
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 08:00:18
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:24
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:24
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:24
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:24
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:24
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:24
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:24
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:24
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:26
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:26
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:26
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/17 13:41:26
+select t_class from teacher where user_account=''
+---------------------------------------
+

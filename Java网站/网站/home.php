@@ -59,7 +59,7 @@ $teacher_class = mGetAll($sql4);
 
 	<!--模态框登录-->
 	<div id="login" class="modal">
-		<form class="modal_content animate" action="./view/admin/login.php" method="post" >
+		<form class="modal_content animate" action="./view/admin/login.php" method="post">
 			<div class="modal_img">
 				<span onclick="document.getElementById('login').style.display='none'" class="close">&times;</span>
 				<img src="./images/icon/user.png" alt="user">

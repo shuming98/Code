@@ -26,9 +26,12 @@ if(!($_FILES['resource']['name'] == '') && ($_FILES['resource']['error'] == 0)){
 
 $res = mExec('resource',$resource);
 
+
 if($res){
-	echo "<script>alert('文件上传成功');location.replace(document.referrer);</script>";
+	echo '文件上传成功';
+	// echo "<script>alert('文件上传成功');location.replace(document.referrer);</script>";
 }else{
-	echo "<script>alert('文件上传失败');location.replace(document.referrer);</script>";
+	echo '文件上传失败,请重新上传';
+	// echo "<script>alert('文件上传失败');location.replace(document.referrer);</script>";
 }
  ?>

@@ -114,6 +114,15 @@ function getExt($filename){
 }
 
 /**
+ * 获得路径中的文件名
+ * @param $filepath 文件路径
+ * @return 文件名
+ */
+function getFileName($filepath){
+	return str_replace('/','',strrchr($filepath,'/'));
+}
+
+/**
  * 生成缩略图(应用于论坛发帖)
  * @param str $oimg 原图相对url
  * @param int $sw 缩略图的宽

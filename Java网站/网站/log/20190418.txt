@@ -1,0 +1,61 @@
+---------------------------------------
+2019/04/18 03:59:44
+select tag_id,tag_name from resource_tag
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:44
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:44
+select count(*) from resource where tag_id=
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:44
+select resource_id,resource_name,resource_type,resource_path from resource where 1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:44
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:44
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:45
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:45
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:47
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:47
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:47
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/04/18 03:59:47
+select t_class from teacher where user_account=''
+---------------------------------------
+

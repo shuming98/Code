@@ -16,7 +16,7 @@ require('../../lib/init.php');
 		<div class="select_form">
 			<p style="float:right">老师好，当前时间：16：36：16</p>
 			<div class="clearfix"></div>
-			<p style="float:left">作业&gt;<a href="">发布作业</a>&gt;<a href="" style="color:#26A5FF">批改作业</a></p>
+			<p style="float:left">作业&gt;<a href="./issue_work.php">发布作业</a>&gt;<a href="./check_work.php" style="color:#26A5FF">批改作业</a></p>
 			<div class="clearfix"></div>
 			<form action="" method="get">
 				<span>班级:</span>
