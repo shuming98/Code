@@ -65,9 +65,9 @@ $teacher_class = mGetAll($sql4);
 				<img src="./images/icon/user.png" alt="user">
 			</div>
 			<div class="modal_form">
-				<p><b>账号</b>:<input type="text" name="user_account" required="required" placeholder="请输入账号/学号"></p>
-				<p><b>密码</b>:<input type="password" name="user_password" required="required" placeholder="请输入密码"></p>
-				<p><input type="checkbox" checked="checked" name="remember">记住密码<a href="#">忘记密码?</a></p>
+				<p><b>账号</b>:<input type="text" name="user_account" required="required" placeholder="请输入账号/学号" value="<?php echo $_COOKIE['account'];?>"></p>
+				<p><b>密码</b>:<input type="password" name="user_password" required="required" placeholder="请输入密码"> </p>
+				<p><input type="checkbox" name="remember" checked>记住账号<a href="#">忘记密码?</a></p>
 				<input type="submit" value="登录">
 			</div>				
 		</form>

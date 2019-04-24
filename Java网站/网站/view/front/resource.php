@@ -89,9 +89,8 @@ $map = array(
 				</a>
 			</figure>
 <?php } ?>
-
 	<!-- 分页页号 -->
-		<div id="page_bar">
+		<div id="page_bar" style="top:30px;">
 			<?php 
 				foreach($pages as $k=>$v){
 					if($k == $current_page){

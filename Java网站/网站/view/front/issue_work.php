@@ -17,13 +17,13 @@ $work_class = mGetAll($sql);
 	<?php include('./nav.php'); ?>
 	<div class="issue_container">
 
-		<p class="issue_work_date" >老师，你好，当前时间为<span id="show_time"></span></p>
-		<p class="issue_work_nav">作业&gt;<a href="./issue_work.php" style="color:#26A5FF;">发布作业</a>&gt;<a href="./check_work.php">批改作业</a></p>
+		<p>老师好，当前时间<span id="show_time"></span></p>
+		<p>作业&gt;<a href="./issue_work.php" style="color:#26A5FF;">发布作业</a>&gt;<a href="./check_work.php">批改作业</a></p>
 
-		<form id="issue_work" name="issue_work" method="post" enctype="multipart/form-data">
+		<form id="issue_work" name="work_date" method="post" enctype="multipart/form-data">
 			<p>标题：<input type="text" name="work_title"></p>
 			<p>作业内容：</p>
-			<textarea name="work_content" cols="46" rows="10"></textarea>
+			<textarea name="work_content"></textarea>
 			<p>文件上传：<input name="work" type="file"></p>
 			<p>截止日期： 
 				<select name="YYYY" onchange="YYYYDD(this.value)"></select>
@@ -43,6 +43,7 @@ $work_class = mGetAll($sql);
 	<?php include('foot.html'); ?>
 </body>
 <script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/select_date.js" type="text/javascript" charset="utf-8"></script>
 <script>
 	window.onload = startClock();
 </script>

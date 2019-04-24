@@ -62,7 +62,7 @@ a:hover { color: #26A5FF; text-decoration:none;}
 
 
 /*页尾*/
-.footer{width: 100%;height: 50px;background: #eee;position:relative;margin-top:50px;}
+.footer{width: 100%;height: 50px;background: #eee;position: relative;top:20px;}
 .footer p{text-align: center;font-size: 16px;}
 
 /**
@@ -114,7 +114,7 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .resource_show figcaption{font-size: 14px;text-align: center;height:15px;}
 
 /*分页页号*/
-#page_bar{width: 150px;height: 20px;margin:600px auto 10px auto;}
+#page_bar{width: 150px;height: 20px;margin:0px auto 10px auto;position: relative;}
 #page_bar span{color:#000;font-size:20px;padding:10px;}
 #page_bar a{color:#666;font-size:16px;padding:10px;}
 #page_bar a:hover{border:1px solid #26A5FF;}
@@ -174,52 +174,66 @@ a:hover { color: #26A5FF; text-decoration:none;}
 /**
  * position:发布作业;
  */
-.issue_container{width:1300px;height: 600px;margin:auto;padding: 15px;box-shadow: 2px 2px 2px #eee;}
-.issue_container p{font-size: 16px;line-height: 28px;color: #000;}
-.issue_work_date{text-align: right;margin-right:20px;}
-.issue_work_nav{text-align: left;margin:5px 0px 20px 50px;}
-.issue_container form{width:500px;margin:auto}
+.issue_container{width:1300px;height: 700px;margin:auto;box-shadow: 2px 3px 3px 2px #eee;padding:10px 20px;}
+.issue_container p{font-size: 18px;}
+#show_time{padding:0px 10px;}
+.issue_container>p:first-child{text-align: right;margin:10px 20px 0px 0px;}
+.issue_container>p:nth-child(2){text-align: left;margin:10px 0px 30px 50px;}
+.issue_container form{width:600px;margin:auto;}
 .issue_container form span{font-weight: normal;opacity: 0.6;}
-.issue_container input[type=text]{padding: 4px 8px;width:400px;margin:0px 0px 20px 35px;}
-.issue_container textarea{font-size: 16px;padding:4px 8px;margin-left:80px;}
-.issue_container input[type=file]{padding: 4px 8px;width:400px;margin:10px 0px 0px 0px;}
-.issue_container input[type=date]{padding: 4px 8px;width:200px;margin:10px 0px 10px 0px;}
+.issue_container input[type=text]{padding: 4px 8px;width:445px;margin:0px 0px 20px 29px;font-size: 18px;}
+.issue_container textarea{font-size: 18px;padding:4px 8px;margin-left:80px;width:445px;height:300px;}
+.issue_container input[type=file]{padding: 4px 8px;width:400px;margin:10px 0px 0px 0px;font-size: 18px;}
 .issue_container select{font-size: 16px;padding: 4px 8px;margin:10px 0px 10px 0px;}
 .issue_container input[type=submit]{-webkit-appearance:button;width: 300px;padding: 4px 8px;font-size: 16px;margin:10px 0px 0px 150px;border: 1px solid #26A5FF;border-radius: 5px;background: #fefefe;}
-
+.issue_container input[type=submit]:hover{background: #26A5FF;color:#fff;}
 /**
  * position:批改作业;
  */
-.check_container{width: 1300px;height: 800px;margin:auto;box-shadow: 2px 3px 3px 2px #eee; }
+.check_container{width: 1300px;height: 800px;margin:auto;box-shadow: 2px 3px 3px 2px #eee;}
 .select_form{padding: 10px 20px;}
 .select_form p{font-size: 18px;}
-.select_form form{margin:20px 0px 0px 250px;}
+.select_form p:first-child{text-align: right;margin:10px 20px 0px 0px;}
+.select_form p:nth-child(2){text-align: left;margin:10px 0px 30px 50px;}
+.select_form form{margin:0px 0px 0px 250px;}
 .select_form span{font-size: 18px;padding: 0px 10px;}
-.select_form select{padding: 4px 8px;width: 150px;}
-.select_form input[type=date]{padding: 4px 8px; width: 150px;}
-.select_form input[type=submit]{padding: 4px 8px;font-size: 16px;margin-left:50px;}
+.select_form select[name=class]+span{margin-left:30px;}
+.select_form select[name=class]{padding: 4px 8px;width: 150px;font-size: 18px;}
+.select_form select[name=YYYY],
+.select_form select[name=MM],
+.select_form select[name=DD]{font-size: 18px;}
+.select_form input[type=submit]{-webkit-appearance:button;padding: 2px 16px;font-size: 18px;margin-left:10px;background: #fefefe;border:1px solid #26A5FF;border-radius: 5px;}
+.select_form input[type=submit]:hover{background: #26A5FF;color:#fefefe;}
 
-.select_result{margin:50px auto;width:1000px;}
+.select_result{margin:30px auto;width:1000px;}
 .select_result p{font-size: 16px;padding: 4px 8px;margin-left:0px;}
 .select_result table{border-collapse: collapse;margin:auto;width: 1000px;border-spacing: 0;}
 .select_result table th,td{border:1px solid gray;padding: 2px 4px;font-size: 18px;text-align: center;}
 .select_result tr:nth-child(even){background: #f2f2f2;}
 
+.no_submit{color: red;}
+.d_file{color:#26A5FF;}
+.works_span{display:inline-block;font-size: 18px;margin: 0px 0px 20px 250px;}
+.select_works{font-size: 18px;padding:5px 10px;color:#26A5FF;}
+.select_works:hover{border:1px solid #000;color: #000;}
+
 /*批改作业模态框*/
+#check_p{text-align: center;font-size: 24px;color:red;}
 .check_modal_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 1000px;height: auto;}
 .check_modal_head{position: relative;margin:10px 0px 0px 30px;}
-.check_modal_head p{font-size: 16px;color:#000;padding: 2px 8px;}
+.check_modal_head>p{font-size: 16px;color:#000;padding: 2px 8px;}
 .check_modal_issue_work{margin:20px 0px 0px 80px;}
 .check_modal_issue_work p{font-size: 18px;line-height: 30px;}
 .check_modal_submit_work{margin:20px 0px 0px 50px;}
-.check_modal_content h2{margin:20px 0px 20px 50px;font-size: 20px;font-weight: bold;}
+.check_modal_content h2{margin:20px 0px 20px 43px;font-size: 20px;font-weight: bold;}
 .check_modal_submit_work{margin-left:150px;}
 .check_modal_submit_work pre{font-size: 14px;}
-.check_modal_submit_work p{font-size: 18px;}
+.check_modal_submit_work p{margin-left:-100px;font-size: 18px;line-height: 30px;}
 .check_modal_content form{margin:20px 0px 30px 140px;}
 .check_modal_content form>p{font-size: 18px;float:left;padding:4px 8px;}
 .check_modal_content form input[type=text]{padding:4px 8px;font-size: 16px;}
 .check_modal_content form input[type=submit]{-webkit-appearance:button;float:left;padding:4px 6px;font-size: 16px;margin-left:10px;background: #26A5FF;}
+
 
 /**
  * position:学生查看作业;
@@ -239,20 +253,21 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .show_modal_content p{font-size: 18px;padding:4px 8px;margin-left:30px;width:700px;}
 .show_modal_content pre{font-size: 16px;margin-left:50px;}
 .show_modal_content form{margin-top:50px;}
-.show_modal_content textarea{font-size: 16px;margin-left:160px;width: 600px;height: 500px;}
+.show_modal_content textarea{font-size: 16px;margin-left:160px;width: 600px;height: 500px;overflow:auto;}
 .show_modal_content input[type=file]{padding:4px 8px;font-size: 16px;}
 .show_modal_content input[type=submit]{padding:4px 8px;width: 300px;border:1px solid #26A5FF;border-radius: 5px;margin:10px 0px 20px 300px;}
 .a_blue{color:#26A5FF;}
+.overtime{text-align: center;font-size: 22px;color:red;}
 /**
  * position:学生查看成绩;
  */
-.show_grade_container {width: 1300px;height:700px;box-shadow: 2px 3px 3px 2px #eee;margin:auto;}
+.show_grade_container {width: 1300px;height:700px;box-shadow: 2px 3px 3px 2px #eee;margin:auto;padding: 8px 16px;}
 .show_grade_container p{font-size: 16px;line-height: 28px;color: #000;}
-.show_grade_date{float:right;margin:20px 50px 0px 0px;}
-.show_grade_nav{float:left;margin:50px 0px 20px 50px;}
-.show_grade_container table{border-collapse: collapse;margin:auto;}
+.show_grade_container>p:nth-child(1){text-align: right;margin:0px 30px 0px 0px;padding-top: 20px;}
+.show_grade_container>p:nth-child(2){text-align: left;margin:2px 0px 10px 34px;}
+.show_grade_container table{border-collapse: collapse;margin:50px auto;}
 .show_grade_container tr:nth-child(even){background: #f2f2f2;}
-.show_grade_container th,td{border:1px solid #666;font-size: 16px;padding:4px 8px;}
+.show_grade_container th,td{border:1px solid #666;font-size: 16px;padding:4px 8px;width: 250px}
 
 /**
  * position:讨论区;
