@@ -37,7 +37,12 @@ $submit_num = mGetOne($sql4);
 //统计没提交作业人数
 $sql5 = "select count(*) from (select user_data.user_account,user_nick from user_data inner join user on user_data.user_account=user.user_account where user_data.class='$issue_class') as nt left join (select user_account,work_id from submit_work where work_id=$work_id) as nt2 on nt.user_account=nt2.user_account where work_id is NULL";
 $nosubmit_num = mGetOne($sql5);
+
+//查询前五条作业记录
+$sql6 = "select work_id,work_title,class,issue_date,deadline from issue_work where user_account='$_SESSION[user_account]' order by work_id desc limit 0,5";
+$history_work = mGetAll($sql6);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,8 +58,24 @@ $nosubmit_num = mGetOne($sql5);
 		<!--查询作业-->
 		<div class="select_form">
 			<p>老师好，当前时间<span id="show_time"></span></p>
-			<p style="float:left">作业&gt;<a href="./issue_work.php">发布作业</a>&gt;<a href="./check_work.php" style="color:#26A5FF">批改作业</a></p>
+			<p>作业&gt;<a href="./issue_work.php">发布作业</a>&gt;<a href="./check_work.php" style="color:#26A5FF">批改作业</a><button class="openbtn" onclick="openSide();">☰ 最近五次作业发布记录</button></p>
 			<div class="clearfix"></div>
+
+			<!-- 前五条作业发布记录 -->
+			<div id="side_content" class="work_history">
+			<?php foreach($history_work as $v){?>
+  				<div class="history_msg">
+  					<p><span><?php echo $v['work_id'];?></span>
+  						<?php echo $v['work_title'];?></p>
+  					<p>班级：<?php echo $v['class']; ?></p>
+  					<p>发布日期：<?php echo $v['issue_date']; ?></p>
+  					<p>截止日期：<?php echo $v['deadline']; ?></p>
+  					<hr>
+  				</div>
+			<?php } ?>
+  			</div>
+
+  			<!-- 查询表单 -->
 			<form name="work_date" method="get">
 				<span>班级:</span>
 				<select name="class" id="class">
@@ -74,7 +95,7 @@ $nosubmit_num = mGetOne($sql5);
 		<!--显示查询结果-->
 		<div class="select_result">
 			<?php //显示班级和日期 
-			if(count($issue_work)==0){
+			if(!empty($issue_class) && count($issue_work)==0){
 				echo '<p id="check_p">这一天并没有发布作业!!!</p>';
 			}else if(count($issue_work)==1){
 				echo '<p>当前班级&gt;',$issue_class,'&gt;',$issue_date,'</p>';
@@ -94,17 +115,20 @@ $nosubmit_num = mGetOne($sql5);
 					<th>作业情况</th>
 					<th>成绩</th>
 				</tr>
-<?php //输出学生作业
-		foreach($student_work as $v){ ?>
+			<?php //输出学生作业
+				foreach($student_work as $v){ ?>
 				<tr>
 					<td><?php echo $v['user_account']; ?></td>
 					<td><?php echo $v['user_nick']; ?></td>
 					<td><?php if($v['work_id']!=NULL){ ?><a onclick="document.getElementById('check_work_<?php echo $v['user_id']; ?>').style.display='block'">已交</a><?php }else{echo '<span class="no_submit">未交<span>';} ?></td>
 					<td id="s_<?php echo $v['user_id']; ?>"><?php echo $v['score']; ?></td>
 				</tr>
-<?php } ?>
+			<?php } ?>
 			</table>
-			<?php echo '<p>本次作业：',$submit_num,'人已交,',$nosubmit_num,'人未交</p>'; ?>
+			<?php
+			if(!empty($student_work)){
+				echo '<p>本次作业：',$submit_num,'人已交,',$nosubmit_num,'人未交</p>';
+			}?>
 		</div>
 	</div>
 	<div class="clearfix"></div>
@@ -150,9 +174,6 @@ $("#check_form_<?php echo $v['user_id']; ?>").submit(function(){
 	<!--页尾-->
 	<?php include('./foot.html'); ?>
 </body>
-<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../js/select_date.js" type="text/javascript" charset="utf-8"></script>
-<script>
-	window.onload=startClock();
-</script>
+<script src="../../js/check_work.js"></script>
 </html>

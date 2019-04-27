@@ -2,6 +2,7 @@
 	if(!isset($_SESSION['user_account'])){
 	 	echo "<script>alert('请登录后再查看本页面内容');</script>";
 		echo "<script>location.replace('../../home.php');</script>";
+		exit;
 	 }
 //查询用户数据
 $sql = "select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='$_SESSION[user_account]'";
@@ -26,11 +27,11 @@ $teacher_class = mGetAll($sql4);
 			<li><a href="../../home.php"><img src="../../images/icon/home.png" alt="home">首页</a></li>
 			<li><a href="./resource.php"><img src="../../images/icon/resource.png" alt="resource">课程资源</a></li>
 			<li><a href="./study.php"><img src="../../images/icon/study.png" alt="study">学习园地</a></li>
-<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>
+			<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>
 			<li><a href="./check_work.php"><img src="../../images/icon/work.png" alt="work">作业区</a></li>
-<?php }else{ ?>			
+			<?php }else{ ?>			
 			<li><a href="./show_work.php"><img src="../../images/icon/work.png" alt="work">作业区</a></li>
-<?php } ?>
+			<?php } ?>
 			<li><a href="./forum.php"><img src="../../images/icon/forum.png" alt="forum">讨论区</a></li>
 			<li><a href="#"><img src="../../images/icon/about.png" alt="about">关于</a></li>
 		</ul>
@@ -63,14 +64,14 @@ $teacher_class = mGetAll($sql4);
 				</p>
 
 				<p>联系方式：<input type="text" name="tel" value="<?php echo $user['tel']; ?>"><p>
-<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==0){ ?>
+				<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==0){ ?>
 				<p>任教班级：
 					<?php foreach($teacher_class as $v){
 						echo $v['t_class'],',';
 					}
 					 ?>
 				</p>
-<?php }else{ ?>	
+				<?php }else{ ?>	
 				<p>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：
 					<?php if(empty($user['class'])) {?>
 				<select name="class">
@@ -98,7 +99,7 @@ $teacher_class = mGetAll($sql4);
 					echo $user['teacher'];
 					} ?>
 				</p>
-<?php } ?>
+				<?php } ?>
 				<input type="submit" value="修改信息">
 			</form>
 

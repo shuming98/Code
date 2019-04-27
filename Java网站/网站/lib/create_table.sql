@@ -33,6 +33,7 @@ create table teacher(
 5.创建资源表:
 create table resource_tag(
 	tag_id smallint unsigned not null primary key auto_increment,
+	user_account char(30) not null defaultt '',
 	tag_name char(20) not null default '',
 	resource_sum int not null default 0
 )engine=myisam default charset=utf8;
@@ -57,11 +58,11 @@ create table issue_work(
 	work_content text,
 	work_filepath char(255) not null default '',
 	issue_date datetime default current_timestamp,
-	deadline datetime not null default '2019-01-01 00:00:00'
+	deadline datetime not null default '2019-01-01 00:00:00',
+	key user_account(user_account)
 )engine=myisam default charset=utf8;
 
 create table submit_work(
-	work_num int unsigned not null primary key auto_increment,
 	work_id int unsigned not null default 0,
 	user_account char(30) not null default '',
 	work_content text,
@@ -70,4 +71,23 @@ create table submit_work(
 	score char(10) not null default '',
 	comment char(100) not null default '',
 	key work_id(work_id)
+)engine=myisam default charset=utf8;
+
+create table study_dir(
+	dirname_id smallint unsigned not null primary key auto_increment,
+	user_account char(30) not null default '',
+	dirname char(20) not null default '',
+	article_sum smallint unsigned not null default 0,
+	key dirname(dirname)
+)engine=myisam default charset=utf8;
+
+create table article(
+	art_id smallint unsigned not null primary key auto_increment,
+	user_account char(30) not null default '',
+	dirname char(20) not null default '',
+	art_title char(50) not null default '',
+	art_content text,
+	pubtime datetime default current_timestamp,
+	pageview int not null default 0,
+	key dirname(dirname)
 )engine=myisam default charset=utf8;

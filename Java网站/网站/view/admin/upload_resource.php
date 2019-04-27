@@ -29,9 +29,7 @@ $res = mExec('resource',$resource);
 
 if($res){
 	echo '文件上传成功';
-	// echo "<script>alert('文件上传成功');location.replace(document.referrer);</script>";
 }else{
 	echo '文件上传失败,请重新上传';
-	// echo "<script>alert('文件上传失败');location.replace(document.referrer);</script>";
 }
  ?>

@@ -5,7 +5,7 @@ require('../../lib/init.php');
 $work['user_account'] = $_SESSION['user_account'];
 $work['class'] = $_POST['class'];
 $work['work_title'] = $_POST['work_title'];
-$work['work_content'] = $_POST['work_content'];
+$work['work_content'] = htmlspecialchars($_POST['work_content']);
 $work['deadline'] = $_POST['YYYY'].'-'.$_POST['MM'].'-'.$_POST['DD'].' 23:59:59';
 
 //将文件路径导入数据库

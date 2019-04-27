@@ -32,17 +32,16 @@ $grade = mGetAll($sql2);
 				<th>成绩</th>
 				<th>评语</th>
 			</tr>
-<?php foreach($grade as $v){ ?>
+		<?php foreach($grade as $v){ ?>
 			<tr>
 				<td><?php echo $v['work_title']; ?></td>
 				<td><?php echo date('Y-m-d',strtotime($v['submit_date'])); ?></td>
 				<td><?php echo $v['score']; ?></td>
 				<td><?php echo $v['comment']; ?></td>
 			</tr>
-<?php } ?>	
+		<?php } ?>	
 		</table>
 	</div>
 	<?php include('./foot.html'); ?>
 </body>
-<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
 </html>

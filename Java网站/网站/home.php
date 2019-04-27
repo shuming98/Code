@@ -33,11 +33,11 @@ $teacher_class = mGetAll($sql4);
 			<li><a href="./home.php"><img src="./images/icon/home.png" alt="home">首页</a></li>
 			<li><a href="./view/front/resource.php"><img src="./images/icon/resource.png" alt="resource">课程资源</a></li>
 			<li><a href="./view/front/study.php"><img src="./images/icon/study.png" alt="study">学习园地</a></li>
-<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>	
+		<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>	
 			<li><a href="./view/front/check_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
-<?php }else { ?>
+		<?php }else { ?>
 			<li><a href="./view/front/show_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
-<?php } ?>
+		<?php } ?>
 			<li><a href="./view/front/forum.php"><img src="./images/icon/forum.png" alt="forum">讨论区</a></li>
 			<li><a href="#"><img src="./images/icon/about.png" alt="about">关于</a></li>
 		</ul>
@@ -45,15 +45,15 @@ $teacher_class = mGetAll($sql4);
 				<input type="search" name="search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;搜索...">
 			</form>
 
-<?php if(isset($_SESSION['user_account'])){ ?>
+		<?php if(isset($_SESSION['user_account'])){ ?>
 
-			<a class="user_message" href="#" onclick="document.getElementById('user').style.display='block'"><img src="<?php echo '.'.$user['pic_path']; ?>" alt="user"><?php echo $user['user_nick']; ?></a>
+			<a class="user_message" onclick="document.getElementById('user').style.display = 'block'" href="#"><img src="<?php echo '.'.$user['pic_path']; ?>" alt="user"><?php echo $user['user_nick']; ?></a>
 
-<?php }else{ ?>
+		<?php }else{ ?>
 
-		<a class="nav_login" href="#" onclick="document.getElementById('login').style.display='block'"><img src="./images/icon/user.png" alt="login">登录</a>
+			<a class="nav_login" onclick="document.getElementById('login').style.display = 'block'" href="#"><img src="./images/icon/user.png" alt="login">登录</a>
 
-<?php } ?>
+		<?php } ?>
 
 	</div>
 
@@ -61,7 +61,7 @@ $teacher_class = mGetAll($sql4);
 	<div id="login" class="modal">
 		<form class="modal_content animate" action="./view/admin/login.php" method="post">
 			<div class="modal_img">
-				<span onclick="document.getElementById('login').style.display='none'" class="close">&times;</span>
+				<span onclick="document.getElementById('login').style.display = 'none'" class="close">&times;</span>
 				<img src="./images/icon/user.png" alt="user">
 			</div>
 			<div class="modal_form">
@@ -77,7 +77,7 @@ $teacher_class = mGetAll($sql4);
 	<div id="user" class="modal">
 		<div class="user_modal_content animate">
 			<div class="user_modal_img">
-				<span onclick="document.getElementById('user').style.display='none'" class="close">&times;</span>
+				<span onclick="document.getElementById('user').style.display = 'none'"  class="close">&times;</span>
 				<div id="showImg"><img src="<?php echo '.'.$user['pic_path']; ?>" alt=""></div>
 			</div>
 
@@ -87,33 +87,33 @@ $teacher_class = mGetAll($sql4);
 				<p>用&nbsp;&nbsp;户&nbsp;名：<input type="text" name="user_nick" value="<?php echo $user['user_nick']; ?>"></p>
 
 				<p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
-					<?php if(empty($user['gender'])){ ?>
+				<?php if(empty($user['gender'])){ ?>
 					   <input name="gender" type="radio" value="男">男
 					   <input name="gender" type="radio" value="女">女
-					<?php }else{
+				<?php }else{
 						echo $user['gender'];
 					}?>
 				</p>
 
 				<p>联系方式：<input type="text" name="tel" value="<?php echo $user['tel']; ?>"><p>
-<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==0){ ?>
+			<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==0){ ?>
 				<p>任教班级：
 					<?php foreach($teacher_class as $v){
 						echo $v['t_class'],',';
 					}
 					 ?>
 				</p>
-<?php }else{ ?>	
+			<?php }else{ ?>	
 				<p>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：
 					<?php if(empty($user['class'])) {?>
 				<select name="class">
-				<?php foreach($t_class as $v){ ?>
+			<?php foreach($t_class as $v){ ?>
 					<option value="<?php echo $v['t_class']; ?>">
 						<?php echo $v['t_class']; ?>				
 					</option>
-				<?php } ?>
+			<?php } ?>
 				</select>
-				<?php }else{
+			<?php }else{
 					echo $user['class'];
 					}?>
 				</p>
@@ -121,17 +121,17 @@ $teacher_class = mGetAll($sql4);
 				<p>任课老师：
 					<?php if(empty($user['teacher'])){ ?>
 				<select name="teacher">
-				<?php foreach($t_name as $v){ ?>
+			<?php foreach($t_name as $v){ ?>
 					<option value="<?php echo $v['t_name']; ?>">
 						<?php echo $v['t_name']; ?>
 					</option>
-				<?php } ?>
+			<?php } ?>
 				</select>
-				<?php }else{
+			<?php }else{
 					echo $user['teacher'];
 					} ?>
 				</p>
-<?php } ?>
+			<?php } ?>
 				<input type="submit" value="修改信息">
 			</form>
 
@@ -220,7 +220,11 @@ $teacher_class = mGetAll($sql4);
 			</div>
 		</div>
 	</div>
-	<?php include('./view/front/foot.html'); ?>
+	<footer class="footer">
+		<p>© 2019 All right reserved.Development by 402.</p>
+		<p>粤ICP备18036003号</p>
+	</footer>
 </body>
-<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/home.js" type="text/javascript" charset="utf-8">
+</script>
 </html>

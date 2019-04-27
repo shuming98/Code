@@ -1,21 +1,30 @@
-<?php session_start();
+<?php 
+session_start();
 require('../../lib/init.php');
 
+//查询该学生的老师
+if($_SESSION['permission_id']==3){
+	$sql = "select teacher.user_account from user_data inner join teacher on user_data.class=teacher.t_class where user_data.user_account='$_SESSION[user_account]'";
+	$teacher = mGetOne($sql);
+}else if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){
+	$teacher = $_SESSION['user_account'];
+}
+
 //查询所有资源标签
-$sql = "select tag_id,tag_name from resource_tag";
-$tag_name = mGetAll($sql);
+$sql2 = "select tag_id,tag_name from resource_tag where user_account='$teacher'";
+$tag_name = mGetAll($sql2);
 
 /**
  * 实现分页功能 
  */
 
 //查询资源总数
-$sql2 = "select count(*) from resource";
-$resource_sum = mGetOne($sql2);
+$sql3 = "select count(*) from resource";
+$resource_sum = mGetOne($sql3);
 
 //查询单个标签的资源总数
-$sql3 = "select count(*) from resource where tag_id=$_GET[tag_id]";
-$tag_resource_sum = mGetOne($sql3);
+$sql4 = "select count(*) from resource where tag_id=$_GET[tag_id]";
+$tag_resource_sum = mGetOne($sql4);
 
 //设置每页显示资源数量
 $per_page_num = 12;
@@ -29,16 +38,16 @@ if(isset($_GET['tag_id'])){
 	$pages = getPage($tag_resource_sum,$current_page,$per_page_num);
 	
 	//查询这个tag_id的tag_name
-	$sql4 = "select tag_name from resource_tag where tag_id=$_GET[tag_id]";
-	$position = mGetOne($sql4);
+	$sql5 = "select tag_name from resource_tag where tag_id=$_GET[tag_id]";
+	$position = mGetOne($sql5);
 }else{
 	$where = '';
 	$pages = getPage($resource_sum,$current_page,$per_page_num);
 }
-
 //查询所有资源
-$sql5 = 'select resource_id,resource_name,resource_type,resource_path from resource where 1' . $where . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
-$resource = mGetAll($sql5);
+$sql6 = "select resource_id,resource_name,resource_type,resource_path from resource where user_account='$teacher'" . $where . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
+$resource = mGetAll($sql6);
+
 
 //文件格式对应其图标
 $map = array(
@@ -67,7 +76,8 @@ $map = array(
 	<!--课程资源-->
 	<div class="resource_container">
 	<!--资源下载-->
-		<div class="resource_show">
+		<div class="resource_container_left">
+			<div class="resource_show">			
 			<span>当前位置:JAVA课程资源&gt;<span>
 				<?php 
 					if(isset($_GET['tag_id'])){
@@ -79,7 +89,7 @@ $map = array(
 			</span>
 			</span>
 	<!-- 输出全部资源 -->
-<?php foreach($resource as $v){ ?>
+		<?php foreach($resource as $v){ ?>
 			<figure>
 				<a href="<?php echo '../..',$v['resource_path']; ?>" download="<?php echo $v['resource_name'],'.',$v['resource_type'] ?>">
 				<img src="<?php echo $map[$v['resource_type']]; ?>" alt="">
@@ -88,7 +98,8 @@ $map = array(
 				</figcaption>	
 				</a>
 			</figure>
-<?php } ?>
+		<?php } ?>
+	</div>
 	<!-- 分页页号 -->
 		<div id="page_bar" style="top:30px;">
 			<?php 
@@ -101,18 +112,21 @@ $map = array(
 				}
 			?>
 		</div>
+
 		</div>
 	<!--资源分类-->
 		<div class="resource_select">
-			<button type="button" onclick="document.getElementById('upload_resource').style.display='block'">+发布资源</button>
-			<button type="button" onclick="document.getElementById('add_tag').style.display='block'">+添加分类</button>
+		<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>
+			<button id="up_res_btn" type="button">+发布资源</button>
+			<button id="add_tag_btn" type="button">+添加分类</button>
+		<?php } ?>
 			<div class="resource_category">
 				<p><img style="width: 20px;" src="../../images/icon/about.png" alt="">资源分类</p>
 				<ul>
 			<!-- 输出资源标签名 -->
-<?php foreach($tag_name as $v){ ?>
+		<?php foreach($tag_name as $v){ ?>
 					<li><a href="./resource.php?tag_id=<?php echo $v['tag_id']; ?>"><?php echo $v['tag_name']; ?></a></li>
-<?php } ?>
+		<?php } ?>
 				</ul>
 			</div>
 			<div class="clearfix"></div>
@@ -133,14 +147,14 @@ $map = array(
 	<div id="upload_resource" class="modal">
 		<div class="upload_modal_content animate">
 			<h1><img src="../../images/icon/work.png" alt="">上传课程资源</h1>
-			<span onclick="document.getElementById('upload_resource').style.display='none'" class="close">&times;</span>
+			<span id="up_res_close" class="close">&times;</span>
 		<form id="upload_resource_form"  method="post" enctype="multipart/form-data">
 			<p>资源名字:<input type="text" name="resource_name"></p>
 			<p>资源分类:
 				<select name="tag_name">
-<?php foreach($tag_name as $v){ ?>
+		<?php foreach($tag_name as $v){ ?>
 				<option value="<?php echo $v['tag_name']; ?>"><?php echo $v['tag_name']; ?></option>
-<?php } ?>
+		<?php } ?>
 				</select>
 			</p>
 			<p>文件上传:<input name="resource" type="file"></p>
@@ -159,7 +173,7 @@ $map = array(
 	<div id="add_tag" class="modal">
 		<div class="add_tag_content animate">
 			<h1><img src="../../images/icon/work.png" alt="">添加资源分类<span>(最多可添加5个)</span></h1>
-			<span onclick="document.getElementById('add_tag').style.display='none'" class="close">&times;</span>
+			<span id="add_tag_close" class="close">&times;</span>
 		<form method="post">
 			<input type="text" name="tag_name" placeholder="请输入资源类名">
 			<input type="submit" value="添加">
@@ -168,5 +182,5 @@ $map = array(
 	</div>
 	<?php include('./foot.html'); ?>
 </body>
-<script type="text/javascript" src="../../js/main.js"></script>
+<script type="text/javascript" src="../../js/resource.js"></script>
 </html>

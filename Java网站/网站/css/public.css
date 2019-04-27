@@ -33,7 +33,7 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .user_message img{width: 25px;height:23px;border-radius: 50%;}
 
 /*模态框登录*/
-.modal{display: none;position: fixed;z-index: 1;left: 0;top:0;width: 100%;height:100%;overflow: auto;padding-top: 60px;background: rgba(0,0,0,0.4);}
+.modal{display: none;position: fixed;z-index: 1000;left: 0;top:0;width: 100%;height:100%;overflow: auto;padding-top: 60px;background: rgba(0,0,0,0.4);}
 .modal_content{background-color: #fefefe;margin:5% auto 15% auto;border:1px solid #26A5FF;width: 500px;height: auto;}
 .modal_img{text-align: center;position: relative;}
 .modal_img img{width: 90px;margin-top: 20px;}
@@ -106,7 +106,8 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .resource_container{width: 1300px;height: 700px;margin:auto;}
 
 /*资源下载*/
-.resource_show{width: 900px;height:auto;float:left;}
+.resource_container_left{width: 900px;height:auto;float:left;}
+.resource_show{height: 600px;}
 .resource_show>span{display:block;width:300px;text-align: center;font-size: 16px;border-bottom:2px solid #999;border-top:2px solid #999;margin:15px 0px 0px 15px;color:#888;}
 .resource_show>span>span{color:#26A5FF;}
 .resource_show figure{width: 15%;padding:10px;float:left;}
@@ -114,7 +115,7 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .resource_show figcaption{font-size: 14px;text-align: center;height:15px;}
 
 /*分页页号*/
-#page_bar{width: 150px;height: 20px;margin:0px auto 10px auto;position: relative;}
+#page_bar{width: 150px;height: 20px;margin:0px auto 10px auto}
 #page_bar span{color:#000;font-size:20px;padding:10px;}
 #page_bar a{color:#666;font-size:16px;padding:10px;}
 #page_bar a:hover{border:1px solid #26A5FF;}
@@ -139,7 +140,7 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .upload_modal_content select{padding: 4px 8px;font-size: 18px;}
 .upload_modal_content input[type=file]{padding: 4px 8px;width:250px;}
 .upload_modal_content input[type=submit]{-webkit-appearance:button;padding: 4px 8px;width:100px;margin:0px 0px 10px 100px;background: #26A5FF;border:1px solid #fefefe;font-size: 15px;border-radius: 5px;}
-.upload_progress{width:80%;height:30px;border:1px solid #26A5FF;margin:0px 0px 20px 10px;float:left;}
+.upload_progress{width:80%;height:30px;margin:0px 0px 20px 10px;float:left;}
 #upload_progress{width: 0%;background: #26A5FF;height: 100%;}
 #upload_rate{float:left;line-height: 30px;font-size: 18px;margin-left:10px;}
 /*添加标签-模态框*/
@@ -154,10 +155,11 @@ a:hover { color: #26A5FF; text-decoration:none;}
 /**
  * position:学习园地;
  */
-.study_container{width: 1300px;height: 700px;margin:auto;border:1px solid gray;}
-
-.study_container_left{width: 300px;height: 100%;border-right:1px solid #000;float:left;}
-.study_container_left>button{-webkit-appearance:button;display:block;background: #fefefe;padding:4px 6px;font-size: 16px;border:1px solid #26A5FF;border-radius: 5px;margin:auto;width: 100px;margin:10px 0px 10px 90px;}
+.study_container{width: 1300px;height: auto;margin:auto;border:1px solid gray;}
+/*左侧内容*/
+.study_container_left{width: 300px;height: 100%;float:left;}
+.study_container_left>button{-webkit-appearance:button;background: #fefefe;padding:4px 6px;font-size: 16px;border:1px solid #26A5FF;border-radius: 5px;width: 100px;margin:10px 10px 20px 30px;float:left;}
+.study_container_left>button:hover{background: #000;color: #26A5FF;border:1px solid #fff;opacity: 0.7;}
 .study_container_left>p{font-size: 16px;margin-left:20px;opacity: 0.5;}
 .caret{cursor: pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 .caret::before{content:"\25B6";color: #000;display: inline-block;margin-right:6px;}
@@ -165,12 +167,31 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .nested{display: none;margin-left:40px;}
 .active{display: block;}
 #treeview{margin-left:20px;width: 250px;font-size: 16px;color:#333;}
+/*添加父节点-模态框*/
+.add_dir_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 600px;height: auto;position: relative;}
+.add_dir_content>h1>img{width: 30px;border:1px solid blue;border-radius: 50%;padding: 3px;}
+.add_dir_content>h1{font-size: 24px;line-height: 20px;margin: 20px;}
+.add_dir_content>h1>span{font-size: 14px;font-weight: normal;opacity: 0.7;}
+.add_dir_content input[type=text]{width:200px;padding: 4px 8px;border:1px solid #26A5FF;margin-left:50px;font-size: 18px;border-radius: 5px;}
+.add_dir_content input[type=submit]{-webkit-appearance:button;padding: 4px 8px;width:100px;margin:0px 0px 30px 20px;background: #26A5FF;border:1px solid #fefefe;font-size: 15px;border-radius: 5px;}
 
-.study_container_right{float:left;width:998px;padding:5px;}	
-.study_container_right h1{font-size: 20px;}
-.study_container_right p{font-size: 16px;opacity: 0.7;margin-left:10px;}
+.study_container_right{float:left;width:998px;min-height:700px;padding:8px 15px;border-left:1px solid #999;}	
+.study_container_right>h1{font-size: 20px;}
+.study_container_right>p{font-size: 16px;opacity: 0.7;}
+.study_container_right>p>a{float:right;}
+.study_container_right>p>span{margin-left:20px;}
+/**
+ * 学习园地-发布文章
+ */
+.study_add_article{width: 1300px;height: 800px;border:1px solid gray;margin:auto;padding:5px 10px;}
+.study_add_article>p:first-child{font-size: 18px;margin:50px 0px 10px 50px;}
+.study_add_article>p:first-child>span{color:#26A5FF;}
+.study_add_article>form{width: 1100px;margin:auto;}
+.study_add_article>form>input[type=text]{width: 1100px;font-size: 24px;border:1px solid #999;margin-bottom:10px;}
+.study_add_article>form select{border:1px solid #eee;font-size: 20px;padding:8px 16px;margin:20px 0px 20px 0px;}
+.study_add_article>form>input[type=submit]{-webkit-appearance:button;font-size: 20px;border:1px solid #f8f8f8;background: #26A5FF;color:#fff;padding:8px 32px;border-radius: 8px;float:right;margin:10px 50px 20px 0px;}
+.study_add_article>form>input[type=submit]:hover{opacity:0.8;}
 
-	
 /**
  * position:发布作业;
  */
@@ -187,14 +208,15 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .issue_container select{font-size: 16px;padding: 4px 8px;margin:10px 0px 10px 0px;}
 .issue_container input[type=submit]{-webkit-appearance:button;width: 300px;padding: 4px 8px;font-size: 16px;margin:10px 0px 0px 150px;border: 1px solid #26A5FF;border-radius: 5px;background: #fefefe;}
 .issue_container input[type=submit]:hover{background: #26A5FF;color:#fff;}
+
 /**
  * position:批改作业;
  */
 .check_container{width: 1300px;height: 800px;margin:auto;box-shadow: 2px 3px 3px 2px #eee;}
 .select_form{padding: 10px 20px;}
 .select_form p{font-size: 18px;}
-.select_form p:first-child{text-align: right;margin:10px 20px 0px 0px;}
-.select_form p:nth-child(2){text-align: left;margin:10px 0px 30px 50px;}
+.select_form>p:first-child{text-align: right;margin:10px 20px 0px 0px;}
+.select_form>p:nth-child(2){text-align: left;margin:10px 0px 30px 50px;}
 .select_form form{margin:0px 0px 0px 250px;}
 .select_form span{font-size: 18px;padding: 0px 10px;}
 .select_form select[name=class]+span{margin-left:30px;}
@@ -204,6 +226,15 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .select_form select[name=DD]{font-size: 18px;}
 .select_form input[type=submit]{-webkit-appearance:button;padding: 2px 16px;font-size: 18px;margin-left:10px;background: #fefefe;border:1px solid #26A5FF;border-radius: 5px;}
 .select_form input[type=submit]:hover{background: #26A5FF;color:#fefefe;}
+
+/* 侧边栏发布作业记录 */
+.work_history{width: 0;position: fixed;z-index: 1;height: auto;top: 50px;left: 0;background-color: #e5e5e5;overflow-x: hidden;transition: 0.5s;opacity:0.9;}
+.history_msg{padding:4px 4px;}
+.history_msg p{font-size: 16px;}
+.history_msg>p>span{padding:0px 10px;border-radius: 5px;border:1px solid #26A5FF;color:#666;margin-right:0px;}
+.openbtn{opacity: 0.5;font-size: 18px;cursor: pointer;color: #000;border:none;float:right;margin-right:40px;}
+.openbtn:hover{background: #000;color: #f8f8f8;border:1px solid #fefefe;opacity: 1;border-radius: 5px}
+
 
 .select_result{margin:30px auto;width:1000px;}
 .select_result p{font-size: 16px;padding: 4px 8px;margin-left:0px;}
@@ -246,6 +277,7 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .show_work_content h2{font-size: 18px;font-weight: bold;margin-bottom:10px;width: 600px;}
 .show_work_content p{margin-left:15px;}
 .show_work_content button{-webkit-appearance:button;float:right;padding:4px 8px;width: 75px;background: #f8f8f8;margin:15px 20px 0px 0px;font-size:16px;border:1px solid #26A5FF;border-radius: 5px;cursor: pointer;}
+.adjust_pos{height: 560px;}
 
 /*查看作业-模态框*/
 .show_modal_content{background-color:#fefefe;margin:auto;border:1px solid #26A5FF;width: 1000px;height:auto;position: relative;}

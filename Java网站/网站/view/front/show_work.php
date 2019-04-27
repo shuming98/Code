@@ -20,11 +20,12 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 $per_page_num = 3;
 
 //查看学生作业
-$sql3= "select work_id,work_title,work_content,work_filepath,deadline from issue_work where class='$class' order by work_id desc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
+$sql3= "select issue_work.work_id,work_title,issue_work.work_content,issue_work.work_filepath,deadline,score,comment,submit_date from issue_work left join submit_work on issue_work.work_id=submit_work.work_id where class='$class' order by issue_work.work_id desc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
 $work = mGetAll($sql3);
 
-
 $pages = getPage($work_sum,$current_page,$per_page_num);
+
+//查看学生成绩
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,21 +43,19 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 	<div class="show_work_container">
 		<p><?php echo $student[0]['user_nick']; ?>，你好，Today is	<?php echo date(D); ?></p>
 		<p>作业&gt;<a href="./show_work.php" style="color:#26A5FF">查看作业</a>&gt;<a href="./show_grade.php">查看成绩</a></p>
-	
-<?php foreach($work as $v){ 
-		$sql4 = "select submit_date from submit_work where user_account = '$_SESSION[user_account]' and work_id=$v[work_id]";
-		$work_res = mGetAll($sql4);
-	?>		
+		<div class="adjust_pos">
+	<?php foreach($work as $v){ ?>		
 		<div class="show_work_content">
 			<button type="button" onclick="document.getElementById('show_work_<?php echo $v['work_id']; ?>').style.display='block'">查看</button>
 			<h2>&gt;<?php echo $v['work_title']; ?></h2>
 			<p>截止日期：	<?php echo $v['deadline']; ?></p>
-			<p>上一次提交时间：<?php echo $work_res[0]['submit_date']; ?></p>
-			<p>得分：4.0</p>
-			<p>评语：很好</p>
+			<p>上一次提交时间：<?php echo $v['submit_date']; ?></p>
+			<p>得分：<?php echo $v['score']; ?></p>
+			<p>评语：<?php echo $v['comment']; ?></p>
 		</div>
 		<div class="clearfix"></div>
-<?php } ?>
+	<?php } ?>
+		</div>
 	<!--分页页号-->
 		<div id="page_bar" style="top:0px;">
 			<?php 
@@ -77,21 +76,21 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 			<span class="close" onclick="document.getElementById('show_work_<?php echo $v['work_id'];?>').style.display='none'">&times;</span>
 			<h2>&gt;<?php echo $v['work_title']; ?></h2>
 			<p><pre><?php echo $v['work_content']; ?></pre></p>
-<?php if(!empty($v['work_filepath'])){ ?>
+		<?php if(!empty($v['work_filepath'])){ ?>
 			<p>作业文件：<a class="a_blue" href="<?php echo '../..'.$v['work_filepath']; ?>" download>点击下载</a></p>
-<?php } ?>
-<?php //超过截止时间不允许提交作业
-if(time()<strtotime($v[deadline])){ ?>
+		<?php } ?>
+		<?php //超过截止时间不允许提交作业
+			if(time()<strtotime($v[deadline])){ ?>
 			<form id="submit_work_<?php echo $v['work_id']; ?>" method="post" enctype="multipart/form-data">
 				<p>提交文本答案:</p>
 				<textarea name="work_content"></textarea>
 				<p>上传文件:<input type="file" name="work"></p>
 				<input type="submit" value="提交">
 			</form>
-				<script>
+		<script>
 	   $("#submit_work_<?php echo $v['work_id']; ?>").submit(function(){
-  var form_data = new FormData($("#submit_work_<?php echo $v['work_id']; ?>")[0]);
-      $.ajax({
+  		var form_data = new FormData($("#submit_work_<?php echo $v['work_id']; ?>")[0]);
+      	$.ajax({
             url: "../admin/submit_work.php?work_id=<?php echo $v['work_id'];?>",
             type: "post",
             data: form_data,
@@ -100,22 +99,21 @@ if(time()<strtotime($v[deadline])){ ?>
             success:function(data){
                 alert(data);
                 $("#show_work_<?php echo $v['work_id'];?>").css('display','none');
+                location.reload();
             },	
             error:function(data){
                 alert('发布失败');
-            }
-        });
-      return false;
-    });
-</script>
-<?php }else{ ?>
+            			}
+        		});
+      		return false;
+    	});
+		</script>
+	<?php }else{ ?>
 		<p class="overtime">已过作业提交的截止时间,无法提交</p>
-<?php } ?>
+	<?php } ?>
 		</div>
 	</div>
 <?php } ?>
 	<?php include('./foot.html'); ?>
 </body>
-<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
-
 </html>
