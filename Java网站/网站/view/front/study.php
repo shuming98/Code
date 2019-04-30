@@ -35,6 +35,7 @@ if(!isset($_GET['id'])){
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../css/public.css">
+	<script src="../../ueditor/utf8-php/ueditor.parse.min.js"></script>
 	<script src="../../js/jquery.js"></script>
 	<title>学习园地</title>
 </head>
@@ -69,7 +70,7 @@ if(!isset($_GET['id'])){
 			<p><?php echo date('Y-m-d',strtotime($article[0]['pubtime'])); ?><span>阅读数：<?php echo $article[0]['pageview']; ?></span><?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){?><a href="./modify_article.php?art_id=<?php echo $art_id;?>">修改</a><?php } ?></p>
 			<div class="clearfix"></div>
 			<hr>
-			<div>
+			<div id="art_content">
 				<?php echo $article[0]['art_content']; ?>
 			</div>
 		</div>
@@ -89,4 +90,9 @@ if(!isset($_GET['id'])){
 	<?php include('./foot.html'); ?>
 </body>
 <script src="../../js/study.js"></script>
+<script>
+	uParse('#art_content', {
+    rootPath: '../../ueditor/utf8-php/'
+})
+</script>
 </html>

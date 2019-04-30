@@ -88,6 +88,54 @@ create table article(
 	art_title char(50) not null default '',
 	art_content text,
 	pubtime datetime default current_timestamp,
-	pageview int not null default 0,
 	key dirname(dirname)
+)engine=myisam default charset=utf8;
+
+create table forum_cat(
+	cat_id smallint unsigned not null primary key auto_increment,
+	cat_name char(10) not null default '',
+	post_sum smallint unsigned not null default 0
+)engine=myisam default charset=utf8;
+
+create table forum_post(
+	post_id int unsigned not null primary key auto_increment,
+	user_account char(50) not null default '',
+	post_title char(50) not null default '',
+	cat_name char(10) not null default '',
+	post_content text,
+	pubtime datetime not null default current_timestamp,
+)engine=myisam default charset=utf8;
+
+create table forum_comment(
+	com_id int unsigned not null primary key auto_increment,
+	post_id int unsigned not null default 0,
+	floor_id smallint unsigned not null default 0,
+	user_account char(50) not null default '',
+	content text,
+	pubtime datetime not null default current_timestamp,
+	key post_id(post_id)
+)engine=myisam default charset=utf8;
+
+create table forum_reply(
+	com_id int unsigned not null primary key auto_increment,
+	post_id int unsigned not null default 0,
+	floor_id smallint unsigned not null default 0,
+	user_account char(50) not null default '',
+	content text,
+	pubtime datetime not null default current_timestamp,
+	key floor_id(floor_id)
+)engine=myisam default charset=utf8;
+
+create table give_a_like(
+	id int unsigned not null primary key auto_increment,
+	post_id int unsigned not null default 0,
+	user_account char(50) not null default '',
+	key post_id(post_id)
+)engine=myisam default charset=utf8;
+
+create table pageview(
+	id int unsigned not null primary key auto_increment,
+	symbol char(10) not null default '',
+	ip int not null default 0,
+	key symbol(symbol)
 )engine=myisam default charset=utf8;

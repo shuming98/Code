@@ -1,4 +1,49 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+require('../../lib/init.php');
+
+//查询论坛分类
+$sql = "select cat_id,cat_name from forum_cat";
+$cat_name = mGetAll($sql);
+
+echo $_GET['cat_name'];
+
+//查询公告文章
+$sql2 = "select user_nick,post_id,cat_name,post_title,pubtime from forum_post inner join user_data on forum_post.user_account = user_data.user_account where cat_name = '公告'";
+$notice = mGetAll($sql2);
+
+/**
+ * 实现分页功能
+ */
+
+//查询帖子总数
+$sql3 = "select count(*) from forum_post";
+$post_sum = mGetOne($sql3);
+
+//设置每页显示帖子数
+$per_page_num = 5;
+
+//从地址栏获得当前页码
+$current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+
+//判断地址栏是否有cat_id,并调用分页函数
+if(isset($_GET['cat_id'])){
+	//查询单个分类的帖子数
+	$sql4 = "select count(*) from forum_post left join forum_cat on forum_post.cat_name = forum_cat.cat_name where cat_id = $_GET[cat_id]";
+	$cat_post_sum = mGetOne($sql4);
+	$where = " where cat_id = $_GET[cat_id] order by post_id desc";
+	$pages = getPage($cat_post_sum,$current_page,$per_page_num);
+}else{
+	$where = " order by post_id desc";
+	$pages = getPage($post_sum,$current_page,$per_page_num);
+}
+
+//查询所有帖子
+$sql9 = "select post_nick,t8.post_id,t9.cat_id,t8.cat_name,post_title,post_time,reply_nick,reply_time,likes,reply_sum from (select post_nick,t6.post_id,cat_name,post_title,post_time,reply_nick,reply_time,likes,reply_sum from(select t3.post_nick,t3.post_id,t3.cat_name,t3.post_title,t3.post_time,t3.reply_nick,t3.reply_time,t4.likes from (select t1.user_nick as post_nick,t1.post_id,t1.cat_name,t1.post_title,t1.pubtime as post_time,t2.user_nick as reply_nick,t2.max_pubtime as reply_time from (select user_nick,post_id,cat_name,post_title,pubtime from forum_post inner join user_data on forum_post.user_account = user_data.user_account) as t1 left join (select user_nick,post_id,max(pubtime) as max_pubtime from forum_comment inner join user_data on forum_comment.user_account = user_data.user_account group by post_id) as t2 on t1.post_id=t2.post_id) as t3 left join (select post_id,count(*) as likes from give_a_like group by post_id) as t4 on t3.post_id=t4.post_id) as t6 left join (select post_id,count(*) as reply_sum from (select post_id from forum_comment union all select post_id from forum_reply) as t5 group by post_id) as t7 on t6.post_id=t7.post_id) as t8 left join (select cat_id,cat_name from forum_cat) as t9 on t8.cat_name = t9.cat_name" . $where . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;;
+echo $sql9;
+$post = mGetAll($sql9);
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,52 +58,52 @@
 	<div class="forum_container">
 	<div class="forum_img"><img src="" alt="图片占位符"></div>
 	<div class="forum_category">
-		<button>公告</button>
-		<button>精品</button>
-		<button>求助</button>
-		<button>分享</button>
-		<button>我要发帖</button>
+	<?php 
+		foreach($cat_name as $v){
+			echo '<button><a href="./forum.php?cat_id=',$v['cat_id'],'">',$v['cat_name'],'</a></button>';
+		}
+	 ?>
+		<button><a href="./forum_post.php">我要发帖</a></button>
 	</div>
 	<div class="clearfix"></div>
 	<!--置顶公告-->
 	<div class="forum_top_notice">
 		<div class="forum_one_notice">
-			<a href="#"><p>[公告]本讨论区须知事项</p><span>管理员 2019/5/25</span></a><br/>
-			<a href="#"><p>[公告]本讨论区须遵守协议</p><span>管理员 2019/5/26</span></a><br/>
-			<a href="#"><p>[公告]本讨论区新手使用教程</p><span>管理员 2019/5/27</span></a><br/>
-			<a href="#"><p>[精品]工作三年月薪18K师兄经验分享</p><span>梁师兄 2019/6/05</span></a><br/>
+		<?php foreach($notice as $v){ 
+			echo '<p><a href="./forum_show?post_id=',$v['post_id'],'">','[',$v['cat_name'],']',$v['post_title'],'</a><span>',$v['user_nick'],' ',timeDiff($v['pubtime']),'</span></p>';
+		} ?>
 		</div>
 	</div>
 	<!--讨论帖子区-->
 		<div class="forum_content">
+		<?php foreach($post as $v){ 
+			if($v['likes'] == null){
+				$v['likes'] = 0;
+			}
+			if($v['reply_sum'] == null){
+				$v['reply_sum'] = 0;
+			}
+		//查询浏览数
+		$sql10 = "select count(*) from pageview where symbol = 'post_$v[post_id]'";
+		$pageview = mGetOne($sql10);
+			?>
 			<div class="forum_one_message">
 				<div class="forum_message_left">
 					<img src="../../images/icon/work.png" alt="">
-					<p><a href="#">[求助]安装JDK时出现以下报错，如何解决</a></p>
-					<p>陈同学 <span>2019/5/25</span></p>
+					<p><a href="./forum_show?post_id=<?php echo $v['post_id']; ?>"><?php echo '[',$v['cat_name'],']',$v['post_title']; ?></a></p>
+					<?php echo '<p>',$v['post_nick'],' <span>',timeDiff($v['post_time']),'</span>','</p>';?>
 				</div>
 				<div class="forum_message_right">
-					<p>最后回复：梁老师 <span>2019/5/29</span></p>
-					<p>赞：5 回复：13 浏览：42</p>
+					<?php echo '<p>最后回复:',$v['reply_nick'],'&nbsp;&nbsp;',timeDiff($v['reply_time']),'</p>
+					<p>赞:',$v['likes'],'&nbsp;&nbsp;&nbsp;&nbsp;回复:',$v['reply_sum'],'&nbsp;&nbsp;&nbsp;&nbsp;浏览:',$pageview,'</p>';?>
 				</div>
 			</div>
-			<div class="forum_one_message">
-				<div class="forum_message_left">
-					<img src="../../images/icon/work.png" alt="">
-					<p><a href="#">[分享]Eclipse火星版(中文版)资源分享</a></p>
-					<p>梁同学 <span>2019/5/28</span></p>
-				</div>
-				<div class="forum_message_right">
-					<p>最后回复：李同学 <span>2019/5/29</span></p>
-					<p>赞：15 回复：2 浏览：72</p>
-				</div>
-			</div>
-		</div>
-		<!--分页-->
-	<p style="text-align: center;font-size: 18px;position:relative;top:200px;">1 2 3 4 5 &gt;</p>
+		<?php } ?>
 	</div>
+				<!--分页-->
+	<p style="text-align: center;font-size: 18px;position:relative;top:200px;">1 2 3 4 5 &gt;</p>
+</div>
 	<!--页脚-->
 	<?php include('./foot.html'); ?>
 </body>
-<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
 </html>

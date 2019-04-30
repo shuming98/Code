@@ -184,4 +184,27 @@ function access(){
 	return $_COOKIE['md5Code'] === md5Code($_COOKIE['user_account']);
 }
 
+/**
+ * 获取时间差
+ * @param str 时间
+ * @return str 时间差
+ */
+
+function timeDiff($datetime){
+	if(empty($datetime)){
+		return;
+	}else{
+		$timediff = time() - strtotime($datetime);
+		if($timediff < 3600){
+			echo intval($timediff / 60),'分钟前';
+			return;
+		}else if($timediff > 3600 && $timediff < 86400){
+			echo intval($timediff / 3600),'小时前';
+			return;
+		}else if($timediff > 86400){
+			echo date('m-d',strtotime($datetime));
+			return;
+		}
+}
+}
 ?>

@@ -22,9 +22,7 @@ $tag_name = mGetAll($sql2);
 $sql3 = "select count(*) from resource";
 $resource_sum = mGetOne($sql3);
 
-//查询单个标签的资源总数
-$sql4 = "select count(*) from resource where tag_id=$_GET[tag_id]";
-$tag_resource_sum = mGetOne($sql4);
+
 
 //设置每页显示资源数量
 $per_page_num = 12;
@@ -34,6 +32,9 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 //判断地址栏是否有tag_id,并调用分页函数
 if(isset($_GET['tag_id'])){
+	//查询单个标签的资源总数
+	$sql4 = "select count(*) from resource where tag_id=$_GET[tag_id]";
+	$tag_resource_sum = mGetOne($sql4);
 	$where = " and tag_id=$_GET[tag_id]";
 	$pages = getPage($tag_resource_sum,$current_page,$per_page_num);
 	
