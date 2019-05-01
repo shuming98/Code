@@ -13,20 +13,45 @@ if($_SESSION['permission_id']==3){
 $sql2 = "select dirname from study_dir where user_account = '$teacher'";
 $dirname = mGetAll($sql2);
 
+//获取用户ip并记录浏览数
+$pageview['ip'] = sprintf('%u',ip2long(getRealIp()));
+
 //输出文章
 if(!isset($_GET['id'])){
-	$sql3 = "select art_title,art_content,pubtime,pageview from article where dirname = 'default'";
+	$sql3 = "select art_title,art_content,pubtime from article where dirname = 'default'";
 	$article = mGetAll($sql3);
-	$art_id=6;
-	$sql4 = "update article set pageview=pageview+1 where art_id = $art_id";
-	mQuery($sql4);
+
+	//记录浏览数
+	$pageview['symbol'] = "art_6";
+
+	//显示阅读数
+	$sql4 = "select count(*) from pageview where symbol = 'art_6'";
+	$viewsum = mGetOne($sql4);
 }else{
 	$art_id = $_GET['id'];
-	$sql5 = "select art_title,art_content,pubtime,pageview from article where art_id = $art_id";
+	$sql5 = "select art_title,art_content,pubtime from article where art_id = $art_id";
 	$article = mGetAll($sql5);
-	$sql6 = "update article set pageview=pageview+1 where art_id = $art_id";
-	mQuery($sql6);
+
+	//记录浏览数
+	$pageview['symbol'] = "art_$art_id";
+
+	//显示阅读数
+	$sql6 = "select count(*) from pageview where symbol = 'art_$art_id'";
+	$viewsum = mGetOne($sql6);
+
+	//防止用户乱输入url
+	if(empty($article)){
+		echo '<script>history.back();</script>';
+	}
 }
+
+//浏览数+1
+$sql7 = "select count(*) from pageview where symbol = '$pageview[symbol]' and ip = $pageview[ip]";
+if(mGetOne($sql7) == 0){
+	mExec('pageview',$pageview);
+}
+
+
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +60,6 @@ if(!isset($_GET['id'])){
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../css/public.css">
-	<script src="../../ueditor/utf8-php/ueditor.parse.min.js"></script>
 	<script src="../../js/jquery.js"></script>
 	<title>学习园地</title>
 </head>
@@ -67,7 +91,7 @@ if(!isset($_GET['id'])){
 		</div>
 		<div class="study_container_right">
 			<h1><?php echo $article[0]['art_title']; ?></h1>
-			<p><?php echo date('Y-m-d',strtotime($article[0]['pubtime'])); ?><span>阅读数：<?php echo $article[0]['pageview']; ?></span><?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){?><a href="./modify_article.php?art_id=<?php echo $art_id;?>">修改</a><?php } ?></p>
+			<p><?php echo date('Y-m-d',strtotime($article[0]['pubtime'])); ?><span>阅读数：<?php echo $viewsum;?>		</span><?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){?><a href="./modify_article.php?art_id=<?php echo $art_id;?>">修改</a><?php } ?></p>
 			<div class="clearfix"></div>
 			<hr>
 			<div id="art_content">
@@ -90,9 +114,4 @@ if(!isset($_GET['id'])){
 	<?php include('./foot.html'); ?>
 </body>
 <script src="../../js/study.js"></script>
-<script>
-	uParse('#art_content', {
-    rootPath: '../../ueditor/utf8-php/'
-})
-</script>
 </html>

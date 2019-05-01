@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*css初始化*/
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td { margin:0; padding:0; }
-body {font-size:12px; color:#000; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff; line-height:24px;width: 100%;}
+body {font-size:16px; color:#000; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff; line-height:24px;width: 100%;}
 fieldset, img { border:0; }
 ol, ul { list-style:none; }
 h1, h2, h3, h4, h5, h6{ font-size:100%; }
@@ -17,6 +17,17 @@ body{background: #efefef;}
 
 /*通用*/
 .clearfix::after{display: block;content: '.';clear: both;height: 0;visibility: hidden;}
+
+/*分页页号*/
+#page_bar{width: 150px;height: 20px;margin:0px auto 10px auto}
+#page_bar span{color:#000;font-size:20px;padding:10px;}
+#page_bar a{color:#666;font-size:16px;padding:10px;}
+#page_bar a:hover{border:1px solid #26A5FF;}
+
+/*页尾*/
+.footer{width: 100%;height: 50px;background: #eee;position: relative;top:20px;}
+.footer p{text-align: center;font-size: 16px;}
+
 /*导航栏*/
 .nav{width: 1300px;height:50px;padding: 5px 0px;margin:auto;}
 .nav_logo{float: left;margin-right:50px;}
@@ -59,11 +70,6 @@ body{background: #efefef;}
 .user_modal_form select{font-size: 18px;width: 200px;background: #fefefe;}
 .user_modal_form input[type=submit]{-webkit-appearance:button;font-size: 20px;width: 100px;padding:4px 6px;background: #26A5FF;border:1px solid #f8f8f8;border-radius: 10px;margin:0px 50px 0px 30px;}
 .user_modal_content button{font-size: 20px;width: 100px;padding:3px 6px;background: #f8f8f8;border:1px solid #26A5FF;border-radius: 10px;position: relative;left:330px;bottom:36px;}
-
-
-/*页尾*/
-.footer{width: 100%;height: 50px;background: #eee;position: relative;top:20px;}
-.footer p{text-align: center;font-size: 16px;}
 
 /**
  * position:首页;
@@ -113,12 +119,6 @@ body{background: #efefef;}
 .resource_show figure{width: 15%;padding:10px;float:left;}
 .resource_show img{width: 100%;padding:10px;}
 .resource_show figcaption{font-size: 14px;text-align: center;height:15px;}
-
-/*分页页号*/
-#page_bar{width: 150px;height: 20px;margin:0px auto 10px auto}
-#page_bar span{color:#000;font-size:20px;padding:10px;}
-#page_bar a{color:#666;font-size:16px;padding:10px;}
-#page_bar a:hover{border:1px solid #26A5FF;}
 
 /*资源分类*/
 .resource_select{width: 340px;height:auto;float: left;margin-left:30px;border-left:1px solid #aaa;padding-left:30px;}
@@ -311,11 +311,10 @@ body{background: #efefef;}
 
 /*标签分类*/
 .forum_category{width: 100%;height: 50px;border-top:2px solid #666;}
-.forum_category button{-webkit-appearance:button;padding:4px 6px;font-size: 16px;color:black;background: #fefefe;width:75px;border:1px solid #26A5FF;border-radius: 5px;margin:5px 20px 5px 0px;}
-.forum_category button:hover{background: #26A5FF;opacity: 0.8}
-.forum_category button>a:hover{color:#fff;}
-.forum_category button:first-child{margin-left:100px;}
-.forum_category button:last-child{float:right;margin-right:100px;width:150px;}
+.forum_category a{display:block;float:left;padding:4px 6px;font-size: 20px;color:black;background: #fefefe;width:75px;border:1px solid #26A5FF;border-radius: 5px;margin:5px 20px 5px 0px;text-align: center}
+.forum_category a:hover{background: #26A5FF;opacity: 0.8;color:#fff;}
+.forum_category a:first-child{margin-left:100px;}
+.forum_category a:last-child{float:right;margin-right:100px;width:150px;}
 
 /*置顶公告*/
 .forum_top_notice{width: 100%;min-height:50px;height: auto;border:1px solid gray;margin-bottom:10px;}
@@ -348,12 +347,12 @@ body{background: #efefef;}
  */
 .forum_show_container{width: 1300px;height: auto;margin:auto;border:1px solid red}
 
-.forum_show_left{float:left;max-width:900px;margin:10px 0px 20px 20px;}
-.forum_show_left h1{font-size: 24px;font-weight: bold;margin-bottom:20px;}
+.forum_show_left{float:left;max-width:800px;margin:10px 0px 20px 20px;}
+.forum_show_left h1{font-size: 24px;font-weight: bold;margin-bottom:20px;line-height: 30px;}
 .forum_show_left img{float:left;height: 50px;width:50px;border-radius: 50%;}
 .forum_show_left p{float:left;font-size: 18px;line-height: 24px;margin-left:10px;}
 
-.forum_show_right{float:right;margin-right:0px;width: 350px;}
+.forum_show_right{float:right;margin:5px 0px 0px 0px;width: 450px;}
 .forum_show_right button{-webkit-appearance:button;font-size: 18px;background:#fefefe;border:1px solid #26A5FF;border-radius: 5px;padding:4px 6px;margin:10px 0px 0px 20px;}
 .forum_show_right button:hover{background: #26A5FF;color:#fff;opacity: 0.7;}
 .forum_show_right p{font-size: 18px;line-height: 24px;margin:20px 0px 0px 20px;}
@@ -366,7 +365,7 @@ body{background: #efefef;}
 .forum_comment_content h1{font-size: 24px;font-weight: normal;padding-bottom:10px;margin-bottom:5px;width:1200px;}
 /*回复本帖*/
 .forum_one_comment{width: 1200px;padding: 5px 0px 0px 15px;border-top:1px solid #aaa;}
-.forum_one_comment>img{float:left;width:50px;height: 50px;border-radius: 50%;}
+.forum_one_comment>img{float:left;height: 50px;width:50px;border-radius: 50%;}
 .forum_one_comment img{max-height: 250px;width:auto;}
 .comment_left{font-size: 16px;float:left;line-height: 24px;margin-left:10px;color:#333;}
 .comment_content{font-size: 18px;margin:10px 0px 10px 20px;}
@@ -379,7 +378,7 @@ body{background: #efefef;}
 .reply_content p{float:left;}
 
 /*留言板*/
-.forum_comment{width:500px;position: fixed;bottom:0px;right:10px;z-index:100;border:1px solid #bbb;background: #fff;display:none;}
+.forum_comment{width:500px;position: fixed;bottom:0px;right:10px;z-index:100;border:1px solid #bbb;background: #fff;display:block;}
 .forum_comment>form>span{font-size: 18px;position:relative;top: 20px;left: 20px;}
 .forum_comment>form>span:hover{text-decoration: underline;color:red;cursor: pointer;}
 .forum_comment>form>input[type=submit]{-webkit-appearance:button;font-size: 24px;padding:2px 8px;background: #fff;border:1px solid #26A5FF;border-radius: 5px;float:right;margin:10px 50px 10px 0px;}

@@ -2,13 +2,25 @@
 session_start();
 require('../../lib/init.php');
 
+//查询该贴内容
+$sql2 = "select post_id,user_account,post_title,cat_name,post_content from forum_post where post_id = $_GET[post_id]";
+$post = mGetAll($sql2);
+
 //查询论坛分类
 if($_SESSION['permission_id'] == 0){
 	$sql = "select cat_name from forum_cat";
 	$cat_name = mGetAll($sql);
+}else if($post[0]['cat_name'] == '精品'){
+	$sql = "select cat_name from forum_cat where cat_id in (2,3,4)";
+	$cat_name = mGetAll($sql);
 }else{
 	$sql = "select cat_name from forum_cat where cat_id in (3,4)";
 	$cat_name = mGetAll($sql);
+}
+
+//防止用户乱输入url
+if($post[0]['user_account'] != $_SESSION['user_account']){
+	echo '<script>history.back();</script>';
 }
  ?>
 <!DOCTYPE html>
@@ -18,20 +30,21 @@ if($_SESSION['permission_id'] == 0){
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../css/public.css">
 	<script src="../../js/jquery.js"></script>
-	<title>发布帖子</title>
+	<title>修改帖子</title>
 </head>
 <body>
 	<?php include('./nav.php'); ?>
 	<!-- 发布文章容器 -->
 	<div class="forum_post">
-		<p><a href="./forum.php">讨论区</a>&gt;<span>发帖</span></p>
+		<p><a href="./forum.php">讨论区</a>&gt;<span>改帖</span></p>
 		<form id="post_form" method="post" accept-charset="utf-8">
-			<input type="text" name="post_title" placeholder="请输入标题">
+			<input type="text" name="post_title" placeholder="请输入标题" value="<?php echo $post[0]['post_title'];?>">
 			<!--加载编辑器的容器-->
-			<script id="container" name="content" type="text/plain"></script>
+			<script id="container" name="content" type="text/plain"><?php echo $post[0]['post_content']; ?></script>
 				<select name="cat_name">
-			<?php foreach($cat_name as $v){ 
-				echo '<option value="',$v['cat_name'],'">',$v['cat_name'],'</option>';
+			<?php foreach($cat_name as $v){
+				echo '<option value="',$v['cat_name'],'"',
+				$v['cat_name'] == $post[0]['cat_name']?'selected=selected>':'>',$v['cat_name'],'</option>';
 				}?>
 				</select>
 			<input type="submit" value="发布">
@@ -54,7 +67,6 @@ if($_SESSION['permission_id'] == 0){
 });
     ue.ready(function(){
     	ue.setHeight(500);
-    	ue.zIndex(100);
     });
 
 
@@ -65,7 +77,7 @@ var data={
     'content':ue.getContent(),
     'cat_name':$("#post_form select[name='cat_name']").val()
 };
-$.post('../admin/forum_post.php',data,function(res){
+$.post('../admin/add_post.php?post_id='+<?php echo $_GET['post_id'];?>,data,function(res){
     alert(res);
     history.back();
   });

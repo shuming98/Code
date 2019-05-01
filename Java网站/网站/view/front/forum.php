@@ -21,7 +21,7 @@ $sql3 = "select count(*) from forum_post";
 $post_sum = mGetOne($sql3);
 
 //设置每页显示帖子数
-$per_page_num = 5;
+$per_page_num = 8;
 
 //从地址栏获得当前页码
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
@@ -41,8 +41,11 @@ if(isset($_GET['cat_id'])){
 
 //查询所有帖子
 $sql9 = "select post_nick,t8.post_id,t9.cat_id,t8.cat_name,post_title,post_time,reply_nick,reply_time,likes,reply_sum from (select post_nick,t6.post_id,cat_name,post_title,post_time,reply_nick,reply_time,likes,reply_sum from(select t3.post_nick,t3.post_id,t3.cat_name,t3.post_title,t3.post_time,t3.reply_nick,t3.reply_time,t4.likes from (select t1.user_nick as post_nick,t1.post_id,t1.cat_name,t1.post_title,t1.pubtime as post_time,t2.user_nick as reply_nick,t2.max_pubtime as reply_time from (select user_nick,post_id,cat_name,post_title,pubtime from forum_post inner join user_data on forum_post.user_account = user_data.user_account) as t1 left join (select user_nick,post_id,max(pubtime) as max_pubtime from forum_comment inner join user_data on forum_comment.user_account = user_data.user_account group by post_id) as t2 on t1.post_id=t2.post_id) as t3 left join (select post_id,count(*) as likes from give_a_like group by post_id) as t4 on t3.post_id=t4.post_id) as t6 left join (select post_id,count(*) as reply_sum from (select post_id from forum_comment union all select post_id from forum_reply) as t5 group by post_id) as t7 on t6.post_id=t7.post_id) as t8 left join (select cat_id,cat_name from forum_cat) as t9 on t8.cat_name = t9.cat_name" . $where . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;;
-echo $sql9;
 $post = mGetAll($sql9);
+
+if(empty($post)){
+	echo '<script>history.back();</script>';
+}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,10 +63,10 @@ $post = mGetAll($sql9);
 	<div class="forum_category">
 	<?php 
 		foreach($cat_name as $v){
-			echo '<button><a href="./forum.php?cat_id=',$v['cat_id'],'">',$v['cat_name'],'</a></button>';
+			echo '<a href="./forum.php?cat_id=',$v['cat_id'],'">',$v['cat_name'],'</a>';
 		}
 	 ?>
-		<button><a href="./forum_post.php">我要发帖</a></button>
+		<a href="./add_post.php">我要发帖</a>
 	</div>
 	<div class="clearfix"></div>
 	<!--置顶公告-->
@@ -100,9 +103,19 @@ $post = mGetAll($sql9);
 			</div>
 		<?php } ?>
 	</div>
-				<!--分页-->
-	<p style="text-align: center;font-size: 18px;position:relative;top:200px;">1 2 3 4 5 &gt;</p>
 </div>
+	<!-- 分页页号 -->
+		<div id="page_bar" style="top:30px;">
+			<?php 
+				foreach($pages as $k=>$v){
+					if($k == $current_page){
+						echo '<span>',$k,'</span>';
+					}else{
+						echo '<a href="./forum.php?',$v,'">',$k,'</a>';
+					}
+				}
+			?>
+		</div>
 	<!--页脚-->
 	<?php include('./foot.html'); ?>
 </body>

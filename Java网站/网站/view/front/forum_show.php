@@ -9,12 +9,12 @@ $pageview['ip'] = sprintf('%u',ip2long(getRealIp()));
 $pageview['symbol'] = "post_$post_id";
 
 $sql = "select count(*) from pageview where symbol = '$pageview[symbol]' and ip = $pageview[ip]";
-if(mGetOne($sql)==0){
+if(mGetOne($sql) == 0){
 	mExec('pageview',$pageview);
 }
 
 //根据id查询文章内容
-$sql2 = "select user_nick,pic_path,post_title,cat_name,post_content,pubtime from forum_post inner join user_data on forum_post.user_account = user_data.user_account where post_id = $_GET[post_id]";
+$sql2 = "select forum_post.user_account,user_nick,pic_path,post_title,cat_name,post_content,pubtime from forum_post inner join user_data on forum_post.user_account = user_data.user_account where post_id = $_GET[post_id]";
 $post = mGetAll($sql2);
 
 //获取文章访问数
@@ -24,6 +24,7 @@ $viewsum = mGetOne($sql3);
 //获取文章点赞数
 $sql4 = "select count(*) from give_a_like where post_id = $post_id";
 $likesum = mGetOne($sql4);
+
 /**
  * 实现分页功能
  */
@@ -39,17 +40,19 @@ $reply_sum = mGetOne($sql7) + $comment_sum;
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 //设置每页显示回复数
-$per_page_num = 4;
+$per_page_num = 5;
 
 
 //根据id输出文章留言
-$sql8 = "select floor_id,user_nick,pic_path,content,pubtime from forum_comment inner join user_data on forum_comment.user_account = user_data.user_account where post_id = $post_id and content !='' order by com_id asc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
+$sql8 = "select floor_id,forum_comment.user_account,user_nick,pic_path,content,pubtime from forum_comment inner join user_data on forum_comment.user_account = user_data.user_account where post_id = $post_id and content !='' order by com_id asc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
 $comment = mGetAll($sql8);
 
 $pages = getPage($comment_sum,$current_page,$per_page_num);
 
 //防止用户乱输入url
 if(empty($post)){
+	echo '<script>history.back();</script>';
+}else if($current_page>1 && empty($comment)){
 	echo '<script>history.back();</script>';
 }
  ?>
@@ -73,13 +76,19 @@ if(empty($post)){
 			<p><?php timeDiff($post[0]['pubtime']); ?></p>
 		</div>
 		<div class="forum_show_right">
-			<?php 
-			if($_SESSION['permission_id'] == 0){
-				echo '<button id="set_jp_btn">设为精品贴</button>';
-			}
-			 ?>
 			<button id="reply_btn">回复本帖</button>
 			<button id="like_btn">点赞</button>
+			<?php 
+			if($_SESSION['permission_id'] == 0){
+				echo '<button id="set_jp_btn">设为精品</button>';
+			}
+			if($post[0]['user_account'] == $_SESSION['user_account']){?>
+				<button id="modify_btn" onclick="location.href='./modify_post.php?post_id=<?php echo $post_id;?>'">修改</button>
+			<?php }
+			if($_SESSION['permission_id'] ==0 || $post[0]['user_account'] == $_SESSION['user_account']){
+				echo '<button id="delete_btn">删帖</button>';
+			}
+			?>
 			<?php echo '<p>浏览:',$viewsum,'&nbsp;&nbsp;&nbsp;回复:',$reply_sum,'&nbsp;&nbsp;&nbsp;点赞:',$likesum,'  </p>'; ?>
 		</div>
 		<div class="clearfix"></div>
@@ -92,28 +101,37 @@ if(empty($post)){
 			<!--留言-->
 			<div class="forum_one_comment">
 				<img src="<?php echo '../..',$v['pic_path']; ?>" alt="头像">
-				<p class="comment_left"><?php echo $v['user_nick'],' ',$v['floor_id'],'楼'; ?></p><br/>
+				<p class="comment_left"><?php echo $v['user_nick'],' ',$v['floor_id'],'楼';
+				if($_SESSION['permission_id'] == 0 || $v['user_account'] == $_SESSION['user_account']){
+					echo '<button class="delete_comment_btn" value="',$v['floor_id'],'">删除</button>';
+				}
+				 ?></p><br/>
 				<p class="comment_left"><?php timeDiff($v['pubtime']); ?></p>
 				<div class="clearfix"></div>
 				<div class="comment_content"><?php echo $v['content']; ?>
 				<button class="reply_one_btn" value="<?php echo $v['floor_id']; ?>">回复</button>
 				<div class="clearfix"></div>
-				</div>
+				</div>				
 				<!--回复-->
 				<?php 
-				$sql9 = "select user_nick,content from forum_reply inner join user_data on forum_reply.user_account = user_data.user_account where post_id = $post_id and floor_id = $v[floor_id]";
+				$sql9 = "select com_id,forum_reply.user_account,user_nick,content from forum_reply inner join user_data on forum_reply.user_account = user_data.user_account where post_id = $post_id and floor_id = $v[floor_id] order by com_id asc";
 				$reply = mGetAll($sql9);
-				foreach($reply as $v){
-				 ?>
+				foreach($reply as $value){
+				 ?>			 
 				<div class="forum_one_reply">
-					<span class="reply_nick"><?php echo $v['user_nick']; ?>：</span>
-					<div class="reply_content"><?php echo $v['content']; ?></div>
+					<span class="reply_nick"><?php echo $value['user_nick']; ?>：</span>
+					<div class="reply_content"><?php echo $value['content']; ?></div>
+					<?php if($_SESSION['permission_id'] == 0 || $value['user_account'] == $_SESSION['user_account']){
+						echo '<button class="delete_reply_btn" value="',$value['com_id'],'">删除</button>';
+					}
+					 ?>
 					<div class="clearfix"></div>
 				</div>
 				<?php } ?>
 			</div>
 		<?php } ?>
-			<!--分页页号-->
+		</div>
+		<!--分页页号-->
 		<div id="page_bar" style="top:0px;">
 			<?php 
 				foreach($pages as $k=>$v){
@@ -124,7 +142,6 @@ if(empty($post)){
 					}
 				}
 			?>
-		</div>
 		</div>
 	</div>
 	<!--留言窗口-->
@@ -223,6 +240,13 @@ $.post('../admin/add_comment.php?post_id=<?php echo $post_id;?>',data,function(r
 return false;
 });
 
+//ajax 点赞
+$("#like_btn").bind('click',function(){
+	$.get('../admin/give_a_like.php?post_id='+<?php echo $post_id; ?>,function(data){
+			$("#like_btn").text(data);
+			$("#like_btn").attr("disabled","true");
+	})
+})
 
 //ajxa 设置精品贴
 $('#set_jp_btn').bind('click',function(){
@@ -232,12 +256,29 @@ $('#set_jp_btn').bind('click',function(){
 	});
 });
 
-//ajax 点赞
-$("#like_btn").bind('click',function(){
-	$.get('../admin/give_a_like.php?post_id='+<?php echo $post_id; ?>,function(data){
-		$("#like_btn").text(data);
-		$("#like_btn").attr("disabled","true");
-	})
-})
+//ajax 删帖
+$("#delete_btn").bind('click',function(){
+	$.get('../admin/delete_post.php?post_id='+<?php echo $post_id; ?>,function(data){
+			alert(data);
+			location.href = "./forum.php";
+	});
+});
+
+//ajax 删除帖子回复
+$(".delete_comment_btn").bind('click',function(event){
+	$.get('../admin/delete_comment.php?post_id='+<?php echo $post_id; ?>+'&floor_id='+event.target.value,function(data){
+			alert(data);
+			location.reload();
+	});
+});
+
+//ajax 删除楼层回复
+$(".delete_reply_btn").bind('click',function(event){
+	$.get('../admin/delete_comment.php?com_id='+event.target.value,function(data){
+			alert(data);
+			location.reload();
+	});
+});
+
 </script>
 </html>

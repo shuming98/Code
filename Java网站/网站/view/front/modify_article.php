@@ -61,7 +61,6 @@ $dirname = mGetAll($sql2);
 });
     ue.ready(function(){
     	ue.setHeight(500);
-    	ue.zIndex(100);
     });
 
 //ajax
