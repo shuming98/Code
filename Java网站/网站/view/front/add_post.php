@@ -26,7 +26,7 @@ if($_SESSION['permission_id'] == 0){
 	<div class="forum_post">
 		<p><a href="./forum.php">讨论区</a>&gt;<span>发帖</span></p>
 		<form id="post_form" method="post" accept-charset="utf-8">
-			<input type="text" name="post_title" placeholder="请输入标题">
+			<input type="text" name="post_title" placeholder="请输入标题" required="required" maxlength="30">
 			<!--加载编辑器的容器-->
 			<script id="container" name="content" type="text/plain"></script>
 				<select name="cat_name">

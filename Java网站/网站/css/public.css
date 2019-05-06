@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*css初始化*/
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td { margin:0; padding:0; }
-body {font-size:16px; color:#000; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff; line-height:24px;width: 100%;}
+body {font-size:16px; color:#000; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff; line-height:24px;width: 100%;min-height: 100%;padding-bottom: 60px;position: absolute;}
 fieldset, img { border:0; }
 ol, ul { list-style:none; }
 h1, h2, h3, h4, h5, h6{ font-size:100%; }
@@ -13,9 +13,8 @@ p{ text-align:justify; text-justify:distribute;}
 a {color: #000; text-decoration:none; }
 a:hover { color: #26A5FF; text-decoration:none;}
 * {box-sizing: border-box;}
-body{background: #efefef;}
 
-/*通用*/
+/*通用*/ 
 .clearfix::after{display: block;content: '.';clear: both;height: 0;visibility: hidden;}
 
 /*分页页号*/
@@ -25,7 +24,7 @@ body{background: #efefef;}
 #page_bar a:hover{border:1px solid #26A5FF;}
 
 /*页尾*/
-.footer{width: 100%;height: 50px;background: #eee;position: relative;top:20px;}
+.footer{width: 100%;height: 50px;background: #eee;position:absolute;bottom:0px;}
 .footer p{text-align: center;font-size: 16px;}
 
 /*导航栏*/
@@ -39,7 +38,8 @@ body{background: #efefef;}
   transition: width 0.4s ease-in-out;background-image: url('../images/icon/search.png');background-repeat: no-repeat;background-size: 23px;background-position: 0px;}
 .nav form input[type=search]:focus {width: 200px;}
 .nav_login,
-.user_message{float: right;font-size: 20px;line-height: 50px;margin-right: 50px;}
+.user_message{float: right;font-size: 20px;line-height: 50px;}
+.nav_login{margin-right:50px;}
 .nav_login img,
 .user_message img{width: 25px;height:23px;border-radius: 50%;}
 
@@ -64,6 +64,7 @@ body{background: #efefef;}
 .user_modal_content{background-color: #fefefe;margin:5% auto 15% auto;border:1px solid #26A5FF;width: 600px;height:auto;}
 .user_modal_img{text-align: center;position: relative;padding-top: 20px;}
 #showImg img{width: 100px;height:100px;border-radius: 50%;}
+#up_img{width:230px;}
 .user_modal_form{margin:auto;width: 330px;}
 .user_modal_form p{font-size:22px;margin:20px 0px;}
 .user_modal_form input[type=text]{font-size: 20px;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;}
@@ -115,6 +116,8 @@ body{background: #efefef;}
 .resource_container_left{width: 900px;height:auto;float:left;}
 .resource_show{height: 600px;}
 .resource_show>span{display:block;width:300px;text-align: center;font-size: 16px;border-bottom:2px solid #999;border-top:2px solid #999;margin:15px 0px 0px 15px;color:#888;}
+.resource_show>span a{color:#888;}
+.resource_show>span a:hover{color:#000;}
 .resource_show>span>span{color:#26A5FF;}
 .resource_show figure{width: 15%;padding:10px;float:left;}
 .resource_show img{width: 100%;padding:10px;}
@@ -129,7 +132,7 @@ body{background: #efefef;}
 /*推荐资源*/
 .resource_recom{width: 320px;height:300px;}
 .resource_recom>p{font-size: 18px;margin-top:15px;font-weight: bold;border-top:2px solid #666;border-bottom: 2px solid #666;padding:4px 8px;}
-.resource_recom li{font-size: 16px;border-bottom:1px solid #eee;padding:3px 8px;}
+.resource_recom li{font-size: 16px;border-bottom:1px solid #ccc;padding:3px 8px;}
 
 /*上传资源-模态框*/
 .upload_modal_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 600px;height: auto;position: relative;}
@@ -180,6 +183,7 @@ body{background: #efefef;}
 .study_container_right>p{font-size: 16px;opacity: 0.7;}
 .study_container_right>p>a{float:right;}
 .study_container_right>p>span{margin-left:20px;}
+
 /**
  * 学习园地-发布文章
  */
@@ -302,6 +306,90 @@ body{background: #efefef;}
 .show_grade_container th,td{border:1px solid #666;font-size: 16px;padding:4px 8px;width: 250px}
 
 /**
+ * position:老师试题区;
+ */
+.test_container{width: 1300px;height: auto;min-height:850px;margin:auto;border:1px solid red;}
+.test_left{width: 300px;height:auto;float:left;border-right:2px solid gray;}
+.test_left>a{display: block;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;width:100px;text-align: center;margin:10px auto;}
+.test_left>a:hover{background: #26A5FF;color:#fff;}
+.test_title_list h3{font-size: 18px;padding:2px 3px;}
+.test_title_list ul{margin-left:20px;}
+.test_title_list ul li a{color:#26A5FF;}
+.test_title_list ul li a:hover{color:orange}
+.test_right{float:right;width:980px;height:auto;}
+.test_right>h2{font-size: 20px;margin:10px 0px 10px 10px;}
+.display_content{width:900px;margin:auto;}
+.display_test{font-size: 16px;margin:5px 0px 15px 0px;}
+.display_test label{font-size: 16px;margin:10px 10px 0px 30px;}
+.display_test input[type=radio]{margin-right:5px;}
+.test_answer{color:red;margin:10px 0px 0px 0px;}
+
+/**
+ * position:添加试题;
+ */
+.add_test_container{width:1300px;height:auto;border:1px solid red;margin:auto;}
+.add_test_container>h1{font-size: 24px;margin:10px 0px 10px 30px;}
+.add_test_container>input[name='title']{display:block;width:50%;font-size: 24px;margin-bottom: 20px;margin:auto;}
+.add_test_container>input[type=submit]{float:right;margin:10px 200px 10px 0px;font-size: 22px;background: #f8f8f8;border:1px solid #26A5FF;padding:6px 36px;border-radius: 5px;}
+.add_test_container>input[type=submit]:hover{background: #26A5FF;color:#fff;}
+
+/*选择题*/
+.add_choice_container>h2{font-size: 20px;margin:10px 0px 0px 50px;float:left;}
+.img_icon{float:left;width:24px;margin:10px 10px 0px 10px;cursor: pointer;}
+.add_choice_container>span{float:left;margin-top:10px;}
+#add_count{color:red;}
+.choice_form{width:1000px;border:1px solid red;margin:auto;}
+.add_choice_temp{padding:5px 0px;}
+.add_choice_temp p{font-size: 18px;margin:10px 0px 10px 60px;}
+.add_choice_temp input[type='text']{outline:none;border:none;border-bottom:1px solid #999;font-size: 18px;padding:2px 4px;}
+.choice_answer{margin-left:80px!important;}
+.add_choice_temp input[name='q[]']{width: 90%;margin-bottom:10px;}
+.add_choice_temp input[name='A[]'],
+.add_choice_temp input[name='B[]'],
+.add_choice_temp input[name='C[]'],
+.add_choice_temp input[name='D[]']{width:17%;margin:0px 15px 10px 5px;}
+.add_choice_temp select[name='res[]']{font-size: 20px;width:50px;}
+
+
+/**
+ * position:学生试题区
+ */
+.ready_test{width:600px;height:400px;border:1px solid #26A5FF;margin:auto;background: #80ff80;}
+.ready_test>h1{font-size: 28px;font-weight: normal;text-align: center;margin-top:75px;}
+.ready_test select{font-size: 32px;background: #fff;border:1px solid #26A5FF;width: 290px;margin-left:70px;}
+.ready_test form{margin:50px 30px 20px 30px;}
+.ready_test input[type=submit]{font-size: 24px;background: #f8f8f8;border:1px solid #26A5FF;border-radius: 5px;padding:4px 6px;position: relative;bottom:5px;}
+.ready_test input[type=submit]:hover{background: #26A5FF;color:#f8f8f8;}
+
+/**
+ * position:试题测验;
+ */
+.start_test_container{width:1300px;height: 600px;margin:auto;background: #f8f8f8;padding-top:50px;}
+.test_content{width:800px;height: 500px;margin:auto;box-shadow: 1px 1px 1px 1px #aaa;}
+.test_content>h2{font-size: 24px;margin:0px 0px 20px 20px;padding-top:20px;}
+/*题号*/
+.topic_num{width:80%;margin:auto;font-size: 18px;background: #eee;}
+.number{cursor: pointer;color:#666;padding:2px 6px;}
+.number:hover{border:1px solid #26A5FF;}
+.num_active{border:1px solid #26A5FF;color:#26A5FF;}
+/*题目*/
+.one_topic{margin:10px 0px 10px 80px;font-size: 18px;min-height:200px;height:auto;max-height:350px;width:80%;}
+.one_topic label{display: block;margin:10px 0px 10px 20px;}
+.one_topic input[type=radio]{margin-right:5px;}
+/*按钮*/
+.topic_btn{width: 100%;height: 50px;margin-bottom:0px;}
+.topic_btn button{-webkit-appearance:button;font-size: 20px;background: #26A5FF;color:#f8f8f8;padding:4px 6px;border-radius: 5px;}
+.topic_btn button:hover{opacity: 0.7;}
+#prev{float:left;margin:10px 0px 10px 70px;}
+#next{float:right;margin:10px 70px 10px 0px;}
+#submit_topic{font-size: 20px;background: #fff;color:#26A5FF;border:1px solid #26A5FF;padding:4px 6px;border-radius: 5px;float:right;margin:10px 70px 10px 0px;display:none;}
+#submit_topic:hover{background: #000;color:#fff;}
+/*答案展示*/
+.answer_topic{margin:30px auto 10px auto;width:100%;height:100px;font-size: 18px;padding:0px 0px 10px 50px;border:1px solid red;}
+
+
+
+/**
  * position:讨论区;
  */
 .forum_container{width: 1300px;height: 900px;margin:auto;border:1px solid #f8f8f8;}
@@ -376,14 +464,13 @@ body{background: #efefef;}
 .forum_one_reply:last-child{margin-left:50px;width:1135px;}
 .reply_nick{float:left;}
 .reply_content p{float:left;}
-
-/*留言板*/
+/*留言板-评论*/
 .forum_comment{width:500px;position: fixed;bottom:0px;right:10px;z-index:100;border:1px solid #bbb;background: #fff;display:block;}
 .forum_comment>form>span{font-size: 18px;position:relative;top: 20px;left: 20px;}
 .forum_comment>form>span:hover{text-decoration: underline;color:red;cursor: pointer;}
 .forum_comment>form>input[type=submit]{-webkit-appearance:button;font-size: 24px;padding:2px 8px;background: #fff;border:1px solid #26A5FF;border-radius: 5px;float:right;margin:10px 50px 10px 0px;}
 .forum_comment>form>input[type=submit]:hover{-webkit-appearance:button;background: #26A5FF;opacity: 0.7;color:#f8f8f8;}
-
+/*留言板-回复*/
 .forum_reply{width:500px;position: fixed;bottom:0px;right:10px;z-index:100;border:1px solid #bbb;background: #fff;display:none;}
 .forum_reply>form>span{font-size: 18px;position:relative;top: 20px;left: 20px;}
 .forum_reply>form>span:hover{text-decoration: underline;color:red;cursor: pointer;}

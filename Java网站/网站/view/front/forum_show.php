@@ -50,11 +50,11 @@ $comment = mGetAll($sql8);
 $pages = getPage($comment_sum,$current_page,$per_page_num);
 
 //防止用户乱输入url
-if(empty($post)){
-	echo '<script>history.back();</script>';
-}else if($current_page>1 && empty($comment)){
-	echo '<script>history.back();</script>';
-}
+// if(empty($post)){
+// 	echo '<script>history.back();</script>';
+// }else if($current_page>1 && empty($comment)){
+// 	echo '<script>history.back();</script>';
+// }
  ?>
 <!DOCTYPE html>
 <html lang="en">

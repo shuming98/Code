@@ -28,7 +28,7 @@ $dirname = mGetAll($sql);
 	<div class="study_add_article">
 		<p><a href="./study.php">学习园地</a>&gt;<span>发布文章</span></p>
 		<form id="article_form"  method="post" accept-charset="utf-8">
-			<input type="text" name="art_title" placeholder="请输入文章标题">
+			<input type="text" name="art_title" placeholder="请输入文章标题" required="required" maxlength="20">
 			<!--加载编辑器的容器-->
 			<script id="container" name="content" type="text/plain"></script>
 				<select name="dirname">

@@ -63,6 +63,7 @@ create table issue_work(
 )engine=myisam default charset=utf8;
 
 create table submit_work(
+	id int unsigned not null primary key auto_increment,
 	work_id int unsigned not null default 0,
 	user_account char(30) not null default '',
 	work_content text,
@@ -138,4 +139,22 @@ create table pageview(
 	symbol char(10) not null default '',
 	ip int not null default 0,
 	key symbol(symbol)
+)engine=myisam default charset=utf8;
+
+create table test(
+	test_id smallint unsigned not null primary key auto_increment,
+	user_account char(50) not null default '',
+	title varchar(255) not null default '',
+	pubtime datetime default current_timestamp
+)engine=myisam default charset=utf8;
+
+create table choice_test(
+	id int unsigned not null primary key auto_increment,
+	test_id smallint unsigned not null default 0,
+	question varchar(255) not null default '',
+	A varchar(255) not null default '',
+	B varchar(255) not null default '',
+	C varchar(255) not null default '',
+	D varchar(255) not null default '',
+	answer char(5) not null default ''
 )engine=myisam default charset=utf8;

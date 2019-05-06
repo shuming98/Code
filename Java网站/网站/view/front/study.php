@@ -106,7 +106,7 @@ if(mGetOne($sql7) == 0){
 			<h1><img src="../../images/icon/work.png" alt="">添加目录</h1>
 			<span id="add_dir_close" class="close">&times;</span>
 		<form method="post">
-			<input type="text" name="dirname" placeholder="目录名">
+			<input type="text" name="dirname" placeholder="目录名" maxlength="20" required="required">
 			<input type="submit" value="添加">
 		</form>
 		</div>

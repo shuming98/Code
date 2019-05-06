@@ -35,20 +35,24 @@ if(isset($_GET['tag_id'])){
 	//查询单个标签的资源总数
 	$sql4 = "select count(*) from resource where tag_id=$_GET[tag_id]";
 	$tag_resource_sum = mGetOne($sql4);
-	$where = " and tag_id=$_GET[tag_id]";
+	$where = " and tag_id=$_GET[tag_id] order by resource_id desc";
 	$pages = getPage($tag_resource_sum,$current_page,$per_page_num);
 	
 	//查询这个tag_id的tag_name
 	$sql5 = "select tag_name from resource_tag where tag_id=$_GET[tag_id]";
 	$position = mGetOne($sql5);
 }else{
-	$where = '';
+	$where = ' order by resource_id desc';
 	$pages = getPage($resource_sum,$current_page,$per_page_num);
 }
+
 //查询所有资源
 $sql6 = "select resource_id,resource_name,resource_type,resource_path from resource where user_account='$teacher'" . $where . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
 $resource = mGetAll($sql6);
 
+//输出下载量前8个资源
+$sql7 = "select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6";
+$resource_recom = mGetAll($sql7);
 
 //文件格式对应其图标
 $map = array(
@@ -79,7 +83,7 @@ $map = array(
 	<!--资源下载-->
 		<div class="resource_container_left">
 			<div class="resource_show">			
-			<span>当前位置:JAVA课程资源&gt;<span>
+			<span>当前位置:<a href="./resource.php">JAVA课程资源</a>&gt;<span>
 				<?php 
 					if(isset($_GET['tag_id'])){
 						echo $position;
@@ -91,10 +95,10 @@ $map = array(
 			</span>
 	<!-- 输出全部资源 -->
 		<?php foreach($resource as $v){ ?>
-			<figure>
-				<a href="<?php echo '../..',$v['resource_path']; ?>" download="<?php echo $v['resource_name'],'.',$v['resource_type'] ?>">
-				<img src="<?php echo $map[$v['resource_type']]; ?>" alt="">
-				<figcaption>
+			<figure class="one_resource" data-rid="<?php echo $v['resource_id'];?>">
+				<a href="<?php echo '../..',$v['resource_path']; ?>" download="<?php echo $v['resource_name'],'.',$v['resource_type']; ?>">
+				<img src="<?php echo $map[$v['resource_type']]; ?>" alt="pic" data-rid="<?php echo $v['resource_id']; ?>">
+				<figcaption data-rid="<?php echo $v['resource_id']; ?>">
 					<?php echo $v['resource_name']; ?>
 				</figcaption>	
 				</a>
@@ -136,9 +140,9 @@ $map = array(
 			<div class="resource_recom">
 				<p><img style="width: 20px;" src="../../images/icon/about.png" alt="">推荐资源</p>
 				<ul>
-					<li><a href="">火星版编译软件下载</a></li>
-					<li><a href="">参考手册</a></li>
-					<li><a href="">函数手册</a></li>
+				<?php foreach($resource_recom as $v){
+					echo '<li><a class="one_resource" href="','../..',$v['resource_path'],'" download="',$v['resource_name'],'.',$v['resource_type'],'" data-rid="',$v['resource_id'],'">',$v['resource_name'],'</a></li>';
+				} ?>
 				</ul>
 			</div>
 		</div>
@@ -150,7 +154,7 @@ $map = array(
 			<h1><img src="../../images/icon/work.png" alt="">上传课程资源</h1>
 			<span id="up_res_close" class="close">&times;</span>
 		<form id="upload_resource_form"  method="post" enctype="multipart/form-data">
-			<p>资源名字:<input type="text" name="resource_name"></p>
+			<p>资源名字:<input type="text" name="resource_name" required="required"></p>
 			<p>资源分类:
 				<select name="tag_name">
 		<?php foreach($tag_name as $v){ ?>
@@ -176,7 +180,7 @@ $map = array(
 			<h1><img src="../../images/icon/work.png" alt="">添加资源分类<span>(最多可添加5个)</span></h1>
 			<span id="add_tag_close" class="close">&times;</span>
 		<form method="post">
-			<input type="text" name="tag_name" placeholder="请输入资源类名">
+			<input type="text" name="tag_name" placeholder="请输入资源类名" required="required">
 			<input type="submit" value="添加">
 		</form>
 		</div>
@@ -184,4 +188,11 @@ $map = array(
 	<?php include('./foot.html'); ?>
 </body>
 <script type="text/javascript" src="../../js/resource.js"></script>
+<script>
+//ajax统计下载次数
+$(".one_resource").bind('click',function(event){
+  $.get('../admin/count_download.php?resource_id='+event.target.getAttribute("data-rid"),function(data){
+  });
+});
+</script>
 </html>

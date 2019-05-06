@@ -17,18 +17,15 @@ $issue_work = mGetAll($sql2);
 
 //多作业查询
 if(isset($_GET['key'])){
-$work_id = $issue_work[$_GET['key']]['work_id'];
-$work_title = $issue_work[$_GET['key']]['work_title'];
-$work_deadline = $issue_work[$_GET['key']]['deadline'];
+	$work_id = $issue_work[$_GET['key']]['work_id'];
+	$work_title = $issue_work[$_GET['key']]['work_title'];
+	$work_deadline = $issue_work[$_GET['key']]['deadline'];
 }else{
 	$work_id = $issue_work[0]['work_id'];
 	$work_title = $issue_work[0]['work_title'];
 	$work_deadline = $issue_work[0]['deadline'];
 }
 
-//查询学生提交的作业内容
-$sql3 = "select user_id,nt.user_account,user_nick,work_id,work_content,work_filepath,score from (select user_id,user_data.user_account,user_nick from user_data inner join user on user_data.user_account=user.user_account where user_data.class='$issue_class') as nt left join (select user_account,work_id,work_content,work_filepath,score from submit_work where work_id=$work_id) as nt2 on nt.user_account=nt2.user_account order by nt.user_id asc";
-$student_work = mGetAll($sql3);
 
 //统计已提交作业人数
 $sql4 = "select count(*) from (select user_data.user_account,user_nick from user_data inner join user on user_data.user_account=user.user_account where user_data.class='$issue_class') as nt left join (select user_account,work_id from submit_work where work_id=$work_id) as nt2 on nt.user_account=nt2.user_account where work_id=$work_id";
@@ -41,6 +38,25 @@ $nosubmit_num = mGetOne($sql5);
 //查询前五条作业记录
 $sql6 = "select work_id,work_title,class,issue_date,deadline from issue_work where user_account='$_SESSION[user_account]' order by work_id desc limit 0,5";
 $history_work = mGetAll($sql6);
+
+/**
+ * 实现分页功能
+ */
+
+//本班作业总数
+$work_sum = $submit_num + $nosubmit_num;
+
+//设置每页显示作业数量
+$per_page_num = 10;
+
+//从地址栏获取当前页码
+$current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+//查询学生提交的作业内容
+$sql3 = "select user_id,nt.user_account,user_nick,work_id,work_content,work_filepath,score from (select user_id,user_data.user_account,user_nick from user_data inner join user on user_data.user_account=user.user_account where user_data.class='$issue_class') as nt left join (select user_account,work_id,work_content,work_filepath,score from submit_work where work_id=$work_id) as nt2 on nt.user_account=nt2.user_account order by nt.user_id asc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
+$student_work = mGetAll($sql3);
+
+$pages = getPage($work_sum,$current_page,$per_page_num);
 ?>
 
 <!DOCTYPE html>
@@ -130,6 +146,18 @@ $history_work = mGetAll($sql6);
 				echo '<p>本次作业：',$submit_num,'人已交,',$nosubmit_num,'人未交</p>';
 			}?>
 		</div>
+				<!--分页页号-->
+		<div id="page_bar" style="top:0px;">
+			<?php 
+				foreach($pages as $k=>$v){
+					if($k == $current_page){
+						echo '<span>',$k,'</span>';
+					}else{
+						echo '<a href="./check_work.php?',$v,'">',$k,'</a>';
+					}
+				}
+			?>
+		</div>
 	</div>
 	<div class="clearfix"></div>
 	<!--显示学生作业_模态框-->
@@ -167,7 +195,6 @@ $("#check_form_<?php echo $v['user_id']; ?>").submit(function(){
  $.post('../admin/check_work.php?user_account=<?php echo $v['user_account']; ?>&work_id=<?php echo $v['work_id'];?>',data,function(res){alert(res);$("#check_work_<?php echo $v['user_id']; ?>").css('display','none');$("#s_<?php echo $v['user_id']; ?>").text(eval(data)['score']);});
  return false;
  });
-
 </script>
 	</div>
 <?php } ?>

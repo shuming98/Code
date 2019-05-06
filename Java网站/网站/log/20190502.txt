@@ -1,0 +1,55 @@
+---------------------------------------
+2019/05/02 15:35:52
+123
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select tag_id,tag_name from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select count(*) from resource where tag_id=1
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select tag_name from resource_tag where tag_id=1
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacher' and tag_id=1 limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:35:52
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/02 15:36:55
+123
+---------------------------------------
+

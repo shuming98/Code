@@ -32,7 +32,7 @@ $dirname = mGetAll($sql2);
 	<div class="study_add_article">
 		<p><a href="./study.php">学习园地</a>&gt;<span>修改文章</span></p>
 		<form id="article_form" method="post" accept-charset="utf-8">
-			<input type="text" name="art_title" placeholder="请输入文章标题" value="<?php echo $article[0]['art_title'];?>">
+			<input type="text" name="art_title" placeholder="请输入文章标题" value="<?php echo $article[0]['art_title'];?>" required="required" maxlength="30">
 			<!--加载编辑器的容器-->
 			<script id="container" name="content" type="text/plain"><?php echo $article[0]['art_content']; ?></script>
 				<select name="dirname">

@@ -38,7 +38,7 @@ if($post[0]['user_account'] != $_SESSION['user_account']){
 	<div class="forum_post">
 		<p><a href="./forum.php">讨论区</a>&gt;<span>改帖</span></p>
 		<form id="post_form" method="post" accept-charset="utf-8">
-			<input type="text" name="post_title" placeholder="请输入标题" value="<?php echo $post[0]['post_title'];?>">
+			<input type="text" name="post_title" placeholder="请输入标题" value="<?php echo $post[0]['post_title'];?>" required="required" maxlength="30">
 			<!--加载编辑器的容器-->
 			<script id="container" name="content" type="text/plain"><?php echo $post[0]['post_content']; ?></script>
 				<select name="cat_name">

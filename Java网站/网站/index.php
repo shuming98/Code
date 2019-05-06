@@ -16,6 +16,7 @@ $t_name = mGetAll($sql3);
 //查看某个老师教的班级名字
 $sql4 = "select t_class from teacher where user_account='$_SESSION[user_account]'";
 $teacher_class = mGetAll($sql4);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +31,7 @@ $teacher_class = mGetAll($sql4);
 	<div class="nav">
 		<img class="nav_logo" src="./images/icon/logo.png" alt="logo">
 		<ul>
-			<li><a href="./home.php"><img src="./images/icon/home.png" alt="home">首页</a></li>
+			<li><a href="./index.php"><img src="./images/icon/home.png" alt="home">首页</a></li>
 			<li><a href="./view/front/resource.php"><img src="./images/icon/resource.png" alt="resource">课程资源</a></li>
 			<li><a href="./view/front/study.php"><img src="./images/icon/study.png" alt="study">学习园地</a></li>
 		<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>	
@@ -38,8 +39,12 @@ $teacher_class = mGetAll($sql4);
 		<?php }else { ?>
 			<li><a href="./view/front/show_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
 		<?php } ?>
+		<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>	
+			<li><a href="./view/front/t_test.php"><img src="./images/icon/about.png" alt="about">发布试题</a></li>
+		<?php }else{ ?>
+			<li><a href="./view/front/s_test.php"><img src="./images/icon/about.png" alt="about">试题练习</a></li>
+		<?php } ?>	
 			<li><a href="./view/front/forum.php"><img src="./images/icon/forum.png" alt="forum">讨论区</a></li>
-			<li><a href="#"><img src="./images/icon/about.png" alt="about">关于</a></li>
 		</ul>
 			<form action="#" method="get">		
 				<input type="search" name="search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;搜索...">
@@ -78,13 +83,13 @@ $teacher_class = mGetAll($sql4);
 		<div class="user_modal_content animate">
 			<div class="user_modal_img">
 				<span onclick="document.getElementById('user').style.display = 'none'"  class="close">&times;</span>
-				<div id="showImg"><img src="<?php echo '.'.$user['pic_path']; ?>" alt=""></div>
+				<div id="showImg"><img src="<?php echo '.'.$user['pic_path']; ?>" alt="img"></div>
 			</div>
 
 			<form class="user_modal_form" action="./view/admin/update_user_data.php" method="post" enctype="multipart/form-data">
 				<span>上传头像：<input id="up_img" type="file" name="pic_path" accept="image/*" onchange="fileUpLoad(this);"></span>
 				<p>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<?php echo $user['user_account'];?></p>
-				<p>用&nbsp;&nbsp;户&nbsp;名：<input type="text" name="user_nick" value="<?php echo $user['user_nick']; ?>"></p>
+				<p>用&nbsp;&nbsp;户&nbsp;名：<input type="text" name="user_nick" value="<?php echo $user['user_nick']; ?>" maxlength="9"></p>
 
 				<p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
 				<?php if(empty($user['gender'])){ ?>
@@ -95,7 +100,7 @@ $teacher_class = mGetAll($sql4);
 					}?>
 				</p>
 
-				<p>联系方式：<input type="text" name="tel" value="<?php echo $user['tel']; ?>"><p>
+				<p>联系方式：<input type="text" name="tel" value="<?php echo $user['tel']; ?>" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')"><p>
 			<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==0){ ?>
 				<p>任教班级：
 					<?php foreach($teacher_class as $v){
@@ -179,9 +184,9 @@ $teacher_class = mGetAll($sql4);
 
 		<!--优秀书籍推荐-->
 		<div class="recom_books">
-		<h1>优秀书籍推荐</h1>
+		<h1>技术文章</h1>
 		<hr>
-		<p>采用轮播图(此栏目可能会被删除)<a href="#"><span></span></a></p>
+		<p><a href="#">Java12发布会对企业带来什么影响<span>了解更多</span></a></p>
 		</div>
 		<div class="clearfix"></div>
 		<div class="excellent_figure">

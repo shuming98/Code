@@ -16,7 +16,7 @@ if($_POST['remember']=='on'){
 	}else{
 		setcookie('account',$user['user_account'],time()-3600,'/');
 	}
-	header('Location:../../home.php');
+	header('Location:../../index.php');
 }else{
 	echo "<script>alert('账号或密码错误!');</script>";
 	echo "<script>history.go(-1);</script>";
