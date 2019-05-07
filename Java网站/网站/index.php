@@ -184,9 +184,9 @@ $teacher_class = mGetAll($sql4);
 
 		<!--优秀书籍推荐-->
 		<div class="recom_books">
-		<h1>技术文章</h1>
+		<h1>站外资讯</h1>
 		<hr>
-		<p><a href="#">Java12发布会对企业带来什么影响<span>了解更多</span></a></p>
+		<p><a href="#">Java12正式发布<span>了解更多</span></a></p>
 		</div>
 		<div class="clearfix"></div>
 		<div class="excellent_figure">

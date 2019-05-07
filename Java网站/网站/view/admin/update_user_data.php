@@ -7,7 +7,9 @@ require('../../lib/init.php');
 if(!($_FILES['pic_path']['name'] == '') && ($_FILES['pic_path']['error'] == 0)){
 	//删除原图片
 	$sql = "select pic_path from user_data where user_account='$_SESSION[user_account]'";
-	unlink(ROOT . mGetOne($sql));
+	if(mGetOne($sql) != '/images/icon/user.png'){
+		unlink(ROOT . mGetOne($sql));
+	}
 	//更新图片
 	$filename = createUserPicDir() . '/' . randStr() . getExt($_FILES['pic_path']['name']);
 	if(move_uploaded_file($_FILES['pic_path']['tmp_name'],ROOT . $filename)){
