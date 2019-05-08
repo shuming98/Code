@@ -17,7 +17,7 @@ if($_SESSION['permission_id'] != 0 && $_SESSION['permission_id'] != 1){
 </head>
 <body>
 	<?php include('./nav.php'); ?>
-	<form class="add_test_container" action="../admin/add_choice.php" method="post" accept-charset="utf-8">
+	<form id="add_test_form" class="add_test_container" method="post" accept-charset="utf-8">
 		<h1>添加试题</h1>
 		<input type="text" name="title" placeholder="请输入试题名字,如选择题一" required="required" maxlength="20">
 		<div class="add_choice_container">
@@ -42,7 +42,6 @@ if($_SESSION['permission_id'] != 0 && $_SESSION['permission_id'] != 1){
 			<input type="submit" value="提交">
 		</form>
 		<?php include('./foot.html'); ?>
-
 </body>	
 <script src="../../js/add_test.js"></script>
 </html>

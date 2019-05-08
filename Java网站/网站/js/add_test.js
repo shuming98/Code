@@ -1,4 +1,4 @@
-var num=1;
+	var num=1;
 	//添加选择题表单
 	$("#add_choice").click(function(){
 		num++;
@@ -16,3 +16,18 @@ var num=1;
 		$(".add_choice_temp:last-child").remove();
 		$("#add_count").text("你已添加"+num+"道选择题表单")
 	});
+
+$(document).ready(function(){
+	//ajax提交表单
+	$("#add_test_form").submit(function(){
+		$.post('../admin/add_choice.php',$("#add_test_form").serialize(),function(res){
+			if(res == 1){
+				alert('添加成功');
+				location.href="./t_test.php";
+			}else if(res == 0){
+				alert('添加失败');
+			}
+		});
+		return false;
+	});
+});

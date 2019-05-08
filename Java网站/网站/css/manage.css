@@ -1,3 +1,4 @@
+/* $("form").serialize() */
 @charset "utf-8";
 /*css初始化*/
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td { margin:0; padding:0; }
@@ -63,6 +64,7 @@ a:hover {color: #26A5FF; text-decoration:none;}
  * position:用户信息添加;
  */
 .user_add_container{width:100%;height:100%;overflow:auto;}
+.user_add_container{width:100%;height:100%;overflow:auto;}
 .user_add_container h2{font-size: 24px;margin:30px 0px 5px 30px;}
 .h2_line{width:200px;height: 2px;background: #26A5FF;display: block;margin:0px 0px 10px 30px;}
 .user_add_container p{font-size: 18px;margin-left:50px;}
@@ -75,3 +77,23 @@ a:hover {color: #26A5FF; text-decoration:none;}
 #add_count{float:left;font-size: 18px;margin:30px 5px 0px 5px;color:red;}
 .add_user_temp{padding:10px 0px;}
 #add_user_form>input[type=submit]{float:right;margin:10px 210px 10px 0px;font-size: 20px;padding:4px 26px;}
+
+/**
+ * position:用户信息查询;
+ */
+.user_query_container{width:100%;height:100%;overflow:auto;}
+.user_query_container h2{font-size: 24px;margin:30px 0px 5px 30px;}
+span.query_acc{float:left;margin-left:80px;font-size: 24px;}
+.user_query_container form{float:left;}
+.user_query_container form select{font-size: 20px;border:none;background:#ececf9;color:#333;width:150px;}
+.user_query_container form input[type=submit]{font-size: 18px;padding:2px 4px;border:1px solid #9999ff;border-radius: 4px;}
+.user_query_container form input[type=submit]:hover{background: #9999ff;color:#fff;}
+.user_query_container form:last-child input[type=text]{font-size: 18px;padding:2px 3px;width:150px;border:none;border-bottom: 1px solid #000;outline:none;background: none;}
+/*查询结果显示*/
+.query_result_container{width:1000px;height:500px;margin:20px auto 10px auto;}
+.query_result_table{width:100%;max-height:500px;height:auto;border-collapse: collapse;}
+.query_result_table tr{border-bottom:2px solid #b3d1ff;}
+.query_result_table tr:nth-child(even){background: #f8f8f8;}
+.query_result_table th,td{text-align: center;font-size: 18px;padding:3px 6px;}
+/*修改和删除*/
+.res_remove:hover{color:red;}

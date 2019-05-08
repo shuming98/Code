@@ -23,9 +23,5 @@ $newsql = substr($sql,0,strlen($sql)-1);
 
 $res = mQuery($newsql);
 
-if($res){
-	echo "<script>location.href='../front/t_test.php';</script>";
-}else{
-	echo "<script>alert('添加失败');history.back();</script>";
-}
+echo $res?1:0;
 ?>

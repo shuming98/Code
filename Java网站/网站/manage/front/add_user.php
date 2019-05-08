@@ -46,7 +46,7 @@ require('../../lib/init.php');
 			<div class="user_add_container">
 				<h2>添加管理员用户</h2>
 				<span class="h2_line"></span>
-				<form action="" method="get" accept-charset="utf-8">
+				<form id="add_admin_form" method="post" accept-charset="utf-8">
 					<p>
 						<span>账号：<input type="text" name="account" required="required" maxlength="20"></span>
 						<span>密码：<input type="password" name="password" required="required" maxlength="20"></span>
@@ -56,7 +56,7 @@ require('../../lib/init.php');
 				</form>
 				<h2>添加老师用户</h2>
 				<span class="h2_line"></span>
-				<form action="" method="get" accept-charset="utf-8">
+				<form id="add_tea_form" action="../admin/add_user.php?pid=1" method="post" accept-charset="utf-8">
 					<p>
 						<span>账号：<input type="text" name="account" required="required" maxlength="20"></span>
 						<span>密码：<input type="password" name="password" required="required" maxlength="20"></span>
@@ -70,7 +70,7 @@ require('../../lib/init.php');
 				<span id="add_count"></span>
 				<div class="clearfix"></div>
 				<span class="h2_line"></span>
-				<form id="add_user_form" action="" method="get" accept-charset="utf-8">
+				<form id="add_user_form" method="post" accept-charset="utf-8">
 					<div class="add_content">
 					<p class="add_user_temp">
 						1.<span>账号：<input type="text" name="account[]" required="required" maxlength="20"></span>
@@ -103,7 +103,7 @@ for (i = 0; i < dropdown.length; i++) {
 }
 
 var num=1;
-//添加选择题表单
+//添加用户表单
 $("#add_user").click(function(){
 	num++;
 	var text = '<p class="add_user_temp">'+num+'.<span>账号：<input type="text" name="account[]" required="required" maxlength="20"></span> <span>密码：<input type="password" name="password[]" required="required" maxlength="20"></span> <span>昵称：<input type="text" name="nick[]" maxlength="20"></span></p>';
@@ -111,7 +111,7 @@ $("#add_user").click(function(){
 	$("#add_count").text("你已添加"+num+"个用户表单");
 });
 
-//删除选择题表单
+//删除用户表单
 $("#minus_user").click(function(){
 	num--;
 	if(num<0){
@@ -120,5 +120,32 @@ $("#minus_user").click(function(){
 	$(".add_user_temp:last-child").remove();
 	$("#add_count").text("你已添加"+num+"个用户表单")
 });
+
+//ajax添加管理员用户
+$("#add_admin_form").submit(function(){
+	$.post('../admin/add_user.php?pid=0',$("#add_admin_form").serialize(),function(res){
+		alert(res);
+	});
+	return false;
+});
+
+//ajax添加教师用户
+$("#add_tea_form").submit(function(){
+	$.post('../admin/add_user.php?pid=1',$("#add_tea_form").serialize(),function(res){
+		alert(res);
+	});
+	return false;
+});
+
+//ajax添加学生用户
+$(document).ready(function(){
+	$("#add_user_form").submit(function(){
+		$.post('../admin/add_user.php?pid=3',$("#add_user_form").serialize(),function(res){
+			alert(res);
+		});
+		return false;
+	});
+});
+
 </script>
 </html>
