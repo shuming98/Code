@@ -10,4 +10,11 @@ if(isset($_GET['account'])){
 	$res2 = mQuery($sql2);
 	echo ($res && $res2)?'删除成功':'删除失败';
 }
+
+//删除班级数据
+if(isset($_GET['class'])){
+	$sql = "delete from teacher where t_class='$_GET[class]'";
+	$res = mQuery($sql);
+	echo $res?'删除成功':'删除失败';
+}
  ?>

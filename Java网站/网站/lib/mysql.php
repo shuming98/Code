@@ -26,11 +26,11 @@ function mConn(){
 
 function mQuery($sql){
 	$res = mysqli_query(mConn(),$sql);
-	// if($res){
-	// 	mLog($sql);
-	// }else {
-	// 	mLog($sql . "\n" . mysqli_error(mConn()));
-	// }
+	if($res){
+		mLog($sql);
+	}else {
+		mLog($sql . "\n" . mysqli_error(mConn()));
+	}
 
 	return $res;
 }

@@ -14,34 +14,7 @@ require('../../lib/init.php');
 <body>
 	<?php include('./header.php'); ?>
 	<div class="manage_container">
-		<div class="sidenav">
-			<button class="dropdown_btn">首页内容管理</button>
-			  <div class="dropdown_container">
-			    <a href="#">轮播图</a>
-			    <a href="#">发布文章</a>
-			    <a href="#">添加外链</a>
-			    <a href="#">最新资讯</a>
-			    <a href="#">优秀学生作品</a>
-			    <a href="#">站外资讯</a>
-			    <a href="#">优秀师生</a>
-			  </div>
-			<button class="dropdown_btn">用户管理</button>
-			  <div class="dropdown_container">
-			    <a href="#">用户信息添加</a>
-			    <a href="#">用户信息查询</a>
-			    <a href="#">用户信息维护</a>
-			  </div>
-			<button class="dropdown_btn">班级管理</button>
-			  <div class="dropdown_container">
-			    <a href="#">班级添加</a>
-			    <a href="#">班级信息维护</a>
-			  </div>
-			 <button class="dropdown_btn">课程资源管理</button>
-			  <div class="dropdown_container">
-			    <a href="#">资源分类维护</a>
-			    <a href="#">资源维护</a>
-			  </div>
-		</div>
+		<?php include('./sidenav.html'); ?>
 		<div class="function">
 			<div class="user_add_container">
 				<h2>添加管理员用户</h2>
@@ -86,22 +59,6 @@ require('../../lib/init.php');
 	<?php include('./footer.html'); ?>
 </body>
 <script>
-//侧边导航栏
-var dropdown = document.getElementsByClassName("dropdown_btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
-
 var num=1;
 //添加用户表单
 $("#add_user").click(function(){

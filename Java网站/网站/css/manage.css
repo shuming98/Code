@@ -18,6 +18,21 @@ a:hover {color: #26A5FF; text-decoration:none;}
 /*通用*/ 
 .clearfix::after{display: block;content: '.';clear: both;height: 0;visibility: hidden;}
 
+/*模态框*/
+.modal{display: none;position: fixed;z-index: 1000;left: 0;top:0;width: 100%;height:100%;overflow: auto;padding-top: 60px;background: rgba(0,0,0,0.4);}
+.close{position: absolute;right:20px;top:10px;color:#333;font-size: 30px;font-weight: bold;}
+.close:hover,
+.close:focus{color:red;cursor:pointer;}
+.animate{-webkit-animation:animatezoom 0.6s;animation: animatezoom 0.6s;}
+@-webkit-keyframes animatezoom {from {-webkit-transform: scale(0)} to {-webkit-transform: scale(1)}}
+@keyframes animatezoom {from {transform: scale(0)} to {transform: scale(1)}}
+
+/*分页页号*/
+#page_bar{width: 150px;height: 20px;margin:0px auto 10px auto}
+#page_bar span{color:#000;font-size:20px;padding:10px;}
+#page_bar a{color:#666;font-size:16px;padding:10px;}
+#page_bar a:hover{border:1px solid #26A5FF;}
+
 /*页头*/
 .header{width:1300px;height: 50px;margin:auto;}
 .header>img{float:left;margin-right:10px;}
@@ -64,7 +79,6 @@ a:hover {color: #26A5FF; text-decoration:none;}
  * position:用户信息添加;
  */
 .user_add_container{width:100%;height:100%;overflow:auto;}
-.user_add_container{width:100%;height:100%;overflow:auto;}
 .user_add_container h2{font-size: 24px;margin:30px 0px 5px 30px;}
 .h2_line{width:200px;height: 2px;background: #26A5FF;display: block;margin:0px 0px 10px 30px;}
 .user_add_container p{font-size: 18px;margin-left:50px;}
@@ -91,9 +105,39 @@ span.query_acc{float:left;margin-left:80px;font-size: 24px;}
 .user_query_container form:last-child input[type=text]{font-size: 18px;padding:2px 3px;width:150px;border:none;border-bottom: 1px solid #000;outline:none;background: none;}
 /*查询结果显示*/
 .query_result_container{width:1000px;height:500px;margin:20px auto 10px auto;}
-.query_result_table{width:100%;max-height:500px;height:auto;border-collapse: collapse;}
+.query_result_table{width:100%;height:auto;border-collapse: collapse;}
 .query_result_table tr{border-bottom:2px solid #b3d1ff;}
 .query_result_table tr:nth-child(even){background: #f8f8f8;}
-.query_result_table th,td{text-align: center;font-size: 18px;padding:3px 6px;}
+.query_result_table th,td{text-align: center;font-size: 18px;padding:3px 6px;word-wrap:break-word;max-width: 150px;}
+.query_num{display:block;margin:10px 0px 10px 20px;color:red;font-size: 16px;}
 /*修改和删除*/
 .res_remove:hover{color:red;}
+/*修改用户数据模态框*/
+.modify_userdata_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 500px;height: 150px;position: relative;}
+.modify_userdata_content>h1{font-size: 24px;line-height: 20px;margin: 20px;}
+.modify_userdata_content>h1>img{width: 30px;border:1px solid blue;border-radius: 50%;padding: 3px;}
+#modify_classdata_form>span{font-size: 24px;margin:10px 0px 10px 70px;}
+#modify_classdata_form input[type=submit]{margin-left:20px;}
+
+/**
+ * position:班级添加;
+ */
+.class_add_container{width:100%;height:100%;overflow:auto;}
+.class_add_container>h2{font-size: 24px;margin:30px 0px 5px 30px;}
+.class_remark{font-size: 18px;border-bottom:1px dashed #26A5FF;border-top:1px dashed #26A5FF;color:red;text-align: center;padding:6px 0px;}
+#add_class_form{width:400px;height:auto;margin:30px auto 10px auto}
+#add_class_form>p{font-size: 24px;margin:15px 0px;}
+#add_class_form input[type=text]{font-size: 20px;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;}
+#add_class_form select{font-size: 24px;width:205px;}
+#add_class_form input[type=submit]{font-size: 24px;padding:4px 16px;background: #26A5FF;color:#fefefe;border:1px solid #fff;border-radius: 5px;width: 100px;margin:0px 0px 10px 230px;}
+#add_class_form input[type=submit]:hover{opacity: 0.7;}
+
+/**
+ * position:班级信息维护;
+ */
+.class_query_container{width:100%;height:100%;overflow:auto;}
+.class_query_container>h2{font-size: 24px;margin:30px 0px 5px 30px;}
+.query_class_result{width:1000px;height:500px;margin:20px auto 10px auto;}
+.query_class_table{width:100%;height:auto;border-collapse: collapse;}
+.query_class_table tr{border-bottom:2px solid #b3d1ff;}
+.query_class_table tr:nth-child(even){background: #f8f8f8;}

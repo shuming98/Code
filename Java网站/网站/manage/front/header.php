@@ -1,6 +1,7 @@
 <?php 
 if(!isset($_SESSION['permission'])){
 	echo "<script>alert('此非你该来之地');location.href='./index.html';</script>";
+	exit;
 }
  ?>
 <div class="header">
