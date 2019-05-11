@@ -1,0 +1,3672 @@
+---------------------------------------
+2019/05/10 11:40:31
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:31
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:31
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:31
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:31
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:31
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:31
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:31
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:33
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:33
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:33
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:33
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:33
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:33
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:33
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:33
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:41
+select user_account,permission_id from user where user_account='admin' and user_password='34427a6ab59facd747db7ad8d1c31685' and permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:43
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:43
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:51
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select user_data.user_account,user_nick,gender,tel,class from user_data inner join user on user_data.user_account=user.user_account where user.permission_id=3 order by user.user_id asc limit 0,14
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select count(*) from user where permission_id=3
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='1640664121'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='1640664100'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='1640664101'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='1640664102'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='q2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='q3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='q4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='e1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='p1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='p2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='p3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='p4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='p5'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:53
+select permission_id from user where user_account='p6'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+update user_data set class='18树莓' where user_account='p1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select user_data.user_account,user_nick,gender,tel,class from user_data inner join user on user_data.user_account=user.user_account where user.permission_id=3 order by user.user_id asc limit 0,14
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select count(*) from user where permission_id=3
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='1640664121'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='1640664100'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='1640664101'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='1640664102'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='q2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='q3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='q4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='e1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='p1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='p2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='p3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='p4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='p5'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:58
+select permission_id from user where user_account='p6'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select user_data.user_account,user_nick,gender,tel,class from user_data inner join user on user_data.user_account=user.user_account where user.permission_id=3 order by user.user_id asc limit 0,14
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select count(*) from user where permission_id=3
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='1640664121'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='1640664100'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='1640664101'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='1640664102'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='q2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='q3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='q4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='e1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='p1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='p2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='p3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='p4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='p5'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:40:59
+select permission_id from user where user_account='p6'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:41:01
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:41:01
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:41:23
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:41:25
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:41:25
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:41:26
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:41:29
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:41:29
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:43:05
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:43:05
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:43:13
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:43:15
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:43:15
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:43:20
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:43:21
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:43:21
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:36
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:40
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:40
+select user_data.user_account,user_nick,gender,tel,class from user_data inner join user on user_data.user_account=user.user_account where user.permission_id=0 order by user.user_id asc limit 0,14
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:40
+select count(*) from user where permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:40
+select permission_id from user where user_account='root'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:40
+select permission_id from user where user_account='admin'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select user_data.user_account,user_nick,gender,tel,class from user_data inner join user on user_data.user_account=user.user_account where user.permission_id=3 order by user.user_id asc limit 0,14
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select count(*) from user where permission_id=3
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='1640664121'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='1640664100'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='1640664101'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='1640664102'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='q2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='q3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='q4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='e1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='p1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='p2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='p3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='p4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='p5'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:41
+select permission_id from user where user_account='p6'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select user_data.user_account,user_nick,gender,tel,class from user_data inner join user on user_data.user_account=user.user_account where user.permission_id=3 order by user.user_id asc limit 14,14
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select count(*) from user where permission_id=3
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p7'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p8'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p9'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p10'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p11'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p12'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p13'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p14'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p16'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select user_data.user_account,user_nick,gender,tel,class from user_data inner join user on user_data.user_account=user.user_account where user.permission_id=3 order by user.user_id asc limit 0,14
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select count(*) from user where permission_id=3
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='1640664121'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='1640664100'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='1640664101'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='1640664102'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='q2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='q3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='q4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='e1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p2'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p3'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p4'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p5'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:43
+select permission_id from user where user_account='p6'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:47
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:47
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:44:57
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:54:07
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:54:08
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:54:51
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:22
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:24
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:24
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:57
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:57
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:58
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:58
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:59
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:55:59
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:00
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:00
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:01
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:01
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:01
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:01
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:01
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:01
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:40
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:40
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:40
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:56:40
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:12
+select user_account,permission_id from user where user_account='root' and user_password='34427a6ab59facd747db7ad8d1c31685' and permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:14
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:15
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:15
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:16
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:16
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:20
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:22
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:22
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 11:57:26
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:23:35
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account= order by resource_tag.tag_id asc
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by resource_tag.tag_id asc' at line 1
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:23:48
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account=teacher order by resource_tag.tag_id asc
+Unknown column 'teacher' in 'where clause'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:23:57
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:24:33
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:24:42
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:24:44
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:25:08
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:27:55
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:28:46
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:28:48
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:28:48
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:29:44
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:29:44
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:29:45
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:29:45
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:29:49
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:29:49
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:29:52
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:30:13
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:08
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:08
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:09
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:09
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:13
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teachera' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:13
+select count(*) from resource_tag where user_account='teachera'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:16
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:16
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:20
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:20
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:42
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:42
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:43
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:43
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:58
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:58
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:31:59
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:32:01
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:32:01
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:15
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:15
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:19
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:19
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:39
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:39
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:40
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:40
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:42
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:42
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:48
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:48
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:52
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:52
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:33:57
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:34:00
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:34:00
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:34:10
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:34:10
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:37:19
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:37:19
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:37:36
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:37:36
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:37:46
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:37:46
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:11
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:11
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:12
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:12
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:21
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:21
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:31
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:31
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:50
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:50
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:51
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:51
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:51
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:51
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:51
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:38:51
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:39:06
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:39:06
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:39:09
+select user_account,permission_id from user where user_account='admin' and user_password='34427a6ab59facd747db7ad8d1c31685' and permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:39:13
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:39:13
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:39:55
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:39:55
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:44:27
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:44:27
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:44:59
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:44:59
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:01
+delete from resource_tag where tag_id=43
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:01
+delete from resource where tag_id=43
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:01
+delete from resource_tag where tag_id=43
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:01
+delete from resource where tag_id=43
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:04
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:04
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:06
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:06
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:07
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:07
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:07
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:07
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:16
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:16
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:16
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:16
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:16
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:16
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:16
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:16
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:19
+select user.user_account,permission_id from user inner join user_data on user.user_account=user_data.user_account where user.user_account = 'teacherb' and user_password = '34427a6ab59facd747db7ad8d1c31685'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:19
+select t_class from teacher where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:23
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:23
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:23
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:23
+select t_class from teacher where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:24
+select tag_id,tag_name from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:24
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:24
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacherb' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:24
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:24
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:24
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:24
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:24
+select t_class from teacher where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:29
+select count(*) from resource_tag where user_account = 'teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:29
+insert into resource_tag (tag_name,user_account) values ('1','teacherb')
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:30
+select tag_id,tag_name from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:30
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:30
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacherb' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:30
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:30
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:30
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:30
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:30
+select t_class from teacher where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:31
+select count(*) from resource_tag where user_account = 'teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:31
+insert into resource_tag (tag_name,user_account) values ('2','teacherb')
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:32
+select tag_id,tag_name from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:32
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:32
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacherb' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:32
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:32
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:32
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:32
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:32
+select t_class from teacher where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:45
+select tag_id from resource_tag where tag_name='1'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:45
+insert into resource (resource_name,tag_id,user_account,resource_type,resource_path) values ('学习资料','44','teacherb','jpg','/upload/course_resource/2019/05/10/FvbNTM7.jpg')
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:48
+select tag_id,tag_name from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:48
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:48
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacherb' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:48
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:48
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:48
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:48
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:45:48
+select t_class from teacher where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:03
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:03
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:06
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:06
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:09
+delete from resource_tag where tag_id=45
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:09
+delete from resource where tag_id=45
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:13
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:13
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:18
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:18
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:42
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:42
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:44
+delete from resource_tag where tag_id=44
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:44
+delete from resource where tag_id=44
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:44
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:44
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:58
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:58
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:46:59
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:00
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:02
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:02
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:04
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:04
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:05
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:07
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:07
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:20
+select tag_id,tag_name from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:20
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:20
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacherb' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:20
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:20
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:20
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:20
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:20
+select t_class from teacher where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:21
+select tag_id,tag_name from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:21
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:21
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacherb' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:21
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:21
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:21
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:21
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 12:47:21
+select t_class from teacher where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:02:49
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:02:49
+select user_nick from user_data where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:02:49
+insert into teacher (user_account,t_name,t_class) values ('','','')
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:04:13
+delete from resource_tag where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:04:13
+delete from resource where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:04:18
+delete from resource_tag where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:04:18
+delete from resource where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:04:19
+delete from resource_tag where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:04:19
+delete from resource where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:05:01
+delete from resource_tag where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:05:01
+delete from resource where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:04
+delete from resource_tag where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:04
+delete from resource where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:10
+select user_account,permission_id from user where user_account='' and user_password='9786af5ae99be3c60a3370750e576c16' and permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:17
+select user_account,permission_id from user where user_account='' and user_password='9786af5ae99be3c60a3370750e576c16' and permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:42
+delete from resource_tag where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:42
+delete from resource where tag_id=4
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:43
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:43
+select user_nick from user_data where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:07:46
+select user_account,permission_id from user where user_account='admin' and user_password='34427a6ab59facd747db7ad8d1c31685' and permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:09:33
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:09:33
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:09:33
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:09:33
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:09:33
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:09:33
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:09:33
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:09:33
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:00
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:00
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:00
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:00
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:00
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:00
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:00
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:00
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:25
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:25
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:25
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:25
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:25
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:26
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:26
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:12:26
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:14:38
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:14:38
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:02
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:02
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:02
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:02
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:02
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:02
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:02
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:02
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:51
+select user_account,permission_id from user where user_account='admin' and user_password='34427a6ab59facd747db7ad8d1c31685' and permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:57
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:58
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:16:58
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:00
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:04
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:06
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:06
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:09
+delete from teacher where t_class=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:10
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:10
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:29
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:17:29
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:18:23
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:18:23
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:18:24
+delete from resource_tag where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:18:24
+delete from resource where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:18:39
+delete from resource_tag where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:18:39
+delete from resource where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:19:18
+delete from resource_tag where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:19:18
+delete from resource where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:19:28
+delete from resource_tag where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:19:28
+delete from resource where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:19:46
+delete from resource_tag where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:19:46
+delete from resource where tag_id=333
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:20:07
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:20:07
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:20:08
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:20:08
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:21:15
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:21:15
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:21:51
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:21:51
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:17
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:17
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:20
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:20
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:20
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:20
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:21
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:21
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:22
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:22
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:22
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:28:22
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:37
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:37
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:38
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:38
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:38
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:38
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:38
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:38
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:39
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:39
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:40
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:40
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:40
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:40
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:44
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:44
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:46
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:46
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:54
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:29:55
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:30:09
+select user_account,permission_id from user where user_account='admin' and user_password='34427a6ab59facd747db7ad8d1c31685' and permission_id=0
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:30:13
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:30:13
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:31:40
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:31:40
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:03
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:03
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:05
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:05
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:08
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:08
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:13
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:13
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:14
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:14
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:24
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:24
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:37
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:37
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:43
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:32:43
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:34:25
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:34:25
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:35:28
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:35:28
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:35:28
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:35:28
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:35:56
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:35:56
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:10
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:10
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:17
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:17
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:25
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:25
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:25
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:25
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:25
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:25
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:40
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:36:40
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:37:58
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:37:58
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:38:06
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:38:06
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:42:59
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:42:59
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:01
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:01
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:06
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:06
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:23
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:23
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:28
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:28
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:43
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:43
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:50
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:50
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:53
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:53
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:56
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:43:56
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:36
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:36
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:43
+update resource_tag set tag_name='教学文档' where tag_id=1
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:43
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:43
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:44
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:44
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:59
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:59
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:59
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:59
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:59
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:59
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:59
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:44:59
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:02
+select user.user_account,permission_id from user inner join user_data on user.user_account=user_data.user_account where user.user_account = 'teacher' and user_password = '34427a6ab59facd747db7ad8d1c31685'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:02
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:02
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:02
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:02
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select dirname from study_dir where user_account = 'teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_title,art_content,pubtime from article where dirname = 'default'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select count(*) from pageview where symbol = 'art_6'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select count(*) from pageview where symbol = 'art_6' and ip = 2130706433
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='认识变量' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='Swing组件' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='对象的行为' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='Java函数库' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='继承与多态' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='网络联机' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='socket应用' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='Tomcat服务器' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select art_id,art_title from article where dirname='' order by art_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select tag_id,tag_name from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacher' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:03
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:05
+select tag_id,tag_name from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:05
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:05
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacher' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:05
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:05
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:05
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:05
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:05
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:11
+select count(*) from resource_tag where user_account = 'teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:11
+insert into resource_tag (tag_name,user_account) values ('233','teacher')
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:11
+select tag_id,tag_name from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:11
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:11
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacher' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:11
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:11
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:11
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:12
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:12
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:16
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:16
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:17
+delete from resource_tag where tag_id=46
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:17
+delete from resource where tag_id=46
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:18
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:18
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:25
+update resource_tag set tag_name='学习课件' where tag_id=2
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:25
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:25
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:25
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:25
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:27
+select tag_id,tag_name from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:27
+select count(*) from resource
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:27
+select resource_id,resource_name,resource_type,resource_path from resource where user_account='teacher' order by resource_id desc limit 0,12
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:27
+select resource_id,resource_name,resource_type,resource_path from resource order by click_count desc limit 0,6
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:27
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:27
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:27
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:27
+select t_class from teacher where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:29
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:29
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:53
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:53
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:57
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacherb' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:57
+select count(*) from resource_tag where user_account='teacherb'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:59
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:45:59
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:46:12
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:46:12
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:49:38
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:49:41
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:49:41
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:49:54
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:54:48
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:54:49
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:54:49
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:54:51
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:54:52
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:54:53
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:54:53
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:34
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:34
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:35
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:35
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:35
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:35
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:44
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:45
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 16:58:45
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:00:32
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:00:35
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:00:39
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:00:41
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:00:51
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:00:51
+select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:00:54
+select user_account,t_name,t_class from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:00:54
+select count(*) from teacher
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:04:49
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:04:49
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:04:53
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:04:53
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:04:58
+select resource_tag.tag_id,user_account,tag_name,t.sum from resource_tag left join (select tag_id,count(*) as sum from resource group by tag_id) as t on resource_tag.tag_id=t.tag_id where user_account='teacher' order by resource_tag.tag_id asc
+---------------------------------------
+
+---------------------------------------
+2019/05/10 17:04:58
+select count(*) from resource_tag where user_account='teacher'
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:02
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:02
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:02
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:02
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:02
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:02
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:02
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:02
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:19
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:19
+select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:19
+select t_class from teacher group by t_class
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:19
+select t_name from teacher group by t_name
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:19
+select t_class from teacher where user_account=''
+---------------------------------------
+
+---------------------------------------
+2019/05/10 19:57:43
+select user_account,permission_id from user where user_account='admin' and user_password='34427a6ab59facd747db7ad8d1c31685' and permission_id=0
+---------------------------------------
+

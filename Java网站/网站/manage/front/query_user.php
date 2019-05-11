@@ -61,7 +61,7 @@ $pages = getPage($num,$current_page,$per_page_num);
 		<?php include('./sidenav.html'); ?>
 		<div class="function">
 			<div class="user_query_container">
-				<h2>用户信息查询</h2>
+				<h2 class="h2_title">用户信息查询</h2>
 				<span class="h2_line"></span>
 			<div>	
 				<span class="query_acc">权限:</span>
@@ -118,7 +118,7 @@ $pages = getPage($num,$current_page,$per_page_num);
 				</table>
 				<?php echo '<span class="query_num">*&nbsp;一共查询到 ',$num,' 条数据</span>';?>
 			</div>
-			<!--添加标签-模态框-->
+			<!--更正班级-模态框-->
 			<div id="modify_userdata" class="modal">
 				<div class="modify_userdata_content animate">
 					<h1><img src="../../images/icon/work.png" alt="">更正学生班级</h1>

@@ -21,7 +21,7 @@ $teacher = mGetAll($sql);
 		<?php include('./sidenav.html'); ?>	
 		<div class="function">
 			<div class="class_add_container">
-				<h2>添加班级</h2>
+				<h2 class="h2_title">添加班级</h2>
 				<span class="h2_line"></span>
 				<p class="class_remark">*注：&nbsp;先添加教师用户,再添加班级。<br/>一个班(单指Java这门课)只能由一位教师任课,<br/>一位教师可以任课多个班</p>
 				<form id="add_class_form" method="post">

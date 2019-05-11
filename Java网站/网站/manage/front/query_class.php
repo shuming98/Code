@@ -25,22 +25,21 @@ $num = mGetOne($sql2);
 		<?php include('./sidenav.html'); ?>
 		<div class="function">
 			<div class="class_query_container">
-				<h2>班级信息维护</h2>
+				<h2 class="h2_title">班级信息维护</h2>
 				<span class="h2_line"></span>
-				<div class="query_class_result">
-				<table class="query_class_table">
+				<div class="query_result_container">
+				<table class="query_result_table">
 					<tr>
 						<th>账号</th>
 						<th>任课老师</th>
 						<th>班级</th>
-						<th colspan="2">数据操作</th>
+						<th>数据操作</th>
 					</tr>
 				<?php foreach($class as $v){ ?>
 					<tr>
 						<td><?php echo $v['user_account']; ?></td>
 						<td><?php echo $v['t_name']; ?></td>
 						<td><?php echo $v['t_class']; ?></td>
-						<td><a class="res_modify">修改</a></td>
 						<td><a class="res_remove" data-class="<?php echo $v['t_class']; ?>">删除</a></td>
 					</tr>
 				<?php } ?>

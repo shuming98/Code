@@ -17,6 +17,12 @@ $t_name = mGetAll($sql3);
 $sql4 = "select t_class from teacher where user_account='$_SESSION[user_account]'";
 $teacher_class = mGetAll($sql4);
 
+
+//输出前n张轮播图
+$sql5 = "select content,pic_path from slideshow order by id desc limit 0,5";
+$slideshow = mGetAll($sql5);
+$slide_num = count($slideshow);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -149,23 +155,13 @@ $teacher_class = mGetAll($sql4);
 	<div class="index_container">
 		<!--轮播图-->
 		<div class="slideshow_container">
+		<?php foreach($slideshow as $k=>$v){ ?>
 			<div class="slides fade">
-				<div class="numbertext">1 / 3</div>
-				<img src="./images/icon/study.png" alt="">
-				<div class="slideshow_text">学习乐园</div>
+				<div class="numbertext"><?php echo $k+1,' / ',$slide_num; ?></div>
+				<img src="<?php echo '.'.$v['pic_path']; ?>" alt="">
+				<div class="slideshow_text"><?php echo $v['content']; ?></div>
 			</div>
-
-			<div class="slides fade">
-				<div class="numbertext">1 / 3</div>
-				<img src="./images/icon/resource.png" alt="">
-				<div class="slideshow_text">资源下载</div>
-			</div>
-
-			<div class="slides fade">
-				<div class="numbertext">1 / 3</div>
-				<img src="./images/icon/forum.png" alt="">
-				<div class="slideshow_text">讨论学习</div>
-			</div>
+		<?php } ?>
 		</div>
 		<!--最新活动-->
 		<div class="hots_new">

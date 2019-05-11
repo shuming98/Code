@@ -158,3 +158,10 @@ create table choice_test(
 	D varchar(255) not null default '',
 	answer char(5) not null default ''
 )engine=myisam default charset=utf8;
+
+create table slideshow(
+	id smallint unsigned not null primary key auto_increment,
+	content varchar(255) not null default '',
+	pic_path varchar(255) not null default '',
+	pubtime datetime default current_timestamp
+)engine=myisam default charset=utf8;

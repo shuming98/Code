@@ -17,27 +17,27 @@ require('../../lib/init.php');
 		<?php include('./sidenav.html'); ?>
 		<div class="function">
 			<div class="user_add_container">
-				<h2>添加管理员用户</h2>
+				<h2 class="h2_title">添加管理员用户</h2>
 				<span class="h2_line"></span>
 				<form id="add_admin_form" method="post" accept-charset="utf-8">
 					<p>
-						<span>账号：<input type="text" name="account" required="required" maxlength="20"></span>
+						<span>账号：<input type="text" name="account" required="required" maxlength="20" oninput="value=value.replace(/[\W]/g,'')"></span>
 						<span>密码：<input type="password" name="password" required="required" maxlength="20"></span>
 						<span>昵称：<input type="text" name="nick" required="required" maxlength="20"></span>
 					<input type="submit" value="添加">
 					</p>
 				</form>
-				<h2>添加老师用户</h2>
+				<h2 class="h2_title">添加老师用户</h2>
 				<span class="h2_line"></span>
 				<form id="add_tea_form" action="../admin/add_user.php?pid=1" method="post" accept-charset="utf-8">
 					<p>
-						<span>账号：<input type="text" name="account" required="required" maxlength="20"></span>
+						<span>账号：<input type="text" name="account" required="required" maxlength="20" oninput="value=value.replace(/[\W]/g,'')"></span>
 						<span>密码：<input type="password" name="password" required="required" maxlength="20"></span>
 						<span>昵称：<input type="text" name="nick" required="required" maxlength="20"></span>
 					<input type="submit" value="添加">
 					</p>
 				</form>
-				<h2 class="add_stu_h2">添加学生用户</h2>
+				<h2 class="add_stu_h2 h2_title">添加学生用户</h2>
 				<img class="img_icon" id="add_user" src="../../images/icon/add.png" alt="add">
 				<img class="img_icon" id="minus_user" src="../../images/icon/minus.png" alt="minus">
 				<span id="add_count"></span>
@@ -46,7 +46,7 @@ require('../../lib/init.php');
 				<form id="add_user_form" method="post" accept-charset="utf-8">
 					<div class="add_content">
 					<p class="add_user_temp">
-						1.<span>账号：<input type="text" name="account[]" required="required" maxlength="20"></span>
+						1.<span>账号：<input type="text" name="account[]" required="required" maxlength="20" oninput="value=value.replace(/[\W]/g,'');"></span>
 						<span>密码：<input type="password" name="password[]" required="required" maxlength="20"></span>
 						<span>昵称：<input type="text" name="nick[]" maxlength="20"></span>
 					</p>

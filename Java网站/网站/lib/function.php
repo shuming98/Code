@@ -60,6 +60,21 @@ function randStr($num=7){
 }
 
 /**
+ * 创建目录(用于保存上传的轮播图)
+ * ROOT . '/upload/slideshow/2019/04/jike.png'
+ * @return $path 文件路径
+ */
+function createSlideshowDir(){
+	$path = '/upload/slideshow/'.date('Y/m');
+	$fpath = ROOT . $path;
+	if(is_dir($fpath) || mkdir($fpath,0777,true)){
+		return $path;
+	}else{
+		return false;
+ 	}
+}
+
+/**
  * 创建目录(用于保存上传的用户头像)
  * ROOT . '/upload/user_pic/2019/04/jike.docs'
  * @return $path 文件路径
