@@ -66,7 +66,7 @@ var data={
 };
 $.post('../admin/add_post.php',data,function(res){
     alert(res);
-    history.back();
+    location.href="./forum.php";
   });
 return false;
 });

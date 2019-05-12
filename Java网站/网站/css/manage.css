@@ -96,7 +96,7 @@ input[type=submit]:hover{background: #9999ff;color:#fff;}
 
 
 /**
- * 轮播图
+ * position:轮播图
  */
 .slideshow_container{width:100%;height:100%;overflow:auto;}
 .slideshow_container>form{width:750px;margin:auto;}
@@ -105,6 +105,41 @@ input[type=submit]:hover{background: #9999ff;color:#fff;}
 .slideshow_container>form>p{font-size: 18px;margin:10px 0px 10px 50px;}
 .slideshow_container>form>textarea{width:480px;height: 80px;margin:-30px 0px 10px 140px;font-size: 18px;}
 .slideshow_container>form>input[type=submit]{display: block;float:right;margin-right:130px;width:150px;}
+
+/**
+ * postion:发布资讯
+ */
+.add_news_container{width:100%;height:100%;overflow:auto;}
+.home_add_news{width: 100%;height: 100%;margin:auto;padding:5px 10px;}
+.home_add_news>form{width: 900px;margin:auto;}
+.home_add_news>form>input[type=text]{width: 900px;font-size: 24px;border:1px solid #999;margin-bottom:10px;}
+.home_add_news>form select{border:1px solid #eee;font-size: 20px;padding:8px 16px;margin:20px 0px 20px 0px;}
+.home_add_news>form>input[type=submit]{-webkit-appearance:button;font-size: 20px;border:1px solid #f8f8f8;background: #9999ff;color:#fff;padding:8px 32px;border-radius: 8px;float:right;margin:10px 50px 20px 0px;}
+.home_add_news>form>input[type=submit]:hover{opacity:0.8;}
+
+/**
+ * position:发布外链;
+ */
+.add_link_container{width:100%;height:100%;overflow:auto;}
+.add_link_container>form{width:510px;margin:20px auto;}
+.add_link_container>form>input[type=text]{display:block;width: 500px;font-size: 24px;border:1px solid #999;margin-bottom:10px;}
+.add_link_container>form>textarea{font-size: 18px;width:500px;height: 100px;}
+#test_link{display: block;font-size: 18px;color:#999;}
+#test_link:hover{color:#26A5FF;}
+.add_link_container>form select{display: block;float:left;border:1px solid #eee;font-size: 22px;margin:10px 10px 10px 0px;}
+.add_link_container>form>input[type=submit]{display:block;float: right;margin:10px 10px 10px 0px;width:100px;}
+
+/**
+ * position:首页模块;
+ */
+.module_query_container{width:100%;height:100%;overflow:auto;}
+/*修改模块名-模态框*/
+.modify_catname_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 500px;height: 150px;position: relative;}
+.modify_catname_content>h1{font-size: 24px;line-height: 20px;margin: 20px;}
+.modify_catname_content>h1>img{width: 30px;border:1px solid blue;border-radius: 50%;padding: 3px;}
+#modify_catname_form>span{font-size: 20px;margin:10px 0px 10px 60px;}
+#modify_catname_form input[type=text]{font-size: 20px;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;}
+
 /**
  * position:用户信息添加;
  */

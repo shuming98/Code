@@ -8,7 +8,7 @@ $article['art_content'] = $_POST['content'];
 
 
 if($article['dirname']=='default' && $_GET['art_id']!=6){
-		echo '请选择目录名';
+		echo 0;
 		exit;
 }
 

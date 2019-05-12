@@ -165,3 +165,20 @@ create table slideshow(
 	pic_path varchar(255) not null default '',
 	pubtime datetime default current_timestamp
 )engine=myisam default charset=utf8;
+
+create table news_cat(
+	id smallint unsigned primary key auto_increment,
+	cat_name char(20) not null default '',
+	news_num smallint unsigned not null default 0
+)engine=myisam default charset=utf8;
+
+create table home_news(
+	id int unsigned not null primary key auto_increment,
+	title varchar(100) not null default '',
+	cat_id smallint unsigned not null default 0,
+	link varchar(255) not null default '',
+	content text,
+	pubtime datetime default current_timestamp
+)engine=myisam default charset=utf8;
+
+insert into news_cat(cat_name) values('最新资讯'),('学生优秀作品'),('站外资讯');

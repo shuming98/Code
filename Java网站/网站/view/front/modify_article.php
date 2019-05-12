@@ -44,7 +44,7 @@ $dirname = mGetAll($sql2);
 			<input type="submit" value="确定">
 		</form>
 		</div>
-	<?php include('../front/foot.html'); ?>
+	<?php include('./foot.html'); ?>
 </body>
 <!-- 配置文件 -->
 <script type="text/javascript" src="../../ueditor/utf8-php/ueditor.config.js"></script>

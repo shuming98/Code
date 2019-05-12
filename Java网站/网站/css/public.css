@@ -78,8 +78,9 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .index_container{width: 1300px;height:auto;border:1px solid gray;margin:auto;}
 .index_container hr{border: 1px dashed #333;}
 .index_container h1{font-size: 20px;font-weight: bold;}
-.index_container p{font-size: 16px;}
-.index_container span{float:right;margin-right:5px;}
+.list_news li{width:100%;line-height: 24px;font-size: 18px;padding:0px 6px;}
+.list_news li>a{display:inline-block;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;width: 85%;}
+.list_news li>span{float:right;margin-right:10px;}
 
 /*轮播图*/
 .slideshow_container{width: 710px;height:400px;position: relative;margin:auto;border:1px solid #333;float:left;}
@@ -92,13 +93,13 @@ a:hover { color: #26A5FF; text-decoration:none;}
 @keyframes fade{from {opacity: 0.4} to {opacity: 1}}
 
 /*最新消息*/
-.hots_new{float:right;height:400px;width: 530px;border:1px solid #444;}
+.hots_news{float:right;height:400px;width: 530px;border:1px solid #444;}
 
 /*优秀作品*/
 .excellent_works{float:left;width:620px;height:300px;border:1px solid #555;margin-top: 30px;}
 
 /*优秀书籍推荐*/
-.recom_books{float:right;width: 620px;height: 300px;border:1px solid #666;margin-top: 30px;}
+.outside_news{float:right;width: 620px;height: 300px;border:1px solid #666;margin-top: 30px;}
 
 /*优秀师生*/
 .excellent_figure{margin-top: 30px;width:100%;height: 200px;border:1px solid #777;}
@@ -106,6 +107,15 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .excellent_figure figcaption{text-align: center;}
 .excellent_teachers{float:left;width: 620px;height:200px;border:1px solid #888;}
 .excellent_students{float:right;width: 620px;height:200px;border:1px solid #999;margin-left:20px;}
+
+
+/**
+ * position:查看资讯;
+ */
+.news_container{width:1000px;margin:auto;height: auto;background: #fefefe;padding:10px;}
+.news_container>h1{text-align: center;font-size: 24px;margin:10px 0px 5px 0px;}
+.news_data{text-align: center;font-size: 12px;color:#bbb;}
+.news_modify{float:right;color:#bbb;font-size: 18px;}
 
 /**
  * position:课程资源;

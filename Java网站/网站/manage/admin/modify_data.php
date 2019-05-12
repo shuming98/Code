@@ -23,4 +23,11 @@ if(isset($_GET['opdir'])){
 	$res = mQuery($sql);
 	echo $res?'修改成功':'修改失败';
 }
+
+//修改模块名
+if(isset($_GET['opcat'])){
+	$sql = "update news_cat set cat_name='$_POST[catname]' where id=$_GET[opcat]";
+	$res = mQuery($sql);
+	echo $res?'修改成功':'修改失败';
+}
  ?>

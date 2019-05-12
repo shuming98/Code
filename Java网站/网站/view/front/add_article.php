@@ -60,7 +60,7 @@ $dirname = mGetAll($sql);
     });
 
 
-//ajax
+//ajax发布文章
 $("#article_form").submit(function(){
 var data={
     'art_title':$("#article_form input[name='art_title']").val(),
@@ -68,8 +68,12 @@ var data={
     'dirname':$("#article_form select[name='dirname']").val()
 };
 $.post('../admin/add_article.php',data,function(res){
-    alert(res);
-    history.back();
+	if(res == 0){
+		alert('请选择目录名');
+	}else{
+		alert(res);
+   		location.href="./study.php";
+	} 
   });
 return false;
 });

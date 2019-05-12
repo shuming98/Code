@@ -1,27 +1,48 @@
 <?php 
 session_start();
 require('./lib/init.php');
-//查询用户数据
-$sql = "select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='$_SESSION[user_account]'";
-$user = mGetRow($sql);
 
-//查询所有班级名字
-$sql2 = "select t_class from teacher group by t_class";
-$t_class = mGetAll($sql2);
+if(isset($_SESSION['user_account'])){
+	//查询用户数据
+	$sql = "select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='$_SESSION[user_account]'";
+	$user = mGetRow($sql);
 
-//查询所有老师名字
-$sql3 = "select t_name from teacher group by t_name";
-$t_name = mGetAll($sql3);
 
-//查看某个老师教的班级名字
-$sql4 = "select t_class from teacher where user_account='$_SESSION[user_account]'";
-$teacher_class = mGetAll($sql4);
+	//查询所有班级名字
+	$sql2 = "select t_class from teacher group by t_class";
+	$t_class = mGetAll($sql2);
 
+
+	//查询所有老师名字
+	$sql3 = "select t_name from teacher group by t_name";
+	$t_name = mGetAll($sql3);
+
+
+	//查看某个老师教的班级名字
+	$sql4 = "select t_class from teacher where user_account='$_SESSION[user_account]'";
+	$teacher_class = mGetAll($sql4);
+}
 
 //输出前n张轮播图
 $sql5 = "select content,pic_path from slideshow order by id desc limit 0,5";
 $slideshow = mGetAll($sql5);
 $slide_num = count($slideshow);
+
+//输出资讯分类
+$sql6 = "select id,cat_name from news_cat order by id asc limit 0,3";
+$catname = mGetAll($sql6);
+
+//查询最新资讯
+$sql7 = "select id,title,link,pubtime from home_news where cat_id=1 order by id desc limit 0,6";
+$hots_news = mGetAll($sql7);
+
+//查询优秀学生作品
+$sql8 = "select id,title,link,pubtime from home_news where cat_id=2 order by id desc limit 0,6";
+$excellent_works = mGetAll($sql8);
+
+//查询站外资讯
+$sql9 = "select id,title,link,pubtime from home_news where cat_id=3 order by id desc limit 0,6";
+$outside_news = mGetAll($sql9);
 
 ?>
 <!DOCTYPE html>
@@ -163,28 +184,67 @@ $slide_num = count($slideshow);
 			</div>
 		<?php } ?>
 		</div>
-		<!--最新活动-->
-		<div class="hots_new">
-			<h1>最新资讯</h1>
+
+		<!--最新资讯-->
+		<div class="hots_news">
+			<h1><?php echo $catname[0]['cat_name']; ?></h1>
 			<hr>
-			<p><a href="#">[活动]计算机设计大赛报名入口。<span>4/23</span></a></p>
+			<ul class="list_news">
+			<?php foreach($hots_news as $v){ ?>
+				<li>
+					<?php if($v['link'] == null){
+						echo '<a href="./view/front/show_news?id=',$v['id'],'">',$v['title'],'</a>';
+					}else{
+						echo '<a href="',$v['link'],'" target="_blank">',$v['title'],'</a>';
+					}
+					echo '<span>',date('m/d',strtotime($v['pubtime'])),'</span>';
+					?>
+				</li>
+			<?php } ?>
+			</ul>
 		</div>
 		<div class=".clearfix"></div>
 		
-		<!--本院优秀成果-->
+		<!--优秀学生作品-->
 		<div class="excellent_works">
-			<h1>学生比赛优秀作品</h1>
+			<h1><?php echo $catname[1]['cat_name']; ?></h1>
 			<hr>
-			<p><a href="#">[梁振伟]Android猿学习APP<span>了解更多</span></a></p>
+			<ul class="list_news">
+			<?php foreach($excellent_works as $v){ ?>
+				<li>
+					<?php if($v['link'] == null){
+						echo '<a href="./view/front/show_news?id=',$v['id'],'">',$v['title'],'</a>';
+					}else{
+						echo '<a href="',$v['link'],'" target="_blank">',$v['title'],'</a>';
+					}
+					echo '<span>',date('m/d',strtotime($v['pubtime'])),'</span>';
+					?>
+				</li>
+			<?php } ?>
+			</ul>
 		</div>
 
-		<!--优秀书籍推荐-->
-		<div class="recom_books">
-		<h1>站外资讯</h1>
+		<!--站外资讯-->
+		<div class="outside_news">
+		<h1><?php echo $catname[2]['cat_name']; ?></h1>
 		<hr>
-		<p><a href="#">Java12正式发布<span>了解更多</span></a></p>
+		<ul class="list_news">
+			<?php foreach($outside_news as $v){ ?>
+				<li>
+					<?php if($v['link'] == null){
+						echo '<a href="./view/front/show_news?id=',$v['id'],'">',$v['title'],'</a>';
+					}else{
+						echo '<a href="',$v['link'],'" target="_blank">',$v['title'],'</a>';
+					}
+					echo '<span>',date('m/d',strtotime($v['pubtime'])),'</span>';
+					?>
+				</li>
+			<?php } ?>
+			</ul>
 		</div>
 		<div class="clearfix"></div>
+
+		<!--优秀师生-->
 		<div class="excellent_figure">
 			<div class="excellent_teachers">
 				<h1>优秀老师</h1>
