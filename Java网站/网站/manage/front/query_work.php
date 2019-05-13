@@ -5,6 +5,7 @@ require('../../lib/init.php');
 /**
  * 实现分页功能
  */
+
 //从地址栏获得当前页码
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 
@@ -13,7 +14,7 @@ $per_page_num = 12;
 
 //查询该老师发布作业的数据
 if(isset($_GET['account'])){
-	$sql = "select work_id,class,work_title,issue_date from issue_work where user_account='$_GET[account]' order by work_id asc";
+	$sql = "select work_id,class,work_title,issue_date from issue_work where user_account='$_GET[account]' order by work_id asc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
 	$work = mGetAll($sql);
 
 	$sql2 = "select count(*) from issue_work where user_account='$_GET[account]'";

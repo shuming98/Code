@@ -1,8 +1,9 @@
 <?php 
 session_start();
 require('../../lib/init.php');
-if($_SESSION['permission_id'] != 0 && $_SESSION['permission_id'] != 1){
-	echo "<script>alert('此非你该来之地');history.back();</script>";
+if($_SESSION['permission_id'] != 1 && $_SESSION['permission_id'] != 2){
+	header('Location:../../index.php');
+	exit;
 }
  ?>
 

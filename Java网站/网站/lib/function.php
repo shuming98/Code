@@ -60,6 +60,21 @@ function randStr($num=7){
 }
 
 /**
+ * 创建目录(用于保存上传的优秀师生)
+ * ROOT . '/upload/excellent/2019/04/jike.png'
+ * @return $path 文件路径
+ */
+function createExcellentDir(){
+	$path = '/upload/excellent/'.date('Y/m');
+	$fpath = ROOT . $path;
+	if(is_dir($fpath) || mkdir($fpath,0777,true)){
+		return $path;
+	}else{
+		return false;
+ 	}
+}
+
+/**
  * 创建目录(用于保存上传的轮播图)
  * ROOT . '/upload/slideshow/2019/04/jike.png'
  * @return $path 文件路径

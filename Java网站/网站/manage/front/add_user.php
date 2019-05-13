@@ -29,7 +29,7 @@ require('../../lib/init.php');
 				</form>
 				<h2 class="h2_title">添加老师用户</h2>
 				<span class="h2_line"></span>
-				<form id="add_tea_form" action="../admin/add_user.php?pid=1" method="post" accept-charset="utf-8">
+				<form id="add_tea_form" method="post" accept-charset="utf-8">
 					<p>
 						<span>账号：<input type="text" name="account" required="required" maxlength="20" oninput="value=value.replace(/[\W]/g,'')"></span>
 						<span>密码：<input type="password" name="password" required="required" maxlength="20"></span>
@@ -80,7 +80,7 @@ $("#minus_user").click(function(){
 
 //ajax添加管理员用户
 $("#add_admin_form").submit(function(){
-	$.post('../admin/add_user.php?pid=0',$("#add_admin_form").serialize(),function(res){
+	$.post('../admin/add_user.php?pid=1',$("#add_admin_form").serialize(),function(res){
 		alert(res);
 	});
 	return false;
@@ -88,7 +88,7 @@ $("#add_admin_form").submit(function(){
 
 //ajax添加教师用户
 $("#add_tea_form").submit(function(){
-	$.post('../admin/add_user.php?pid=1',$("#add_tea_form").serialize(),function(res){
+	$.post('../admin/add_user.php?pid=2',$("#add_tea_form").serialize(),function(res){
 		alert(res);
 	});
 	return false;

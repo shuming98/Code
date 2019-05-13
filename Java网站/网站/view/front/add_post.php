@@ -3,7 +3,7 @@ session_start();
 require('../../lib/init.php');
 
 //查询论坛分类
-if($_SESSION['permission_id'] == 0){
+if($_SESSION['permission_id'] == 1){
 	$sql = "select cat_name from forum_cat";
 	$cat_name = mGetAll($sql);
 }else{

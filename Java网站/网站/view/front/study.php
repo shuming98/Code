@@ -5,7 +5,7 @@ require('../../lib/init.php');
 if($_SESSION['permission_id']==3){
 	$sql = "select teacher.user_account from user_data inner join teacher on user_data.class=teacher.t_class where user_data.user_account='$_SESSION[user_account]'";
 	$teacher = mGetOne($sql);
-}else if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){
+}else if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){
 	$teacher = $_SESSION['user_account'];
 }
 
@@ -68,7 +68,7 @@ if(mGetOne($sql7) == 0){
 	<?php include('./nav.php'); ?>
 	<div class="study_container">
 		<div class="study_container_left">
-		<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){?>
+		<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){?>
 			<button id="add_dir_button" type="button">添加目录</button>
 			<button type="button"><a href="./add_article.php">发布文章</a></button>
 		<?php } ?>
@@ -91,7 +91,7 @@ if(mGetOne($sql7) == 0){
 		</div>
 		<div class="study_container_right">
 			<h1><?php echo $article[0]['art_title']; ?></h1>
-			<p><?php echo date('Y-m-d',strtotime($article[0]['pubtime'])); ?><span>阅读数：<?php echo $viewsum;?>		</span><?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){?><a href="./modify_article.php?art_id=<?php echo $art_id;?>">修改</a><?php } ?></p>
+			<p><?php echo date('Y-m-d',strtotime($article[0]['pubtime'])); ?><span>阅读数：<?php echo $viewsum;?>		</span><?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){?><a href="./modify_article.php?art_id=<?php echo $art_id;?>">修改</a><?php } ?></p>
 			<div class="clearfix"></div>
 			<hr>
 			<div id="art_content">

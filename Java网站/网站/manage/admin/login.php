@@ -6,7 +6,7 @@ $admin['account'] = trim($_POST['account']);
 $admin['password'] = md5Code(trim($_POST['password']));
 
 
-$sql = "select user_account,permission_id from user where user_account='$admin[account]' and user_password='$admin[password]' and permission_id=0";
+$sql = "select user_account,permission_id from user where user_account='$admin[account]' and user_password='$admin[password]' and permission_id=1";
 
 $row = mGetRow($sql);
 if($row){

@@ -44,6 +44,13 @@ $excellent_works = mGetAll($sql8);
 $sql9 = "select id,title,link,pubtime from home_news where cat_id=3 order by id desc limit 0,6";
 $outside_news = mGetAll($sql9);
 
+//查询优秀老师
+$sql10 = "select name,pic_path from excellent where identify=1 order by id desc limit 0,3";
+$excellentT = mGetAll($sql10);
+
+//查询优秀学生
+$sql11 = "select name,pic_path from excellent where identify=3 order by id desc limit 0,3";
+$excellentS = mGetAll($sql11);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,12 +68,12 @@ $outside_news = mGetAll($sql9);
 			<li><a href="./index.php"><img src="./images/icon/home.png" alt="home">首页</a></li>
 			<li><a href="./view/front/resource.php"><img src="./images/icon/resource.png" alt="resource">课程资源</a></li>
 			<li><a href="./view/front/study.php"><img src="./images/icon/study.png" alt="study">学习园地</a></li>
-		<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>	
+		<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){ ?>	
 			<li><a href="./view/front/check_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
 		<?php }else { ?>
 			<li><a href="./view/front/show_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
 		<?php } ?>
-		<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>	
+		<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){ ?>	
 			<li><a href="./view/front/t_test.php"><img src="./images/icon/about.png" alt="about">发布试题</a></li>
 		<?php }else{ ?>
 			<li><a href="./view/front/s_test.php"><img src="./images/icon/about.png" alt="about">试题练习</a></li>
@@ -128,7 +135,7 @@ $outside_news = mGetAll($sql9);
 				</p>
 
 				<p>联系方式：<input type="text" name="tel" value="<?php echo $user['tel']; ?>" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')"><p>
-			<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==0){ ?>
+			<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){ ?>
 				<p>任教班级：
 					<?php foreach($teacher_class as $v){
 						echo $v['t_class'],',';
@@ -187,7 +194,8 @@ $outside_news = mGetAll($sql9);
 
 		<!--最新资讯-->
 		<div class="hots_news">
-			<h1><?php echo $catname[0]['cat_name']; ?></h1>
+			<h1><?php echo $catname[0]['cat_name']; ?><a href="./view/front/more_news.php?news=1">&gt;&gt;更多</a></h1>
+			<div class="clearfix"></div>
 			<hr>
 			<ul class="list_news">
 			<?php foreach($hots_news as $v){ ?>
@@ -207,7 +215,8 @@ $outside_news = mGetAll($sql9);
 		
 		<!--优秀学生作品-->
 		<div class="excellent_works">
-			<h1><?php echo $catname[1]['cat_name']; ?></h1>
+			<h1><?php echo $catname[1]['cat_name']; ?><a href="./view/front/more_news.php?news=2">&gt;&gt;更多</a></h1>
+			<div class="clearfix"></div>
 			<hr>
 			<ul class="list_news">
 			<?php foreach($excellent_works as $v){ ?>
@@ -226,7 +235,8 @@ $outside_news = mGetAll($sql9);
 
 		<!--站外资讯-->
 		<div class="outside_news">
-		<h1><?php echo $catname[2]['cat_name']; ?></h1>
+		<h1><?php echo $catname[2]['cat_name']; ?><a href="./view/front/more_news.php?news=3">&gt;&gt;更多</a></h1>
+		<div class="clearfix"></div>
 		<hr>
 		<ul class="list_news">
 			<?php foreach($outside_news as $v){ ?>
@@ -249,35 +259,23 @@ $outside_news = mGetAll($sql9);
 			<div class="excellent_teachers">
 				<h1>优秀老师</h1>
 				<hr>
+			<?php foreach($excellentT as $v){ ?>
 				<figure>
-					<img src="./images/icon/user.png" alt="">
-					<figcaption>甘老师</figcaption>
+					<img src="<?php echo '.'.$v['pic_path']; ?>" alt="pic">
+					<figcaption><?php echo $v['name']; ?></figcaption>
 				</figure>
-				<figure>
-					<img src="./images/icon/user.png" alt="">
-					<figcaption>李老师</figcaption>
-				</figure>
-				<figure>
-					<img src="./images/icon/user.png" alt="">
-					<figcaption>陈老师</figcaption>
-				</figure>
+			<?php } ?>
 			</div>
 
 			<div class="excellent_students">
 				<h1>优秀学生</h1>
 				<hr>
+			<?php foreach($excellentS as $v){ ?>
 				<figure>
-					<img src="./images/icon/user.png" alt="">
-					<figcaption>梁同学</figcaption>
+					<img src="<?php echo '.'.$v['pic_path']; ?>" alt="">
+					<figcaption><?php echo $v['name']; ?></figcaption>
 				</figure>
-				<figure>
-					<img src="./images/icon/user.png" alt="">
-					<figcaption>陈同学</figcaption>
-				</figure>
-				<figure>
-					<img src="./images/icon/user.png" alt="">
-					<figcaption>吴同学</figcaption>
-				</figure>
+			<?php } ?>
 			</div>
 		</div>
 	</div>
@@ -286,6 +284,5 @@ $outside_news = mGetAll($sql9);
 		<p>粤ICP备18036003号</p>
 	</footer>
 </body>
-<script src="./js/home.js" type="text/javascript" charset="utf-8">
-</script>
+<script src="./js/home.js"></script>
 </html>

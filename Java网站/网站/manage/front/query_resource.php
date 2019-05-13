@@ -10,7 +10,7 @@ require('../../lib/init.php');
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 //设置每页显示数据数
-$per_page_num = 12;
+$per_page_num = 10;
 
 //查询该教师分类标签资源或全部资源
 if(isset($_GET['account'])){
@@ -66,7 +66,7 @@ $pages = getPage($num,$current_page,$per_page_num);
 					}
 					echo '</p>';
 				} ?>
-				<div class="query_result_container">
+				<div class="query_result_container" style="height:450px;">
 					<table class="query_result_table">
 						<tr>
 							<th>id</th>

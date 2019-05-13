@@ -3,7 +3,7 @@ session_start();
 require('../../lib/init.php');
 
 //输出所有教师
-$sql = "select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=1 order by user_id asc";
+$sql = "select user.user_account,user_nick from user inner join user_data on user.user_account=user_data.user_account where permission_id=2 order by user_id asc";
 $teacher = mGetAll($sql);
  ?>
 <!DOCTYPE html>

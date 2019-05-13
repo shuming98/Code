@@ -2,19 +2,28 @@
 session_start(); 
 require('../../lib/init.php');
 
-if(isset($_GET['id'])){
-	//查询该文章内容
-	$sql2 = "select title,cat_name,content,pubtime from home_news inner join news_cat on news_cat.id=home_news.cat_id where home_news.id=$_GET[id]";
+/**
+ * 实现分页功能
+ */
+
+//从地址栏获得当前页码
+$current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+//设置每页显示数据数
+$per_page_num = 17;
+
+if(isset($_GET['news'])){
+	$sql = "select cat_name from news_cat where id=$_GET[news]";
+	$catname = mGetOne($sql);
+
+	$sql2 = "select id,title,link,pubtime from home_news where cat_id=$_GET[news] order by id desc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
 	$news = mGetAll($sql2);
 
-	if(empty($news)){
-		header('Location:../../index.php');
-		exit;
-	}
-}else{
-	header('Location:../../index.php');
-	exit;
+	$sql3 = "select count(*) from home_news where cat_id=$_GET[news]";
+	$num = mGetOne($sql3);
 }
+
+$pages = getPage($num,$current_page,$per_page_num);
 
 ?>
 <!DOCTYPE html>
@@ -47,17 +56,35 @@ if(isset($_GET['id'])){
 		</ul>
 	</div>
 	<div class="clearfix"></div>
-	<div class="news_container">
-		<h1><?php echo $news[0]['title']; ?></h1>
-		<p class="news_data"><?php echo date('m-d',strtotime($news[0]['pubtime'])),'&nbsp;&nbsp;',$news[0]['cat_name']; ?>
-		<?php 
-			if (!empty($_SESSION) && ($_SESSION['permission_id']==1)){
-				echo '<a class="news_modify" href="./modify_news.php?id=',$_GET[id],'">修改</a>';
-			}
-		 ?>
-		</p>
-		<hr>
-		<?php echo $news[0]['content']; ?>
+	<div class="more_news_container">
+		<p class="more_news_nav"><a href="../../index.php">首页</a>&gt;<span><?php echo $catname; ?></span></p>
+		<div class="list_more_container">
+			<ul class="list_more_news">
+			<?php foreach($news as $v){ ?>
+				<li>
+					<?php if($v['link'] == null){
+						echo '<a href="./show_news?id=',$v['id'],'">',$v['title'],'</a>';
+					}else{
+						echo '<a href="',$v['link'],'" target="_blank">',$v['title'],'</a>';
+					}
+					echo '<span>',date('m-d',strtotime($v['pubtime'])),'</span>';
+					?>
+				</li>
+			<?php } ?>
+			</ul>
+			<!--分页页号-->
+			<div id="page_bar" style="top:0px;">
+				<?php 
+					foreach($pages as $k=>$v){
+						if($k == $current_page){
+							echo '<span>',$k,'</span>';
+						}else{
+							echo '<a href="./more_news.php?',$v,'">',$k,'</a>';
+						}
+					}
+				?>
+			</div>
+		</div>
 	</div>
 	<?php include('./foot.html'); ?>
 </body>

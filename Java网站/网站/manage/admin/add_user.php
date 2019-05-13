@@ -8,14 +8,14 @@ $sql = "select user_account from user";
 $arr = array_column(mGetAll($sql),'user_account');
 
 //添加管理员账号
-if($_GET['pid'] == 0){
+if($_GET['pid'] == 1){
 	if(in_array($_POST['account'],$arr)){
 		echo $_POST['account'],'账号已存在,请重新填写';
 		exit;
 	}else{
 		$admin['user_account'] = $_POST['account'];
 		$admin['user_password'] = md5Code($_POST['password']);
-		$admin['permission_id'] = 0;
+		$admin['permission_id'] = 1;
 
 		$admin_data['user_account'] = $_POST['account'];
 		$admin_data['user_nick'] = $_POST['nick'];
@@ -27,14 +27,14 @@ if($_GET['pid'] == 0){
 }
 
 //添加教师账号
-if($_GET['pid'] == 1){
+if($_GET['pid'] == 2){
 	if(in_array($_POST['account'],$arr)){
 		echo $_POST['account'],'账号已存在,请重新填写';
 		exit;
 	}else{
 		$teacher['user_account'] = $_POST['account'];
 		$teacher['user_password'] = md5Code($_POST['password']);
-		$teacher['permission_id'] = 1;
+		$teacher['permission_id'] = 2;
 
 		$teacher_data['user_account'] = $_POST['account'];
 		$teacher_data['user_nick'] = $_POST['nick'];

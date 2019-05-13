@@ -66,4 +66,11 @@ if(isset($_GET['work'])){
 	$res2 = mQuery($sql2);
 	echo ($res && $res2)?'删除成功':'删除失败';
 }
+
+//删除作业发布数据
+if(isset($_GET['news'])){
+	$sql = "delete from home_news where id=$_GET[news]";
+	$res = mQuery($sql);
+	echo $res?'删除成功':'删除失败';
+}
  ?>

@@ -43,7 +43,7 @@ a:hover {color: #26A5FF; text-decoration:none;}
 .res_remove:hover{color:red;}
 
 /*表单提交按钮样式*/
-input[type=submit]{font-size: 20px;padding:2px 4px;border:1px solid #9999ff;border-radius: 4px;}
+input[type=submit]{font-size: 18px;padding:2px 4px;border:1px solid #9999ff;border-radius: 4px;}
 input[type=submit]:hover{background: #9999ff;color:#fff;}
 
 /*分页页号*/
@@ -56,6 +56,10 @@ input[type=submit]:hover{background: #9999ff;color:#fff;}
 .header{width:1300px;height: 50px;margin:auto;}
 .header>img{float:left;margin-right:10px;}
 .header>h1{float:left;font-size: 30px;line-height: 50px;font-weight: normal;}
+.header>span{float:right;line-height: 50px;font-size: 20px;}
+.header>span>a{color:#999;}
+.header>span>a:hover{color:red;}
+
 
 /*页尾*/
 .footer{width: 100%;height: 50px;background: #eee;position:absolute;bottom:0px;}
@@ -107,6 +111,17 @@ input[type=submit]:hover{background: #9999ff;color:#fff;}
 .slideshow_container>form>input[type=submit]{display: block;float:right;margin-right:130px;width:150px;}
 
 /**
+ * position:首页模块;
+ */
+.module_query_container{width:100%;height:100%;overflow:auto;}
+/*修改模块名-模态框*/
+.modify_catname_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 500px;height: 150px;position: relative;}
+.modify_catname_content>h1{font-size: 24px;line-height: 20px;margin: 20px;}
+.modify_catname_content>h1>img{width: 30px;border:1px solid blue;border-radius: 50%;padding: 3px;}
+#modify_catname_form>span{font-size: 20px;margin:10px 0px 10px 60px;}
+#modify_catname_form input[type=text]{font-size: 20px;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;}
+
+/**
  * postion:发布资讯
  */
 .add_news_container{width:100%;height:100%;overflow:auto;}
@@ -130,24 +145,31 @@ input[type=submit]:hover{background: #9999ff;color:#fff;}
 .add_link_container>form>input[type=submit]{display:block;float: right;margin:10px 10px 10px 0px;width:100px;}
 
 /**
- * position:首页模块;
+ * position:查询模块资讯;
  */
-.module_query_container{width:100%;height:100%;overflow:auto;}
-/*修改模块名-模态框*/
-.modify_catname_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 500px;height: 150px;position: relative;}
-.modify_catname_content>h1{font-size: 24px;line-height: 20px;margin: 20px;}
-.modify_catname_content>h1>img{width: 30px;border:1px solid blue;border-radius: 50%;padding: 3px;}
-#modify_catname_form>span{font-size: 20px;margin:10px 0px 10px 60px;}
-#modify_catname_form input[type=text]{font-size: 20px;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;}
+.query_news_container{width:100%;height:100%;overflow:auto;}
+.query_news_container>form{width:400px;height: auto;margin:auto;}
+.query_news_container>form>span{font-size: 24px;}
+.query_news_container>form>select{border:1px solid #eee;font-size: 24px;margin:0px 10px 0px 0px;}
 
+/**
+ * position:优秀师生添加;
+ */
+.add_excellent_container{width:100%;height:100%;overflow:auto;}
+.show_img{width:100px;height: 100px;border-radius: 50%;border:1px solid #26A5FF;margin-left:80px;}
+.show_img>img{width:100%;height: 100%;border-radius: 50%;}
+.excellent_form{width:360px;margin:20px auto;}
+.excellent_form p{font-size: 18px;margin:10px 0px 10px 0px;}
+.excellent_form input[type=text]{width: 200px;font-size: 18px;padding:2px 6px;}
+.excellent_form select{font-size: 18px;}
+.excellent_form input[type=submit]{width:150px;margin:10px 0px 10px 60px;}
 /**
  * position:用户信息添加;
  */
 .user_add_container{width:100%;height:100%;overflow:auto;}
 .user_add_container p{font-size: 18px;margin-left:50px;}
 .user_add_container input[type=text],input[type=password]{font-size: 18px;padding:2px 4px;}
-.user_add_container input[type=submit]{font-size: 18px;background: #26A5FF;color:#333;padding:2px 3px;border-radius: 5px;margin-left:10px;}
-.user_add_container input[type=submit]:hover{opacity: 0.7;color:#000;}
+.user_add_container input[type=submit]{margin-left:10px;}
 /*批量添加学生用户*/
 .add_stu_h2{float:left;}
 .img_icon{float:left;width:24px;height:24px;margin:30px 5px 0px 5px;cursor: pointer;}
@@ -162,8 +184,6 @@ input[type=submit]:hover{background: #9999ff;color:#fff;}
 span.query_acc{float:left;margin-left:80px;font-size: 24px;}
 .user_query_container form{float:left;}
 .user_query_container form select{font-size: 20px;border:none;background:#ececf9;color:#333;width:150px;}
-.user_query_container form input[type=submit]{font-size: 18px;padding:2px 4px;border:1px solid #9999ff;border-radius: 4px;}
-.user_query_container form input[type=submit]:hover{background: #9999ff;color:#fff;}
 .user_query_container form:last-child input[type=text]{font-size: 18px;padding:2px 3px;width:150px;border:none;border-bottom: 1px solid #000;outline:none;background: none;}
 /*修改用户数据模态框*/
 .modify_userdata_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 500px;height: 150px;position: relative;}
@@ -181,8 +201,7 @@ span.query_acc{float:left;margin-left:80px;font-size: 24px;}
 #add_class_form>p{font-size: 24px;margin:15px 0px;}
 #add_class_form input[type=text]{font-size: 20px;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;}
 #add_class_form select{font-size: 24px;width:205px;}
-#add_class_form input[type=submit]{font-size: 24px;padding:4px 16px;background: #26A5FF;color:#fefefe;border:1px solid #fff;border-radius: 5px;width: 100px;margin:0px 0px 10px 230px;}
-#add_class_form input[type=submit]:hover{opacity: 0.7;}
+#add_class_form input[type=submit]{font-size: 24px;padding:4px 16px;width: 100px;margin:0px 0px 10px 230px;}
 
 /**
  * position:班级信息维护;
@@ -196,16 +215,12 @@ span.query_acc{float:left;margin-left:80px;font-size: 24px;}
 /*查询表单*/
 .tag_query_container>form{width:300px;height: auto;margin:20px auto 10px auto;}
 .tag_query_container>form>input[type=text]{font-size: 20px;border:none;outline: none;border-bottom:1px solid #26A5FF;background: none}
-.tag_query_container>form>input[type=submit]{font-size: 18px;padding:2px 4px;border:1px solid #9999ff;border-radius: 4px;background: none;}
-.tag_query_container>form>input[type=submit]:hover{background: #9999ff;color:#fff;}
 /*修改标签名-模态框*/
 .modify_tagname_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 500px;height: 150px;position: relative;}
 .modify_tagname_content>h1{font-size: 24px;line-height: 20px;margin: 20px;}
 .modify_tagname_content>h1>img{width: 30px;border:1px solid blue;border-radius: 50%;padding: 3px;}
 #modify_tagname_form>span{font-size: 20px;margin:10px 0px 10px 60px;}
 #modify_tagname_form input[type=text]{font-size: 20px;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;}
-#modify_tagname_form input[type=submit]{font-size: 20px;padding:2px 4px;border:1px solid #9999ff;border-radius: 4px;}
-#modify_tagname_form input[type=submit]:hover{background: #9999ff;color:#fff;}
 
 /**
  * position:资源维护;
@@ -224,16 +239,12 @@ span.query_acc{float:left;margin-left:80px;font-size: 24px;}
 /*查询表单*/
 .dir_query_container>form{width:300px;height: auto;margin:20px auto 10px auto;}
 .dir_query_container>form>input[type=text]{font-size: 20px;border:none;outline: none;border-bottom:1px solid #26A5FF;background: none}
-.dir_query_container>form>input[type=submit]{font-size: 18px;padding:2px 4px;border:1px solid #9999ff;border-radius: 4px;background: none;}
-.dir_query_container>form>input[type=submit]:hover{background: #9999ff;color:#fff;}
 /*修改目录名-模态框*/
 .modify_dirname_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 500px;height: 150px;position: relative;}
 .modify_dirname_content>h1{font-size: 24px;line-height: 20px;margin: 20px;}
 .modify_dirname_content>h1>img{width: 30px;border:1px solid blue;border-radius: 50%;padding: 3px;}
 #modify_dirname_form>span{font-size: 20px;margin:10px 0px 10px 60px;}
 #modify_dirname_form input[type=text]{font-size: 20px;padding:4px 6px;border:1px solid #26A5FF;border-radius: 5px;}
-#modify_dirname_form input[type=submit]{font-size: 20px;padding:2px 4px;border:1px solid #9999ff;border-radius: 4px;}
-#modify_dirname_form input[type=submit]:hover{background: #9999ff;color:#fff;}
 
 /**
  * position：文章维护

@@ -7,7 +7,7 @@ $sql2 = "select post_id,user_account,post_title,cat_name,post_content from forum
 $post = mGetAll($sql2);
 
 //查询论坛分类
-if($_SESSION['permission_id'] == 0){
+if($_SESSION['permission_id'] == 1){
 	$sql = "select cat_name from forum_cat";
 	$cat_name = mGetAll($sql);
 }else if($post[0]['cat_name'] == '精品'){

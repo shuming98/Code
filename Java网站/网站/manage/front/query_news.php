@@ -1,24 +1,28 @@
 <?php 
 session_start();
-require('../../lib/acc_admin.php');
 require('../../lib/init.php');
+
+//查询模块名称
+$sql = "select id,cat_name from news_cat";
+$catname = mGetAll($sql);
 
 /**
  * 实现分页功能
  */
+
 //从地址栏获得当前页码
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 //设置每页显示数据数
 $per_page_num = 12;
 
-//查询该教师发布的文章
-if(isset($_GET['account'])){
-	$sql = "select art_id,dirname,art_title from article where user_account='$_GET[account]' order by dirname,art_id asc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
-	$article = mGetAll($sql);
+//查询模块文章
+if(isset($_GET['module'])){
+	$sql2 = "select home_news.id,cat_name,title,pubtime from home_news inner join news_cat on home_news.cat_id=news_cat.id where home_news.cat_id=$_GET[module] order by home_news.id desc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
+	$news = mGetAll($sql2);
 
-	$sql2 = "select count(*) from article where user_account='$_GET[account]'";
-	$num = mGetOne($sql2);
+	$sql3 = "select count(*) from home_news where cat_id=$_GET[module]";
+	$num = mGetOne($sql3);
 }
 
 $pages = getPage($num,$current_page,$per_page_num);
@@ -38,29 +42,36 @@ $pages = getPage($num,$current_page,$per_page_num);
 	<div class="manage_container">
 		<?php include('./sidenav.html'); ?>
 		<div class="function">
-			<div class="article_query_container">
-				<h2 class="h2_title">文章维护</h2>
+			<div class="query_news_container">
+				<h2 class="h2_title">模块资讯查询</h2>
 				<span class="h2_line"></span>
 				<form action="" method="get">
-					<input type="text" name="account" placeholder="请输入教师账号" maxlength="20" required="required">
+					<span>请选择模块：</span>
+					<select name="module">
+					<?php foreach($catname as $v){ 
+						echo '<option value="',$v['id'],'">',$v['cat_name'],'</option>';
+					} ?>
+					</select>
 					<input type="submit" value="查询">
 				</form>
 				<div class="query_result_container">
 					<table class="query_result_table">
 						<tr>
-							<td>id</td>
-							<td>目录名</td>
-							<td>文章标题</td>
-							<td>数据操作</td>
+							<th>id</th>
+							<th>模块名</th>
+							<th>标题</th>
+							<th>发布时间</th>
+							<th>数据操作</th>
 						</tr>
-					<?php foreach($article as $v){ ?>
+						<?php foreach($news as $v){ ?>
 						<tr>
-							<td><?php echo $v['art_id']; ?></td>
-							<td><?php echo $v['dirname']; ?></td>
-							<td><?php echo $v['art_title']; ?></td>
-							<td><a class="res_remove" data-article="<?php echo $v['art_id']; ?>">删除</a></td>
+							<td><?php echo $v['id']; ?></td>
+							<td><?php echo $v['cat_name']; ?></td>
+							<td><?php echo $v['title']; ?></td>
+							<td><?php echo $v['pubtime']; ?></td>
+							<td><a class="res_remove" data-news="<?php echo $v['id']; ?>">删除</a></td>
 						</tr>
-					<?php } ?>
+						<?php } ?>
 					</table>
 					<?php echo '<span class="query_num">* 一共查询到 ',$num,' 条数据</span>'; ?>
 				</div>
@@ -71,7 +82,7 @@ $pages = getPage($num,$current_page,$per_page_num);
 						if($k == $current_page){
 							echo '<span>',$k,'</span>';
 						}else{
-							echo '<a href="./query_article.php?',$v,'">',$k,'</a>';
+							echo '<a href="./query_news.php?',$v,'">',$k,'</a>';
 						}
 					}
 				?>
@@ -82,9 +93,9 @@ $pages = getPage($num,$current_page,$per_page_num);
 	<?php include('./footer.html'); ?>
 </body>
 <script>
-//ajax删除文章数据
+//ajax删除资讯数据
 $(".res_remove").click(function(){
-	$.get('../admin/delete_data.php?article='+$(this).data('article'),function(res){
+	$.get('../admin/delete_data.php?news='+$(this).data('news'),function(res){
 		alert(res);
 		location.reload();
 	});

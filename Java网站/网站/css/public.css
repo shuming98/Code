@@ -78,6 +78,8 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .index_container{width: 1300px;height:auto;border:1px solid gray;margin:auto;}
 .index_container hr{border: 1px dashed #333;}
 .index_container h1{font-size: 20px;font-weight: bold;}
+.index_container h1>a{float:right;margin-right:15px;color:#999;font-size: 16px;font-weight: normal}
+.index_container h1>a:hover{color:#26A5FF;}
 .list_news li{width:100%;line-height: 24px;font-size: 18px;padding:0px 6px;}
 .list_news li>a{display:inline-block;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;width: 85%;}
 .list_news li>span{float:right;margin-right:10px;}
@@ -103,8 +105,9 @@ a:hover { color: #26A5FF; text-decoration:none;}
 
 /*优秀师生*/
 .excellent_figure{margin-top: 30px;width:100%;height: 200px;border:1px solid #777;}
-.excellent_figure figure{float:left;padding:20px;}
-.excellent_figure figcaption{text-align: center;}
+.excellent_figure figure{float:left;}
+.excellent_figure figure img{height: 100px;width:100px;border-radius: 50%;}
+.excellent_figure figcaption{text-align: center;font-size: 18px;}
 .excellent_teachers{float:left;width: 620px;height:200px;border:1px solid #888;}
 .excellent_students{float:right;width: 620px;height:200px;border:1px solid #999;margin-left:20px;}
 
@@ -116,6 +119,19 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .news_container>h1{text-align: center;font-size: 24px;margin:10px 0px 5px 0px;}
 .news_data{text-align: center;font-size: 12px;color:#bbb;}
 .news_modify{float:right;color:#bbb;font-size: 18px;}
+
+/**
+ * position:查看更多资讯;
+ */
+.more_news_container{width:1000px;margin:auto;height: auto;background: #fefefe;padding:10px;}
+.more_news_nav{font-size: 18px;margin:10px 0px 20px 50px;}
+.more_news_nav>span{color:#26A5FF;}
+.list_more_container{height: auto;width:800px;margin:auto;}
+.list_more_news{list-style-type: disc;height: 600px;}
+.list_more_news li{font-size: 18px;margin:5px 0px 5px 0px;}
+.list_more_news a{display: inline-block;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;width:80%;}
+.list_more_news li>span{float:right;margin-right:80px;color:#999;}
+
 
 /**
  * position:课程资源;

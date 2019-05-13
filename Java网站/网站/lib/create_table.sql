@@ -181,4 +181,13 @@ create table home_news(
 	pubtime datetime default current_timestamp
 )engine=myisam default charset=utf8;
 
+create table excellent(
+	id smallint unsigned not null primary key auto_increment,
+	identify tinyint unsigned not null default 1,
+	name char(5) not null default '',
+	pic_path varchar(255) not null default '/images/icon/user.png',
+	pubtime datetime default current_timestamp
+)engine=myisam default charset=utf8;
+
+5.插入初始数据
 insert into news_cat(cat_name) values('最新资讯'),('学生优秀作品'),('站外资讯');

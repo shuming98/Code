@@ -67,8 +67,8 @@ $pages = getPage($num,$current_page,$per_page_num);
 				<span class="query_acc">权限:</span>
 				<form action="" method="get" accept-charset="utf-8">
 					<select name="permission">
-						<option value="0">管理员</option>
-						<option value="1">教师</option>
+						<option value="1">管理员</option>
+						<option value="2">教师</option>
 						<option value="3">学生</option>
 					</select>
 					<input type="submit" value="查询">

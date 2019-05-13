@@ -6,7 +6,7 @@ require('../../lib/init.php');
 if($_SESSION['permission_id']==3){
 	$sql = "select teacher.user_account from user_data inner join teacher on user_data.class=teacher.t_class where user_data.user_account='$_SESSION[user_account]'";
 	$teacher = mGetOne($sql);
-}else if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){
+}else if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){
 	$teacher = $_SESSION['user_account'];
 }
 
@@ -121,7 +121,7 @@ $map = array(
 		</div>
 	<!--资源分类-->
 		<div class="resource_select">
-		<?php if($_SESSION['permission_id']==0 || $_SESSION['permission_id']==1){ ?>
+		<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){ ?>
 			<button id="up_res_btn" type="button">+发布资源</button>
 			<button id="add_tag_btn" type="button">+添加分类</button>
 		<?php } ?>

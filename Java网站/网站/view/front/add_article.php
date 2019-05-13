@@ -3,9 +3,8 @@ session_start();
 require('../../lib/init.php');
 
 //防止非法入侵
-if($_SESSION['permission_id']!=0 && $_SESSION['permission_id']!=1){
-	echo "<script>alert('此非你该来的地方');</script>";
-	echo "<script>location.replace('../../home.php');</script>";
+if($_SESSION['permission_id']!=1 && $_SESSION['permission_id']!=2){
+	header('Location:../../index.php');
 	exit;
 }
 

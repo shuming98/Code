@@ -79,13 +79,13 @@ $pages = getPage($comment_sum,$current_page,$per_page_num);
 			<button id="reply_btn">回复本帖</button>
 			<button id="like_btn">点赞</button>
 			<?php 
-			if($_SESSION['permission_id'] == 0){
+			if($_SESSION['permission_id'] == 1){
 				echo '<button id="set_jp_btn">设为精品</button>';
 			}
 			if($post[0]['user_account'] == $_SESSION['user_account']){?>
 				<button id="modify_btn" onclick="location.href='./modify_post.php?post_id=<?php echo $post_id;?>'">修改</button>
 			<?php }
-			if($_SESSION['permission_id'] ==0 || $post[0]['user_account'] == $_SESSION['user_account']){
+			if($_SESSION['permission_id'] ==1 || $post[0]['user_account'] == $_SESSION['user_account']){
 				echo '<button id="delete_btn">删帖</button>';
 			}
 			?>
@@ -102,7 +102,7 @@ $pages = getPage($comment_sum,$current_page,$per_page_num);
 			<div class="forum_one_comment">
 				<img src="<?php echo '../..',$v['pic_path']; ?>" alt="头像">
 				<p class="comment_left"><?php echo $v['user_nick'],' ',$v['floor_id'],'楼';
-				if($_SESSION['permission_id'] == 0 || $v['user_account'] == $_SESSION['user_account']){
+				if($_SESSION['permission_id'] == 1 || $v['user_account'] == $_SESSION['user_account']){
 					echo '<button class="delete_comment_btn" value="',$v['floor_id'],'">删除</button>';
 				}
 				 ?></p><br/>
@@ -121,7 +121,7 @@ $pages = getPage($comment_sum,$current_page,$per_page_num);
 				<div class="forum_one_reply">
 					<span class="reply_nick"><?php echo $value['user_nick']; ?>：</span>
 					<div class="reply_content"><?php echo $value['content']; ?></div>
-					<?php if($_SESSION['permission_id'] == 0 || $value['user_account'] == $_SESSION['user_account']){
+					<?php if($_SESSION['permission_id'] == 1 || $value['user_account'] == $_SESSION['user_account']){
 						echo '<button class="delete_reply_btn" value="',$value['com_id'],'">删除</button>';
 					}
 					 ?>
