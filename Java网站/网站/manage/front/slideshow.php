@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_admin.php');
 require('../../lib/init.php');
  ?>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ require('../../lib/init.php');
 				<span class="h2_line"></span>
 				<form id="add_slideshow" method="post" enctype="multipart/form-data">
 					<div id="showImg"><img src="" alt=""></div>
-					<p>上传图片：<input id="up_img" type="file" name="slideshow" accept="image/*" onchange="fileUpLoad(this);">(轮播图分辨率：710*400)</p>
+					<p>上传图片：<input id="up_img" type="file" name="slideshow" accept="image/*" onchange="fileUpLoad(this);" required="required">(轮播图分辨率：710*400)</p>
 					<p>图片描述：</p>
 					<textarea name="content"></textarea>
 					<input type="submit" value="添加">

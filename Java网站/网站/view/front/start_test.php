@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
 
 
@@ -48,9 +49,9 @@ if(!empty($_POST)){
  				echo '<span class="number" onclick="currentNum(',$i,')">',$i,'</span>';
  			} ?>
  			</div>
- 			<form  method="post" action="" accept-charset="utf-8">
+ 			<form  method="post" action="">
  				<?php foreach($topic as $v){ ?>
- 					<div class="one_topic" required="required">
+ 					<div class="one_topic">
  					<p><?php echo $num++,'.&nbsp;',$v['question']; ?></p>
  					<label><input type="radio" name="topic_<?php echo $num-1; ?>" value="A">A.&nbsp;<?php echo $v['A']; ?></label>
  					<label><input type="radio" name="topic_<?php echo $num-1; ?>"  value="B">B.&nbsp;<?php echo $v['B']; ?></label>

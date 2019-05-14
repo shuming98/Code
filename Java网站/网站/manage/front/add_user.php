@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_admin.php');
 require('../../lib/init.php');
  ?>
 <!DOCTYPE html>

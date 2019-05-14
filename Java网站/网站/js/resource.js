@@ -71,3 +71,9 @@ document.getElementById('add_tag_btn').onclick = function(){
 document.getElementById('add_tag_close').onclick = function(){
   document.getElementById('add_tag').style.display = "none";
 }
+
+//ajax统计下载次数
+$(".one_resource").bind('click',function(event){
+  $.get('../admin/count_download.php?resource_id='+event.target.getAttribute("data-rid"),function(data){
+  });
+});

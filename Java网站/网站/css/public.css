@@ -34,9 +34,6 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .nav ul li a{font-size: 25px;line-height: 50px;}
 .nav ul li img{width: 23px;}
 .nav form{float: left;}
-.nav form input[type=search]{float:left;width: 100px;height: 30px;padding: 4px 8px;font-size: 18px;border:1px solid #26A5FF;border-radius: 5px;margin:10px 5px 0px 15px;text-align: center;-webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;background-image: url('../images/icon/search.png');background-repeat: no-repeat;background-size: 23px;background-position: 0px;}
-.nav form input[type=search]:focus {width: 200px;}
 .nav_login,
 .user_message{float: right;font-size: 20px;line-height: 50px;}
 .nav_login{margin-right:50px;}
@@ -197,7 +194,7 @@ a:hover { color: #26A5FF; text-decoration:none;}
 .active{display: block;}
 #treeview{margin-left:20px;width: 250px;font-size: 16px;color:#333;}
 /*添加父节点-模态框*/
-.add_dir_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 600px;height: auto;position: relative;}
+.add_dir_content{background-color: #fefefe;margin:auto;border:1px solid #26A5FF;width: 500px;height: auto;position: relative;}
 .add_dir_content>h1>img{width: 30px;border:1px solid blue;border-radius: 50%;padding: 3px;}
 .add_dir_content>h1{font-size: 24px;line-height: 20px;margin: 20px;}
 .add_dir_content>h1>span{font-size: 14px;font-weight: normal;opacity: 0.7;}

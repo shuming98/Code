@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_user.php');
 require('../../lib/ue_init.php');
 $post['user_account'] = $_SESSION['user_account'];
 $post['post_title'] = $_POST['post_title'];

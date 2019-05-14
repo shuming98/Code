@@ -7,7 +7,6 @@ if(isset($_SESSION['user_account'])){
 	$sql = "select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='$_SESSION[user_account]'";
 	$user = mGetRow($sql);
 
-
 	//查询所有班级名字
 	$sql2 = "select t_class from teacher group by t_class";
 	$t_class = mGetAll($sql2);
@@ -58,31 +57,29 @@ $excellentS = mGetAll($sql11);
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./css/public.css">
+	<script src="./js/jquery.js"></script>
 	<title>首页</title>
 </head>
 <body>
 	<!--导航栏-->
-	<div class="nav">
+	<div class="nav">       
 		<img class="nav_logo" src="./images/icon/logo.png" alt="logo">
 		<ul>
 			<li><a href="./index.php"><img src="./images/icon/home.png" alt="home">首页</a></li>
-			<li><a href="./view/front/resource.php"><img src="./images/icon/resource.png" alt="resource">课程资源</a></li>
-			<li><a href="./view/front/study.php"><img src="./images/icon/study.png" alt="study">学习园地</a></li>
+			<li class="permit"><a href="./view/front/resource.php"><img src="./images/icon/resource.png" alt="resource">课程资源</a></li>
+			<li class="permit"><a href="./view/front/study.php"><img src="./images/icon/study.png" alt="study">学习园地</a></li>
 		<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){ ?>	
-			<li><a href="./view/front/check_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
+			<li class="permit"><a href="./view/front/check_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
 		<?php }else { ?>
-			<li><a href="./view/front/show_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
+			<li class="permit"><a href="./view/front/show_work.php"><img src="./images/icon/work.png" alt="work">作业区</a></li>
 		<?php } ?>
 		<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){ ?>	
 			<li><a href="./view/front/t_test.php"><img src="./images/icon/about.png" alt="about">发布试题</a></li>
 		<?php }else{ ?>
-			<li><a href="./view/front/s_test.php"><img src="./images/icon/about.png" alt="about">试题练习</a></li>
+			<li class="permit"><a href="./view/front/s_test.php"><img src="./images/icon/about.png" alt="about">试题练习</a></li>
 		<?php } ?>	
-			<li><a href="./view/front/forum.php"><img src="./images/icon/forum.png" alt="forum">讨论区</a></li>
+			<li class="permit"><a href="./view/front/forum.php"><img src="./images/icon/forum.png" alt="forum">讨论区</a></li>
 		</ul>
-			<form action="#" method="get">		
-				<input type="search" name="search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;搜索...">
-			</form>
 
 		<?php if(isset($_SESSION['user_account'])){ ?>
 
@@ -123,7 +120,7 @@ $excellentS = mGetAll($sql11);
 			<form class="user_modal_form" action="./view/admin/update_user_data.php" method="post" enctype="multipart/form-data">
 				<span>上传头像：<input id="up_img" type="file" name="pic_path" accept="image/*" onchange="fileUpLoad(this);"></span>
 				<p>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<?php echo $user['user_account'];?></p>
-				<p>用&nbsp;&nbsp;户&nbsp;名：<input type="text" name="user_nick" value="<?php echo $user['user_nick']; ?>" maxlength="9"></p>
+				<p>用&nbsp;&nbsp;户&nbsp;名：<input type="text" name="user_nick" value="<?php echo $user['user_nick']; ?>" maxlength="9" required="required"></p>
 
 				<p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
 				<?php if(empty($user['gender'])){ ?>
@@ -136,7 +133,7 @@ $excellentS = mGetAll($sql11);
 
 				<p>联系方式：<input type="text" name="tel" value="<?php echo $user['tel']; ?>" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')"><p>
 			<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){ ?>
-				<p>任教班级：
+				<p>任教班级:
 					<?php foreach($teacher_class as $v){
 						echo $v['t_class'],',';
 					}
@@ -285,4 +282,11 @@ $excellentS = mGetAll($sql11);
 	</footer>
 </body>
 <script src="./js/home.js"></script>
+<script>
+<?php if(!isset($_SESSION['user_account'])){ ?>
+	$(".permit").click(function(){
+		alert('请登录后再查看本页面内容');
+	});
+<?php } ?>
+</script>
 </html>

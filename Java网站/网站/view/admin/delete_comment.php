@@ -1,4 +1,6 @@
 <?php 
+session_start();
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
 
 if(isset($_GET['com_id'])){

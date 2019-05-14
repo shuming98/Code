@@ -1,12 +1,8 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 
-//防止非法入侵
-if($_SESSION['permission_id']!=1 && $_SESSION['permission_id']!=2){
-	header('Location:../../index.php');
-	exit;
-}
 
 //查询目录名
 $sql = "select dirname from study_dir where user_account = '$_SESSION[user_account]'";

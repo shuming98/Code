@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
 
 //查询论坛分类
@@ -44,7 +45,7 @@ $sql9 = "select post_nick,t8.post_id,t9.cat_id,t8.cat_name,post_title,post_time,
 $post = mGetAll($sql9);
 
 if(empty($post)){
-	echo '<script>history.back();</script>';
+	header('Location:./forum.php');
 }
  ?>
 <!DOCTYPE html>

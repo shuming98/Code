@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
 
 //查询该学生的老师
@@ -187,12 +188,5 @@ $map = array(
 	</div>
 	<?php include('./foot.html'); ?>
 </body>
-<script type="text/javascript" src="../../js/resource.js"></script>
-<script>
-//ajax统计下载次数
-$(".one_resource").bind('click',function(event){
-  $.get('../admin/count_download.php?resource_id='+event.target.getAttribute("data-rid"),function(data){
-  });
-});
-</script>
+<script src="../../js/resource.js"></script>
 </html>

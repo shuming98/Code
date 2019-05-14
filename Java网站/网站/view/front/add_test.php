@@ -1,10 +1,7 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
-if($_SESSION['permission_id'] != 1 && $_SESSION['permission_id'] != 2){
-	header('Location:../../index.php');
-	exit;
-}
  ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 
 //查询该老师添加的试题

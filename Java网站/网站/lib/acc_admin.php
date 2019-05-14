@@ -1,5 +1,5 @@
 <?php 
-if(!isset($_SESSION['permission']) && !isset($_SESSION['permission_id'])){
+if(!isset($_SESSION['permission'])){
 	header('Location:../../index.php');
 	exit;
 }

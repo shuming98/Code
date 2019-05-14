@@ -1,4 +1,6 @@
-<?php session_start(); 
+<?php 
+session_start(); 
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
 //查看学生昵称和班级
 $sql = "select user_nick,class from user_data where user_account='$_SESSION[user_account]'";
@@ -81,33 +83,12 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 		<?php } ?>
 		<?php //超过截止时间不允许提交作业
 			if(time()<strtotime($v[deadline])){ ?>
-			<form id="submit_work_<?php echo $v['work_id']; ?>" method="post" enctype="multipart/form-data">
+			<form id="submit_work_<?php echo $v['work_id']; ?>" class="submit_form" method="post" enctype="multipart/form-data" data-workid="<?php echo $v['work_id']; ?>">
 				<p>提交文本答案:</p>
 				<textarea name="work_content"></textarea>
 				<p>上传文件:<input type="file" name="work"></p>
 				<input type="submit" value="提交">
 			</form>
-		<script>
-	   $("#submit_work_<?php echo $v['work_id']; ?>").submit(function(){
-  		var form_data = new FormData($("#submit_work_<?php echo $v['work_id']; ?>")[0]);
-      	$.ajax({
-            url: "../admin/submit_work.php?work_id=<?php echo $v['work_id'];?>",
-            type: "post",
-            data: form_data,
-            processData: false,
-            contentType: false,
-            success:function(data){
-                alert(data);
-                $("#show_work_<?php echo $v['work_id'];?>").css('display','none');
-                location.reload();
-            },	
-            error:function(data){
-                alert('发布失败');
-            			}
-        		});
-      		return false;
-    	});
-		</script>
 	<?php }else{ ?>
 		<p class="overtime">已过作业提交的截止时间,无法提交</p>
 	<?php } ?>
@@ -116,4 +97,26 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 <?php } ?>
 	<?php include('./foot.html'); ?>
 </body>
+<script src=""></script>
+<script>
+$(".submit_form").submit(function(){
+	var that = this;
+	var form_data = new FormData($(that)[0]);
+	$.ajax({
+	    url: "../admin/submit_work.php?work_id="+$(that).data('workid'),
+	    type: "post",
+	    data: form_data,
+	    processData: false,
+	    contentType: false,
+	    success:function(data){
+	        alert(data);
+	        location.reload();
+	    },	
+	    error:function(data){
+	        alert('发布失败');
+	    			}
+		});
+		return false;
+});
+</script>
 </html>

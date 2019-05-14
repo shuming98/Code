@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 
 $work['user_account'] = $_SESSION['user_account'];

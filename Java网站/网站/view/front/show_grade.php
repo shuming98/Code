@@ -1,14 +1,29 @@
 <?php 
 session_start(); 
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
+
+/**
+ * 实现分页功能
+ */
+//从地址栏获得当前页码
+$current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+//设置每页显示数据数
+$per_page_num = 14;
 
 //查询学生名字
 $sql = "select user_nick from user_data where user_account='$_SESSION[user_account]'";
 $student = mGetAll($sql);
 
 //查询学生成绩
-$sql2 = "select work_title,submit_date,score,comment from submit_work inner join issue_work on issue_work.work_id=submit_work.work_id where submit_work.user_account='$_SESSION[user_account]' order by issue_work.work_id desc";
+$sql2 = "select work_title,submit_date,score,comment from submit_work inner join issue_work on issue_work.work_id=submit_work.work_id where submit_work.user_account='$_SESSION[user_account]' order by issue_work.work_id desc" . ' limit ' . ($current_page-1)*$per_page_num . ',' . $per_page_num;
 $grade = mGetAll($sql2);
+
+$sql3 = "select count(*) from submit_work where user_account='$_SESSION[user_account]' order by work_id desc";
+$num = mGetOne($sql3);
+
+$pages = getPage($num,$current_page,$per_page_num);
 
 ?>
 <!DOCTYPE html>
@@ -41,6 +56,18 @@ $grade = mGetAll($sql2);
 			</tr>
 		<?php } ?>	
 		</table>
+			<!--分页页号-->
+			<div id="page_bar" style="top:0px;">
+				<?php 
+					foreach($pages as $k=>$v){
+						if($k == $current_page){
+							echo '<span>',$k,'</span>';
+						}else{
+							echo '<a href="./show_grade.php?',$v,'">',$k,'</a>';
+						}
+					}
+				?>
+			</div>
 	</div>
 	<?php include('./foot.html'); ?>
 </body>

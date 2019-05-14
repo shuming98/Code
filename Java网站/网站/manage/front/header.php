@@ -1,8 +1,4 @@
 <?php 
-if(!isset($_SESSION['permission'])){
-	header('Location:../../index.php');
-	exit;
-}
 //查询该管理员名字
 $sql = "select user_nick from user_data where user_account='$_SESSION[account]'";
 $nick = mGetOne($sql);

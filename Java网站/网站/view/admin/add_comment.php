@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_user.php');
 require('../../lib/ue_init.php');
 
 if(!isset($_GET['floor_id'])){

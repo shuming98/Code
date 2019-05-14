@@ -1,4 +1,6 @@
 <?php 
+session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 $submit_work['score'] = $_POST['score'];
 $submit_work['comment'] = $_POST['comment'];

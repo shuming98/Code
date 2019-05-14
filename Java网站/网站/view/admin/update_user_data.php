@@ -1,6 +1,6 @@
 <?php 
 session_start();
-//echo $_SESSION['user_account']; //user_account teacher
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
 
 //用户头像上传路径导入数据库

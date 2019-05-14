@@ -1,9 +1,11 @@
 <?php 
 session_start(); 
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 //查询该老师任课班级
 $sql = "select t_class from teacher where user_account = '$_SESSION[user_account]'";
 $class = mGetAll($sql);
+
 
 //格式化时间
 $format_date = $_GET['YYYY'].'-'.$_GET['MM'].'-'.$_GET['DD'];
@@ -137,7 +139,7 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 					<td><?php echo $v['user_account']; ?></td>
 					<td><?php echo $v['user_nick']; ?></td>
 					<td><?php if($v['work_id']!=NULL){ ?><a onclick="document.getElementById('check_work_<?php echo $v['user_id']; ?>').style.display='block'">已交</a><?php }else{echo '<span class="no_submit">未交<span>';} ?></td>
-					<td id="s_<?php echo $v['user_id']; ?>"><?php echo $v['score']; ?></td>
+					<td><?php echo $v['score']; ?></td>
 				</tr>
 			<?php } ?>
 			</table>
@@ -161,7 +163,9 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 	</div>
 	<div class="clearfix"></div>
 	<!--显示学生作业_模态框-->
-<?php foreach($student_work as $v){ ?>
+<?php foreach($student_work as $v){
+	if(!empty($v['work_id'])){
+ ?>
 	<div id="check_work_<?php echo $v['user_id']; ?>" class="modal">
 		<div class="check_modal_content animate">
 			<div class="check_modal_head">
@@ -179,28 +183,18 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 				<p>文件:<a class="d_file" href="<?php echo '../..'.$v['work_filepath'];?>">下载&nbsp;<?php echo getFileName($v['work_filepath']); ?></a></p>
 			<?php } ?>
 			</div>
-			<form id="check_form_<?php echo $v['user_id']; ?>" action="" method="post" accept-charset="utf-8">
+			<form id="check_form_<?php echo $v['user_id']; ?>" class="check_from" method="post" data-workid="<?php echo $v['work_id']; ?>" data-account="<?php echo $v['user_account']; ?>">
 				<p>成绩：<input type="text" name="score" placeholder="请输入该作业得分"></p>
 				<p>评语：<input type="text" name="comment"></p>
 				<input type="submit" value="确定">
 				<div class="clearfix"></div>
 			</form>
 		</div>
-<script>
-$("#check_form_<?php echo $v['user_id']; ?>").submit(function(){
-
- 	var data={'score':$("#check_form_<?php echo $v['user_id']; ?> input[name='score']").val(),
-   'comment':$("#check_form_<?php echo $v['user_id']; ?> input[name='comment']").val()};
-
- $.post('../admin/check_work.php?user_account=<?php echo $v['user_account']; ?>&work_id=<?php echo $v['work_id'];?>',data,function(res){alert(res);$("#check_work_<?php echo $v['user_id']; ?>").css('display','none');$("#s_<?php echo $v['user_id']; ?>").text(eval(data)['score']);});
- return false;
- });
-</script>
 	</div>
-<?php } ?>
+<?php }} ?>
 	<!--页尾-->
 	<?php include('./foot.html'); ?>
 </body>
-<script src="../../js/select_date.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/select_date.js"></script>
 <script src="../../js/check_work.js"></script>
 </html>

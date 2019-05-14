@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 $sql = "select count(*) from resource_tag where user_account = '$_SESSION[user_account]'";
 if(mgetOne($sql)<5){

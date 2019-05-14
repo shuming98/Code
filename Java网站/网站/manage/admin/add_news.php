@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require('../../lib/acc_admin.php');
-require('../../lib/init.php');
+require('../../lib/ue_init.php');
 
 $news['title'] = $_POST['title'];
 $news['content'] = $_POST['content'];

@@ -1,5 +1,6 @@
 <?php 
 session_start(); 
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 $sql = "select t_class from teacher where user_account='$_SESSION[user_account]'";
 $work_class = mGetAll($sql);
@@ -41,6 +42,6 @@ $work_class = mGetAll($sql);
 	</div>
 	<?php include('foot.html'); ?>
 </body>
-<script src="../../js/issue_work.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../js/select_date.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/issue_work.js"></script>
+<script src="../../js/select_date.js"></script>
 </html>

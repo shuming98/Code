@@ -1,30 +1,3 @@
-//显示当前时间
-var timer=null;
-function displayClock(num){
-  if(num<10){
-    return "0"+num;
-  }
-  else{
-    return num;
-  }
-}
-//停止计时
-function stopClock(){
-  clearTimeout(timer);
-}
-//开始计时
-function startClock(){
-  var time =new Date();
-  var hours=displayClock(time.getHours())+":";
-  var minutes=displayClock(time.getMinutes())+":";
-  var seconds=displayClock(time.getSeconds());
-  //显示时间
-  show_time.innerHTML=hours+minutes+seconds;
-  timer=setTimeout("startClock()",1000);
-}
-
-window.onload = startClock();
-
 //历史记录侧边栏
 function openSide(){
   var side = document.getElementById("side_content");
@@ -34,3 +7,12 @@ function openSide(){
     side.style.width = "0px";
   }
 }
+
+$(".check_from").submit(function(){
+  var that = this;
+  $.post('../admin/check_work.php?user_account='+$(that).data('account')+'&work_id='+$(that).data('workid'),$(that).serialize(),function(res){
+    alert(res);
+    location.reload();
+  });
+  return false;
+ });

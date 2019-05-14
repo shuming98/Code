@@ -1,4 +1,6 @@
 <?php 
+session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 
 $sql = "select count(*) from forum_post where cat_name = '精品' and post_id = $_GET[post_id]";

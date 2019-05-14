@@ -1,9 +1,11 @@
 <?php 
 session_start();
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
 
-$post_id = $_GET['post_id'];
 
+if(isset($_GET['post_id'])){
+$post_id = $_GET['post_id'];
 //每个用户访问,浏览数+1
 $pageview['ip'] = sprintf('%u',ip2long(getRealIp()));
 $pageview['symbol'] = "post_$post_id";
@@ -49,12 +51,13 @@ $comment = mGetAll($sql8);
 
 $pages = getPage($comment_sum,$current_page,$per_page_num);
 
+}
 //防止用户乱输入url
-// if(empty($post)){
-// 	echo '<script>history.back();</script>';
-// }else if($current_page>1 && empty($comment)){
-// 	echo '<script>history.back();</script>';
-// }
+if(empty($post)){
+	header('Location:./forum.php');
+}else if($current_page>1 && empty($comment)){
+	header('Location:./forum.php');
+}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -245,8 +248,8 @@ $("#like_btn").bind('click',function(){
 	$.get('../admin/give_a_like.php?post_id='+<?php echo $post_id; ?>,function(data){
 			$("#like_btn").text(data);
 			$("#like_btn").attr("disabled","true");
-	})
-})
+	});
+});
 
 //ajxa 设置精品贴
 $('#set_jp_btn').bind('click',function(){
@@ -279,6 +282,5 @@ $(".delete_reply_btn").bind('click',function(event){
 			location.reload();
 	});
 });
-
 </script>
 </html>

@@ -1,9 +1,4 @@
 <?php 
-	if(!isset($_SESSION['user_account'])){
-	 	echo "<script>alert('请登录后再查看本页面内容');</script>";
-		echo "<script>location.replace('../../index.php');</script>";
-		exit;
-	 }
 //查询用户数据
 $sql = "select user_data.user_account,user_nick,gender,tel,class,teacher,pic_path from user inner join user_data on user.user_account=user_data.user_account where user_data.user_account='$_SESSION[user_account]'";
 $user = mGetRow($sql);
@@ -39,9 +34,6 @@ $teacher_class = mGetAll($sql4);
 			<?php } ?>
 			<li><a href="./forum.php"><img src="../../images/icon/forum.png" alt="forum">讨论区</a></li>
 		</ul>
-			<form action="#" method="get">	
-				<input type="search" name="search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;搜索...">
-			</form>
 		<a class="user_message" href="#" onclick="document.getElementById('user').style.display='block'"><img src="<?php echo '../..'.$user['pic_path']; ?>" alt="user"><?php echo $user['user_nick']; ?></a>
 	</div>
 
@@ -56,7 +48,7 @@ $teacher_class = mGetAll($sql4);
 			<form class="user_modal_form" action="../admin/update_user_data.php" method="post" enctype="multipart/form-data">
 				<span>上传头像：<input id="up_img" type="file" name="pic_path" accept="image/*" onchange="fileUpLoad(this);"></span>
 				<p>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<?php echo $user['user_account'];?></p>
-				<p>用&nbsp;&nbsp;户&nbsp;名：<input type="text" name="user_nick" value="<?php echo $user['user_nick']; ?>" maxlength="9"></p>
+				<p>用&nbsp;&nbsp;户&nbsp;名：<input type="text" name="user_nick" value="<?php echo $user['user_nick']; ?>" maxlength="9" required="required"></p>
 
 				<p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
 					<?php if(empty($user['gender'])){ ?>

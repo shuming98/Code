@@ -1,13 +1,20 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/ue_init.php');
 $article['user_account'] = $_SESSION['user_account'];
 $article['dirname'] = $_POST['dirname'];
 $article['art_title'] = $_POST['art_title'];
 $article['art_content'] = $_POST['content'];
 
+$sql = "select art_id from article where dirname='default' and user_account='$_SESSION[user_account]'";
+$art_id = mGetOne($sql);
 
-if($article['dirname']=='default' && $_GET['art_id']!=6){
+$sql2 = "select count(*) from article where dirname='default' and user_account='$_SESSION[user_account]'";
+
+$default_num = mGetOne($sql2);
+
+if($article['dirname']=='default' && ($_GET['art_id']!=$art_id && $default_num!=0)){
 		echo 0;
 		exit;
 }

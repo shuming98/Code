@@ -1,7 +1,9 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
-$array = $_POST;
+
+$array = htmlspecialchars($_POST);
 
 //插入test表并获取id
 $test['title'] = $_POST['title'];

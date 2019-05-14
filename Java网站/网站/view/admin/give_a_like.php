@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_user.php');
 require('../../lib/init.php');
 
 $sql = "select count(*) from give_a_like where post_id=$_GET[post_id] and user_account='$_SESSION[user_account]'";

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
 
 $resource['resource_name']=$_POST['resource_name'];

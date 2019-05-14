@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../lib/acc_admin.php');
 require('../../lib/init.php');
 
 //查询资源分类
@@ -59,9 +60,11 @@ $.ajax({
    if(response.status == 200) {
     $("#test_link").text('链接有效');
     $("#test_link").attr('href',$("textarea[name='link']").val());
+    $("#link_form input[type=submit]").removeAttr('disabled');
    }else{
     $("#test_link").text('链接无效,请输入完整链接');
     $("#test_link").attr('href','javascript:void(0);');
+    $("#link_form input[type=submit]").attr('disabled','true');
    }
   }
 });

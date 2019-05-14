@@ -1,12 +1,7 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
-
-//防止非法入侵
-if($_SESSION['permission_id']!=1 && $_SESSION['permission_id']!=2){
-	header('Location:../../index.php');
-	exit;
-}
 
 //获取资讯id并查询该资讯内容
 $news_id = $_GET['id'];
@@ -72,7 +67,7 @@ $("#news_form").submit(function(){
     'content':ue.getContent(),
     'news_id':$("#news_form select[name='news_id']").val()
 	};
-$.post('../../manage/admin/add_news.php?id=<?php echo $news_id;?>',data,function(res){
+$.post('../admin/modify_news.php?id=<?php echo $news_id;?>',data,function(res){
     	alert(res);
     	location.href="./show_news?id=<?php echo $news_id; ?>";
   	});

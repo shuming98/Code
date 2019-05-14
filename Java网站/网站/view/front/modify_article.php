@@ -1,12 +1,7 @@
 <?php 
 session_start();
+require('../../lib/acc_teacher.php');
 require('../../lib/init.php');
-
-//防止非法入侵
-if($_SESSION['permission_id']!=1 && $_SESSION['permission_id']!=2){
-	header('Location:../../index.php');
-	exit;
-}
 
 //获取文章id并查询该文章内容
 $art_id = $_GET['art_id'];
@@ -70,8 +65,12 @@ $("#article_form").submit(function(){
     'dirname':$("#article_form select[name='dirname']").val()
 	};
 $.post('../admin/add_article.php?art_id=<?php echo $art_id;?>',data,function(res){
-    alert(res);
-    history.back();
+		if(res == 0){
+			alert('请选择目录名');
+		}else{
+			alert(res);
+	   		location.href="./study.php?id=<?php echo $_GET['art_id']; ?>";
+		} 
   	});
 return false;
 });
