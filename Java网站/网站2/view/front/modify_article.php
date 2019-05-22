@@ -5,10 +5,11 @@ require('../../lib/init.php');
 
 //获取文章id并查询该文章内容
 $art_id = $_GET['art_id'];
-$sql = "select dirname,art_title,art_content from article where art_id = $art_id";
+$sql = "select dirname_id,art_title,art_content from article where art_id = $art_id";
 $article = mGetAll($sql);
 //查询目录名
-$sql2 = "select dirname from study_dir where user_account = '$_SESSION[user_account]'";
+$sql2 = "select dirname_id,dirname from study_dir where user_account = '$_SESSION[user_account]'";
+echo $sql2;
 $dirname = mGetAll($sql2);
  ?>
 <!DOCTYPE html>
@@ -20,19 +21,21 @@ $dirname = mGetAll($sql2);
 	<script src="../../js/jquery.js"></script>
 	<title>修改文章</title>
 </head>
-<body>
+<body style="background: #F8F8F8">
 	<?php include('./nav.php'); ?>
 	<!-- 发布文章容器 -->
 	<div class="study_add_article">
-		<p><a href="./study.php">学习园地</a>&gt;<span>修改文章</span></p>
-		<form id="article_form" method="post" accept-charset="utf-8">
+		<div class="ue_line">	
+			<span class="ue_nav"><span><a href="./study.php">学习园地</a></span></span><span class="ue_tri"></span><span class="ue_nav2"><span>修改文章</span></span><span class="ue_tri"></span>
+		</div>
+		<form id="article_form" method="post" action="../admin/add_article.php?art_id=<?php echo $art_id;?>">
 			<input type="text" name="art_title" placeholder="请输入文章标题" value="<?php echo $article[0]['art_title'];?>" required="required" maxlength="30">
 			<!--加载编辑器的容器-->
 			<script id="container" name="content" type="text/plain"><?php echo $article[0]['art_content']; ?></script>
 				<select name="dirname">
-					<option value="default">选择目录</option>
+					<option value="0">选择目录</option>
 			<?php foreach($dirname as $v){ 
-				echo '<option value="',$v['dirname'],'"',$v['dirname']==$article[0]['dirname']?' selected="selected"':'','>',$v['dirname'],'</option>';
+				echo '<option value="',$v['dirname_id'],'"',$v['dirname_id']==$article[0]['dirname_id']?' selected="selected"':'','>',$v['dirname'],'</option>';
 				}?>
 				</select>
 			<input type="submit" value="确定">
@@ -48,7 +51,7 @@ $dirname = mGetAll($sql2);
 <script type="text/javascript">
     var ue = UE.getEditor('container', {
     toolbars: [
-    ['undo','redo','removeformat','|','bold','italic','underline','strikethrough','horizontal','|','fontsize','forecolor','backcolor','|','indent','justifyleft','justifycenter','justifyright','|','insertorderedlist','insertunorderedlist','|','insertcode','simpleupload','fullscreen','attachment','drafts','|','preview','help']
+    ['undo','redo','removeformat','|','bold','italic','underline','strikethrough','horizontal','|','fontsize','forecolor','backcolor','|','indent','justifyleft','justifycenter','justifyright','|','insertorderedlist','insertunorderedlist','|','insertcode','simpleupload','fullscreen','attachment','drafts','|','preview']
 	],
 	autoHeightEnabled: false,
     autoFloatEnabled: false

@@ -160,7 +160,7 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 			}?>
 		</div>
 				<!--分页页号-->
-		<div id="page_bar" style="top:0px;">
+		<div id="page_bar">
 			<?php 
 				foreach($pages as $k=>$v){
 					if($k == $current_page){
@@ -196,8 +196,8 @@ $pages = getPage($work_sum,$current_page,$per_page_num);
 			<?php } ?>
 			</div>	
 			<form id="check_form_<?php echo $v['user_id']; ?>" class="check_from" method="post" data-workid="<?php echo $v['work_id']; ?>" data-account="<?php echo $v['user_account']; ?>">
-				<p>成绩：<input type="text" name="score" placeholder="请输入该作业得分" required="required"></p>
-				<p>评语：<input type="text" name="comment"></p>
+				<p>成绩：<input type="text" name="score" placeholder="请输入该作业得分" required="required" maxlength="5"></p>
+				<p>评语：<input type="text" name="comment" maxlength="50"></p>
 				<input type="submit" value="确定">
 				<div class="clearfix"></div>
 			</form>

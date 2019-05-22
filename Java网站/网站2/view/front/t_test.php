@@ -40,15 +40,17 @@ $num = 1;
 		<div class="test_left">
 			<a href="./add_test.php">添加试题</a>
 			<div class="test_title_list">
-				<h3>已添加试题：</h3>	
+				<h3>已添加试题</h3>	
 				<ul>
 				<?php foreach($title as $v){
-					echo '<li><a href="./t_test.php?test_id=',$v['test_id'],'">',$v['title'],'</a></li>';
+					echo '<li><span class="li_dot">&#8226;</span><a href="./t_test.php?test_id=',$v['test_id'],'">',$v['title'],'</a></li>';
 				} ?>
 				</ul>
 			</div>	
 		</div>
 		<div class="test_right">
+			<img src="../../images/icon/pin.png" alt="img">
+			<div class="clearfix"></div>
 			<h2><?php echo $one_title; ?></h2>
 			<div class="display_content">			
 			<?php foreach($test as $v){ ?>
@@ -58,7 +60,7 @@ $num = 1;
 				<label><nobr><input type="radio" name="choice_<?php echo $num-1; ?>">B.&nbsp;<?php echo $v['B']; ?></nobr></label>
 				<label><nobr><input type="radio" name="choice_<?php echo $num-1; ?>">C.&nbsp;<?php echo $v['C']; ?></nobr></label>
 				<label><nobr><input type="radio" name="choice_<?php echo $num-1; ?>">D.&nbsp;<?php echo $v['D']; ?></nobr></label>
-				<p class="test_answer">答案:<?php echo $v['answer']; ?></p>
+				<p class="test_answer">答案:<span><?php echo $v['answer']; ?></span></p>
 			</div>
 		<?php } ?>
 		</div>

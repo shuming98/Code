@@ -11,19 +11,19 @@ if($_SESSION['permission_id']==3){
 }
 
 //输出目录名
-$sql2 = "select dirname from study_dir where user_account = '$teacher'";
+$sql2 = "select dirname_id,dirname from study_dir where user_account = '$teacher'";
 $dirname = mGetAll($sql2);
-	
-//获取用户ip并记录浏览数
+
+//获取用户ip并记录浏览数	
 $pageview['ip'] = sprintf('%u',ip2long(getRealIp()));
 
 //输出文章
 if(!isset($_GET['id'])){
-	$sql3 = "select art_title,art_content,pubtime from article where dirname = 'default' and user_account='$teacher'";
+	$sql3 = "select art_title,art_content,pubtime from article where dirname_id = 0  and user_account='$teacher'";
 	$article = mGetAll($sql3);
 
 	if(!empty($article)){
-	$sql4 = "select art_id from article where dirname = 'default' and user_account='$teacher'";
+	$sql4 = "select art_id from article where dirname_id = 0 and user_account='$teacher'";
 	$art_id = mGetOne($sql4);
 
 	//记录浏览数
@@ -67,26 +67,28 @@ if(mGetOne($sql8) == 0){
 	<script src="../../js/jquery.js"></script>
 	<title>学习园地</title>
 </head>
-<body>
+<body style="background: #F0F0F0">
 	<!--导航栏-->
 	<?php include('./nav.php'); ?>
 	<div class="study_container">
 		<div class="study_container_left">
 		<?php if($_SESSION['permission_id']==1 || $_SESSION['permission_id']==2){?>
-			<button id="add_dir_button" type="button">添加目录</button>
-			<button type="button"><a href="./add_article.php">发布文章</a></button>
+			<div class="study_button">
+				<button type="button" onclick="location.href='./add_article.php'"><img src="../../images/icon/pen.png" alt="">发布文章</button>
+				<button id="add_dir_button" type="button"><img src="../../images/icon/pen.png" alt="">添加目录</button>
+				<div class="clearfix"></div>	
+			</div>
 		<?php } ?>
-			<div class="clearfix"></div>
 			<p>知识树</p>
 			<ul id="treeview">
 				<?php foreach($dirname as $v){ ?>
-				<li><span class="caret"><?php echo $v['dirname']; ?></span>
+				<li class="treeview_li"><span class="caret"><span>&nbsp;&nbsp;</span><span><?php echo $v['dirname']; ?></span></span>
 					<ul class="nested">
 				<?php //输出文章标题
-				$sql9 = "select art_id,art_title from article where dirname='$v[dirname]' order by art_id asc";
+				$sql9 = "select art_id,art_title from article where dirname_id='$v[dirname_id]' order by art_id asc";
 				$art_title = mGetAll($sql9);
 				foreach($art_title as $v){
-						echo '<li><a href="./study.php?id=',$v['art_id'],'">',$v['art_title'],'</a></li>';
+						echo '<li><span class="li_dot">&#8226;</span><a href="./study.php?id=',$v['art_id'],'">',$v['art_title'],'</a></li>';
 				} ?>
 					</ul>
 				</li>
@@ -111,7 +113,7 @@ if(mGetOne($sql8) == 0){
 	<!-- 添加父节点-模态框 -->
 	<div id="add_dir" class="modal">
 		<div class="add_dir_content animate">
-			<h1><img src="../../images/icon/work.png" alt="">添加目录</h1>
+			<h1 class="modal_title"><img src="../../images/icon/work.png" alt="">添加目录</h1>
 			<span id="add_dir_close" class="close">&times;</span>
 		<form method="post">
 			<input type="text" name="dirname" placeholder="目录名" maxlength="20" required="required">

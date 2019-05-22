@@ -50,7 +50,7 @@ $teacher_class = mGetAll($sql4);
 		<div class="user_modal_content animate">
 			<div class="user_modal_img">
 				<span onclick="document.getElementById('user').style.display = 'none'"  class="close">&times;</span>
-				<div id="showImg"><img src="<?php echo '../..'.$user['pic_path']; ?>" alt="img"></div>
+				<div id="showImg"><label for="up_img"><img src="<?php echo '../..'.$user['pic_path']; ?>" alt="img"></label></div>
 			</div>
 
 			<form class="user_modal_form" action="../admin/update_user_data.php" method="post" enctype="multipart/form-data">

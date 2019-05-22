@@ -20,7 +20,7 @@ if(isset($_GET['test_id'])){
 
 	$sql3 = "select count(*) from test inner join (select teacher.user_account from user_data inner join teacher on user_data.class=teacher.t_class where user_data.user_account='$_SESSION[user_account]') as t on test.user_account=t.user_account and test_id=$test_id";	
 	if(mGetOne($sql3) == 0){
-		echo '<script>history.back();</script>';
+		header('Location:./s_test.php');
 	}
 }else{
 	header('Location:./s_test.php');
@@ -54,27 +54,30 @@ if(!empty($_POST)){
  			<form  method="post" action="">
  				<?php foreach($topic as $v){ ?>
  					<div class="one_topic">
+ 					<div style="height:250px;">
  					<p><?php echo $num++,'.&nbsp;',$v['question']; ?></p>
  					<label><input type="radio" name="topic_<?php echo $num-1; ?>" value="A">A.&nbsp;<?php echo $v['A']; ?></label>
- 					<label><input type="radio" name="topic_<?php echo $num-1; ?>"  value="B">B.&nbsp;<?php echo $v['B']; ?></label>
- 					<label><input type="radio" name="topic_<?php echo $num-1; ?>"  value="C">C.&nbsp;<?php echo $v['C']; ?></label>
- 					<label><input type="radio" name="topic_<?php echo $num-1; ?>"  value="D">D.&nbsp;<?php echo $v['D']; ?></label>
+ 					<label><input type="radio" name="topic_<?php echo $num-1; ?>" value="B">B.&nbsp;<?php echo $v['B']; ?></label>
+ 					<label><input type="radio" name="topic_<?php echo $num-1; ?>" value="C">C.&nbsp;<?php echo $v['C']; ?></label>
+ 					<label><input type="radio" name="topic_<?php echo $num-1; ?>" value="D">D.&nbsp;<?php echo $v['D']; ?></label>
+ 					</div>
  				<?php if(!empty($_POST)){ ?>
  					<div class="answer_topic">
- 						<p>你的答案:<?php echo $_POST[topic_.($num-1)]; ?></p>
- 						<p>正确答案:<?php echo $v['answer']; ?></p>
-					<?php if($_POST[topic_.($num-1)] == $v['answer']){
-						echo '<p>当前得分:',$score += 2,'</p>';
-					}else{
-						echo '<p>当前得分:',$score,'</p>';
+ 					<?php
+ 						echo '<p><span>你的答案：<span>',$_POST[topic_.($num-1)],'</span></span><span>正确答案：<span>',$v['answer'];
+ 						if($_POST[topic_.($num-1)] == $v['answer']){
+							echo '</span></span><span>当前得分：<span>',$score += 2,'</span></span>';
+						}else{
+							echo '</span></span><span>当前得分：<span>',$score,'</span></span>';
 					}?>
+					</p>
  					</div>
  				<?php } ?>
  				</div>
  				<?php } ?>
- 				<div class="topic_btn">				
+ 				<div class="topic_btn">
+ 					<button type="button" id="next" onclick="changeTopic(1)">下一题</button>	
  					<button type="button" id="prev" onclick="changeTopic(-1)">上一题</button>
- 					<button type="button" id="next" onclick="changeTopic(1)">下一题</button>
  				<?php if(empty($_POST)){ ?>
  				<input id="submit_topic" type="submit" value="提交">
  				<?php } ?>

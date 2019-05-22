@@ -21,11 +21,13 @@ if($_SESSION['permission_id'] == 1){
 	<script src="../../js/jquery.js"></script>
 	<title>发布帖子</title>
 </head>
-<body>
+<body style="background: #f8f8f8">
 	<?php include('./nav.php'); ?>
 	<!-- 发布文章容器 -->
 	<div class="forum_post">
-		<p><a href="./forum.php">讨论区</a>&gt;<span>发帖</span></p>
+	<div class="ue_line">
+		<span class="ue_nav"><span><a href="./forum.php">讨论区</a></span></span><span class="ue_tri"></span><span class="ue_nav2" style=""><span>发布帖子</span></span><span class="ue_tri"></span>
+	</div>
 		<form id="post_form" method="post" accept-charset="utf-8">
 			<input type="text" name="post_title" placeholder="请输入标题" required="required" maxlength="30">
 			<!--加载编辑器的容器-->

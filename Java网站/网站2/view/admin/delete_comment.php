@@ -11,7 +11,7 @@ if(isset($_GET['com_id'])){
 	exit;
 }else{
 	//删除一贴某楼下所有回复
-	$sql = "delete from forum_comment where post_id = $_GET[post_id] and floor_id = $_GET[floor_id]";
+	$sql = "update forum_comment set content='' where post_id = $_GET[post_id] and floor_id = $_GET[floor_id]";
 	mQuery($sql);
 
 	$sql2 = "delete from forum_reply where post_id = $_GET[post_id] and floor_id = $_GET[floor_id]";

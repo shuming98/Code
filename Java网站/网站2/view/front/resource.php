@@ -124,7 +124,7 @@ $other = '../../images/icon/download.png';
 	</div>
 	<!-- 分页页号 -->
 	<div style="background: #DEDEDE;padding:2px 0px">
-		<div id="page_bar" style="top:30px;">
+		<div id="page_bar">
 			<?php 
 				if($current_page>1){
 					$_GET[page]=$current_page-1;
@@ -179,9 +179,9 @@ $other = '../../images/icon/download.png';
 	<div class="clearfix"></div>
 	<!--上传资源-模态框-->
 	<div id="upload_resource" class="modal">
-		<div class="upload_modal_content animate modal_radius">
-			<h1 class="modal_radius modal_title"><img src="../../images/icon/work.png" alt="img">上传课程资源</h1>
-			<span id="up_res_close" class="close close_circle">&times;</span>
+		<div class="upload_modal_content animate">
+			<h1 class="modal_title"><img src="../../images/icon/pen.png" alt="img">上传课程资源</h1>
+			<span id="up_res_close" class="close">&times;</span>
 		<form id="upload_resource_form"  method="post" enctype="multipart/form-data">
 			<p>资源名字:<input type="text" name="resource_name" required="required"></p>
 			<p>资源分类:
@@ -191,7 +191,7 @@ $other = '../../images/icon/download.png';
 		<?php } ?>
 				</select>
 			</p>
-			<p>文件上传:<input name="resource" type="file"></p>
+			<p>文件上传:<input name="resource" type="file" required="required"></p>
 			<input type="submit" value="上传">
 			<div class="clearfix"></div>
 		</form>
@@ -206,9 +206,9 @@ $other = '../../images/icon/download.png';
 
 <!--添加标签-模态框-->
 	<div id="add_tag" class="modal">
-		<div class="add_tag_content animate modal_radius">
-			<h1 class="modal_radius modal_title"><img src="../../images/icon/work.png" alt="">添加资源分类<span>(最多可添加5个)</span></h1>
-			<span id="add_tag_close" class="close close_circle">&times;</span>
+		<div class="add_tag_content animate">
+			<h1 class="modal_title"><img src="../../images/icon/pen.png" alt="">添加资源分类<span>(最多可添加5个)</span></h1>
+			<span id="add_tag_close" class="close">&times;</span>
 		<form method="post">
 			<input type="text" name="tag_name" placeholder="请输入资源类名" required="required">
 			<input type="submit" value="添加">

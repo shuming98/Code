@@ -33,11 +33,13 @@ if($post[0]['user_account'] != $_SESSION['user_account']){
 	<script src="../../js/jquery.js"></script>
 	<title>修改帖子</title>
 </head>
-<body>
+<body style="background: #f8f8f8">
 	<?php include('./nav.php'); ?>
 	<!-- 发布文章容器 -->
 	<div class="forum_post">
-		<p><a href="./forum.php">讨论区</a>&gt;<span>改帖</span></p>
+	<div class="ue_line">	
+		<span class="ue_nav"><span><a href="./forum.php">讨论区</a></span></span><span class="ue_tri"></span><span class="ue_nav2"><span>修改帖子</span></span><span class="ue_tri"></span>
+	</div>
 		<form id="post_form" method="post" accept-charset="utf-8">
 			<input type="text" name="post_title" placeholder="请输入标题" value="<?php echo $post[0]['post_title'];?>" required="required" maxlength="30">
 			<!--加载编辑器的容器-->

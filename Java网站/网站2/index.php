@@ -109,7 +109,7 @@ $excellentS = mGetAll($sql11);
 			<div class="modal_form">
 				<p>账号:<input type="text" name="user_account" required="required" placeholder="请输入账号/学号" value="<?php echo $_COOKIE['account'];?>"></p>
 				<p>密码:<input type="password" name="user_password" required="required" placeholder="请输入密码"> </p>
-				<p><label><input style="zoom:1.6" type="checkbox" name="remember" checked>记住账号</label><a href="#">忘记密码?</a></p>
+				<p><label><input style="zoom:1.6" type="checkbox" name="remember" checked>记住账号</label></p>
 				<input type="submit" value="登录">
 			</div>				
 		</form>
@@ -120,7 +120,7 @@ $excellentS = mGetAll($sql11);
 		<div class="user_modal_content animate">
 			<div class="user_modal_img">
 				<span onclick="document.getElementById('user').style.display = 'none'"  class="close">&times;</span>
-				<div id="showImg"><img src="<?php echo '.'.$user['pic_path']; ?>" alt="img"></div>
+				<div id="showImg"><label for="up_img"><img src="<?php echo '.'.$user['pic_path']; ?>" alt="img"></label></div>
 			</div>
 			<form class="user_modal_form" action="./view/admin/update_user_data.php" method="post" enctype="multipart/form-data">
 				<span>上传头像:<input id="up_img" type="file" name="pic_path" accept="image/*" onchange="fileUpLoad(this);"></span>

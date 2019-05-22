@@ -5,7 +5,7 @@ require('../../lib/init.php');
 
 
 //查询目录名
-$sql = "select dirname from study_dir where user_account = '$_SESSION[user_account]'";
+$sql = "select dirname_id,dirname from study_dir where user_account = '$_SESSION[user_account]'";
 $dirname = mGetAll($sql);
  ?>
 <!DOCTYPE html>
@@ -21,18 +21,17 @@ $dirname = mGetAll($sql);
 	<?php include('./nav.php'); ?>
 	<!-- 发布文章容器 -->
 	<div class="study_add_article">
-		<!-- <p><a href="./study.php">学习园地</a>&gt;<span>发布文章</span></p> -->
 	<div class="ue_line">	
 		<span class="ue_nav"><span><a href="./study.php">学习园地</a></span></span><span class="ue_tri"></span><span class="ue_nav2"><span>发布文章</span></span><span class="ue_tri"></span>
 	</div>
-		<form id="article_form"  method="post" accept-charset="utf-8">
+		<form id="article_form" action="../admin/add_article.php" method="post">
 			<input type="text" name="art_title" placeholder="请输入文章标题" required="required" maxlength="20">
 			<!--加载编辑器的容器-->
 			<script id="container" name="content" type="text/plain"></script>
 				<select name="dirname">
-					<option value="default">选择目录</option>
+					<option value="0">选择目录</option>
 			<?php foreach($dirname as $v){ 
-				echo '<option value="',$v['dirname'],'">',$v['dirname'],'</option>';
+				echo '<option value="',$v['dirname_id'],'">',$v['dirname'],'</option>';
 				}?>
 				</select>
 			<input type="submit" value="发布">
@@ -48,7 +47,7 @@ $dirname = mGetAll($sql);
 <script type="text/javascript">
     var ue = UE.getEditor('container', {
     toolbars: [
-    ['undo','redo','removeformat','|','bold','italic','underline','strikethrough','horizontal','|','fontsize','forecolor','backcolor','|','indent','justifyleft','justifycenter','justifyright','|','insertorderedlist','insertunorderedlist','|','insertcode','simpleupload','fullscreen','attachment','drafts','|','preview','help']
+    ['undo','redo','removeformat','|','bold','italic','underline','strikethrough','horizontal','|','fontsize','forecolor','backcolor','|','indent','justifyleft','justifycenter','justifyright','|','insertorderedlist','insertunorderedlist','|','insertcode','simpleupload','fullscreen','attachment','drafts','|','preview']
 	],
 	autoHeightEnabled: false,
     autoFloatEnabled: false

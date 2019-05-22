@@ -7,12 +7,10 @@ require('../../lib/init.php');
 $news_id = $_GET['id'];
 $sql = "select title,cat_id,content from home_news where id = $news_id";
 $news = mGetAll($sql);
-var_dump($news);
 
 //查询分类名
 $sql2 = "select id,cat_name from news_cat order by id asc limit 0,3";
 $catname = mGetAll($sql2);
-var_dump($catname);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,11 +21,13 @@ var_dump($catname);
 	<script src="../../js/jquery.js"></script>
 	<title>修改资讯</title>
 </head>
-<body>
+<body style="background: #f8f8f8">
 	<?php include('./nav.php'); ?>
 	<!-- 发布文章容器 -->
 	<div class="study_add_article">
-		<p><a href="../../index.php">首页</a>&gt;<span>修改资讯</span></p>
+		<div class="ue_line">	
+		<span class="ue_nav"><span style="margin-left:20px;"><a href="../../index.php">首页</a></span></span><span class="ue_tri"></span><span class="ue_nav2"><span>修改资讯</span></span><span class="ue_tri"></span>
+	</div>
 		<form id="news_form" method="post" action="../../manage/admin/add_news.php?id=<?php echo $news_id;?>">
 			<input type="text" name="title" placeholder="请输入资讯标题" value="<?php echo $news[0]['title'];?>" required="required" maxlength="30">
 			<!--加载编辑器的容器-->
