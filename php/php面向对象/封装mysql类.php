@@ -9,9 +9,9 @@ class Mysql{
 
 	public function __construct()
 	{
-		$this->host='localhost';
+		$this->host='127.0.0.1';
 		$this->user='root';
-		$this->passwd='';
+		$this->passwd='123456';
 		$this->dbName='nglinux';
 		$this->charset='utf8';
 
@@ -23,14 +23,12 @@ class Mysql{
 
 		//设置字符集
 		$this->setChar($this->charset);
-
 	}
 
 	//负责连接
 	private function connect($host,$user,$passwd,$dbName)
-	{
-		$conn=mysqli_connect($host,$user,$passwd,$dbName);
-		$this->conn=$conn;
+	{		$conn=mysqli_connect($host,$user,$passwd,$dbName);		
+		 	$this->conn=$conn;
 	}
 
 	//负责切换数据库
@@ -148,7 +146,7 @@ class Mysql{
 
 $mysql=new Mysql();
 //给一个数组，数组键是列，数组值是列的值，自动生成insert语句
-$arr=array('id'=>'999','content'=>'null');
+$arr=array('id,content'=>'3999,"str"','content'=>'null');
 foreach($arr as $key=>$value) {
 	$res=$mysql->insertAll($key,$value);
 }

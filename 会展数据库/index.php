@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,14 +69,15 @@
 			<img id="logo" src="./img/logo.png" alt="logo">
 			<h2 id="title_h2"><i>无人经济体验展</i></h2>
 				<h1 id="title_h1">网站数据管理系统</h1>
-				<form id="login" action="./index.php" method="post">
+				<form id="login" action="" method="post">
 					<p>账号：<input class="textbox" type="text" name="account"></p>
 					<p>密码：<input class="textbox" type="password" name="password"></p>
 					<input class="login_button" type="submit" value="登录">
 					<input class="login_button" type="reset" value="重置">
 				</form>
+
 	<?php 
-	error_reporting(0); 
+	//error_reporting(0); 
 	$account=$_POST['account'];
 	$password=$_POST['password'];
 
@@ -94,7 +96,12 @@
 	{
 		if(($account==$arr['account']) && ($password==$arr['password']))
 		{
-			echo "<script>alert('登录成功,欢迎您$account');location.replace('./home/home.html');</script>";
+			session_start();
+			$_SESSION['account']=$account;
+			echo '登陆成功,1秒后自动跳转';
+
+			header("refresh:3;url=./home/home.php");
+			ob_end_flush();		
 		}
 		else
 		{

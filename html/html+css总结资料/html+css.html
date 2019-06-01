@@ -82,7 +82,8 @@
       输入框        text                                  value=""
       单选          radio                     value      checked="checked" 
       多选框        checkbox                   value      checked="checked" 
-      上传文件/头像  file
+      上传文件/头像  file         enctype="multipart/form-data" multiple="multiple"（多文件上传）
+      accept="规定上传图片的类型image/\*"
       提交/按钮     submit                      value
       隐藏域        hidden                     value
       下拉框
@@ -93,6 +94,7 @@
       input内容不可编辑                                   disabled="disabled"
       </form>   //文本给用户看、name用于分类、value给服务器看
       required="required"     表单不可为空
+
 
       type新增加属性:color/data/datetime/datetime-local/email/image/range/search/url/tel （可写正则验证）
       <input type="submit" form="form_id"> //可写在form外面,根据id提交相对应的表单
@@ -154,6 +156,7 @@ H5新增标签
 <progress> 定义任务进程
 <output> 计算结果输出显示
 <pre>  预格式化文本,保留空格和换行
+<xmp>  把html片段当字符串输出
 <object><param> 包含图像、音频、视频等,param 定义参数
 <audio control><source> 定义音频域, source 插入音频、视频
 <video control> 定义视频域
@@ -191,9 +194,10 @@ div>ul>li*4
 6.table td文字不换行：white-space:nowrap;
 7.使用相同属性的多个标签可以“,”隔开。  如：.top, .bottom, .footer{float:none} 
 8.css中文编码,第一行加入 @charset "utf-8”;
-9.css选择器: ①p span(后代选择器,修改p后所有的span属性);②p>span(子选择器,只修改p后第一个span属性)      
-
-
+9.css选择器: ①p span(后代选择器,修改p后所有的span属性);②p>span(子选择器,只修改p后第一个span属性)  ③classname p:first-child(类名下第一个p标签)     
+10.选择第一个类名： .exerciseInfo: nth-of-type(1) { ... };
+选择最后一个类名： .exerciseInfo: last-child { ... };
+选择其中一个指定的类名：.exerciseInfo: nth-of-type(x) { ... };
 
 Emmet基本语法：
 后代：>   如：div>p  

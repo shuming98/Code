@@ -1,13 +1,14 @@
-	^ []的内容指可选填,{}补充说明
+^ []的内容指可选填,{}补充说明
 
 零、数据库入门语句
     1.连接数据库:mysql -uroot -p
     2.查看所有库:show databases;
-    3.建库:create databases 库名;
+    3.建库:create database 库名;
     4.删库:drop database 库名;
 
 零_壹、修改数据库密码
-    1.mysqladmin -u用户名 -p password 新密码  
+    1.不登录mysql: mysqladmin -u用户名 -p password 新密码  
+    2.登录mysql: set password for 用户名@localhost = password('新密码');
 
 一、创建表:建表就是声明列的过程。(列，选什么类型的列？列给什么样的属性?)
 语法: create table 表名(
@@ -58,7 +59,7 @@
 
 四、列的操作(增删改查)
 
-1.增加一列:alter table 表名 add 列名 列类型 列属性 [after 列名]; {after 列名 是指定新列在那个位置}
+1.增加一列:alter table 表名 add 列名 列类型 列属性 [after 列名]; {after 列名(first) 是指定新列在那个位置}
 2.修改一列:alter table 表名 change 原列名 新列名 列类型 列属性;   {这个不但可以改类型属性，换可以改名}
          alter table 表名 modify 列名 列类型 列属性;
 3.删除一列:alter table 表名 drop column 列名;
@@ -117,5 +118,11 @@
 
 ④添加主键索引:alter table 表名 add primary key(列名);
 ⑤删除主键索引:alter table 表名 drop primary key;
+
+八、备份数据库
+1.备份所有库:mysqldump -u root -p --all-databases > filename.sql
+2.备份库:mysqldump -u root -p --databases 库名 > filename.sql
+3.备份表:mysqldump -u root -p 库名 表名 > filename.sql
+4.数据还原:mysql -u root -p 库名 < filename.sql
 
 

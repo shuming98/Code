@@ -58,7 +58,7 @@
 
 五、连接查询 {仍可用where等子句查询}
 
-	1.内连接查询(交集):表1 inner join 表2 on 条件
+	1.内连接查询(交集):表1 inner join 表2 on 条件	
 
 		如:{
 			select boy.hid,boy.bname,girl.hid,girl.gname from boy inner join girl on boy.hid=girl.hid;
@@ -86,3 +86,6 @@
 案例e:银行转账.
 
 特征:隔离性、原子性、一致性、持久性
+
+八、不断学习
+1.mysql格式化日期:date_format(moment,'%Y-%m-%d');
