@@ -25,7 +25,7 @@ if($row){
 		header('Location:../../index.php');
 }else{
 	echo "<script>alert('账号或密码错误!');</script>";
-	echo "<script>history.go(-1);</script>";
+	echo "<script>location.href='../../index.php';</script>";
 }
  ?>
 
