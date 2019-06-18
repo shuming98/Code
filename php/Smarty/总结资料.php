@@ -20,6 +20,16 @@ $smarty->cache_lifetime = 30;
 //判断是否有缓存
 echo $smarty->isCached('./1.html')?'有Cache':'无Cache';
 
+//单模板多缓存
+$id = $_GET['id'];
+if(!$smarty->isCached('./1.html',$id)){
+	$smarty->assign('id',$id);
+}
+
+//局部缓存(一个页面某部分需要缓存，某部分不需要缓存) 适应于单个标签不缓存
+$smarty->assign('nocache','单个标签不缓存-变化内容',true);
+$smarty->assign('nocache2','{nocache}适用于大段不缓存的地方{/nocache}');
+
 //变量赋值(单个)
 #$smarty->assign('key',value);
 $smarty->assign('var','123');
@@ -34,21 +44,11 @@ class Obj{
 }
 $smarty->assign('obj',new Obj());
 
-//引入文件，并输出
-#$smarty->display('1.html');
-?>
-
-<?php 
-//模板中引用变量
-$arr = array('one'=>1,'two'=>2);
- ?>
-
-<?php 
-//判断
+//逻辑-判断
 $num = mt_rand(4,6);
 $smarty->assign('n',$num);
 
-//循环
+//逻辑-循环
 $know = array(
 	array('id'=>1,'title'=>'计算机','content'=>'仿人体结构'),
 	array('id'=>2,'title'=>'显示器','content'=>'60fps')
@@ -58,29 +58,16 @@ $smarty->assign('know',$know);
 //变量调节器
 $smarty->assign('up','AssbIJo');
 
-//单模板多缓存
-$id = $_GET['id'];
-if(!$smarty->isCached('./1.html',$id)){
-	$smarty->assign('id',$id);
-}
-
-//局部缓存(一个页面某部分需要缓存，某部分不需要缓存) 适应于单个标签不缓存
-$smarty->assign('nocache','单个标签不缓存-变化内容',true);
-$smarty->assign('nocache2','{nocache}适用于大段不缓存的地方{/nocache}');
-
-//模板调用PHP函数
+//模板调用PHP函数 insert_xxx(){} 
 function insert_hanshu(){
-	echo 'insert name=函数名';
+	echo '前端调用:insert name=函数名';
 }
 
+//引入文件，并输出
+$smarty->display('1.html');
 ?>
 
-
-<?php 
-$smarty->display('1.html');
- ?>
-
-<!-- 
+<!-- 总结
 1.模板中的变量三种来源：assign赋值(存储在_tpl_vars属性中)、系统变量、配置文件读取(存储在_config属性)
 
 2.模板编译的特点：

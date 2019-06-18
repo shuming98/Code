@@ -1,4 +1,4 @@
-//计算有标签个数
+//计算某标签个数
 ①$("table tr").length
 ②document.getElementById("table_Id").getElementsByTagName("tr").length;
 
@@ -18,10 +18,12 @@ $.post提交表单data:①$("form").serialize()
 				  ②$("form").serializeArray()
 
 
-//jquery
-①jquery放js文件不运行，外加上
-	$(document).ready(function(){
-		//特别是动态HTML
-	});
-
-②关门提交表单:var that = this; $(that).date();
+<script>
+alert('***');
+location.href = "url";     //重定向网页
+location.replace('url')    //跳转页面并刷新(不记录)
+location.replace(document.referrer); //浏览器后退并刷新
+location.reload();         //刷新页面
+history.go(-1)或history.back(); //浏览器后退
+history.go(1)或history.forward(); //浏览器前进
+</script>" 
