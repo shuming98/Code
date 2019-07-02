@@ -1,0 +1,137 @@
+  <include file="Public/header" title="商品类型" /> 
+  <div class="block1 clearfix"> 
+   <div class="ur_here blank">
+     当前位置: 
+    <a href="/">首页</a>
+    <code>&gt;</code>
+    <if condition="is_array($mbx) eq 'true'">
+    <foreach name="mbx" item="mbx">
+      <a href="#">
+      {$mbx.cat_name}
+    </a>
+      <code>&gt;</code> 
+    </foreach>
+    <else/>
+    {$mbx}
+  </if>
+   </div> 
+   <div id="pageLeft" class="fl"> 
+    <h1 style="background:url(./images/sdgg.gif) repeat-x; height:27px; line-height:27px; padding-left:10px;"><a href="#"><font style="color:#000; font-size:14px;">所有分类</font></a></h1> 
+    <div class="mod1 mod2 blank" id="historybox"> 
+     <span class="lb"></span>
+     <span class="rb"></span> 
+     <div class="cagegoryCon clearfix"> 
+      <foreach name="tree" item="tr1"> 
+       <if condition="$tr1[parent_id] eq 0"> 
+        <dl> 
+         <dt>
+           {$tr1['cat_name']} 
+         </dt> 
+         <dd class="clearfix"> 
+          <foreach name="tree" item="tr2"> 
+           <if condition="$tr2['parent_id'] eq $tr1['cat_id']"> 
+            <p class=""><a href="{:U('Home/Cat/cat',array('cat_id'=>$tr2['cat_id']))}" title="{$tr2['cat_name']}" class="txtdot">{$tr2['cat_name']}</a></p> 
+           </if> 
+          </foreach> 
+         </dd> 
+        </dl> 
+       </if> 
+      </foreach> 
+     </div> 
+     <div class="blank"></div> 
+    </div> 
+    <h1 class="mod2tit" style="background:url(./images/sdgg.gif) repeat-x; height:27px; color:#000">销售排行</h1>
+    <div class="mod1 mod2 blank" id="topbox"> 
+     <span class="lb"></span>
+     <span class="rb"></span> 
+     <ul id="top10"> 
+      <?php $num = 1; ?>
+      <foreach name="cat_goods" item="good"> 
+       <li> 
+        <div class="first"> 
+         <div class="fl"> 
+          <font style="color:#F00; font-weight:bold"><?php echo $num++; ?>.</font> 
+          <a href="{:U('Home/Goods/goods',array('goods_id'=>$good['goods_id']))}" title="{$good['goods_name']}">{$good['goods_name']}</a> 
+         </div> 
+         <div class="fr">
+          <b class="f1">{$good['shop_price']}</b>
+         </div> 
+        </div> </li> 
+      </foreach> 
+     </ul> 
+    </div> 
+    <h1 class="mod2tit" style="background:url(themes/68ecshop_hechafree/images/sdgg.gif) repeat-x; height:27px;"><font style="color:#000">历史浏览</font></h1> 
+    <div id="history_div"> 
+     <div class="mod1 mod2 blank" id="historybox"> 
+      <span class="lb"></span>
+      <span class="rb"></span> 
+      <ul id="top10"> 
+        <?php $num=1; ?>
+       <foreach name="his" item="v"> 
+        <li> 
+         <div class="first"> 
+          <div class="fl"> 
+           <font style="color:#F00; font-weight:bold"><?php echo $num++; ?>.</font> 
+           <a href="{:U('Home/Goods/goods',array('goods_id'=>$v['goods_id']))}" title="">{$v['goods_name']}</a> 
+          </div> 
+          <div class="fr">
+           <b class="f1">{$v['shop_price']}</b>
+          </div> 
+         </div> </li> 
+       </foreach> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="pageRight" class="fr"> 
+    <div class="goodsTitle clearfix blank"> 
+     <span class="fl">商品列表</span> 
+     <form method="GET" class="sort fr" name="listform">
+       显示方式： 
+      <a href="#"><img src="__PUBLIC__/Home/images/display_mode_list.gif" alt="" /></a> 
+      <a href="#"><img src="__PUBLIC__/Home/images/display_mode_grid_act.gif" alt="" /></a> 
+      <a href="#"><img src="__PUBLIC__/Home/images/display_mode_text.gif" alt="" /></a>&nbsp;&nbsp; 
+      <a href="#"><img src="__PUBLIC__/Home/images/goods_id_DESC.gif" alt="按上架时间排序" /></a> 
+      <a href="#"><img src="__PUBLIC__/Home/images/shop_price_default.gif" alt="按价格排序" /></a> 
+      <a href="#"><img src="__PUBLIC__/Home/images/last_update_default.gif" alt="按更新时间排序" /></a> 
+      <input type="hidden" name="category" value="1" /> 
+      <input type="hidden" name="display" value="grid" id="display" /> 
+      <input type="hidden" name="brand" value="0" /> 
+      <input type="hidden" name="price_min" value="0" /> 
+      <input type="hidden" name="price_max" value="0" /> 
+      <input type="hidden" name="filter_attr" value="0" /> 
+      <input type="hidden" name="page" value="1" /> 
+      <input type="hidden" name="sort" value="goods_id" /> 
+      <input type="hidden" name="order" value="DESC" /> 
+     </form> 
+    </div> 
+    <div class="clearfix modContent"> 
+     <form name="compareForm" action="" method="post"> 
+      <div class="clearfix grid"> 
+       <foreach name="cat_goods" item="cats"> 
+        <div class="goodsbox1" style="margin: 5px 9px 8px 8px;*margin:5px 6px 10px 14px;"> 
+         <div class="imgbox1">
+          <a href="{:U('Home/goods/goods',array('goods_id'=>$cats['goods_id']))}"><img src="{$cats['goods_img']}" alt="{$cats['goods_name']}" /></a>
+         </div> 
+         <a href="{:U('Home/goods/goods',array('goods_id'=>$cats['goods_id']))}" title="{$cats['goods_name']}">{$cats['goods_name']}</a>
+         <br /> 
+         <font class="market">{$cats['market_price']}</font> 
+         <b class="f1">{$cats['shop_price']}</b>
+         <br /> 
+        </div> 
+       </foreach> 
+      </div> 
+     </form> 
+    </div> 
+    <div class="pagebar"> 
+     <form name="selectPageForm" action="http://free.68ecshop.com/hechaw2013/category.php" method="get"> 
+      <div id="pager">
+        总计 
+       <b>{$count}</b>个记录
+       {$page}
+      </div> 
+     </form> 
+    </div> 
+   </div> 
+  </div> 
+  <include file="Public/footer" />
