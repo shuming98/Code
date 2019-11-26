@@ -16,13 +16,13 @@
 	②yum软件包下载：yum install nginx
 
 二、启动nginx服务
-1)启动：./nginx [切换到 /usr/local/nginx/sbin 目录下执行]
-	[如果连接服务器或启动服务失败，请执行此操作：service iptables stop]
-2)重启：nginx -s reload
-3)重开日志：nginx -s reopen
-4)立即停止：nginx -s stop
-5)优雅停止：nginx -s quit
-6)检查配置文件：nginx -t
+	1)启动：./nginx [切换到 /usr/local/nginx/sbin 目录下执行]
+		[如果连接服务器或启动服务失败，请执行此操作：service iptables stop]
+	2)重启：nginx -s reload
+	3)重开日志：nginx -s reopen
+	4)立即停止：nginx -s stop
+	5)优雅停止：nginx -s quit
+	6)检查配置文件：nginx -t
 
 三、配置文件（nginx.conf）
 	1）基本
@@ -38,8 +38,11 @@
 			access_log logs/access.log main;
 
 			location / {
-				root html/path;
+				root html/path;                      #网站根目录，location ~ \.php$处也要修改	
 				index index.html index.htm;
+				autoindex on;                        #开启目录浏览功能；   
+        		autoindex_exact_size off;            #关闭详细文件大小统计，让文件大小显示MB，GB单位，默认为b；   
+       			autoindex_localtime on;              #开启以服务器本地时区显示文件修改日期！   
 			}
 		}
 
@@ -50,6 +53,8 @@
 		#取消注释以下两行
 		"log_format main ..."
 		"access_log logs/access.log main;"
+
+
 
 四、整合php(开启php解析)
 
