@@ -124,12 +124,10 @@ td{
     </tr>
     <?php
   error_reporting(0);
+  include ('../conn.php');
   
   $id=$_GET['id'];    
   $username=$_GET['username'];
-
-  $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
-  mysqli_query($conn,'set names utf8');
   
   $sql="select * from account where id = '$id'";
   $sql2="select * from account where username = '$username'";

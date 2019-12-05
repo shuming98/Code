@@ -1,3 +1,5 @@
+use uee;
+
 insert into login(account,password) values ('root','123456'),
 	('shuming','123456'),('guest','000000');
 

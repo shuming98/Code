@@ -1,7 +1,6 @@
 <?php
     error_reporting(0);
-	$conn = mysqli_connect('127.0.0.1','root','123456','uee');
-    mysqli_query($conn,'set names utf8');  
+	include ('../conn.php');
 	$id=$_GET['id'];
 	if(empty($_POST)){		
 	$sql="select * from exhibitor where id ='$id'"; 

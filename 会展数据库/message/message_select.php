@@ -152,8 +152,8 @@ td{
   $enterprise=$_GET['enterprise'];
   $email=$_GET['email'];
 
-  $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
-  mysqli_query($conn,'set names utf8');
+  include ('../conn.php');
+ 
 
   $sql="select * from message where username = '$username'";
   $sql2="select * from message where enterprise = '$enterprise'";

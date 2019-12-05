@@ -77,12 +77,11 @@
 				</form>
 
 	<?php 
-	//error_reporting(0); 
+	error_reporting(0); 
 	$account=$_POST['account'];
 	$password=$_POST['password'];
 
-	$conn=mysqli_connect('127.0.0.1','root','123456','uee');
-	mysqli_query($conn,'set names utf8');
+	include('./conn.php'); 
 	$sql="select account,password from login where account='$account'";
 	$res=mysqli_query($conn,$sql);
 	$arr=mysqli_fetch_assoc($res);
@@ -98,9 +97,9 @@
 		{
 			session_start();
 			$_SESSION['account']=$account;
-			echo '登陆成功,1秒后自动跳转';
+			echo '登陆成功,3秒后自动跳转';
 
-			header("refresh:3;url=./home/home.php");
+			header("refresh:3;url=./home/home.html");
 			ob_end_flush();		
 		}
 		else

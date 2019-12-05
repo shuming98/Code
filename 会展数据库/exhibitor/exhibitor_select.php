@@ -218,9 +218,8 @@ td{
   $type=$_GET['type'];
   $number=$_GET['number'];    
 
-  $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
-  mysqli_query($conn,'set names utf8');
-
+  include ('../conn.php');
+  
   $sql="select * from exhibitor where username = '$username'";
   $sql2="select * from exhibitor where enterprise = '$enterprise'";
   $sql3="select * from exhibitor where tel = '$tel'";

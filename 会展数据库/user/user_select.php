@@ -189,8 +189,7 @@ td{
   $income=$_GET['income'];
   $tend=$_GET['tend'];
 
-  $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
-  mysqli_query($conn,'set names utf8');
+  include('../conn.php');
 
   $sql="select * from user where name = '$name'";
   $sql2="select * from user where age = '$age'";

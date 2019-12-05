@@ -86,8 +86,8 @@ td{
     </tr>
     <?php 
   error_reporting(0);
-  $conn=mysqli_connect('127.0.0.1','root','123456','uee'); 
-  mysqli_query($conn,'set names utf8');   
+  include ('../conn.php');
+
   $data=mysqli_query($conn,'select * from message order by id');
   while($row=mysqli_fetch_assoc($data)){
    ?>

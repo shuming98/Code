@@ -1,8 +1,7 @@
 <?php 
     error_reporting(0);
 	$id = $_GET['id'];
-	$conn=mysqli_connect('127.0.0.1','root','123456','uee');
-	mysqli_query($conn,'set names utf8');
+    include('../conn.php');
 	$sql = "delete from user where id='$id'";
 	$res = mysqli_query($conn,$sql);
 
