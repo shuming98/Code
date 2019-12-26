@@ -11,12 +11,13 @@
     2.登录mysql: set password for 用户名@localhost = password('新密码');
 
 一、创建表:建表就是声明列的过程。(列，选什么类型的列？列给什么样的属性?)
-语法: create table 表名(
-	列名 类型 属性
-	列名 类型 属性
-	...
-	...
-)表属性;
+
+    语法: create table 表名(
+    	列名 类型 属性
+    	列名 类型 属性
+    	...
+    	...
+    )表属性;
 
 二、列类型
 
@@ -49,11 +50,14 @@
 
 三、列属性
 
-1.列的默认值: not null default '值'{默认值设置需遵守类型格式。字符需要加单引号,数字不需要,中文需要加字符集声明charset utf8}
+1.列的默认值: not null default '值'
+{默认值设置需遵守类型格式。字符需要加单引号,数字不需要,中文需要加字符集声明charset utf8}
 
 2.主键与自增: 主键:primary key (主键列数据不重复,能够区别每一行进行索引)
             自增:auto_increment (自增只能加在索引上,且只能设置一列)
             {主键自增通常并用,如:id smallint primary key auto_increment}
+
+3.建表时为字段添加注释: comment ''
 
 	^到这里建表教程已经完成，接下来看看如何操作列
 
@@ -121,7 +125,8 @@
 
 八、备份数据库
 1.备份所有库:mysqldump -u root -p --all-databases > filename.sql
-2.备份库:mysqldump -u root -p --databases 库名 > filename.sql
+2.备份库:mysqldump -u root -p --databases(-B) 库名 > filename.sql
+3.备份所有表:mysqldump -uroot -p 库名 > filename.sql
 3.备份表:mysqldump -u root -p 库名 表名 > filename.sql
 4.数据还原:mysql -u root -p 库名 < filename.sql
 
