@@ -5,6 +5,8 @@
    2)安装后配置： git config --global user.name "Your Name"
                git config --global user.name "email@example.com"
                git config --global color.ui true
+               #终端显示中文
+               git config --global core.quotepath false
 
 三、创建本地版本库ß
 	1)创建空目录：mkdir 目录名
@@ -17,7 +19,7 @@
 	2)把文件添加到仓库：git add 文件名1 文件名2 文件3 ...... （文件放入暂存区）
 	3)把文件提交到仓库：git commit -m "提交文字说明"         （文件放入分支）
 	4)git commit -a 相当于②加③
-ß
+
 五、查看文件修改和状态
 	1）查看仓库当前状态：git status
 	2）查看文件修改：git diff 文件名  [仓库与目录文件的不同]
@@ -50,14 +52,15 @@
 
 九、远程仓库Github
 	1）创建(注册)一个Github账号。
-	2）本地创建ssh key。 终端输入： ssh-keygen -t rsa -C "email@example.com" 
-	  [之后一直回车]
+	2）本地创建ssh key, 终端输入： ssh-keygen -t rsa -C "email@example.com" 
+	  [之后一直回车.公钥放在平台上,用于实现免密登录]
 	3）远程仓库设置：打开Github官网 →→→ Settings →→→ SSH keys →→→ New SSH key →→→ 输入Title和key[ 本地隐藏文件 id_rsa.pub 查看 ] →→→ Add SSH key 。
 
 十、添加远程库(本地→→→远程)
 	1）Gihub创建一个新库。New repository
 	2）本地(终端)关联远程库：git remote add origin git@github.com:用户名/库名.git
 	3）同步远程库(本地文件提交到github)：git push -u origin master [第一次提交需要加-u,之后不用]
+	4）删除本地关联远程库：git remote remove origin
 	
 十一、克隆远程库(远程→→→本地)：git clone git@github.com:用户名/库名.git	
 
@@ -107,10 +110,18 @@ feature 分支用于开发新功能
 十六、使用Github[Fork一个开源仓库到自己的仓库里，本地git clone]
 
 十七、设置忽略文件
-	[一些重要信息文件和系统自动生成的文件，如果不想提交，可以把它们的名字写入.gitignore_global,被忽略文件git不会管，也不会报错]
+	[一些重要信息文件和系统自动生成的文件，如果不想提交，可以把它们的名字写入.gitignore(项目下创建),被忽略文件git不会管，也不会报错]
 	1）编辑忽略文件：编辑隐藏文件'.gitignore_global'，写入文件名或文件后缀 ‘*.ini’
 	2）被忽略文件强制添加到暂存区：git add -f 文件名
 	3）检查忽略文件：git check-ignore -v 文件名
+	4）设置全局.gitignore文件：git config --global core.excludesfile ~/.gitignore
+	5）查看忽略文件状态：git status --ignored
+	6）忽略文件写法：文件名 .DS_Store
+				  目录   vendor/
+				  根目录下 /vendor
+				  通配符 * ? []
+				  排除文件 !config.php
+
 
 十八、配置别名
 	1）git config --global alias.别名 原命令名
