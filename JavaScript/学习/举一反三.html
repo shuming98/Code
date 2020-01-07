@@ -1,0 +1,49 @@
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>对象操作</title>
+	<style>
+</style>
+</head>
+<body>
+	<div style="width: 0px;height:0px;border-bottom: 100px solid red;border-left:100px solid transparent;border-right:100px solid transparent;" onclick="t();"></div>
+</body>
+<script type="text/javascript">
+	function t(){
+	var div=document.getElementsByTagName('div')[0];
+	if(div.style.borderBottomColor.indexOf('red') >= 0){
+	div.style.borderBottomColor='gold';
+}else{
+	div.style.borderBottomColor='red';
+}
+}
+</script>
+</html>
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>利用事件对象——点不到的图片</title>
+</head>
+<style type="text/css">
+img{
+	position: relative;left: 0px;top: 0px;
+}
+</style>
+<body>
+	<img src="./捉不到我.png">
+</body>
+<script type="text/javascript">
+	document.getElementsByTagName('img')[0].onmouseover=function(ev){
+		this.style.left=ev.pageX+10+'px';
+		this.style.top=ev.pageY+10+'px';
+	}
+	document.getElementsByTagName('img')[0].onclick=function(){
+		alert('妈的，被点到了！');
+	}
+</script>
+</html>
+

@@ -1,0 +1,8 @@
+获取access_token
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxffe577a74f2ed038&secret=0d1fb7b7214b597ca1cb2b91718a3182
+
+url
+qingfeng.wicp.vip/wx
+
+开发者微信号
+oJPR5uMKsh1yZ-r778n7EoWxqBXg

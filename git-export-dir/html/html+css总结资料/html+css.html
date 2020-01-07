@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!--浏览器兼容-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <!--添加小图标-->
+  <link rel="icon" href="./images/icon/labelLogo.jpg">/
+  <link rel="stylesheet" href="路径" />```````链接外部css  #css初始化  
+  <title></title>
+</head>
+<body>
+  
+</body>
+</html>
+<style>
+	@import url("路径")`````````````````````````链接外部css
+
+
+	命名：#id -class
+	块状元素：
+	div{
+    font-family: Helvetica,"Microsoft YaHei",STXihei,sans-serif;
+------------------------------------------------------------------------------------------------------
+                          普通属性
+--------------------------------------------------------------------------------------------------------
+		height:;`````````````````````````高
+		width:```````````````````````````宽
+		background:;````````````````````背景色
+		float: left/right;``````````````浮动
+		clear:left/right/both;``````````清楚浮动
+		margin:;````````````````````````外边距    [0px(垂直) auto（水平)] #元素居中
+		border: 像素 线条 颜色;````````````边框
+		padding: ；``````````````````````内边距(top bottom left right)(上 左右 下)
+		##加入 margin/border/padding/ 面积会增大，为保持不变，此面积需缩小特定的2倍
+		display: block inline none;(转块状 转内联 不显示元素)
+    display:table            元素变为块状，像table一样显示
+    display:table-cell       元素像th,td一样显示
+    position:relative;  top/left/bottom/right: px;   相对定位
+    position: absolute; top/left/bottom/right: px;   绝对定位
+                          （距离某方向多少像素）
+---------------------------------------------------------------------------------------------------------
+                           文本编辑
+--------------------------------------------------------------------------------------------------------                 
+		text-indent: 像素;``````````````段落缩进
+		text-align: left/right/center; `文字方向
+		text-decoration: underline;`````文字修饰（下划线、上划线、中划线）
+		letter-spacing: 像素;```````````文字间隔
+		color:颜色;``````````````````````文字颜色
+		font-style: italic;`````````````文字风格（斜体）
+		font-weight:像素;````````````````文字粗细
+		font-size: 像素;``````````````````文字大小
+		line-height: 像素;```````````````行高
+		font-family:'sans-serif','serif';`字体#稀有字体放最前
+      :                         自适应
+-------------------------------------------------------------------------------------------------------
+                           背景图片
+-----------------------------------------------------------------------------------------------------
+       background-image:url("图片名");       ###设置背景色过渡背景图
+       background-repeat: repeat-x/repeat-y/no-repeat;```图片方向
+       background-attachment: fixed;`````````图片滚动固定
+       background-position:方向（水平）/方向（垂直）/[+ —]像素（以左上角为原点[右+下+]） ``精准控制背景图片位置***
+------------------------------------------------------------------------
+       list-style-type:图标;``````````````````列表序号图标，一般不用，用图片代替
+--------------------------------------------------------------------------------------------------------------
+                           制作表格
+--------------------------------------------------------------------------------------------------------------
+        border:;```````````````````````````加边框
+        border-collapse: collapse;`````````边框融合
+        border-spacing:像素;```````````````边框距离
+        padding: 像素;``````````````````````边框大小
+-----------------------------------------------------------------------------------------------------
+                         伪类（链接颜色）LVHA
+------------------------------------------------------------------------------------------------------
+        a:link{    ````````````````````````普通状态
+        	color:;
+        }
+        a:visited{  ``````````````````````访问过状态
+        	color: ;
+        }
+        a:hover{    ``````````````````````犹豫状态（鼠标指示状态）
+        	color: ;
+        }
+        a:active{ ````````````````````````活动状态（鼠标点击瞬间，一般不写）
+        	color: ;
+        }
+ ------------------------------------------------------------------------------------------------------
+                                           表单
+ ------------------------------------------------------------------------------------------------------
+      <form action="接受地址" method="post">
+      <input type="                " name="" >           默认值
+      输入框        text                                  value=""
+      单选          radio                     value      checked="checked" 
+      多选框        checkbox                   value      checked="checked" 
+      上传文件/头像  file         enctype="multipart/form-data" multiple="multiple"（多文件上传）
+      accept="规定上传图片的类型image/\*"
+      提交/按钮     submit                      value
+      隐藏域        hidden                     value
+      下拉框
+       <select name="">    
+       <option value="">text<option>                     selected="selected"
+       </select>
+      本文区域 <textarea value=""><textarea>
+      input内容不可编辑                                   disabled="disabled"
+      </form>   //文本给用户看、name用于分类、value给服务器看
+      required="required"     表单不可为空
+
+
+      type新增加属性:color/data/datetime/datetime-local/email/image/range/search/url/tel （可写正则验证）
+      <input type="submit" form="form_id"> //可写在form外面,根据id提交相对应的表单
+       ------------------------------------------------------------------------------------------------------
+                                          框架
+     ------------------------------------------------------------------------------------------------------  
+       ①Doctype:frameset.dtd
+       ②删除<body></body>
+       ③<frameset rows="200px,*">   row=""划行框架                   frame定义网页框架，src一般放“链接”，
+           <frame src="链接"></frame>                                框架里的内容，由另一个网页编写
+           <frameset cols="200px,*">  cols=""划列框架                 frame不用搞div等东西
+           <frame src="链接"><frame>
+           <frame src="链接" name="应用于target"></frame>              name=""给框架起个名字，应用于target
+           </frameset>                                               target:即你点开的新链接会打开一个新目标，这个新
+        </frameset>                                                   目标放在哪个框架里？ 例，target="_blank"  
+		内联元素：                                                          target="name"
+		span
+	
+	}
+   ------------------------------------------------------------------------------------------------------ 
+	标签:
+	<div style="属性;属性;"></div>````````````````````布局
+	<span></span>``````````````````文字修饰
+	<h1></h1>`````````````````````````标题
+    <p></p>`````````````````````段落
+    <br />```````````````````````回车
+    <img src="图片名（本地、远程路径）" alt="替代图片文字" title="鼠标指示内容" />````插入图片  ##内联 转块可设置宽高等
+    <ul></ul>````````````````````无序列表
+    <ol></ol>````````````````````有序列表
+    <li></li>````````````````````列表
+    <caption>定义表格标题
+    <table>`````````````````````表格``````````````````````````[]
+    	<tr>````````````````````行（table row）
+    		<td colspan=”n“>```````````列（table date） [border 加边框] [colspan="n" //行跨格n个]
+    		</td rowspan="n">`````````````````````````````````````````[rowspan=”n“ //列跨格n个]
+        </tr>
+    </table>
+    <<colgroup><col span=''></colgroup>定义列属性
+    <a id="锚点名” href="网址" target="_blank" title="鼠标指示内容">提示文字</a>（target=”_blank“ #新开标签页）
+    <a href="#锚点名">###</a>```````锚点链接（网页时使用）
+
+    字符实体 &实体名;
+
+ ------------------------------------------------------------------------------------------------------ 
+H5新增标签
+<datalist> 定义<input>内容的选项列表(如,搜索框)
+<del> 文本加中划线
+<ins> 文本加下划线(标记修改文本)
+<keygen>加密表单
+<label>为input元素定义标记,点击文本会触发控件
+<fieldest><legend> fieldest 对表单分组并绘制边框,legend 定义标题
+<dialog open> 定义框、窗口
+<embed> 嵌入插件或外部应用
+<meter> 定义度量衡
+<progress> 定义任务进程
+<output> 计算结果输出显示
+<pre>  预格式化文本,保留空格和换行
+<xmp>  把html片段当字符串输出
+<object><param> 包含图像、音频、视频等,param 定义参数
+<audio control><source> 定义音频域, source 插入音频、视频
+<video control> 定义视频域
+<sup> 上标文本
+<sub> 下标文本
+<article> 定义文章
+<footer>页脚
+<nav>标识导航栏
+<canvas>绘图容器
+<base>定义相对url
+
+ ------------------------------------------------------------------------------------------------------ 
+H5新增全局属性
+accesskey 设置快捷键
+contenteditable="true/false" 是否可编辑内容
+dir="rtl/ltr/auto" 文本方向
+draggable="true/false/auto" 元素是否能拖动
+hidden="hidden" 隐藏元素,JS控制
+spellcheck="true/false" 对文本内容拼写检查
+title="" 鼠标指示会显示提示文本
+ ------------------------------------------------------------------------------------------------------ 
+
+使用技巧：
+div>ul>li*4
+学习新东西：
+1.一个标签可以起多个类名,用空格隔开。 <div class="human food hobby"></div>
+2.css用逗号隔开类名,表示多个类名用同样的样式  .class1,
+                                       .class2{css}
+3.一个标签多个类名：标签.类名   img.size{} 类名是size的img标签使用该css属性
+4.一个类名多个标签：类名.标签   row.span{}类名是row的标签及其下,如果是span标签全都使用该属性 
+5.选择器优先级:!important>>内联样式的权值(1000)>>ID选择器(100)>>类选择器(10)>>标签选择器(1)
+除此以外，后代选择器的权值为每项权值之和，比如”#id .class a”的权值为100 + 10 + 1 = 111。
+派生（后代、子）选择器用标签或类选择器进行。【为了维护id选择器的地位】  
+按钮不能改变大小时，添加属性： -webkit-appearance: button;
+6.table td文字不换行：white-space:nowrap;
+7.使用相同属性的多个标签可以“,”隔开。  如：.top, .bottom, .footer{float:none} 
+8.css中文编码,第一行加入 @charset "utf-8”;
+9.css选择器: ①p span(后代选择器,修改p后所有的span属性);②p>span(子选择器,只修改p后第一个span属性)  ③classname p:first-child(类名下第一个p标签)     
+10.选择第一个类名： .exerciseInfo: nth-of-type(1) { ... };
+选择最后一个类名： .exerciseInfo: last-child { ... };
+选择其中一个指定的类名：.exerciseInfo: nth-of-type(x) { ... };
+
+Emmet基本语法：
+后代：>   如：div>p  
+兄弟：+   如：div+img
+上级：^   如：input^p
+分组：()  如：div>form>(input*2^p)>button
+乘法：*   如：ul>li*5
+自增符号：$ 如：ul>li.className$@5*3  【$变量;@n,从n开始递增】
+               p>span{num $}*10      【{输入标签内容}】
+ID和类属性：如：div#layout.container
+自定义属性：如：input[type=password id=passwd name=passwd]
+本文：{}    如：a{click me}
+
+Emmet缩写：
+字符集：meta:utf
+移动端：meta:vp
+脚本：script:src
+表单get：form:get/post
+输入：input:t/p/c/r/f/s/b/checkout                 
+
+
+常用代码：
+/* 清除浮动 */
+.clearfix::after{display: block;content: '.';clear: both;height: 0;visibility: hidden;}
+/* 文本内容自动隐藏 */
+.text_hidden{display:inline-block;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;}
+</style>

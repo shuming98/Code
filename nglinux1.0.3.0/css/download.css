@@ -1,0 +1,74 @@
+*{text-decoration: none;font-family:Helvetica,Tahoma,"微软雅黑","华文细黑","Microsoft YaHei",sans-serif;}
+body{background: #f8f8f8; margin:0px;overflow-x: hidden;}
+.cyan_line{width: 90px;height: 5px;background:#4fd2c2;display: block;margin:auto;}
+.title{text-align: center;}
+/*导航栏*/
+#header{height:55px;width:100%;background: #fff;}
+#header_div1{width: 1200px;margin:auto;}
+#header_logo{width: 200px;height: 50px;float: left;}
+#header_div2{height:50px;float: right;margin-right: 50px;}
+.nav{list-style-type: none;}
+.nav li{display: inline;}
+.nav li a{text-decoration: none;font-size:x-large;font-weight: bold;padding: 0px 10px 0px;
+color:#222;line-height: 23px;}
+.nav li a:visited{color:#111;}
+.nav li a:hover{color:#4fd2c2;}
+#header_signup{color:#fff;background: #4fd2c2;padding: 5px 3px 5px;border-radius: 15px;
+	margin-left: 15px;}
+
+/*Linux发行版*/
+#container{width: 100%;height: auto;}
+#download{width: 100%;height: 700px;margin-top: 100px;}
+#pic_9{max-width: 1565px;margin-left:14%;}
+#pic_9 a img{float: left;width: 27%;max-width: 423px;height: auto;
+	margin-left: 20px;margin-bottom: 20px;}
+#img_1{animation-duration:0.3s;}
+#img_2{animation-duration:0.6s;}
+#img_3{animation-duration:0.9s;}
+#img_4{animation-duration:1.2s;}
+#img_5{animation-duration:1.5s;}
+#img_6{animation-duration:1.8s;}
+#img_7{animation-duration:2.1s;}
+#img_8{animation-duration:2.4s;}
+#img_9{animation-duration:2.7s;}
+
+/*其他发行版*/
+#others{width: 100%;height:550px;margin-top: 200px;background: #fff;}
+#pic_2{max-width:1117px;margin:auto;}
+#pic_2 a img{height: auto;}
+#others_img_2{position: relative;bottom: 380px;}
+/*推荐文章*/
+#recommend{max-width: 828px;margin:auto;}
+#pic_6{max-width:828px;margin:auto;}
+#pic-6 a img{float: left;width: 25%;max-width: 256px;height: auto;
+margin-left: 20px;margin-bottom: 20px;}
+
+/**slideInUp**/
+.slideInUp {-webkit-animation-name: slideInUp;animation-name: slideInUp;-webkit-animation-duration: 1s;
+animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+@-webkit-keyframes slideInUp {0% {-webkit-transform: translateY(100%);transform: translateY(100%);
+visibility: visible;}
+100% {-webkit-transform: translateY(0);transform: translateY(0);}}
+@keyframes slideInUp {0% {-webkit-transform: translateY(100%);transform: translateY(100%);
+visibility: visible;}
+100% {-webkit-transform: translateY(0);transform: translateY(0);}} 
+
+/**slideLeft**/
+.slideLeft {-webkit-animation-name: slideLeft;animation-name: slideLeft;-webkit-animation-duration: 1s;
+animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+@-webkit-keyframes slideLeft {0% {-webkit-transform: translateX(-100%);transform: translateX(-100%);
+	visibility: visible;}
+100% {-webkit-transform: translateX(0);transform: translateX(0);}}
+@keyframes slideLeft {0% {-webkit-transform: translateX(-100%);transform: translateX(-100%);
+visibility: visible;}
+100% {-webkit-transform: translateX(0);transform: translateX(0);}} 
+
+/**slideRight**/
+.slideRight {-webkit-animation-name: slideRight;animation-name: slideRight;-webkit-animation-duration: 1s;
+animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+@-webkit-keyframes slideRight {0% {-webkit-transform: translateX(100%);transform: translateX(100%);
+visibility: visible;}
+100% {-webkit-transform: translateX(0);transform: translateX(0);}}
+@keyframes slideRight {0% {-webkit-transform: translateX(100%);transform: translateX(100%);
+visibility: visible;}
+100% {-webkit-transform: translateX(0);transform: translateX(0);}} 
