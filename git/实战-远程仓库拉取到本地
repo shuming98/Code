@@ -1,0 +1,10 @@
+实现-远程仓库拉取到本地
+1）克隆远程仓库： git clone git@github.com:shuming98/UEE-Admin.git
+
+2）拉取远程dev分支： git branch dev origin/dev
+
+3）切换到dev分支： git checkout dev
+
+4）修改内容后，提交前先合并远程代码： git pull origin dev
+
+5）提交代码到远程库： git push origin dev
