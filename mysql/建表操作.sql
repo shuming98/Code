@@ -107,20 +107,23 @@
 
 2.创建索引:①建表时,把主键索引可当作列属性添加:primary key;
          ②建表时,在列后面添加:索引 索引名(列名)  如,key name(name) {索引名通常和列名相同}
+           主键：primary key(colName);
+           外键：foreign key(colName) references table2(colname)
+           [on delete cascade] table2表中记录被删的同时会删除本表相关外键记录
 
 3.索引类型:①索引长度:可以索引前一部分内容。如,unique key email(email(10))
           ②多列索引:两列或多列的值看作一个整体建立索引。 如,key id(id,name); {左前缀原则}
           ③冗余索引:某列上可能存在多个索引。 如,key id(id,name),key name(name)
 
 4.索引操作
-
 ①查看索引:show index from 表名;
 
-②增加索引:alter table 表名 add index/unique 索引名(列名);
-③删除索引:alter table 表名 drop index 索引名;
-         drop index 索引名 on 表名;
-
-④添加主键索引:alter table 表名 add primary key(列名);
+②增加索引:alter table 表名 add index/unique 索引名(col_name);
+         create index 索引名 on tableName(colName);
+③删除索引:alter table 表名 drop index col_name;
+         drop index 列名 on 表名;
+ 
+④添加主键索引:alter table 表名 add primary key(col_name);
 ⑤删除主键索引:alter table 表名 drop primary key;
 
 八、备份数据库
@@ -130,4 +133,8 @@
 3.备份表:mysqldump -u root -p 库名 表名 > filename.sql
 4.数据还原:mysql -u root -p 库名 < filename.sql
 
-
+九、表命名规范
+1.关联表名应该是被关联表用'_'连接组成。如：work_issue
+2.字段名,前两位表名缩写.'_'连接组成。如：cats表有ct_id,ct_name.
+3.常用字段使用固定定义。如是否删除：delornot
+4.索引名和表名相同。

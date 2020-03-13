@@ -66,4 +66,23 @@ function getRelativePath($a,$b){
 }
 
 //getRelativePath('/a/b/c/d/e.php','/a/b/12/34/c.php')
+
+/**
+ * 创建多级目录
+ * @param  string  $path  文件路径
+ * @param  integer $chmod 文件权限
+ * @return string         返回信息
+ */
+function createDir($path,$chmod=0777){
+	if(is_dir($path){
+		echo '文件已存在';
+	}else{
+		if(mkdir($path,$chmod,true)){
+			echo '创建成功';
+		}else{
+			echo '创建失败';
+		};
+	}
+}
+
 ?>

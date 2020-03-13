@@ -37,6 +37,8 @@
 	3.尽量避免写NULL
 
 三、索引优化（通俗说，就是数据的目录，提高查询速度和排序速度）
+（数据结构：B-Tree/Hash/全文索引；主键索引结构：聚簇/非聚簇索引）
+
 	1.B-tree索引（二叉树遍历实现，排好序的快速查找结构）
 		①常见误区：
 			A.常用列都加上索引（查询时，独立索引只有一个能发挥作用）
@@ -46,7 +48,7 @@
 					>>>c1,c2,c3,c4都起到索引作用
 				b.where c1=1 and c2=2 and c4=4 order by c3;
 					>>>c1,c2起到索引作用，c3排好序
-				c.where c1=1 and c4=4 and group by c3,c2;
+				c.where c1=1 and c4=4 group by c3,c2;
 					>>>c1起到索引作用，c3,c2顺序无法利用索引		
 				d.where c1=1 and c5=5 order by c2,c3;
 					>>>c1起到索引作用，c2,c3发挥了排序作用
@@ -56,12 +58,12 @@
 	2.Hash索引（常用于内存引擎表，用数学函数算）
 		①过程：构建一个规律函数，使数据重复性少，离散性大。传一个具体精确的值，能找到数据位置。
 		>>如，f(x) = x^2-3x+1
-		②缺点：不对范围查询优化；无法使用前缀索引my* ；排序无法优化；必须回行（通过索引拿到数据位置，必须回到表中取数据）
+		②缺点：不对范围查询优化；无法使用前缀索引my* ；排序无法优化；必须回表（通过索引拿到数据位置，必须回到表中取数据）
 
 	3.聚簇索引与非聚簇索引
 		1）了解：
 		  ①聚簇索引：主键索引结构中，既存储主键值，又存储行数据。
-		  	A.优势：主键查询条目比较少时，不用回行（数据在主键节点下）。
+		  	A.优势：主键查询条目比较少时，不用回表（数据在主键节点下）。
 		  	B.劣势：主键碰到不规则数据（如随机值）插入时，会造成频繁的页分裂。
 		  	C.高性能索引策略：
 		  		a.节点下数据文件，分裂比较慢；
@@ -77,7 +79,7 @@
 			 B.如果没有主键（primary key），会向后找(unique key)或系统内部生成一个主键（rowid）。
 		 ②myisam引擎：主索引和次索引的数据，都指向物理行（磁盘位置table.MYD[data数据文件]、table.MYI[index索引文件]）。
 
-	4.索引覆盖：查询的列恰好是索引的一部分，那么查询只需要在索引文件上进行，不需要回行到磁盘上找数据。（索引中有你想要的数据，不需要回行）。
+	4.索引覆盖：查询的列恰好是索引的一部分，那么查询只需要在索引文件上进行，不需要回表到磁盘上找数据。（索引中有你想要的数据，不需要回表）。
 		A.这种查询速度非常快,特别体现在myisam非聚簇索引上。
 		>>如，select id from user where id > 10;
 		B.如果是innodb聚簇索引，而且有许多不规则数据（造成页分裂），查询时要跳过好多块导致速度会被拖慢，甚至不如联合索引速度快。
@@ -121,10 +123,11 @@
 			innodb引擎：alter table 表名 engine innodb
 
 四、sql语句优化
+https://www.cnblogs.com/gdwkong/articles/8505125.html
 	1.sql语句的时间花在：等待时间和执行时间（查找、排序、取出）。
 	2.如何提高sql语句查询速度？
 		A.利用联合索引的顺序、区分度、长度来加速查询速度；
-		B.使用索引覆盖（不用回行），取数据快；
+		B.使用索引覆盖（不用回表），取数据快；
 		C.利用索引排序或不排序，免除firesort过程；
 		D.查询更少的行和列。
 
@@ -373,24 +376,28 @@
 	5）账号安全：禁止mysql可以直接登录；删除无关账号。
 
 	6）查看授权过程(检查账号、检查权限)：show grants
+	                                 show grants for 'user'@'localhost'
 
 	7)检测操作权限：是否有权操作某个库/某张表/某个操作
 		检测顺序：user表->db表->tables_priv表
 
 	8)授权：
+		grant 授权 on 某库某表 to 用户@访问ip identified by 指定密码 (with grant option[可给他人授权])
 
-		grant [usage] on *[dbName].*[tableName] to [user]@'[localhost]' identified by '[passwd]'
+		grant [usage] on *[dbName].*[tableName] to [user]@'[localhost/ip]' identified by '[passwd]'
 
-		常用权限usage:all、drop、alter、create、delete、update、insert、select
+		常用权限usage:all privileges、drop、alter、create、delete、update、insert、select
 
 		>>grant select,insert,update on nglinux.user to admin@'localhost' 
-
 
 	9）撤销授权：
 
 		revoke [权限1，权限2...] on *.* from user@'localhost'
 
 		>>revoke insert,update on nglinux.user from admin@'localhost'
+
+	10）删除用户：
+		drop user 'user'@'localhost'
 
 	10）锁表与释放
 
