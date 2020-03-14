@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	/**
+	 * 闭包中的嵌套函数执行,会获取外层没有销毁的变量,重复执行
+	 */
+	function t(){
+		var age = 20;
+		return function(){
+			return ++age;
+		}
+	}
+
+	var age = 99;
+	tmp = t();
+	// alert(t()); //function
+	// alert(t()()); //21,调用顺序1，2
+	// alert(tmp()); //21，调用顺序2
+	// alert(tmp()); //22,嵌套函数执行后并没有销毁外层变量
+
+	/**
+	 * 闭包中的变量仅闭包函数使用,外界污染不了.
+	 */
+	var inc = (function(){
+		var cnt = 0;
+		return function(){
+			return ++cnt;
+		}
+	})();
+
+	console.log(inc());//1
+	console.log(inc());//2
+	console.log(inc());//3
+
+
+</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	div{
+		margin: 5px 0;
+	}
+	#cont{
+		height: 150px;
+		border: 1px solid #000;
+	}
+	#ad{
+		height: 100px;
+		border: 1px solid #d9d8d9;
+	}
+	#footer{
+		height: 100px;
+	}
+</style>
+<body>
+	<div id="cont">我是内容</div>
+	<div id="ad">我是广告</div>
+	<select name="" id="sel">
+		<option value="m">男性风格</option>
+		<option value="f">女性风格</option>
+	</select>
+	<footer id="footer">
+		尾部信息
+	</footer>
+</body>
+<script>
+	/**
+	 * 观察者模式
+	 */
+	var sel = document.getElementById('sel');
+	
+	//创建观察者数组
+	sel.listeners = [];
+	
+	//添加观察者函数
+	sel.addListener = function(obj){
+		sel.listeners.push(obj);
+	}
+
+	//下拉选择时,不执行具体代码，而去通知观察者执行自己的update属性函数
+	sel.onchange = sel.notice = function(){
+		for(var i=0,n=this.listeners.length;i<n;i++){
+			this.listeners[i].update(this);
+		}
+	}
+
+	/**
+	 * 添加观察者模块
+	 */
+	
+	//内容
+	var cont = document.getElementById('cont');
+	sel.addListener(cont);
+
+	//观察者update函数
+	cont.update = function(sel){
+		if(sel.value == 'm'){
+			this.style.background = 'blue';
+		}else if(sel.value == 'f'){
+			this.style.background = 'pink';
+		}
+	}
+
+	//广告
+	var cont = document.getElementById('ad');
+	sel.addListener(ad);
+	
+	//观察者update函数
+	ad.update = function(sel){
+		if(sel.value == 'm'){
+			this.innerHTML = 'Steam打折游戏';
+		}else if(sel.value == 'f'){
+			this.innerHTML = 'Mac  or YYL选择哪一个';
+		}
+	}
+
+	//尾部
+	var cont = document.getElementById('footer');
+	sel.addListener(footer);
+	
+	//观察者update函数
+	footer.update = function(sel){
+		if(sel.value == 'm'){
+			this.style.background = '#999';
+		}else if(sel.value == 'f'){
+			this.style.background = '#b23142';		
+		}
+	}
+
+</script>
+</html>

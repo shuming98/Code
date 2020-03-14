@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>输出变量：{$num}</h2>
+	<hr>	
+	<h2>if else 判断：	
+		<if condition="$num gt 5">
+			你及格了
+			<else/>
+			没及格
+		</if>
+	</h2>
+	<hr>
+	<h2>三元运算符：{$three}是{$three?'对了':'错了'}</h2>
+	<hr>
+	<h2>数组遍历：
+		<foreach name="array" item="v" key="k">
+			{$k}--{$v}
+		</foreach>
+	</h2>	
+</body>
+</html>

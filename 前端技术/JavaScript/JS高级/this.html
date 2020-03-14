@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	/**
+	 * 1.作为普通函数来调用
+	 */	
+	'use strict';
+	funciton t(){
+		this.say = 'me';
+	}
+
+	t();
+	alert(windows.say);
+
+	/**
+	 * 2.作用对象的方法来调用时,指向调用者(调用对象).
+	 */
+	var tell = function(){
+		alert('tell me:'+this.say);
+	}
+
+	//创建一个对象
+	var human = {  
+		'name':'xiaowang',
+		'say':'great',
+	}
+
+	human.t = tell; //把函数表达式赋值给t属性
+	human.t();		//调用t属性 tell me：great
+	tell.call(human,1,2);
+	//tell.apply(human,[1,2]);
+
+
+	/**
+	 * 3.作为构造函数来调用时
+	 */
+	function Dog(name,age){
+		this.name = name;
+		this.age = age;
+		this.bark = function(){
+			alert(this.name + this.age+'岁了');
+		};
+	}
+
+	var dog = new Dog('小花',3);
+	console.log(dog.bark());
+
+	/**
+	 * 4.函数通过call,apply方法调用
+	 */
+	
+	var tell = function(x,y){
+		alert('tell me:'+x+y+this.say);
+	}
+
+	//创建一个对象
+	var human = {  
+		'name':'xiaowang',
+		'say':'great',
+	}
+
+	tell.call(human,1,2);
+	tell.apply(human,[3,4]);
+
+</script>
+</html>

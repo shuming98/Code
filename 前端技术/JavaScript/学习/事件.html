@@ -1,0 +1,232 @@
+<!--常用事件
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>常用事件</title>
+	
+		onclick 元素点击时
+		onfocus 元素获得焦点时（鼠标点击、tab光标移到、键盘输入即可）
+		onblur  元素失去焦点时 （onfocus、onblur常用于表单）,如果不用onblur，onfocus产生的效果会保留
+
+		onmouseover 鼠标经过时（a:hover 效果触发后会被保留，可用onmouseout还原）
+		onmouseout  鼠标离开时 （与onmouseover一起用，有出乎意料的效果）
+		onsubmit	表单提交时（用于表单验证，当表单验证失败时，用onsubmit="return t();"来拦截数据提交）
+		onload		页面加载完毕时 （①<body onload="t();">；②window.onload=function t(){}）
+	
+	<style type="text/css">
+</style>
+</head>
+<body>
+	<div style="width: 200px;height: 200px;background: blue;" onclick="alert('点我干嘛')" onmouseover="t3();" onmouseout="t4();">灵性账号</div>
+	<form action="#">
+	<p>搜索<input type="text" name="search" value="请输入关键词" onfocus="t();" onblur="t2();" onclick="t5();" 	/></p>
+	<p>Mail:<input type="text" name="mail" onfocus="t4();" onclick="t6();" /></p>
+	<input type="submit" name="submit">
+</form>
+</body>
+<script type="text/javascript">
+	function t(){
+		document.getElementsByName('search')[0].value="";
+		document.getElementsByName('search')[0].style.border="2px solid pink";
+	}
+	function t2(){
+		document.getElementsByName('search')[0].value="请输入关键词";
+	}
+	function t3(){
+		document.getElementsByTagName('div')[0].innerHTML='指什么指输入账号呀0_0';
+	}
+	function t4(){
+		document.getElementsByTagName('div')[0].innerHTML='我很灵性';
+	}
+	function t5(){
+		document.getElementsByTagName('div')[0].innerHTML='请输入用户名，只允许使用大小字英文字母和数字';
+	}
+	function t6(){
+		document.getElementsByTagName('div')[0].style.background='black';
+		document.getElementsByTagName('div')[0].style.color='white';
+		document.getElementsByTagName('div')[0].innerHTML='请输入密码，我是黑色我无看!';
+	}
+	function t7(){
+		document.getElementsByTagName('p')[0].innerHTML+='<span style="color:red;">&nbsp*请输入关键词</span>';
+	}
+</script>
+</html>
+-->
+<!--结构样式行为相分离、对象事件
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>结构（html）、样式(css)、行为(javascript)相分离</title>
+</head>
+<style type="text/css">
+	div{
+		background: green;
+		width: 200px;height: 200px;
+	}	
+</style>
+<body>
+	<div></div>
+</body>
+<script type="text/javascript">
+	//之前的写法
+	function t(){
+		document.getElementsByTagName('div')[0].style.background='red';
+	}
+	//*行为分离后写法，onclick行为也是div的一个属性*
+	document.getElementsByTagName('div')[0].onclick=function(ev){
+		this.style.background='red';
+		console.log(ev); //利用windows.event事件对象，结果会传给第一个参数，例如:ev
+		//ev=window.event || ev;  ie低版本需添加上
+	}
+	//把函数赋值给对象onclick行为属性
+</script>
+</html>
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>事件委托，利用ev.target(一个五子棋小游戏)</title>
+</head>
+<style type="text/css">
+table{
+	border-collapse: collapse;background: #999;width: 500px;height:500px;
+}
+td{
+	border: 1px solid black;border-radius: 50px;
+}
+</style>
+<body>
+	<h2>五子棋游戏，1P为白棋，2P为黑棋</h2>
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+	var num=0;
+	document.getElementsByTagName('table')[0].onclick=function(ev){
+		ev.target.style.background=num++%2?'black':'white';
+	}
+</script>
+</html>

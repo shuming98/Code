@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	引入子模板(头、尾)：
+	{include file='./head.html'}
+	<hr>
+	<h1>输出变量值：{$var}</h1>
+	<hr>	
+	<p>输出数组值：{$array['one']}</p>
+	<p>输出数组值：{$array.two}</p>
+	<hr>
+	<p>输出对象属性：{$obj->obj}</p>
+	<hr>
+	<p>输出系统变量</p>
+	<p>{$smarty.now}</p> <!-- time() -->
+	<p>{$smarty.get.id}</p> <!-- $_GET['id'] -->
+	<p>{$smarty.const.PI}</p> <!-- echo 常量名 -->
+	<hr>
+	{Config_load file="./init.config"}
+	<p>输出配置文件内容：{$smarty.config.db}</p>
+	<hr>
+	<p>if判断：
+	{if $n == 4} 123
+	{else if $n == 5} 1234
+	{else} 1-9
+	{/if}
+	</p>
+	<hr>
+	<p>for循环(注意:不要用模版里面的foreach,因为性能非常低,而且这不是模版的职责,它只是有这些功能而已)：
+		{foreach $know as $k=>$v}
+		{$v.title}
+		{$v.id+5}
+		{/foreach}
+	</p>
+	<hr>
+	<p>变量调节器，smarty调用了php函数(无必要用,不应该它干的事，它干了，效率极低)</p>
+	<p>全转大写：{$up|upper}</p>	
+	<p>格式化时间：{$smarty.now|date_format:'Y-m-d'}</p>
+	<hr>
+	<p>单模板多缓存——通过id传参改变页面一小部分内容(缓存变化的内容)：{$id}</p>
+	<hr>
+	<p>不缓存变化的内容：{$nocache}</p>
+	<p>{nocache}{$nocache2}{/nocache}</p>
+	<hr>
+	<p>模板调用函数：{insert name=hanshu}</p>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+}
+
+/*模态框*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #333;
+}
+
+/* 模态框内容 */
+.modal-content {
+  position: relative;
+  background-color: #333;
+  padding: 0;
+  width: 100%;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {
+  color: #fff;
+  font-size: 1em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left:15%;
+}
+
+.column img {
+  margin-bottom: 1em;
+}
+.column span{
+   display: block;
+   text-align: center;
+   font-size: 1.2em;
+   margin-top: -10px;
+   margin-bottom: 10px;
+}
+
+.caption-container {
+	font-size: 1em;
+  text-align: center;
+  background-color: #333;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+</style>
+<body>
+<div class="row" style="margin-left:9%;">
+  <div class="column">
+    <img src="./首页/六/Cinnamon.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <span >Cinnamon</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Unity.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <span >Unity</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Enlightenment.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <span >Enlightenment</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Fluxbox.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <span >Fluxbox</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/GNOME.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    <span >GNOME</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Mate.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+    <span >Mate</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Pantheon.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+    <span >Pantheon</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/i3-gaps.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+    <span >i3-gaps</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Trinity.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+    <span >Trinity</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Xfce.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+    <span >Xfce</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/KDE-Plasma.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+    <span >KDE-Plasma</span>
+  </div>
+  <div class="column">
+    <img src="./首页/六/Sugar.jpg" style="width:260px;height: 160px;padding: 5px;" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+    <span >Sugar</span>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 12</div>
+      <img src="./首页/六/Cinnamon.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <img src="./首页/六/Unity.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 12</div>
+      <img src="./首页/六/Enlightenment.jpg" style="display: block;margin:auto;">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 12</div>
+      <img src="./首页/六/Fluxbox.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 12</div>
+      <img src="./首页/六/GNOME.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 12</div>
+      <img src="./首页/六/Mate.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 12</div>
+      <img src="./首页/六/Pantheon.jpg" style="display: block;margin:auto;">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">8 / 12</div>
+      <img src="./首页/六/i3-gaps.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 12</div>
+      <img src="./首页/六/Trinity.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 12</div>
+      <img src="./首页/六/Xfce.jpg" style="display: block;margin:auto;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 12</div>
+      <img src="./首页/六/KDE-Plasma.jpg" style="display: block;margin:auto;">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">12 / 12</div>
+      <img src="./首页/六/Sugar.jpg" style="display: block;margin:auto;">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Cinnamon.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(1)" alt="Cinnamon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Unity.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(2)" alt="Unity">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Enlightenment.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(3)" alt="Enlightenment">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Fluxbox.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(4)" alt="Fluxbox">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/GNOME.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(5)" alt="GNOME">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Mate.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(6)" alt="Mate">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Pantheon.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(7)" alt="Pantheon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/i3-gaps.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(8)" alt="i3-gaps">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Trinity.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(9)" alt="Trinity">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Xfce.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(10)" alt="Xfce">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/KDE-Plasma.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(11)" alt="KDE-Plasma">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./首页/六/Sugar.jpg" style="width: 120px;height: 90px;" onclick="currentSlide(12)" alt="Sugar">
+    </div>
+    <img src="" alt="" />
+  </div>
+</div>
+</body>
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</html>
