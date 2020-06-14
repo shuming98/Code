@@ -226,7 +226,8 @@ td{
 <script type="text/javascript">
 	var num=0;
 	document.getElementsByTagName('table')[0].onclick=function(ev){
-		ev.target.style.background=num++%2?'black':'white';
+		console.log(ev);
+		ev.target.style.background = num++%2?'black':'white';
 	}
 </script>
 </html>

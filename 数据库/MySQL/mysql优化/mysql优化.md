@@ -466,7 +466,7 @@ https://www.cnblogs.com/gdwkong/articles/8505125.html
 		全文索引：针对文章内容中的单词各做索引
 
 	2）mysql支持全文索引
-		①添加fulltxt全文索引:
+		①添加fulltext全文索引:
 
 			alter table news add fulltext index cont(cont);
 
