@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<!-- 单向数据绑定：页面显示绑定的数据，但不能修改数据。 -->
+	<!-- 双向数据绑定：页面不但显示数据，还可以修改数据。使用 v-model="data" -->
+
+	<!-- 属性绑定：v-bind:<attr>="data.attr" -->
+	<!-- 属性绑定简写： :<attr>="data.attr" -->
+	<div id="second">
+		<!-- 属性绑定、双向数据绑定 -->
+		<div :title="title">hello world</div>
+		<input v-model="content">
+		<div>{{content}}</div>
+	</div>
+
+	<script>
+		new Vue({
+			el:"#second",
+			data:{
+				title:"this is hello world",
+				content:"this is content",
+			}
+
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./vue.js"></script>
+</head>
+<body>
+
+	<!-- 挂载点：Vue处理的DOM实例 -->
+	<!-- 模板：挂载点内部内容 和 template属性 -->
+	
+	<!-- v-text="data" :显示转义后的内容 -->
+	<!-- v-html="data" :不会转义标签内容 -->
+	<!-- 显示数据：{{data}} -->
+	<!-- 绑定事件：v-on:<event>="<method>"  -->
+	<!-- 事件绑定简写：@<event>="<method>" -->
+
+	<div id="root">
+		<!-- 显示内容、绑定事件 -->
+		<h1 v-text="number" @click="handleClick"></h1>
+	</div>
+
+	<script>
+		//创建vue实例，处理DOM节点。没有DOM操作，着重数据编写。
+		//DOM对象、数据、方法
+		new Vue({
+			el:"#root",
+			//template:"<h1>{{msg}}</h1>",
+			data:{
+				msg:"hello world",
+				number:123
+			},
+			methods:{
+				handleClick:function(){
+					this.number = '点击事件修改内容';
+				}
+			}
+		})
+	</script>
+</body>
+</html>

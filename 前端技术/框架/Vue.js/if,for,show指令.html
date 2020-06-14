@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<!-- v-if v-show: 控制DOM标签显示与隐藏。if会清除标签，show会隐藏标签 -->
+	<!-- v-for: 循环展示使用：v-for="item of data", 把data数据赋给item。可以加上:key="index"，当索引提高性能 -->
+
+	<div id="fourth">
+		<div v-show="show">hello world</div>
+		<button @click="handleClick">toggle</button>
+		<ul>
+			<li v-for="(item, index) of list" :key="index">{{item}}</li>
+		</ul>
+	</div>
+
+	<script>
+		new Vue({
+			el: "#fourth",
+			data: {
+				show: true,
+				list: [1,2,3],
+			},
+			methods: {
+				handleClick: function() {
+					this.show = !this.show;
+				}
+			}
+		})
+	</script>
+</body>
+</html>
